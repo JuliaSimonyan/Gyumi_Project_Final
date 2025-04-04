@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Places";
+}
+<h2>Places</h2>
+
+<p>
+    <a href="@Url.Action("Add", "Place", new { area = "Admin" })" class="btn btn-primary">Add New Place</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Place Name</th>
+            <th>Description</th>
+            <th>Photo</th>
+            <th>Subcategory</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var place in Model)
+        {
+            <tr>
+                <td>@place.PlaceName</td>
+                <td>@place.Description</td>
+                <td><img src="/Images/places/@place.Photo" alt="Place Image" style="width: 50px; height: 50px;" /></td>
+                <td>@place.SubcategoryId</td>
+                <td>
+                    <form action="@Url.Action("Delete", "Place", new { id = place.Id, area = "Admin" })" method="post" style="display:inline-block;">
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this place?')">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

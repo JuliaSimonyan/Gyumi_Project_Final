@@ -1,0 +1,1 @@
+﻿global using AppRes = GyumriFinalVersion.Resources.Resource;

@@ -1,0 +1,30 @@
+﻿@model Gyumri.Common.ViewModel.Subcategory.EditSubcategoryViewModel
+
+@{
+    ViewData["Title"] = "Edit Subcategory";
+}
+
+<h1>Edit Subcategory</h1>
+
+<form asp-action="Edit" asp-controller="Subcategory" asp-area="Admin" method="post">
+    <input type="hidden" name="SubcategoryId" value="@Model.SubcategoryId" />
+
+    <div class="form-group">
+        <label for="Name">Subcategory Name</label>
+        <input type="text" class="form-control" id="Name" name="Name" value="@Model.Name" required />
+    </div>
+
+    <div class="form-group">
+        <label for="CategoryId">Category</label>
+        <select id="CategoryId" name="CategoryId" class="form-control" required>
+            @foreach (var category in (IEnumerable<Gyumri.Common.ViewModel.Category.CategoryViewModel>)ViewBag.Categories)
+            {
+                <option value="@category.CategoryId" @(Model.CategoryId == category.CategoryId ? "selected" : "")>
+                    @category.Name
+                </option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>

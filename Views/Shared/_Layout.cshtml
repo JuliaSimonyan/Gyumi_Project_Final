@@ -1,0 +1,93 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - GyumriFinalVersion</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/GyumriFinalVersion.styles.css" asp-append-version="true" />
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-black navbar-expand-lg">
+        <div class="container px-0">
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")"><img src="~/content/Images/Vector.png" alt="Logo" height="30"></a>
+
+            <!-- Toggler button for small screens -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                        @foreach (var menuItem in ViewBag.Categories)
+                        {
+                        <li class="nav-item">
+                            <a class="nav-link" asp-action="Category" asp-controller="Home" asp-route-categoryId="@menuItem.CategoryId">
+                                    @menuItem.Name
+                            </a>
+                        </li>
+                        }
+                    
+                </ul>
+                <div class="d-flex" style="display:flex;align-items: center;justify-content: center;">
+                    <div class="search-container">
+                        <a class="nav-link search-icon" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        <input type="text" class="search-input" placeholder="Search...">
+                    </div>
+                    <a class="nav-link" href="#"><i class="fa-regular fa-bookmark"></i></a>
+                    <form asp-action="ChangeLanguage" method="POST">
+                    <select class="language-dropdown" name="lang" onchange="this.form.submit()">
+                        @if (currentCulture == "en")
+                        {
+                            <option value="en" selected>English</option>
+                        }
+                        else
+                        {
+                            <option value="en">English</option>
+                        }
+                        @if (currentCulture == "hy-AM")
+                        {
+                            <option value="hy-AM" selected>Հայերեն</option>
+                        }
+                        else
+                        {
+                            <option value="hy-AM">Հայերեն</option>
+                        }
+                        @if (currentCulture == "ru-RU")
+                        {
+                            <option value="ru-RU" selected>Русский</option>
+                        }
+                        else
+                        {
+                            <option value="ru-RU">Русский</option>
+                        }
+
+                    </select>
+                    
+                       </form>
+                  
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+  
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

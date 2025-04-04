@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GyumriFinalVersion", "GyumriFinalVersion.csproj", "{2FF1F078-9E83-40CC-A0F2-1943FCEE294B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gyumri.Data", "..\Gyumri.Data\Gyumri.Data.csproj", "{C446BC52-0603-472A-B3E7-68E5D04592A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gyumri.Common", "..\Gyumri.Common\Gyumri.Common.csproj", "{87097A2B-5E25-4196-AC87-04F6D9803A43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gyumri.App", "..\Gyumri.App\Gyumri.App.csproj", "{F20ECCCE-4589-4451-BE72-5BF569A653C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2FF1F078-9E83-40CC-A0F2-1943FCEE294B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FF1F078-9E83-40CC-A0F2-1943FCEE294B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FF1F078-9E83-40CC-A0F2-1943FCEE294B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FF1F078-9E83-40CC-A0F2-1943FCEE294B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C446BC52-0603-472A-B3E7-68E5D04592A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C446BC52-0603-472A-B3E7-68E5D04592A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C446BC52-0603-472A-B3E7-68E5D04592A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C446BC52-0603-472A-B3E7-68E5D04592A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87097A2B-5E25-4196-AC87-04F6D9803A43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87097A2B-5E25-4196-AC87-04F6D9803A43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87097A2B-5E25-4196-AC87-04F6D9803A43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87097A2B-5E25-4196-AC87-04F6D9803A43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F20ECCCE-4589-4451-BE72-5BF569A653C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F20ECCCE-4589-4451-BE72-5BF569A653C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F20ECCCE-4589-4451-BE72-5BF569A653C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F20ECCCE-4589-4451-BE72-5BF569A653C6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DAFF0406-121E-4FCE-A440-99690CA01D50}
+	EndGlobalSection
+EndGlobal

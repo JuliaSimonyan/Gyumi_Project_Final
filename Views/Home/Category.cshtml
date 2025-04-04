@@ -1,0 +1,11 @@
+﻿<h1> Category </h1>
+
+<p>@ViewBag.Category.Name</p>
+
+<h3>Subcategories of @ViewBag.Category.Name</h3>
+<ul>
+    @foreach (var item in ViewBag.Subcategories)
+    {
+        <li>@item.Name</li>
+    }
+</ul>

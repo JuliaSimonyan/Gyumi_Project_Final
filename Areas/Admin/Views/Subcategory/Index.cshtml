@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Gyumri.Common.ViewModel.Subcategory.SubcategoryViewModel>
+
+@{
+    ViewData["Title"] = "Subcategory List";
+}
+
+<h1>Subcategories</h1>
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var subcategory in Model)
+        {
+            <tr>
+                <td>@subcategory.SubcategoryId</td>
+                <td>@subcategory.Name</td>
+                <td>@subcategory.CategoryName</td>
+                <td>
+                    <a href="@Url.Action("Edit", "Subcategory", new { area = "Admin", id = subcategory.SubcategoryId })" class="btn btn-primary">Edit</a>
+                    <form action="@Url.Action("Delete", "Subcategory", new { area = "Admin", id = subcategory.SubcategoryId })" method="post" style="display:inline;">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Add", "Subcategory", new { area = "Admin" })" class="btn btn-success mb-3">Add Subcategory</a>
