@@ -23,6 +23,8 @@ namespace Gyumri.Application.Services
                 {
                     Id = p.PlaceId,
                     Description = p.Description,
+                    DescriptionArm = p.DescriptionArm,
+                    DescriptionRu = p.DescriptionRu,
                     PlaceName = p.PlaceName,
                     PlaceNameArm = p.PlaceNameArm,
                     PlaceNameRu = p.PlaceNameRu,
@@ -32,12 +34,10 @@ namespace Gyumri.Application.Services
                 .ToListAsync();
         }
 
-
-        public PlacesViewModel GetPlaceById(int id)
+        public async Task<PlacesViewModel> GetPlaceById(int id)
         {
-            var place = _context.Places.FirstOrDefault(p => p.PlaceId == id);
-            if (place == null)
-                return null;
+            var place = await _context.Places.FirstOrDefaultAsync(p => p.PlaceId == id);
+            if (place == null) return null;
 
             return new PlacesViewModel
             {
@@ -53,7 +53,7 @@ namespace Gyumri.Application.Services
             };
         }
 
-        public bool AddPlace(AddEditPlaceViewModel model)
+        public async Task<bool> AddPlace(AddEditPlaceViewModel model)
         {
             var place = new Place
             {
@@ -67,14 +67,14 @@ namespace Gyumri.Application.Services
                 SubcategoryId = model.SubcategoryId
             };
 
-            _context.Places.Add(place);
-            _context.SaveChanges();
+            await _context.Places.AddAsync(place);
+            await _context.SaveChangesAsync();
             return true;
         }
 
-        public bool EditPlace(AddEditPlaceViewModel model)
+        public async Task<bool> EditPlace(AddEditPlaceViewModel model)
         {
-            var place = _context.Places.FirstOrDefault(p => p.PlaceId == model.Id);
+            var place = await _context.Places.FirstOrDefaultAsync(p => p.PlaceId == model.Id);
             if (place == null) return false;
 
             place.PlaceName = model.PlaceName;
@@ -87,19 +87,38 @@ namespace Gyumri.Application.Services
             place.SubcategoryId = model.SubcategoryId;
 
             _context.Places.Update(place);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return true;
         }
 
-        public bool DeletePlace(int id)
+        public async Task<bool> DeletePlace(int id)
         {
-            var place = _context.Places.FirstOrDefault(p => p.PlaceId == id);
+            var place = await _context.Places.FirstOrDefaultAsync(p => p.PlaceId == id);
             if (place == null) return false;
 
             _context.Places.Remove(place);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return true;
         }
 
+        public Task<List<PlacesViewModel>> GetPlacesBySubCategoryId(int id)
+        {
+            var places = _context.Places
+                .Where(p => p.SubcategoryId == id)
+                .Select(p => new PlacesViewModel
+                {
+                    Id = p.PlaceId,
+                    PlaceName = p.PlaceName,
+                    PlaceNameArm = p.PlaceNameArm,
+                    PlaceNameRu = p.PlaceNameRu,
+                    Description = p.Description,
+                    DescriptionArm = p.DescriptionArm,
+                    DescriptionRu = p.DescriptionRu,
+                    Photo = p.Photo
+                })
+                .ToListAsync();
+
+            return places;
+        }
     }
 }

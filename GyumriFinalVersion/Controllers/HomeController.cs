@@ -3,6 +3,7 @@ using Gyumri.Common.ViewModel.Category;
 using Gyumri.Data.Models;
 using GyumriFinalVersion.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.CSharp;
 using System.Diagnostics;
 
 namespace GyumriFinalVersion.Controllers
@@ -14,6 +15,7 @@ namespace GyumriFinalVersion.Controllers
         private readonly ICategory _categoryService;
         private readonly ISubcategory _subcategoryService;
         private readonly IPlace _placeService;
+
         public HomeController(ICategory categoryService, ApplicationContext context, ISubcategory subcategoryService, IPlace placeService)
         {
             _categoryService = categoryService;
@@ -28,8 +30,10 @@ namespace GyumriFinalVersion.Controllers
             ViewBag.Categories = await _categoryService.GetAllCategories();
             ViewBag.Subcategories = await _subcategoryService.GetAllSubcategories();
             ViewBag.Places = await _placeService.GetAllPlaces();
-            var language = Request.Cookies[CultureCookieName] ?? "en"; // Default 'en'
-            var cultureInfo = new System.Globalization.CultureInfo(language);
+            var currentCulture = Request.Cookies["UserCulture"] ?? "en";
+            var cultureInfo = new System.Globalization.CultureInfo(currentCulture);
+
+            // Set the culture for the request
             System.Threading.Thread.CurrentThread.CurrentCulture = cultureInfo;
             System.Threading.Thread.CurrentThread.CurrentUICulture = cultureInfo;
 
@@ -42,6 +46,10 @@ namespace GyumriFinalVersion.Controllers
         {
             CategoryViewModel category = await _categoryService.GetCategoryById(categoryId);
             var subcategories = await _subcategoryService.GetSubcategoriesByCategoryId(categoryId);
+            foreach (var item in subcategories)
+            {
+                item.Places = await _placeService.GetPlacesBySubCategoryId(item.SubcategoryId);
+            }
             ViewBag.Subcategories = subcategories;
             ViewBag.Category = category;
             ViewBag.Categories = await _categoryService.GetAllCategories();

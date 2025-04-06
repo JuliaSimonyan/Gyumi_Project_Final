@@ -1,8 +1,9 @@
 ﻿using Gyumri.Application.Interfaces;
-using Gyumri.Application.Services;
 using Gyumri.Common.ViewModel.Place;
 using Gyumri.Common.ViewModel.Subcategory;
 using Microsoft.AspNetCore.Mvc;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace Gyumri.Areas.Admin.Controllers
 {
@@ -11,9 +12,7 @@ namespace Gyumri.Areas.Admin.Controllers
     {
         private readonly IPlace _placeService;
         private readonly ISubcategory _subcategoryService;
-
         private readonly IWebHostEnvironment _webHostEnvironment;
-
 
         public PlaceController(IPlace placeService, ISubcategory subcategoryService, IWebHostEnvironment webHostEnvironment)
         {
@@ -26,36 +25,94 @@ namespace Gyumri.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             var places = await _placeService.GetAllPlaces();
-
             return View(places);
         }
+
         public async Task<IActionResult> Add()
         {
             var subcategories = await _subcategoryService.GetAllSubcategories();
             ViewBag.Subcategories = subcategories;
-
             return View();
         }
+
         [HttpPost]
-        public IActionResult Add(AddEditPlaceViewModel model, IFormFile photo)
+        public async Task<IActionResult> Add(AddEditPlaceViewModel model, IFormFile photo)
         {
             if (photo != null)
             {
-                string fileName = Guid.NewGuid() + System.IO.Path.GetExtension(photo.FileName);
-                string path = $"{_webHostEnvironment.WebRootPath}/Images/places/{fileName}";
+                string fileName = Guid.NewGuid() + Path.GetExtension(photo.FileName);
+                string path = Path.Combine(_webHostEnvironment.WebRootPath, "Images/places", fileName);
                 model.Photo = fileName;
+
                 using var fileStream = new FileStream(path, FileMode.Create);
-                photo.CopyTo(fileStream);
+                await photo.CopyToAsync(fileStream);
             }
-            bool place = _placeService.AddPlace(model);
+
+            bool success = await _placeService.AddPlace(model);
+            if (!success)
+            {
+                ModelState.AddModelError("", "Error adding place.");
+                return View(model);
+            }
+
             return RedirectToAction("Index");
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            var place = await _placeService.GetPlaceById(id);
+            if (place == null)
+            {
+                return NotFound();
+            }
+
+            var subcategories = await _subcategoryService.GetAllSubcategories();
+            ViewBag.Subcategories = subcategories;
+
+            var model = new AddEditPlaceViewModel
+            {
+                Id = place.Id,
+                PlaceName = place.PlaceName,
+                PlaceNameArm = place.PlaceNameArm,
+                PlaceNameRu = place.PlaceNameRu,
+                Description = place.Description ?? "",
+                DescriptionArm = place.DescriptionArm,
+                DescriptionRu = place.DescriptionRu,
+                Photo = place.Photo,
+                SubcategoryId = place.SubcategoryId
+            };
+
+            return View(model);
+        }
 
         [HttpPost]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Edit(AddEditPlaceViewModel model, IFormFile photo)
         {
-            bool isPlaceDeleted = _placeService.DeletePlace(id);
+            if (photo != null)
+            {
+                string fileName = Guid.NewGuid() + Path.GetExtension(photo.FileName);
+                string path = Path.Combine(_webHostEnvironment.WebRootPath, "Images/places", fileName);
+                model.Photo = fileName;
+
+                using var fileStream = new FileStream(path, FileMode.Create);
+                await photo.CopyToAsync(fileStream);
+            }
+
+            bool success = await _placeService.EditPlace(model);
+            if (!success)
+            {
+                ModelState.AddModelError("", "Error updating place.");
+                return View(model);
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id)
+        {
+            bool isPlaceDeleted = await _placeService.DeletePlace(id);
             if (isPlaceDeleted)
             {
                 return RedirectToAction("Index");
@@ -63,8 +120,5 @@ namespace Gyumri.Areas.Admin.Controllers
 
             return NotFound();
         }
-
-
-
     }
 }

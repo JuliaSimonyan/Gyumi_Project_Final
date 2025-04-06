@@ -1,0 +1,277 @@
+@media (max-width: 992px) {
+    /* Navbar */
+    .navbar-collapse {
+        text-align: center;
+    }
+    .navbar-nav {
+        flex-direction: column;
+    }
+    .search-container {
+        display: none; /* Hide search on smaller screens */
+    }
+
+    /* Hero Section */
+    .hero-content {
+        text-align: center;
+        padding: 20px;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    .hero-design img {
+        max-width: 80%;
+    }
+
+    /* Scroll Containers */
+    .scroll-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+    .card {
+        flex: 0 0 80%; /* Show one full card at a time */
+        margin-right: 10px;
+        scroll-snap-align: start;
+    }
+
+    /* Footer */
+    .footer .row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+    .btn-plan {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+    .coupon-section {
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 40px 10px;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 0.8rem;
+    }
+    .scroll-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        flex: 0 0 80%;
+        margin-bottom: 15px;
+    }
+    .decorative-art {
+        top: 1% !important;
+    right: 2% !important;
+    width: 250px !important;
+    height: 300px !important;
+    }
+    .discover-overlay {
+        width: 340px !important;
+
+    }
+    .footer-logo {
+    margin-left: 0 !important;
+    }
+    .row {
+        display: block !important;
+    }
+}
+
+@media (max-width: 768px) { 
+    .scroll-container {
+        flex-wrap: nowrap; /* Keep horizontal scroll on mobile */
+        overflow-x: auto;
+    }
+
+    .card {
+        width: 85%; /* Bigger cards for better readability */
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 480px) { 
+    .scroll-container {
+        justify-content: center; /* Center cards on extra small screens */
+    }
+
+    .card {
+        width: 90%; /* Make cards almost full width */
+    }
+}
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    .header-title {
+        font-size: 3.5rem;
+        padding-left: 50px;
+    }
+    
+    .gyumri-coupon-text h2 {
+        font-size: 2rem;
+        margin-left: 3rem;
+    }
+
+    .gyumri-coupon-button {
+        margin-left: 3rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header-title {
+        font-size: 3rem;
+        padding-left: 30px;
+    }
+
+    .nav-links {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .card {
+        width: 300px;
+        height: 250px !important;
+    }
+
+    .gyumri-coupon-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .gyumri-coupon-text h2 {
+        margin-left: 0;
+    }
+
+    .gyumri-coupon-button {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .see-do-section {
+        height: auto;
+        padding-bottom: 30px;
+    }
+
+    .header-image {
+        height: 400px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-title {
+        font-size: 2.5rem;
+        padding-left: 0;
+    }
+
+    .card {
+        width: 250px;
+        height: 220px !important;
+    }
+
+    .scroll-container {
+        height: auto;
+        gap: 10px;
+    }
+
+    .gyumri-coupon-text h2 {
+        font-size: 1.75rem !important;
+        margin:  1.5rem auto !important;    }
+
+    .gyumri-coupon-button {
+        margin:  1rem auto !important;
+        font-size: 0.9rem !important;
+        padding: 0.5rem 1rem !important;
+    }
+    .ms-6{
+        margin: 0 !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header-image {
+        height: 300px;
+    }
+
+    .header-title {
+        right: 45% !important;
+        top: 65% !important;
+        font-size: 3rem !important;
+        }
+
+    .nav-links {
+        padding: 10px;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+        margin: 0 5px;
+    }
+
+    .summer-title {
+        font-size: 1.5rem;
+    }
+
+    .description-text {
+        font-size: 1rem;
+    }
+
+    .card {
+        width: 100%;
+        height: auto !important;
+    }
+
+    .card-body {
+        position: relative;
+        bottom: 0;
+        text-align: center;
+    }
+
+    .gyumri-coupon-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .gyumri-coupon-button {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.75rem;
+    }
+    .see-more-link, .see-more-link-black {
+        margin-top: -20px !important;
+    }
+    .col-md-4{
+        margin-bottom: 10px !important;
+    }
+    .col-md-3{
+        padding-bottom: 10px;
+    }
+    .relaxtitle {
+        right: 22% !important;
+    }
+}

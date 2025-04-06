@@ -8,6 +8,9 @@ namespace Gyumri.Data.Models
         public string? Name { get; set; }//en
         public string? NameArm { get; set; }
         public string? NameRu { get; set; }
+        public string Description { get; set; }
+        public string? DescriptionArm { get; set; }
+        public string? DescriptionRu { get; set; }
 
         [ForeignKey("Category")]
         public int CategoryId { get; set; }

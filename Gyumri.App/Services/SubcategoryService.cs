@@ -29,6 +29,9 @@ namespace Gyumri.Application.Services
                 NameArm = model.NameArm,
                 NameRu = model.NameRu,
                 CategoryId = model.CategoryId,
+                Description = model.Description,
+                DescriptionArm = model.DescriptionArm,
+                DescriptionRu = model.DescriptionRu
             };
             await _context.AddAsync(subcategory);
             await _context.SaveChangesAsync();
@@ -57,6 +60,10 @@ namespace Gyumri.Application.Services
             subcategory.NameArm = model.NameArm;
             subcategory.NameRu = model.NameRu;
             subcategory.CategoryId = model.CategoryId;
+            subcategory.Description = model.Description;
+            subcategory.DescriptionArm = model.DescriptionArm;
+            subcategory.DescriptionRu = model.DescriptionRu;
+
 
             _context.Subcategories.Update(subcategory);
             await _context.SaveChangesAsync();
@@ -73,6 +80,9 @@ namespace Gyumri.Application.Services
                     Name = s.Name,
                     NameArm = s.NameArm,
                     NameRu = s.NameRu,
+                    Description = s.Description,
+                    DescriptionArm = s.DescriptionArm,
+                    DescriptionRu = s.DescriptionRu,
                     CategoryId = s.CategoryId,
                     CategoryName = s.Category.Name
                 })
@@ -94,6 +104,9 @@ namespace Gyumri.Application.Services
                 Name = subcategory.Name,
                 NameArm = subcategory.NameArm,
                 NameRu = subcategory.NameRu,
+                Description = subcategory.Description,
+                DescriptionArm = subcategory.DescriptionArm,
+                DescriptionRu = subcategory.DescriptionRu,
                 CategoryId = subcategory.CategoryId,
                 CategoryName = subcategory.Category.Name,
                 CategoryNameArm = subcategory.Category.NameArm,
@@ -110,6 +123,9 @@ namespace Gyumri.Application.Services
                     Name = s.Name,
                     NameArm = s.NameArm,
                     NameRu = s.NameRu,
+                    Description = s.Description,
+                    DescriptionArm = s.DescriptionArm,
+                    DescriptionRu = s.DescriptionRu,
                     CategoryId = s.CategoryId,
                     CategoryName = s.Category.Name,
                     CategoryNameArm = s.Category.NameArm,

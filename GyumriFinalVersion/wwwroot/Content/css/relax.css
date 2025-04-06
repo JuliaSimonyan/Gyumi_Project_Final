@@ -1,0 +1,15 @@
+.header-image {
+    background: rgba(0, 0, 0, 0.311);
+    background-image: url('../Images/relaxheader.jpeg') !important; /* Replace with actual image path */
+    background-size: cover;
+    background-position:center center !important;
+    height: 500px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+}
+.items {
+    position: relative;
+    background-color: black;
+}

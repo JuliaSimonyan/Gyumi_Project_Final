@@ -6,9 +6,10 @@ namespace Gyumri.Application.Interfaces
     public interface IPlace
     {
         Task<List<PlacesViewModel>> GetAllPlaces();
-        PlacesViewModel GetPlaceById(int id);
-        bool AddPlace(AddEditPlaceViewModel model);
-        bool EditPlace(AddEditPlaceViewModel model);
-        bool DeletePlace(int id);
+        Task<PlacesViewModel> GetPlaceById(int id);
+        Task<bool> AddPlace(AddEditPlaceViewModel model);
+        Task<bool> EditPlace(AddEditPlaceViewModel model);
+        Task<bool> DeletePlace(int id);
+        Task<List<PlacesViewModel>> GetPlacesBySubCategoryId(int id);
     }
 }

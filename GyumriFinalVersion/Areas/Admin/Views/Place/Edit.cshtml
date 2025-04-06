@@ -1,0 +1,65 @@
+﻿@model Gyumri.Common.ViewModel.Place.AddEditPlaceViewModel
+@{
+    ViewData["Title"] = "Edit Place";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Edit" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="PlaceName">Place Name</label>
+        <input type="text" class="form-control" id="PlaceName" name="PlaceName" value="@Model.PlaceName" required />
+    </div>
+
+    <div class="form-group">
+        <label for="PlaceNameArm">Place Name (Armenian)</label>
+        <input type="text" class="form-control" id="PlaceNameArm" name="PlaceNameArm" value="@Model.PlaceNameArm" />
+    </div>
+
+    <div class="form-group">
+        <label for="PlaceNameRu">Place Name (Russian)</label>
+        <input type="text" class="form-control" id="PlaceNameRu" name="PlaceNameRu" value="@Model.PlaceNameRu" />
+    </div>
+
+    <div class="form-group">
+        <label for="Description">Description</label>
+        <textarea id="Description" name="Description" class="form-control" rows="3">@Model.Description</textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="DescriptionArm">Description (Armenian)</label>
+        <textarea id="DescriptionArm" name="DescriptionArm" class="form-control" rows="3">@Model.DescriptionArm</textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="DescriptionRu">Description (Russian)</label>
+        <textarea id="DescriptionRu" name="DescriptionRu" class="form-control" rows="3">@Model.DescriptionRu</textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="SubcategoryId">Subcategory</label>
+        <select class="form-control" id="SubcategoryId" name="SubcategoryId" required>
+            <option value="">Select Subcategory</option>
+            @foreach (var subcategory in ViewBag.Subcategories as List<Gyumri.Common.ViewModel.Subcategory.SubcategoryViewModel>)
+            {
+                <option value="@subcategory.SubcategoryId" @(subcategory.SubcategoryId == Model.SubcategoryId ? "selected" : "")>
+                    @subcategory.Name
+                </option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Photo">Upload Photo (Optional)</label>
+        <input type="file" class="form-control-file" id="Photo" name="photo" />
+        @if (!string.IsNullOrEmpty(Model.Photo))
+        {
+            <div>
+                <img src="~/Images/places/@Model.Photo" alt="Current Photo" width="100" height="100" />
+            </div>
+        }
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+</form>

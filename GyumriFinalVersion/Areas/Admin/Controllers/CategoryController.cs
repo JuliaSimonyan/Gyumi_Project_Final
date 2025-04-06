@@ -2,8 +2,7 @@
 using Gyumri.Common.ViewModel.Category;
 using Gyumri.Data.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System.Linq;
+
 
 namespace Gyumri.Areas.Admin.Controllers
 {
@@ -11,7 +10,6 @@ namespace Gyumri.Areas.Admin.Controllers
     public class CategoryController : Controller
     {
         private readonly ApplicationContext _context;
-
         private readonly ICategory _categoryService;
 
         public CategoryController(ICategory categoryService, ApplicationContext context)
@@ -20,9 +18,9 @@ namespace Gyumri.Areas.Admin.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var categories = _categoryService.CategoryList().Result;
+            var categories = await _categoryService.CategoryList();
             return View(categories);
         }
 
@@ -32,22 +30,20 @@ namespace Gyumri.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public  async Task<IActionResult> Add(AddCategoryViewModel category)
+        public async Task<IActionResult> Add(AddCategoryViewModel category)
         {
-           
-                bool success = (await _categoryService.Add(category));
-                if (success)
-                {
-                    return RedirectToAction("Index");
-                }
-                ModelState.AddModelError("", "Error adding category.");
-        
+            bool success = await _categoryService.Add(category);
+            if (success)
+            {
+                return RedirectToAction("Index");
+            }
+            ModelState.AddModelError("", "Error adding category.");
             return View(category);
         }
 
-        public IActionResult Edit(int id)
+        public async Task<IActionResult> Edit(int id)
         {
-            var category = _context.Categories.Find(id);
+            var category = await _context.Categories.FindAsync(id);
             if (category == null)
             {
                 return NotFound();
@@ -63,28 +59,28 @@ namespace Gyumri.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(EditCategoryViewModel model)
+        public async Task<IActionResult> Edit(EditCategoryViewModel model)
         {
+            var existingCategory = await _categoryService.GetCategoryById(model.CategoryId);
+            if (existingCategory == null)
+            {
+                return NotFound();
+            }
 
-            //if (model == null)
-            //{
-            //    return View(model);
-            //}
+            bool success = await _categoryService.Edit(model);
 
-            //var category = _categoryService.GetCategoryById(model.CategoryId);
-            //if (category == null)
-            //{
-            //    return NotFound();
-            //}
+            if (!success)
+            {
+                return View(model);
+            }
 
-            //_categoryService.Edit(category.Result);
             return RedirectToAction("Index");
         }
 
         [HttpPost]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            bool success = _categoryService.Delete(id).Result;
+            bool success = await _categoryService.Delete(id);
             if (success)
             {
                 return RedirectToAction(nameof(Index));

@@ -28,8 +28,16 @@ namespace GyumriFinalVersion
             builder.Services.AddScoped<ISubcategory, SubcategoryService>();
             builder.Services.AddScoped<IPlace, PlaceService>();
 
-
             var app = builder.Build();
+
+            var supportedCultures = new[] { "en", "hy-AM", "ru-RU" };
+            var localizationOptions = new RequestLocalizationOptions()
+                .SetDefaultCulture("en")
+                .AddSupportedCultures(supportedCultures)
+                .AddSupportedUICultures(supportedCultures);
+
+            app.UseRequestLocalization(localizationOptions);
+
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -46,14 +54,7 @@ namespace GyumriFinalVersion
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
-            app.UseRouting();
-
-            var supportedCultures = new[] { "en", "hy-AM", "ru-RU" };
-            var localizationOptions = new RequestLocalizationOptions()
-                .SetDefaultCulture("en")
-                .AddSupportedCultures(supportedCultures)
-                .AddSupportedUICultures(supportedCultures);
-
+            app.UseRouting();  
 
             app.UseAuthorization();
 

@@ -8,9 +8,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - GyumriFinalVersion</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/content/style.css">
+    <link rel="stylesheet" href="~/content/css/responsive.css">
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/GyumriFinalVersion.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/GyumriFinalVersion.styles.css" asp-append-version="true" /> *@
 </head>
 <body>
 
@@ -27,6 +29,11 @@
             <!-- Navbar Content -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
+                    <li class ="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">
+                            Home
+                        </a>
+                    </li>
                         @foreach (var menuItem in ViewBag.Categories)
                         {
                         <li class="nav-item">
@@ -44,7 +51,7 @@
                     </div>
                     <a class="nav-link" href="#"><i class="fa-regular fa-bookmark"></i></a>
                     <form asp-action="ChangeLanguage" method="POST">
-                    <select class="language-dropdown" name="lang" onchange="this.form.submit()">
+                        <select class="language-dropdown dropdown-menu" name="lang" onchange="this.form.submit()">
                         @if (currentCulture == "en")
                         {
                             <option value="en" selected>English</option>
@@ -78,10 +85,40 @@
             </div>
         </div>
     </nav>
-    <div class="container">
-        <main role="main" class="pb-3">
+    <div >
+        <main role="main" >
             @RenderBody()
         </main>
+    </div>
+
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="footer-logo">
+                        <img src="~/content/Images/Vector.png" alt="Logo" style="width: 60px; height: 60px;">
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 footer-section footer-contact">
+                    <div class="footer-section">CONTACT</div><br>
+                    <p>Vardanants St. 1</p>
+                    <p>Gyumri, Shirak Marz, RA</p>
+                    <p>+ 374 95 2 58 206</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 footer-section footer-about">
+                    <div class="footer-section">ABOUT THIS WEBSITE</div><br>
+                    <p><a href="#" class="footer-link">About gyumritourism.com</a></p>
+                    <p><a href="#" class="footer-link">Privacy Policy</a></p>
+                    <p><a href="#" class="footer-link">Accessibility statement</a></p>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-section footer-links">
+                    <div class="footer-section">OTHER LINKS</div><br>
+                    <p><a href="#" class="footer-link">Plan a Trip</a></p>
+                    <p><a href="#" class="footer-link">For Media</a></p>
+                </div>
+            </div>
+        </div>
     </div>
 
   

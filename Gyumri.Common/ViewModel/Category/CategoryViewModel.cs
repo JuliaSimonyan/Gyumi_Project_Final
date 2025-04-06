@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gyumri.Common.ViewModel.Place;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
