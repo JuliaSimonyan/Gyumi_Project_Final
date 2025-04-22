@@ -1,10 +1,13 @@
 ﻿using Gyumri.Application.Interfaces;
 using Gyumri.Common.ViewModel.Subcategory;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Gyumri.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
+
     public class SubcategoryController : Controller
     {
         private readonly ISubcategory _subcategoryService;

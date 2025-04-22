@@ -1,6 +1,7 @@
 ﻿using Gyumri.Application.Interfaces;
 using Gyumri.Common.ViewModel.Place;
 using Gyumri.Common.ViewModel.Subcategory;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.IO;
 using System.Threading.Tasks;
@@ -8,6 +9,8 @@ using System.Threading.Tasks;
 namespace Gyumri.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
+
     public class PlaceController : Controller
     {
         private readonly IPlace _placeService;

@@ -1,81 +1,103 @@
-using GyumriFinalVersion.Data;
+﻿using GyumriFinalVersion.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-
 using Gyumri.Data.Models;
 using Gyumri.Application.Interfaces;
 using Gyumri.Application.Services;
 
-namespace GyumriFinalVersion
+var builder = WebApplication.CreateBuilder(args);
+
+// DB Context
+builder.Services.AddDbContext<ApplicationContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("GyumriDB")));
+
+// Identity
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationContext>()
+    .AddDefaultTokenProviders();
+
+builder.Services.ConfigureApplicationCookie(options =>
 {
-    public class Program
+    options.LoginPath = "/Account/Login";
+    options.AccessDeniedPath = "/Account/AccessDenied";
+});
+
+// Add MVC (controllers & views)
+builder.Services.AddControllersWithViews();
+
+// Custom services
+builder.Services.AddScoped<ICategory, CategoryService>();
+builder.Services.AddScoped<ISubcategory, SubcategoryService>();
+builder.Services.AddScoped<IPlace, PlaceService>();
+
+var app = builder.Build();
+
+// SEED admin user/roles
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+    var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
+
+    string[] roles = { "Admin", "User" };
+    foreach (var role in roles)
     {
-        public static void Main(string[] args)
+        if (!await roleManager.RoleExistsAsync(role))
+            await roleManager.CreateAsync(new IdentityRole(role));
+    }
+
+    var adminEmail = "admin@admin.com";
+    var adminPassword = "Admin123!";
+
+    // Check if user exists
+    var adminUser = await userManager.FindByEmailAsync(adminEmail);
+
+    if (adminUser == null)
+    {
+        var user = new ApplicationUser
         {
-            var builder = WebApplication.CreateBuilder(args);
+            UserName = adminEmail,
+            Email = adminEmail,
+            EmailConfirmed = true
+        };
 
-            // Add services to the container.
-            var connectionString = builder.Configuration.GetConnectionString("GyumriDB") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
-            builder.Services.AddDbContext<ApplicationContext>(options =>
-                options.UseSqlServer(connectionString));
-            builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-
-            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationContext>();
-            builder.Services.AddControllersWithViews();
-
-            builder.Services.AddScoped<ICategory, CategoryService>();
-            builder.Services.AddScoped<ISubcategory, SubcategoryService>();
-            builder.Services.AddScoped<IPlace, PlaceService>();
-
-            var app = builder.Build();
-
-            var supportedCultures = new[] { "en", "hy-AM", "ru-RU" };
-            var localizationOptions = new RequestLocalizationOptions()
-                .SetDefaultCulture("en")
-                .AddSupportedCultures(supportedCultures)
-                .AddSupportedUICultures(supportedCultures);
-
-            app.UseRequestLocalization(localizationOptions);
-
-
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
+        var result = await userManager.CreateAsync(user, adminPassword);
+        if (result.Succeeded)
+        {
+            Console.WriteLine("✅ Admin user created successfully.");
+            await userManager.AddToRoleAsync(user, "Admin");
+        }
+        else
+        {
+            Console.WriteLine("❌ Failed to create admin user:");
+            foreach (var error in result.Errors)
             {
-                app.UseMigrationsEndPoint();
+                Console.WriteLine($" - {error.Description}");
             }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
-
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
-
-            app.UseRouting();  
-
-            app.UseAuthorization();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                    name: "admin_default",
-                    pattern: "admin",
-                    defaults: new { area = "Admin", controller = "Dashboard", action = "Index" });
-
-                endpoints.MapControllerRoute(
-                    name: "areas",
-                    pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");
-            });
-
-            app.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
-            app.MapRazorPages();
-
-            app.Run();
         }
     }
+    else
+    {
+        Console.WriteLine("ℹ️ Admin user already exists.");
+    }
 }
+
+
+
+// Middleware setup
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseRouting();
+app.UseAuthentication(); // ✅ IMPORTANT
+app.UseAuthorization();
+
+// Routing
+app.MapControllerRoute(
+    name: "areas",
+    pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.Run();

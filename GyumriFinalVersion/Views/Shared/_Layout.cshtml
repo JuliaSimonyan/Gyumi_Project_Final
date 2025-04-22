@@ -1,6 +1,6 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
-    var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
+   // ViewData["Title"] = "Home Page";
+   // var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="~/GyumriFinalVersion.styles.css" asp-append-version="true" /> *@
 </head>
 <body>
+    <partial name="_LoginPartial" />
 
-    <nav class="navbar navbar-dark bg-black navbar-expand-lg">
+@*     <nav class="navbar navbar-dark bg-black navbar-expand-lg">
         <div class="container px-0">
             <a class="navbar-brand" href="@Url.Action("Index", "Home")"><img src="~/content/Images/Vector.png" alt="Logo" height="30"></a>
 
@@ -85,7 +86,7 @@
             </div>
         </div>
     </nav>
-    <div >
+ *@    <div >
         <main role="main" >
             @RenderBody()
         </main>
