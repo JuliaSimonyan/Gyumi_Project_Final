@@ -1,4 +1,6 @@
 ﻿@model Gyumri.Common.ViewModel.LoginViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
 
 <h2>Login</h2>
 
@@ -24,7 +26,6 @@
 
     <button type="submit">Login</button>
 </form>
-
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }

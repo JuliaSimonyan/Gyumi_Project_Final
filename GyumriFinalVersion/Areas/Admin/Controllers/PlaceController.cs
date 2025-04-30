@@ -1,4 +1,6 @@
-﻿using Gyumri.Application.Interfaces;
+﻿using Gyumri.App.Services;
+using Gyumri.Application.Interfaces;
+using Gyumri.Common.ViewModel.Apartment;
 using Gyumri.Common.ViewModel.Place;
 using Gyumri.Common.ViewModel.Subcategory;
 using Microsoft.AspNetCore.Authorization;
@@ -90,10 +92,22 @@ namespace Gyumri.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [HttpPost]
         public async Task<IActionResult> Edit(AddEditPlaceViewModel model, IFormFile photo)
         {
-            if (photo != null)
+            var existingActivity = await _placeService.GetPlaceById(model.Id);
+
+            if (photo != null && photo.Length > 0)
             {
+                if (!string.IsNullOrEmpty(existingActivity.Photo))
+                {
+                    string oldPath = Path.Combine(_webHostEnvironment.WebRootPath, "Images/places", existingActivity.Photo);
+                    if (System.IO.File.Exists(oldPath))
+                    {
+                        System.IO.File.Delete(oldPath);
+                    }
+                }
+
                 string fileName = Guid.NewGuid() + Path.GetExtension(photo.FileName);
                 string path = Path.Combine(_webHostEnvironment.WebRootPath, "Images/places", fileName);
                 model.Photo = fileName;
@@ -101,15 +115,13 @@ namespace Gyumri.Areas.Admin.Controllers
                 using var fileStream = new FileStream(path, FileMode.Create);
                 await photo.CopyToAsync(fileStream);
             }
-
-            bool success = await _placeService.EditPlace(model);
-            if (!success)
+            else
             {
-                ModelState.AddModelError("", "Error updating place.");
-                return View(model);
+                model.Photo = existingActivity.Photo;
             }
 
-            return RedirectToAction("Index");
+            await _placeService.EditPlace(model);
+            return RedirectToAction(nameof(Index));
         }
 
         [HttpPost]

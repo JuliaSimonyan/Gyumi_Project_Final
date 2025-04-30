@@ -1,4 +1,6 @@
-﻿namespace Gyumri.Middleware
+﻿using System.Globalization;
+
+namespace Gyumri.Middleware
 {
     public class LocalizationMiddleware
     {

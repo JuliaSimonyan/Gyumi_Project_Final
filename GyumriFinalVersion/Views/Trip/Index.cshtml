@@ -1,0 +1,92 @@
+﻿<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Your Trip</title>
+    <link rel="stylesheet" href="~/Content/css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/css/trip.css">
+</head>
+<body>
+
+    <!-- Hero Section with Trip Planner -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="display-3 fw-bold" style="margin-top: 200px;">Let's Plan Your Trip!</h1>
+            <p class="lead" style="margin-bottom: 100px;">Use this tool to organize your travel, stay, and activities for an unforgettable trip to Cymru. Get a personalized plan emailed or downloaded at the end!</p>
+
+            <div class="trip-planner-container">
+                <div class="trip-planner">
+                    <div class="date-picker">
+                        <label for="trip-dates" class="date-label">
+                            <i class="fa-regular fa-calendar"></i>
+                            <input type="text" id="trip-dates" class="date-input" value="Mar 15 - Mar 21" readonly>
+                        </label>
+                    </div>
+
+                    <div class="people-counter">
+                        <div class="counter-group">
+                            <label>Adults</label>
+                            <div class="counter">
+                                <button type="button" class="counter-btn decrease">-</button>
+                                <input type="text" class="count-input" value="2" readonly>
+                                <button type="button" class="counter-btn increase">+</button>
+                            </div>
+                        </div>
+
+                        <div class="counter-group">
+                            <label>Children</label>
+                            <div class="counter">
+                                <button type="button" class="counter-btn decrease">-</button>
+                                <input type="text" class="count-input" value="2" readonly>
+                                <button type="button" class="counter-btn increase">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="next-step">
+                        <a href=@Url.Action("FirstStep", "Trip") class="next-btn">
+                            Next: Getting Here
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/e8c2e1c09c.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script>
+        flatpickr("#trip-dates", {
+            mode: "range",
+            dateFormat: "M j",
+            defaultDate: ["Mar 15", "Mar 21"],
+            onClose: function (selectedDates, dateStr) {
+                document.getElementById("trip-dates").value = dateStr;
+            }
+        });
+
+        document.querySelectorAll('.counter-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                const countInput = this.parentElement.querySelector('.count-input');
+                let count = parseInt(countInput.value);
+
+                if (this.classList.contains('decrease')) {
+                    if (count > 0) {
+                        count--;
+                    }
+                } else if (this.classList.contains('increase')) {
+                    count++;
+                }
+
+                countInput.value = count;
+            });
+        });
+    </script>
+</body>

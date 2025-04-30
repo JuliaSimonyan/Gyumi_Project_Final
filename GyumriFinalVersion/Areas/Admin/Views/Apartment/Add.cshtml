@@ -1,0 +1,49 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@model Gyumri.Common.ViewModel.Apartment.ApartmentViewModel
+@using Gyumri.Data.Models;
+<h2>Add New Apartment</h2>
+
+<form asp-action="Add" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Name" for="Name">Name</label>
+        <input asp-for="Name" type="text" class="form-control" id="Name" name="Name" required />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Type" for="Type">Type</label>
+        <select asp-for="Type" class="form-control" id="Type" name="Type">
+            @foreach (var type in Enum.GetValues(typeof(ApartmentType)).Cast<ApartmentType>())
+            {
+                <option value="@type">@type</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MinPrice" for="MinPrice">Min Price</label>
+        <input asp-for="MinPrice" type="number" class="form-control" id="MinPrice" name="MinPrice" required />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MaxPrice" for="MaxPrice">Max Price</label>
+        <input asp-for="MaxPrice" type="number" class="form-control" id="MaxPrice" name="MaxPrice" required />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description" for="Description">Description</label>
+        <textarea asp-for="Description" class="form-control" id="Description" name="Description"></textarea>
+    </div>
+
+    <!-- Remove the asp-for="Image" and handle the file separately -->
+    <div class="form-group">
+        <label for="Photo">Image</label>
+        <input type="file" name="photo" class="form-control" />
+        <span asp-validation-for="Image" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Add</button>
+        <a href="@Url.Action("Index", "Apartment", new { area = "Admin" })" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>

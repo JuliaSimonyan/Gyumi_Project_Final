@@ -1,0 +1,249 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using Gyumri.Data.Models;
+@model Gyumri.Common.ViewModel.Activity.ActivityViewModel
+@{
+    ViewData["Title"] = "Where to Stay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where to Stay - Travel Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/style.css">
+    <link rel="stylesheet" href="~/Content/css/step2.css">
+    <link rel="stylesheet" href="~/Content/css/step1.css">
+    <link rel="stylesheet" href="~/Content/css/step3.css">
+
+</head>
+<body>
+
+    <!-- Main Content -->
+    <div class="main-content" style="background-color:white;">
+        <!-- Progress Steps -->
+        <div class="progress-steps">
+            <div class="step completed">
+                <div class="step-icon">
+                    <i class="fa-solid fa-car"></i>
+                </div>
+                <div class="step-text">Getting to/around</div>
+            </div>
+            <div class="step-divider"></div>
+            <div class="step completed">
+                <div class="step-icon">
+                    <i class="fa-solid fa-bed"></i>
+                </div>
+                <div class="step-text">Where to Stay</div>
+            </div>
+            <div class="step-divider"></div>
+            <div class="step active">
+                <div class="step-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="step-text">What to Do</div>
+            </div>
+            <div class="step-divider"></div>
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <div class="step-text">Finalizing</div>
+            </div>
+        </div>
+
+        <!-- Accommodation Filters -->
+        <div class="accommodation-filters">
+            <button class="filter-btn active">
+                <i class="fa-solid fa-building-columns"></i>
+                <span>Museums</span>
+            </button>
+            <button class="filter-btn">
+                <i class="fa-solid fa-compass-drafting"></i>
+                <span>Crafts</span>
+            </button>
+            <button class="filter-btn">
+                <i class="fa-regular fa-chess-rook"></i>
+                <span>History</span>
+            </button>
+            <button class="filter-btn">
+                <i class="fa-solid fa-mountain-sun"></i>
+                <span>Outdoors</span>
+            </button>
+            <button class="filter-btn">
+                <i class="fa-solid fa-plate-wheat"></i>
+                <span>Cafes</span>
+            </button>
+            <button class="filter-btn">
+                <i class="fa-solid fa-utensils"></i>
+                <span>Restaurants</span>
+            </button>
+        </div>
+
+        <!-- Accommodation List -->
+        <div class="accommodation-list">
+            <!-- Villa Kars Hotel -->
+            @foreach (var item in ViewBag.Activities)
+            {
+                <div class="accommodation-item">
+                    <div class="item-selection">
+                        <input type="radio" name="accommodation" id="villa-kars" checked>
+                        <label for="villa-kars"></label>
+                    </div>
+                    <div class="item-image">
+                        <img src="~/Images/activities/@item.Image" alt="Villa Kars Hotel">
+                    </div>
+                    <div class="item-details">
+                        <h3>@item.Name</h3>
+                        <div class="item-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p>@item.Description</p>
+                    </div>
+                    <div class="item-price">
+                        <div class="price-tag">
+                            <i class="fa-solid fa-tag"></i>
+                            <span>@item.PriceMin - @item.PriceMax ֏ AMD / night</span>
+                        </div>
+                        <a href="#" class="more-details">More Details <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+            }
+          @*   <!-- Berlin Art Hotel -->
+            <div class="accommodation-item">
+                <div class="item-selection">
+                    <input type="radio" name="accommodation" id="berlin-art">
+                    <label for="berlin-art"></label>
+                </div>
+                <div class="item-image">
+                    <img src="Images/museum3.png" alt="Berlin Art Hotel">
+                </div>
+                <div class="item-details">
+                    <h3>Gallery of Mariam and Eranuhi Aslamazyan Sisters</h3>
+                    <div class="item-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p>
+                        The Gallery is a distinguished cultural institution in Gyumri, Armenia,
+                        dedicated to celebrating the artistic legacy of two pioneering Armenian sisters.
+                    </p>
+                </div>
+                <div class="item-price">
+                    <div class="price-tag">
+                        <i class="fa-solid fa-tag"></i>
+                        <span>1,000  (֏) AMD</span>
+                    </div>
+                    <a href="#" class="more-details">More Details <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Radisson Hotel & Spa Gyumri -->
+            <div class="accommodation-item">
+                <div class="item-selection">
+                    <input type="radio" name="accommodation" id="radisson">
+                    <label for="radisson"></label>
+                </div>
+                <div class="item-image">
+                    <img src="Images/museum1.png" alt="Radisson Hotel & Spa Gyumri">
+                </div>
+                <div class="item-details">
+                    <h3>Mher Mkrtchyan Museum</h3>
+                    <div class="item-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p>
+                        This museum honors Mher Mkrtchyan, a celebrated Armenian actor
+                        known for his roles in cinema and theater.
+                    </p>
+                </div>
+                <div class="item-price">
+                    <div class="price-tag">
+                        <i class="fa-solid fa-tag"></i>
+                        <span>700  (֏) AMD</span>
+                    </div>
+                    <a href="#" class="more-details">More Details <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </div> *@
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination-container">
+            <div class="navigation-buttons">
+                <a href=@Url.Action("SecondStep", "Trip") class="back-btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back
+                </a>
+                <div class="pagination">
+                    <a href="#" class="page-item active">1</a>
+                    <a href="#" class="page-item">2</a>
+                    <a href="#" class="page-item">...</a>
+                    <a href="#" class="page-item">9</a>
+                    <a href="#" class="page-item">10</a>
+                </div>
+                <a href=@Url.Action("ForthStep", "Trip") class="next-btn">
+                    Next
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/e8c2e1c09c.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            const accommodationRadios = document.querySelectorAll('input[name="accommodation"]');
+            accommodationRadios.forEach(radio => {
+                radio.addEventListener('change', function () {
+                    document.querySelectorAll('.accommodation-item').forEach(item => {
+                        item.classList.remove('selected');
+                    });
+
+                    if (this.checked) {
+                        this.closest('.accommodation-item').classList.add('selected');
+                    }
+                });
+            });
+
+            document.querySelector('.accommodation-item').classList.add('selected');
+
+            const paginationItems = document.querySelectorAll('.page-item');
+            paginationItems.forEach(item => {
+                item.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    paginationItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+           
+        });
+    </script>
+</body>
+</html>

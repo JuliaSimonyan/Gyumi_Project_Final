@@ -1,0 +1,729 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #333;
+    background-color: #1e1e1e;
+}
+
+.container {
+    margin: 10px 5%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header styles */
+/* Navbar General Styles */
+.ml-auto {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    padding: 5px;
+  }
+  
+  .nav-link:hover {
+    color: #ffffff;
+  }
+  
+  /* Search Container */
+  .search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-icon {
+    position: relative;
+  }
+  
+  .search-icon:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    transition: width 0.3s ease;
+  }
+  
+  /* Search Input */
+  .search-input {
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    width: 0;
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    outline: none;
+    font-size: 14px;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    background: transparent;
+    color: #ffffff;
+    z-index: 10;
+    cursor: pointer;
+  }
+  
+  .search-container:focus-within .search-input {
+    width: 150px;
+    opacity: 1;
+    cursor: text;
+  }
+  
+  /* Language Dropdown */
+  .language-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .language-dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    z-index: 1000;
+    min-width: 100px;
+  }
+  
+  .language-dropdown .dropdown-menu a {
+    display: block;
+    padding: 5px 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .language-dropdown .dropdown-menu a:hover {
+    background-color: #f4f4f4;
+  }
+  
+  .language-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+  position: fixed;
+  }
+  .navbar-brand img{
+      width: 75px;
+      height: 45.03px;
+  }
+  
+  .navbar-dark .navbar-nav .nav-link {
+      color: white;
+  }
+  .navbar-nav .nav-link {
+      position: relative; 
+      padding: 10px 0; 
+      transition: transform 0.5s , border-bottom 1s ; 
+  }
+  
+  .navbar-nav .nav-link:hover {
+      transform: translateX(-15px); 
+      border-bottom: 3px solid white;
+  }
+  
+  .nav-link {
+      color: white !important;
+  }
+  .navbar-nav .nav-item {
+      margin-left: 15px; 
+  }
+  
+  .ml-auto .nav-link {
+      margin-left: 20px; 
+  }
+  
+
+/* Search Container */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: relative;
+}
+
+.search-icon:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    transition: width 0.3s ease;
+}
+
+/* Search Input */
+.search-input {
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    width: 0;
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    outline: none;
+    font-size: 14px;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    background: transparent;
+    color: #ffffff;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.search-container:focus-within .search-input {
+    width: 150px;
+    opacity: 1;
+    cursor: text;
+}
+
+/* Language Dropdown */
+.language-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.language-dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    z-index: 1000;
+    min-width: 100px;
+}
+
+.language-dropdown .dropdown-menu a {
+    display: block;
+    padding: 5px 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.language-dropdown .dropdown-menu a:hover {
+    background-color: #f4f4f4;
+}
+
+.language-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Hero section */
+.hero-section {
+    background-image: url('../Images/mapheader.png');
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    margin: 0 auto;
+    height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+/* Map container */
+.map-container {
+    position: relative;
+    margin: 20px 0%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    /* Add this to ensure proper stacking context */
+    z-index: 1;
+}
+
+.map-content {
+    position: relative;
+    display: flex;
+    min-height: 500px;
+    width: 100%;
+}
+
+#map {
+    flex: 1;
+    height: 500px;
+    /* Make sure the map doesn't have absolute positioning */
+    position: relative;
+    z-index: 1;
+}
+
+/* Info panels - adjust positioning */
+.info-panel {
+    width: 300px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 2; /* Higher than map but not higher than navbar */
+    display: none;
+    max-height: 500px;
+    overflow-y: auto;
+    position: relative; /* Change from absolute to relative */
+    flex-shrink: 0;
+}
+
+/* Make sure navbar stays on top */
+.navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure navbar is always on top */
+    position: fixed;
+}
+
+
+
+.map-filters {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+    overflow-x: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 8px 15px;
+    margin: 0 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+    border-radius: 20px;
+}
+
+.filter-btn svg {
+    margin-right: 5px;
+}
+
+.filter-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.filter-btn.active {
+    background-color: #333;
+    color: white;
+}
+
+#map {
+    flex: 1;
+    height: 120vh;
+    z-index: 1;
+}
+
+/* Apply grayscale filter to map tiles */
+.map-tiles-grayscale {
+    filter: grayscale(100%) !important;
+}
+
+/* Custom marker styling */
+.custom-marker {
+    background: transparent;
+}
+
+/* Using the provided location pin icon */
+.marker-icon {
+    width: 30px;
+    height: 30px;
+    background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Group%2023-fmAN2Si5YnLPoqmwCOdWIdSbp6r0BF.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* District icon styling */
+.district-icon {
+    width: 36px;
+    height: 36px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Info panels */
+.info-panel {
+    width: 500px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+    max-height: 100%;
+    left: 30px;
+    overflow-y: auto;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.info-header {
+    padding: 15px;
+    background-color: #1a1a1a;
+    color: white;
+    position: relative;
+}
+
+.info-header h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.info-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.info-actions {
+    display: flex;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.info-time {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.location-address {
+    font-size: 14px;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.action-btn svg {
+    margin-right: 5px;
+}
+
+.info-section {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.info-section h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.more-link {
+    color: #0066cc;
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.photo-gallery {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.photo-gallery img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.view-all-btn {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Location list */
+.location-list {
+    padding: 10px 0;
+}
+
+.location-item {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.location-time-icon {
+    margin-right: 10px;
+}
+
+.location-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.location-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.location-info {
+    flex: 1;
+}
+
+.location-info h4 {
+    margin-bottom: 3px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.location-time, .location-address {
+    font-size: 12px;
+    color: #666;
+}
+
+/* District label */
+#district-label {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1a1a1a;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    z-index: 1000;
+    display: none;
+}
+
+/* District panel specific styles */
+.district-panel {
+    width: 400px;
+}
+
+/* Footer styles */
+.footer {
+    color: #fff;            /* White text */
+    padding: 40px 0;        /* Spacing for the footer */
+    width: 100%;            /* Ensure full width */
+  }
+.red-tint {
+    filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
+}
+
+  .footer-logo {
+    margin-left: 15%;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .footer-section-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  /* Link styling for the footer */
+  .footer-link {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .footer-link:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  /* Ensure padding inside columns */
+  .footer-contact p, .footer-about p, .footer-links p {
+    margin: 5px 0;
+  }
+/* Responsive styles */
+@media (max-width: 992px) {
+    .navbar-nav .nav-item {
+        margin-left: 10px;
+    }
+    
+    .hero-section {
+        background-size: cover;
+        background-position: center;
+        height: 70vh;
+    }
+    
+    .map-content {
+        flex-direction: column;
+    }
+    
+    .info-panel {
+        width: 100%;
+        max-height: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        margin-top: 10px;
+    }
+    
+    .navbar-toggler {
+        border-color: white;
+    }
+    
+    .navbar-collapse {
+        justify-content: flex-start;
+    }
+    
+    .navbar-nav .nav-item {
+        margin-left: 5px;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 8px 0;
+    }
+    
+    .hero-section {
+        height: 60vh;
+    }
+    
+    .hero-content {
+        margin: 50px;
+    }
+    
+    .map-filters {
+        padding: 10px 0;
+    }
+    
+    .filter-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+    
+    .hero-content {
+        margin: 30px !important;
+    }
+    
+    .map-container {
+        margin: 10px 2%;
+    }
+    
+    .map-filters {
+        padding: 5px 0;
+    }
+    
+    .filter-btn {
+        padding: 5px 8px;
+        margin: 0 3px;
+        font-size: 11px;
+    }
+    
+    .filter-btn svg {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .info-panel {
+        max-height: 400px;
+    }
+}

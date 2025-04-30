@@ -4,8 +4,15 @@ using Microsoft.EntityFrameworkCore;
 using Gyumri.Data.Models;
 using Gyumri.Application.Interfaces;
 using Gyumri.Application.Services;
+using Microsoft.AspNetCore.Localization.Routing;
+using Microsoft.AspNetCore.Localization;
+using System.Globalization;
+using Gyumri.Middleware;
+using Gyumri.App.Interfaces;
+using Gyumri.App.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 
 // DB Context
 builder.Services.AddDbContext<ApplicationContext>(options =>
@@ -18,8 +25,8 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
 
 builder.Services.ConfigureApplicationCookie(options =>
 {
-    options.LoginPath = "/Account/Login";
-    options.AccessDeniedPath = "/Account/AccessDenied";
+    options.LoginPath = "/Admin/Account/Login";
+    options.AccessDeniedPath = "/Admin/Account/AccessDenied";
 });
 
 // Add MVC (controllers & views)
@@ -29,8 +36,15 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<ICategory, CategoryService>();
 builder.Services.AddScoped<ISubcategory, SubcategoryService>();
 builder.Services.AddScoped<IPlace, PlaceService>();
+builder.Services.AddScoped<IApartment, ApartmentService>();
+builder.Services.AddScoped<IActivityService, ActivityService>();
+builder.Services.AddLocalization();
+
+
+
 
 var app = builder.Build();
+
 
 // SEED admin user/roles
 using (var scope = app.Services.CreateScope())
@@ -88,9 +102,19 @@ using (var scope = app.Services.CreateScope())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+
+var supportedCultures = new[] { "en", "hy-AM", "ru-RU" };
+var localizationOptions = new RequestLocalizationOptions()
+    .SetDefaultCulture("en")
+    .AddSupportedCultures(supportedCultures)
+    .AddSupportedUICultures(supportedCultures);
+app.UseRequestLocalization(localizationOptions);
+app.UseMiddleware<LocalizationMiddleware>();
+
 app.UseAuthentication(); // ✅ IMPORTANT
 app.UseAuthorization();
 
+app.UseCookiePolicy();
 // Routing
 app.MapControllerRoute(
     name: "areas",

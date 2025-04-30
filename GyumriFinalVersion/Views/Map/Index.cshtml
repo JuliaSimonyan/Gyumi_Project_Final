@@ -1,0 +1,473 @@
+﻿<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gyumri's Districts</title>
+<link rel="stylesheet" href="~/Content/css/responsive.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="~/Content/style.css">
+
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="~/Content/css/map.css">
+
+<body>
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="display-3 fw-bold">Gyumri's Districts!</h1>
+            <p class="lead">Discover the soul of Gyumri through its historic quarters, vibrant neighborhoods, and hidden gems.</p>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-container">
+        <div class="map-filters">
+            <button class="filter-btn" data-category="hotels">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 22v-8.5a2.5 2.5 0 0 1 5 0V22"></path>
+                    <path d="M3 17h5"></path>
+                    <path d="M13 22v-7.5a2.5 2.5 0 0 1 5 0V22"></path>
+                    <path d="M13 17h5"></path>
+                </svg>
+                Hotels
+            </button>
+            <button class="filter-btn" data-category="museums">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 22V4c0-.5.2-1 .6-1.4C5 2.2 5.5 2 6 2h12c.5 0 1 .2 1.4.6.4.4.6.9.6 1.4v18H4z"></path>
+                    <path d="M2 22h20"></path>
+                    <path d="M10 6h4"></path>
+                    <path d="M10 10h4"></path>
+                    <path d="M10 14h4"></path>
+                    <path d="M10 18h4"></path>
+                </svg>
+                Museums
+            </button>
+            <button class="filter-btn" data-category="crafts">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
+                    <path d="M8.5 8.5v.01"></path>
+                    <path d="M16 15.5v.01"></path>
+                    <path d="M12 12v.01"></path>
+                    <path d="M11 17v.01"></path>
+                    <path d="M7 14v.01"></path>
+                </svg>
+                Crafts
+            </button>
+            <button class="filter-btn" data-category="history">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+                    <path d="M12 2v2"></path>
+                    <path d="M12 6v2"></path>
+                    <path d="m4.93 4.93 1.41 1.41"></path>
+                    <path d="m17.66 4.93-1.41 1.41"></path>
+                    <path d="M2 12h2"></path>
+                    <path d="M20 12h2"></path>
+                    <path d="m6.34 17.66 1.41-1.41"></path>
+                    <path d="m16.25 17.66-1.41-1.41"></path>
+                </svg>
+                History
+            </button>
+            <button class="filter-btn" data-category="outdoors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 22v-5l5-5 5 5-5 5z"></path>
+                    <path d="M9.5 14.5 16 8"></path>
+                    <path d="m17 2 5 5-5 5-5-5z"></path>
+                </svg>
+                Outdoors
+            </button>
+            <button class="filter-btn" data-category="cafes">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 8h1a4 4 0 1 1 0 8h-1"></path>
+                    <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path>
+                    <line x1="6" y1="2" x2="6" y2="4"></line>
+                    <line x1="10" y1="2" x2="10" y2="4"></line>
+                    <line x1="14" y1="2" x2="14" y2="4"></line>
+                </svg>
+                Cafes
+            </button>
+            <button class="filter-btn" data-category="restaurants">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 2h18"></path>
+                    <path d="M3 7h18"></path>
+                    <path d="M3 12h18"></path>
+                    <path d="m3 17 5 5"></path>
+                    <path d="m8 17-5 5"></path>
+                    <path d="M13 17h8"></path>
+                </svg>
+                Restaurants
+            </button>
+        </div>
+
+        <div class="map-content">
+            <!-- Info panels for districts -->
+            <div id="kumayri-district-panel" class="info-panel district-panel">
+                <div class="info-header">
+                    <h2>Kumayri</h2>
+                    <p class="subtitle">Historic District</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="~/Content/Images/kumayri.png" alt="Kumayri Historic District">
+                </div>
+                <div class="info-actions">
+                    <button class="action-btn save-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                            <polyline points="7 3 7 8 15 8"></polyline>
+                        </svg>
+                        Save
+                    </button>
+                    <button class="action-btn share-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="18" cy="5" r="3"></circle>
+                            <circle cx="6" cy="12" r="3"></circle>
+                            <circle cx="18" cy="19" r="3"></circle>
+                            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                        </svg>
+                        Share
+                    </button>
+                </div>
+                <div class="info-section">
+                    <h3>Quick Facts</h3>
+                    <p>Kumayri is the heart of Gyumri's cultural heritage. This district is a living museum with its preserved 18th and 19th-century buildings that reflect Armenian and Russian Imperial architecture.</p>
+                    <a href="#" class="more-link">more</a>
+                </div>
+                <div class="info-section">
+                    <div class="location-list">
+                        <div class="location-item">
+                            <div class="location-time-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div class="location-image">
+                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-v0iFzPomlnCxNBHxtGzd5a2IWtI6cY.png" alt="Aslamazyan Sisters Gallery">
+                            </div>
+                            <div class="location-info">
+                                <h4>Aslamazyan Sisters Gallery</h4>
+                                <div class="location-time">10:30-17:00 •</div>
+                                <div class="location-address">25 Haghtanaki Avenue, Gyumri</div>
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <div class="location-time-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div class="location-image">
+                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uJPHLqIUMLZgQ8N9IXMLiM1xtSJh8k.png" alt="Leo Ceramics Studio">
+                            </div>
+                            <div class="location-info">
+                                <h4>Leo Ceramics Studio</h4>
+                                <div class="location-time">12:00-18:00 •</div>
+                                <div class="location-address">47 Haghtanaki Avenue, Gyumri</div>
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <div class="location-time-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div class="location-image">
+                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-v0iFzPomlnCxNBHxtGzd5a2IWtI6cY.png" alt="Friendship Park">
+                            </div>
+                            <div class="location-info">
+                                <h4>Friendship Park</h4>
+                                <div class="location-time">9:00-22:00 •</div>
+                                <div class="location-address">Abovyan St. 242, Gyumri</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="view-all-btn">VIEW MORE OPTIONS</button>
+                </div>
+            </div>
+
+            <div id="northern-district-panel" class="info-panel district-panel">
+                <div class="info-header">
+                    <h2>Northern District</h2>
+                    <p class="subtitle">Modern Residential Area</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="~/Content/Images/creamics.png" alt="Northern District">
+                </div>
+                <div class="info-actions">
+                    <button class="action-btn save-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                            <polyline points="7 3 7 8 15 8"></polyline>
+                        </svg>
+                        Save
+                    </button>
+                    <button class="action-btn share-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="18" cy="5" r="3"></circle>
+                            <circle cx="6" cy="12" r="3"></circle>
+                            <circle cx="18" cy="19" r="3"></circle>
+                            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                        </svg>
+                        Share
+                    </button>
+                </div>
+                <div class="info-section">
+                    <h3>Quick Facts</h3>
+                    <p>The Northern District of Gyumri is a modern residential area developed after the 1988 earthquake. It features contemporary architecture, shopping centers, and recreational facilities.</p>
+                    <a href="#" class="more-link">more</a>
+                </div>
+                <div class="info-section">
+                    <div class="location-list">
+                        <div class="location-item">
+                            <div class="location-time-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div class="location-image">
+                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-v0iFzPomlnCxNBHxtGzd5a2IWtI6cY.png" alt="Friendship Park">
+                            </div>
+                            <div class="location-info">
+                                <h4>Friendship Park</h4>
+                                <div class="location-time">Open 24 hours •</div>
+                                <div class="location-address">Northern District, Gyumri</div>
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <div class="location-time-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div class="location-image">
+                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uJPHLqIUMLZgQ8N9IXMLiM1xtSJh8k.png" alt="Berlin Hotel">
+                            </div>
+                            <div class="location-info">
+                                <h4>Berlin Hotel</h4>
+                                <div class="location-time">Open 24 hours •</div>
+                                <div class="location-address">Northern District, Gyumri</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="view-all-btn">VIEW MORE OPTIONS</button>
+                </div>
+            </div>
+
+            <div id="eastern-district-panel" class="info-panel district-panel">
+                <div class="info-header">
+                    <h2>Eastern District</h2>
+                    <p class="subtitle">Cultural and Educational Hub</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img class="red-tint" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-v0iFzPomlnCxNBHxtGzd5a2IWtI6cY.png" alt="Eastern District">
+                </div>
+                <div class="info-actions">
+                    <button class="action-btn save-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                            <polyline points="7 3 7 8 15 8"></polyline>
+                        </svg>
+                        Save
+                    </button>
+                    <button class="action-btn share-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="18" cy="5" r="3"></circle>
+                            <circle cx="6" cy="12" r="3"></circle>
+                            <circle cx="18" cy="19" r="3"></circle>
+                            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                        </svg>
+                        Share
+                    </button>
+                </div>
+                <div class="info-section">
+                    <h3>Quick Facts</h3>
+                    <p>The Eastern District of Gyumri is known for its educational institutions and cultural venues. This area houses several schools, the Gyumri State Pedagogical Institute, and various museums.</p>
+                    <a href="#" class="more-link">more</a>
+                </div>
+                <div class="info-section">
+                    <div class="location-list">
+                        <div class="location-item">
+                            <div class="location-time-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div class="location-image">
+                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-v0iFzPomlnCxNBHxtGzd5a2IWtI6cY.png" alt="Gyumri Museum">
+                            </div>
+                            <div class="location-info">
+                                <h4>Gyumri Museum</h4>
+                                <div class="location-time">10:00-17:00 •</div>
+                                <div class="location-address">Eastern District, Gyumri</div>
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <div class="location-time-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div class="location-image">
+                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uJPHLqIUMLZgQ8N9IXMLiM1xtSJh8k.png" alt="Aregak Cafe">
+                            </div>
+                            <div class="location-info">
+                                <h4>Aregak Cafe</h4>
+                                <div class="location-time">09:00-20:00 •</div>
+                                <div class="location-address">Eastern District, Gyumri</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="view-all-btn">VIEW MORE OPTIONS</button>
+                </div>
+            </div>
+
+            <!-- Info panels for POIs -->
+            <div id="leo-ceramics-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>Leo Ceramics</h2>
+                    <p class="subtitle">Pottery Studio</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uJPHLqIUMLZgQ8N9IXMLiM1xtSJh8k.png" alt="Leo Ceramics Pottery Studio">
+                </div>
+                <div class="info-actions">
+                    <button class="action-btn save-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                            <polyline points="7 3 7 8 15 8"></polyline>
+                        </svg>
+                        Save
+                    </button>
+                    <button class="action-btn share-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="18" cy="5" r="3"></circle>
+                            <circle cx="6" cy="12" r="3"></circle>
+                            <circle cx="18" cy="19" r="3"></circle>
+                            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                        </svg>
+                        Share
+                    </button>
+                </div>
+                <div class="info-section">
+                    <h3>Quick Facts</h3>
+                    <p>Leo Ceramics Pottery Studio is a charming artisan space nestled in the heart of Gyumri. The studio is renowned for its handcrafted ceramic creations that blend traditional Armenian motifs with contemporary design.</p>
+                    <div class="location-time">12:00-18:00 •</div>
+                    <div class="location-address">47 Haghtanaki Avenue, Gyumri</div>
+                </div>
+                <div class="info-section">
+                    <h3>Photos</h3>
+                    <div class="photo-gallery">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uJPHLqIUMLZgQ8N9IXMLiM1xtSJh8k.png" alt="Ceramic pendant">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uJPHLqIUMLZgQ8N9IXMLiM1xtSJh8k.png" alt="Ceramic decoration">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uJPHLqIUMLZgQ8N9IXMLiM1xtSJh8k.png" alt="Ceramic vase">
+                    </div>
+                    <button class="view-all-btn">VIEW ALL PHOTOS</button>
+                </div>
+            </div>
+
+            <div id="gyumri-museum-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>Gyumri Museum</h2>
+                    <p class="subtitle">History Museum</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-v0iFzPomlnCxNBHxtGzd5a2IWtI6cY.png" alt="Gyumri Museum">
+                </div>
+                <div class="info-actions">
+                    <button class="action-btn save-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                            <polyline points="7 3 7 8 15 8"></polyline>
+                        </svg>
+                        Save
+                    </button>
+                    <button class="action-btn share-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="18" cy="5" r="3"></circle>
+                            <circle cx="6" cy="12" r="3"></circle>
+                            <circle cx="18" cy="19" r="3"></circle>
+                            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                        </svg>
+                        Share
+                    </button>
+                </div>
+                <div class="info-section">
+                    <h3>Quick Facts</h3>
+                    <p>The Gyumri Museum showcases the rich history and cultural heritage of Gyumri and the Shirak region. The museum houses archaeological artifacts, historical documents, and exhibits about the city's development through the centuries.</p>
+                    <div class="location-time">10:00-17:00 •</div>
+                    <div class="location-address">Eastern District, Gyumri</div>
+                </div>
+            </div>
+
+            <div id="berlin-hotel-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>Berlin Hotel</h2>
+                    <p class="subtitle">Luxury Hotel</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uJPHLqIUMLZgQ8N9IXMLiM1xtSJh8k.png" alt="Berlin Hotel">
+                </div>
+                <div class="info-actions">
+                    <button class="action-btn save-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                            <polyline points="7 3 7 8 15 8"></polyline>
+                        </svg>
+                        Save
+                    </button>
+                    <button class="action-btn share-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="18" cy="5" r="3"></circle>
+                            <circle cx="6" cy="12" r="3"></circle>
+                            <circle cx="18" cy="19" r="3"></circle>
+                            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                        </svg>
+                        Share
+                    </button>
+                </div>
+                <div class="info-section">
+                    <h3>Quick Facts</h3>
+                    <p>Berlin Hotel is a luxury accommodation option in Gyumri, offering modern amenities and comfortable rooms. The hotel features a restaurant serving Armenian and international cuisine, a fitness center, and conference facilities.</p>
+                    <div class="location-time">Open 24 hours •</div>
+                    <div class="location-address">Northern District, Gyumri</div>
+                </div>
+            </div>
+
+            <div id="district-label">KUMAYRI HISTORIC DISTRICT</div>
+
+            <!-- Map -->
+            <div id="map"></div>
+        </div>
+    </section>
+
+</body>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/e8c2e1c09c.js" crossorigin="anonymous"></script>
+<script src="~/Content/map.js"></script>

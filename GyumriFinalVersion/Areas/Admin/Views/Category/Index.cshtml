@@ -1,12 +1,15 @@
 ﻿@model List<Gyumri.Common.ViewModel.Category.CategoryViewModel>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
 
 @{
     ViewData["Title"] = "Categories List";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-
 }
 
 <h1>@ViewData["Title"]</h1>
+
+<partial name="_LoginPartial" />
+
 
 <table class="table">
     <thead>

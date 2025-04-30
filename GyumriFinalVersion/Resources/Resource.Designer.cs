@@ -29,7 +29,7 @@ namespace GyumriFinalVersion.Resources {
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        public Resource() {
+        internal Resource() {
         }
         
         /// <summary>
@@ -59,9 +59,18 @@ namespace GyumriFinalVersion.Resources {
                 resourceCulture = value;
             }
         }
-
+        
         /// <summary>
-        ///   Looks up a localized string similar to Welcome.
+        ///   Looks up a localized string similar to Welcome to Gyumri.
+        /// </summary>
+        public static string Gyumri {
+            get {
+                return ResourceManager.GetString("Gyumri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5 reasons to visit Gyumri.
         /// </summary>
         public static string Welcome {
             get {

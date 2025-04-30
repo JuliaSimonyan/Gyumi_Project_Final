@@ -1,0 +1,38 @@
+﻿@model List<Gyumri.Common.ViewModel.Apartment.ApartmentViewModel>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h2>Apartments</h2>
+
+<p>
+    <a href="@Url.Action("Add")">Add New Apartment</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Price Range</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var apartment in Model)
+        {
+            <tr>
+                <td>@apartment.Name</td>
+                <td>@apartment.Type</td>
+                <td>@apartment.MinPrice - @apartment.MaxPrice</td>
+                <td>@apartment.Description</td>
+                <td><img src="~/Images/accomodations/@apartment.Image" alt="Image" style="width: 50px; height: 50px;" /></td>
+                <td>
+                    <form action="@Url.Action("Delete", "Apartment", new { id = apartment.Id, area = "Admin" })" method="post" style="display:inline-block;">
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this place?')">Delete</button>
+                    </form>
+                    <a href="@Url.Action("Edit", "Apartment", new { id = apartment.Id, area = "Admin" })" class="btn btn-warning">Edit</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Leaflet Routing with Clicks</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+    <style>
+        #map {
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Click two points to draw a route</h2>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.min.js"></script>
+
+    <script>
+        var map = L.map('map').setView([40.1792, 44.4991], 10); // Երևան
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        var points = [];
+        var markers = [];
+        var routingControl = null;
+
+        map.on('click', function (e) {
+            if (points.length >= 2) {
+                // Եթե արդեն 2 կետ ունենք, մաքրում ենք
+                points = [];
+                markers.forEach(function (marker) {
+                    map.removeLayer(marker);
+                });
+                markers = [];
+                if (routingControl) {
+                    map.removeControl(routingControl);
+                    routingControl = null;
+                }
+            }
+
+            var marker = L.marker(e.latlng).addTo(map);
+            markers.push(marker);
+            points.push(e.latlng);
+
+            if (points.length === 2) {
+                drawRoute(points[0], points[1]);
+            }
+        });
+
+        function drawRoute(start, end) {
+            routingControl = L.Routing.control({
+                waypoints: [
+                    start,
+                    end
+                ],
+                routeWhileDragging: false,
+                show: false,
+                draggableWaypoints: false,
+                addWaypoints: false,
+                lineOptions: {
+                    styles: [{ color: 'blue', weight: 5 }]
+                },
+                createMarker: function () { return null; }, // Չէ որ մենք արդեն մարկեր դրեցինք
+            }).addTo(map);
+        }
+    </script>
+
+</body>
+</html>

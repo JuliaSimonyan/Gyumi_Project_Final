@@ -2,6 +2,7 @@
 using Gyumri.Common.ViewModel.Category;
 using Gyumri.Data.Models;
 using GyumriFinalVersion.Models;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.CSharp;
 using System.Diagnostics;
@@ -34,8 +35,8 @@ namespace GyumriFinalVersion.Controllers
             var cultureInfo = new System.Globalization.CultureInfo(currentCulture);
 
             // Set the culture for the request
-            System.Threading.Thread.CurrentThread.CurrentCulture = cultureInfo;
-            System.Threading.Thread.CurrentThread.CurrentUICulture = cultureInfo;
+            Thread.CurrentThread.CurrentCulture = cultureInfo;
+            Thread.CurrentThread.CurrentUICulture = cultureInfo;
 
             ViewBag.Categories = await _categoryService.GetAllCategories();
             return View();
@@ -55,20 +56,37 @@ namespace GyumriFinalVersion.Controllers
             ViewBag.Categories = await _categoryService.GetAllCategories();
             return View();
         }
+        public async Task<IActionResult> Test()
+        {
+            ViewBag.Categories = await _categoryService.GetAllCategories();
+            ViewBag.Subcategories = await _subcategoryService.GetAllSubcategories();
+            ViewBag.Places = await _placeService.GetAllPlaces();
+            var currentCulture = Request.Cookies["UserCulture"] ?? "en";
+            var cultureInfo = new System.Globalization.CultureInfo(currentCulture);
 
-        [HttpPost]
+            // Set the culture for the request
+            Thread.CurrentThread.CurrentCulture = cultureInfo;
+            Thread.CurrentThread.CurrentUICulture = cultureInfo;
+
+            ViewBag.Categories = await _categoryService.GetAllCategories();
+            return View();
+        }
+
         public IActionResult ChangeLanguage(string lang)
         {
-            // Պահել լեզուն cookie-ում
-            Response.Cookies.Append(CultureCookieName, lang, new Microsoft.AspNetCore.Http.CookieOptions
-            {
-                Expires = DateTime.UtcNow.AddYears(1),  // Լեզուն պահպանվում է 1 տարի
-                IsEssential = true, // Անհրաժեշտ է կարգավորումների համար
-                SameSite = Microsoft.AspNetCore.Http.SameSiteMode.Lax // Համակարգչի միջավայրում
-            });
+            
+                // Պահել լեզուն cookie-ում
+                Response.Cookies.Append(CultureCookieName, lang, new Microsoft.AspNetCore.Http.CookieOptions
+                {
+                
+        Expires = DateTime.UtcNow.AddYears(1),  // Լեզուն պահպանվում է 1 տարի
+                 IsEssential = true, // Անհրաժեշտ է կարգավորումների համար
+                 SameSite = Microsoft.AspNetCore.Http.SameSiteMode.Lax // Համակարգչի միջավայրում
+    });
+ 
+             // Արտահանենք լեզվով փոխված էջը
+             return RedirectToAction("Index");
+}
 
-            // Արտահանենք լեզվով փոխված էջը
-            return RedirectToAction("Index");
-        }
     }
 }

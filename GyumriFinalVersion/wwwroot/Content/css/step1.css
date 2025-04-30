@@ -1,0 +1,354 @@
+/* Transportation page specific styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.main-content {
+    margin-top: 76px; /* To account for fixed navbar */
+    padding: 0;
+}
+
+/* Progress Steps */
+.progress-steps {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: white;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 230px;
+}
+
+.step-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.step.active .step-icon {
+    background-color: #000;
+    color: white;
+}
+
+.step-text {
+    font-size: 12px;
+    color: #666;
+}
+
+.step.active .step-text {
+    color: #000;
+    font-weight: 500;
+}
+
+.step-divider {
+    width: 110px;
+    height: 1px;
+    border-bottom: 2px dotted black;
+    background-color: #e0e0e0;
+    margin-top: -18px;
+}
+
+.progress-indicator {
+    text-align: center;
+    padding: 10px 0;
+    background-color: white;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.progress-indicator p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Trip Planner Container */
+.trip-planner-container {
+    display: flex;
+    justify-content: space-between;
+    width: 1160px;
+    margin: 0 auto;
+}
+.map-wrapper {
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    /* Add this to ensure proper stacking context */
+    z-index: 1;
+}
+/* Map Column */
+.map-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#map {
+    position: relative !important;
+        filter: grayscale(100%);
+  border-radius: 10px;
+    margin: 10px;
+    height: 580px;
+}
+
+/* Apply grayscale to map */
+.grayscale-map {
+    filter: grayscale(100%);
+}
+
+.route-info-container {
+    background-color: #eee;
+    margin: 10px 0;
+    border-radius: 10px;
+    height: 60px;
+    padding: 15px;
+}
+.route-info-container-black {
+    background-color: #181818;
+    margin: 10px auto;
+    width: 1160px;
+    border-radius: 10px;
+    height: 40px;
+    padding: 5px 20px;
+    box-sizing: border-box;
+}
+.route-info-container-black h5, p {
+    color: white !important;
+}
+
+.route-info, .route-info-white{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.route-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.route-info p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+/* Options Column */
+.options-column {
+    flex: 1;
+    padding: 0;
+}
+.leaflet-control-attribution {
+    display: none;
+}
+.transport-option-group {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: #eee;}
+
+.transport-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.transport-header.expanded {
+    border-bottom: 1px solid #eee;
+}
+
+.transport-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.transport-name {
+    flex: 1;
+    font-weight: 500;
+}
+
+.dropdown-arrow {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.transport-content {
+    padding: 0 15px 15px 15px;
+}
+
+.transport-item {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.2s;
+}
+
+.transport-item.selected {
+    background-color: #f5f5f5;
+}
+
+.item-radio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.item-radio input[type="radio"] {
+    margin-right: 10px;
+}
+
+.item-radio label {
+    font-weight: 500;
+    margin: 0;
+    cursor: pointer;
+}
+input[type='radio'] {
+    accent-color: #232323;
+}
+.item-rating {
+    float: right;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.item-details {
+    display: flex;
+    gap: 20px;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.detail i {
+    margin-right: 8px;
+    width: 16px;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0  auto !important;
+    padding: 20px;
+
+}
+
+.back-btn, .next-btn {
+    padding: 8px 16px;
+    border-radius: 38px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+}
+
+.back-btn {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.back-btn:hover {
+    background-color: #f5f5f5;
+}
+
+.next-btn {
+    background-color: #000;
+    border: none;
+    color: white;
+}
+
+.next-btn:hover {
+    background-color: #333;
+}
+
+/* Distance marker on the map */
+.distance-marker {
+    background: white;
+    border: 1px solid #666;
+    border-radius: 4px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.distance-marker div {
+    color: #333;
+    font-weight: 500;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .trip-planner-container {
+        flex-direction: column;
+    }
+    
+    .map-column {
+        border-right: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .progress-steps {
+        padding: 15px 0;
+    }
+    
+    .step {
+        width: 80px;
+    }
+    
+    .step-divider {
+        width: 30px;
+    }
+    
+    .item-details {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .step-text {
+        font-size: 10px;
+    }
+    
+    .navigation-buttons {
+        padding: 15px;
+    }
+}

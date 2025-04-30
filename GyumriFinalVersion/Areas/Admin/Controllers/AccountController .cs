@@ -3,8 +3,10 @@ using GyumriFinalVersion.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GyumriFinalVersion.Controllers
+namespace GyumriFinalVersion.Areas.Admin.Controllers
 {
+    [Area("Admin")]
+
     public class AccountController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
@@ -49,7 +51,7 @@ namespace GyumriFinalVersion.Controllers
             ModelState.AddModelError(string.Empty, "Invalid login attempt.");
             return View(model);
         }
-
+       
         [HttpPost]
         public async Task<IActionResult> Logout()
         {

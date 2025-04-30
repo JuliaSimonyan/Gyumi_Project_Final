@@ -1,6 +1,6 @@
 ﻿@{
    // ViewData["Title"] = "Home Page";
-   // var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
+   var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -15,9 +15,8 @@
     <link rel="stylesheet" href="~/GyumriFinalVersion.styles.css" asp-append-version="true" /> *@
 </head>
 <body>
-    <partial name="_LoginPartial" />
 
-@*     <nav class="navbar navbar-dark bg-black navbar-expand-lg">
+    <nav class="navbar navbar-dark bg-black navbar-expand-lg">
         <div class="container px-0">
             <a class="navbar-brand" href="@Url.Action("Index", "Home")"><img src="~/content/Images/Vector.png" alt="Logo" height="30"></a>
 
@@ -44,49 +43,58 @@
                         </li>
                         }
                     
-                </ul>
+                </ul> 
+               
                 <div class="d-flex" style="display:flex;align-items: center;justify-content: center;">
                     <div class="search-container">
                         <a class="nav-link search-icon" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
                         <input type="text" class="search-input" placeholder="Search...">
                     </div>
                     <a class="nav-link" href="#"><i class="fa-regular fa-bookmark"></i></a>
-                    <form asp-action="ChangeLanguage" method="POST">
-                        <select class="language-dropdown dropdown-menu" name="lang" onchange="this.form.submit()">
-                        @if (currentCulture == "en")
-                        {
-                            <option value="en" selected>English</option>
-                        }
-                        else
-                        {
-                            <option value="en">English</option>
-                        }
-                        @if (currentCulture == "hy-AM")
-                        {
-                            <option value="hy-AM" selected>Հայերեն</option>
-                        }
-                        else
-                        {
-                            <option value="hy-AM">Հայերեն</option>
-                        }
-                        @if (currentCulture == "ru-RU")
-                        {
-                            <option value="ru-RU" selected>Русский</option>
-                        }
-                        else
-                        {
-                            <option value="ru-RU">Русский</option>
-                        }
+                                            <div class="language-dropdown">
 
-                    </select>
-                    
-                       </form>
+                    <form asp-action="ChangeLanguage" method="POST">
+
+                        <select style="border:none; background-color:transparent; color:white;" name="lang" onchange="this.form.submit()">
+                            @if (currentCulture == "en")
+                            {
+                                
+                                    <option class="nav-link" value="en" selected>English</option>
+                            }
+                            else
+                            {
+
+                                    <option class="nav-link" value="en">English</option>
+                            }
+                            @if (currentCulture == "hy-AM")
+                            {
+
+                                    <option  value="hy-AM" selected>Հայերեն</option>
+                            }
+                            else
+                            {
+                                    <option value="hy-AM">Հայերեն</option>
+                            }
+                            @if (currentCulture == "ru-RU")
+                            {
+                                    <option  value="ru-RU" selected>Русский</option>
+                            }
+                            else
+                            {
+                                    <option  value="ru-RU">Русский</option>
+                            }
+
+                        </select>
+
+                    </form>
+                    </div>
+
                   
                 </div>
             </div>
         </div>
     </nav>
- *@    <div >
+    <div >
         <main role="main" >
             @RenderBody()
         </main>

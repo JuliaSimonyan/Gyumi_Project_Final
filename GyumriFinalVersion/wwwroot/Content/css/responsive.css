@@ -93,6 +93,11 @@
         width: 340px !important;
 
     }
+    .discover-overlay-new {
+        margin:0 !important;
+        height: 380px !important;
+        width: 340px !important;
+    }
     .footer-logo {
     margin-left: 0 !important;
     }
