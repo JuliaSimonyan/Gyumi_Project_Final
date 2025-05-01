@@ -61,11 +61,38 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Welcome to Gyumri.
+        ///   Looks up a localized string similar to Home.
         /// </summary>
-        public static string Gyumri {
+        public static string Home {
             get {
-                return ResourceManager.GetString("Gyumri", resourceCulture);
+                return ResourceManager.GetString("Home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Plan a Trip.
+        /// </summary>
+        public static string PlanATrip {
+            get {
+                return ResourceManager.GetString("PlanATrip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to See more.
+        /// </summary>
+        public static string SeeMore {
+            get {
+                return ResourceManager.GetString("SeeMore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your trip plan.
+        /// </summary>
+        public static string TripPlan {
+            get {
+                return ResourceManager.GetString("TripPlan", resourceCulture);
             }
         }
         
@@ -75,6 +102,24 @@ namespace GyumriFinalVersion.Resources {
         public static string Welcome {
             get {
                 return ResourceManager.GetString("Welcome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An open city where innovations, arts and crafts, traditions, and humor are born.&lt;br&gt; A place for you..
+        /// </summary>
+        public static string WelcomeDescription {
+            get {
+                return ResourceManager.GetString("WelcomeDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Welcome to Gyumri.
+        /// </summary>
+        public static string WelcomeGyumri {
+            get {
+                return ResourceManager.GetString("WelcomeGyumri", resourceCulture);
             }
         }
     }

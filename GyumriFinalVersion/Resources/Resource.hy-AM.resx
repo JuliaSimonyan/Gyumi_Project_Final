@@ -117,10 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Gyumri" xml:space="preserve">
-    <value>Բարի Գալուստ Գյումրի</value>
+  <data name="Home" xml:space="preserve">
+    <value>Գլխավոր</value>
+  </data>
+  <data name="PlanATrip" xml:space="preserve">
+    <value>Պլանավորել ճանապարհորդություն</value>
+  </data>
+  <data name="SeeMore" xml:space="preserve">
+    <value>Տեսնել ավելին</value>
+  </data>
+  <data name="TripPlan" xml:space="preserve">
+    <value>Ձեր ուղևորության պլանը</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>5 պատճառ Գյումրի այցելելու համար</value>
+  </data>
+  <data name="WelcomeDescription" xml:space="preserve">
+    <value>Բաց քաղաք, որտեղ ծնվում են նորարարությունները, արվեստն ու արհեստները, ավանդույթներն ու հումորը։&lt;br&gt; Քաղաք՝ քեզ համար։</value>
+  </data>
+  <data name="WelcomeGyumri" xml:space="preserve">
+    <value>Բարի Գալուստ Գյումրի</value>
   </data>
 </root>

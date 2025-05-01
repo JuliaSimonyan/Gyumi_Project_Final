@@ -117,10 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Gyumri" xml:space="preserve">
-    <value>Добро пожаловать Gyumri</value>
+  <data name="Home" xml:space="preserve">
+    <value>Главная</value>
+  </data>
+  <data name="PlanATrip" xml:space="preserve">
+    <value>Спланировать поездку</value>
+  </data>
+  <data name="SeeMore" xml:space="preserve">
+    <value>Смотреть больше</value>
+  </data>
+  <data name="TripPlan" xml:space="preserve">
+    <value>План вашего путешествия</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Добро пожаловать</value>
+  </data>
+  <data name="WelcomeDescription" xml:space="preserve">
+    <value>Открытый город, где рождаются инновации, искусство и ремёсла, традиции и юмор.&lt;br&gt; Город для тебя.</value>
+  </data>
+  <data name="WelcomeGyumri" xml:space="preserve">
+    <value>Добро пожаловать Гюмри</value>
   </data>
 </root>

@@ -22,9 +22,11 @@
     <section class="hero-section">
         <div class="hero-overlay"></div>
         <div class="hero-content ">
-            <h1 class="display-1 fw-bold">@AppRes.Gyumri</h1>
-            <p class="lead">An open city where innovations, arts and crafts, traditions, and humor are born.<br> A place for you.</p>
-            <a href=@Url.Action("Index", "Trip") class="btn btn-plan fw-normal">Plan a Trip</a>
+            <h1 class="display-1 fw-bold">@AppRes.WelcomeGyumri</h1>
+            <p class="lead">
+                @Html.Raw(AppRes.WelcomeDescription)
+            </p>
+            <a href=@Url.Action("Index", "Trip") class="btn btn-plan fw-normal">@AppRes.PlanATrip</a>
         </div>
         <div class="hero-design">
             <img src="/Content/Images/gif1.gif">
@@ -81,7 +83,7 @@
         <div class="ms-5">
             <h2 class="section-title1">Places</h2>
             <p class="section-subtitle1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="#" class="see-more-link">See More<span class="arrow"> &#8702;</span></a>
+            <a href="#" class="see-more-link">@AppRes.SeeMore <span class="arrow"> &#8702;</span></a>
             <div class="scroll-container" id="scrollContainer1">
                 <div class="card">
                     <img src="/Content/Images/place1.jpeg" alt="Forge of Legends">
