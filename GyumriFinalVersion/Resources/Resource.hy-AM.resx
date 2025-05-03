@@ -117,6 +117,30 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ArchitecturalTimeTravel" xml:space="preserve">
+    <value>Ճարտարապետական ժամանակային ճանապարհորդություն</value>
+  </data>
+  <data name="ArtTechTraditionCollide" xml:space="preserve">
+    <value>Որտեղ արվեստը, տեխնոլոգիան և ավանդույթը բախվում են</value>
+  </data>
+  <data name="CulturalRenaissance" xml:space="preserve">
+    <value>Մշակութային վերաբեաշխում</value>
+  </data>
+  <data name="DiscovertheHeartofArmenia" xml:space="preserve">
+    <value>Բացահայտեք Հայաստանի սիրտը</value>
+  </data>
+  <data name="ForgeOfLegends" xml:space="preserve">
+    <value>Լեգենդների դարբնոց</value>
+  </data>
+  <data name="FromEmpirestoEarthquakes" xml:space="preserve">
+    <value>Իմպերիայից մինչև երկրաշարժեր</value>
+  </data>
+  <data name="GyumrisCulture" xml:space="preserve">
+    <value>Գյումրիի մշակույթ</value>
+  </data>
+  <data name="GyumriHeritage" xml:space="preserve">
+    <value>Գյումրիի ժառանգություն</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>Գլխավոր</value>
   </data>
@@ -129,6 +153,9 @@
   <data name="TripPlan" xml:space="preserve">
     <value>Ձեր ուղևորության պլանը</value>
   </data>
+  <data name="UNESCOսBlacksmithingMasterpieces" xml:space="preserve">
+    <value>ՅՈՒՆԵՍԿՕ-ի դարբնության գլուխգործոցները</value>
+  </data>
   <data name="Welcome" xml:space="preserve">
     <value>5 պատճառ Գյումրի այցելելու համար</value>
   </data>
@@ -137,5 +164,77 @@
   </data>
   <data name="WelcomeGyumri" xml:space="preserve">
     <value>Բարի Գալուստ Գյումրի</value>
+  </data>
+  <data name="TraditionMeetsModernity" xml:space="preserve">
+    <value>Ավանդույթը հանդիպում է մոդեռնությանը</value>
+  </data>
+  <data name="LearnaboutGyumrisdistricts" xml:space="preserve">
+    <value>Ուսումնասիրեք Գյումրիի շրջանները</value>
+  </data>
+  <data name="Discover" xml:space="preserve">
+    <value>Բացահայտել</value>
+  </data>
+  <data name="GyumrisUniqueDistricts" xml:space="preserve">
+    <value>Գյումրիի յուրահատուկ շրջանները</value>
+  </data>
+  <data name="JourneyThroughHistoryCultureCreativit" xml:space="preserve">
+    <value>Ճանապարհորդություն պատմության, մշակույթի և ստեղծագործության միջոցով</value>
+  </data>
+  <data name="TakeYour" xml:space="preserve">
+    <value>Վերցրու քո</value>
+  </data>
+  <data name="AndExplore" xml:space="preserve">
+    <value>և ուսումնասիրիր</value>
+  </data>
+  <data name="GyumriUpperCase" xml:space="preserve">
+    <value>ԳՅՈՒՄՐԻ</value>
+  </data>
+  <data name="CuponUpperCase" xml:space="preserve">
+    <value>ԿՈՒՊՈՆԸ</value>
+  </data>
+  <data name="CuponFeature" xml:space="preserve">
+    <value>Մեր կտրոնների հնարավորությունը շուտով հասանելի կլինի՝ վերադարձիր շուտով՝</value>
+  </data>
+  <data name="greatDeals" xml:space="preserve">
+    <value>հրաշալի առաջարկների համար։</value>
+  </data>
+  <data name="LookingForMore" xml:space="preserve">
+    <value>Փնտրու՞մ ես ավելին։</value>
+  </data>
+  <data name="DiveDeeperIntoGyumrisHiddenGems" xml:space="preserve">
+    <value>Սուզվիր ավելի խոր՝ բացահայտելու Գյումրիի թաքնված գանձերը</value>
+  </data>
+  <data name="LookingForPartTextt" xml:space="preserve">
+    <value>Գյումրին ավելին է, քան պարզապես գեղեցիկ շենքերի և թանգարանների հավաքածու։ Այն քաղաք է, որ լի է թաքնված անկյուններով, չպատմված պատմություններով և կենդանի ավանդույթներով, որոնք անցնում են տեսանելիից այն կողմ։ Անկախ նրանից՝ դու տեղացի ես թե այցելու, միշտ կա նոր բան բացահայտելու։</value>
+  </data>
+  <data name="ExploretheUndergroundArtsScene" xml:space="preserve">
+    <value>Ուսումնասիրիր հատակագծի արվեստի աշխարհը</value>
+  </data>
+  <data name="ExploretheUndergroundArtsSceneText" xml:space="preserve">
+    <value>Գյումրիի արվեստի աշխարհը չպետք է սահմանափակվի միայն իր պատկերասրահներով և թատրոններով։</value>
+  </data>
+  <data name="TakeWorkshopWithLocalArtisans" xml:space="preserve">
+    <value>Վերցրու դասընթաց տեղական արհեստավորների հետ</value>
+  </data>
+  <data name="TakeWorkshopWithLocalArtisansText" xml:space="preserve">
+    <value>Գյումրին արհեստավորների քաղաք է։</value>
+  </data>
+  <data name="ExperienceGyumriAfterDark" xml:space="preserve">
+    <value>Զգա Գյումրին գիշերվա ընթացքում</value>
+  </data>
+  <data name="ExperienceGyumriAfterDarkText" xml:space="preserve">
+    <value>Քաղաքը կյանքի է կոչվում ուրիշ ձևով արևածագից հետո։</value>
+  </data>
+  <data name="LetsPlanYourTrip" xml:space="preserve">
+    <value>Արի պլանավորենք քո ճամփորդությունը։</value>
+  </data>
+  <data name="TripPageText" xml:space="preserve">
+    <value>Օգտագործիր այս գործիքը՝ քո ճամփորդությունը, կեցությունը և զբաղմունքները կազմակերպելու համար՝ անմոռանալի ճանապարհորդություն դեպի Գյումրի ապահովելու նպատակով։ Վերջում կարող ես ստանալ քո անհատականացված պլանը՝ էլ․ փոստով կամ ներբեռնմամբ։</value>
+  </data>
+  <data name="Adults" xml:space="preserve">
+    <value>Մեծահասակներ</value>
+  </data>
+  <data name="GettingHere" xml:space="preserve">
+    <value>Հաջորդը՝ Ինչպես հասնել այստեղ</value>
   </data>
 </root>

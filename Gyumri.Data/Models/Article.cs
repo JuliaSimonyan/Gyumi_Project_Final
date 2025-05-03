@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Gyumri.Data.Models
 {
-    public enum ApartmentType
+    public class Article
     {
-        Hotel,
-        GuestHouse,
-        Hostel
+
     }
 }

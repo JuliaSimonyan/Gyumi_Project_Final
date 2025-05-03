@@ -26,7 +26,7 @@
             <p class="lead">
                 @Html.Raw(AppRes.WelcomeDescription)
             </p>
-            <a href=@Url.Action("Index", "Trip") class="btn btn-plan fw-normal">@AppRes.PlanATrip</a>
+            <a asp-controller="Trip" asp-action="Index" class="btn btn-plan fw-normal">@AppRes.PlanATrip</a>
         </div>
         <div class="hero-design">
             <img src="/Content/Images/gif1.gif">
@@ -41,98 +41,99 @@
                 <div class="card">
                     <img src="/Content/Images/reason1.jpeg" alt="Forge of Legends">
                     <div class="card-overlay">
-                        <h5 class="card-title">Forge of Legends</h5>
-                        <p class="card-text">UNESCO’s Blacksmithing Masterpieces</p>
+                        <h5 class="card-title">@AppRes.ForgeOfLegends</h5>
+                        <p class="card-text">@AppRes.UNESCOսBlacksmithingMasterpieces</p>
                     </div>
 
                 </div>
                 <div class="card">
                     <img src="/Content/Images/reason2.jpeg" alt="Architectural Time Travel">
                     <div class="card-overlay">
-                        <h5 class="card-title">Architectural Time Travel</h5>
-                        <p class="card-text">From Empires to Earthquakes</p>
+                        <h5 class="card-title">@AppRes.ArchitecturalTimeTravel</h5>
+                        <p class="card-text">@AppRes.FromEmpirestoEarthquakes</p>
                     </div>
 
                 </div>
                 <div class="card">
                     <img src="/Content/Images/reason3.jpeg" alt="Cultural Renaissance">
                     <div class="card-overlay">
-                        <h5 class="card-title">Cultural Renaissance</h5>
-                        <p class="card-text">Where Art, Tech, and Tradition Collide</p>
+                        <h5 class="card-title">@AppRes.CulturalRenaissance</h5>
+                        <p class="card-text">@AppRes.ArtTechTraditionCollide</p>
                     </div>
 
                 </div>
                 <div class="card">
                     <img src="/Content/Images/reason4.jpeg" alt="Gyumri's Heritage">
                     <div class="card-overlay">
-                        <h5 class="card-title">Gyumri's Heritage</h5>
-                        <p class="card-text">Discover the Heart of Armenia</p>
+                        <h5 class="card-title">@AppRes.GyumriHeritage</h5>
+                        <p class="card-text">@AppRes.DiscovertheHeartofArmenia</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="/Content/Images/reason5.jpeg" alt="Gyumri's Culture">
                     <div class="card-overlay">
-                        <h5 class="card-title">Gyumri's Culture</h5>
-                        <p class="card-text">Tradition Meets Modernity</p>
+                        <h5 class="card-title">@AppRes.GyumrisCulture</h5>
+                        <p class="card-text">@AppRes.TraditionMeetsModernity</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Section 2 -->
-        <div class="ms-5">
-            <h2 class="section-title1">Places</h2>
+        <div class="mb-1 ms-5">
+            <h2 class="section-title1">@AppRes.Welcome</h2>
             <p class="section-subtitle1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="#" class="see-more-link">@AppRes.SeeMore <span class="arrow"> &#8702;</span></a>
             <div class="scroll-container" id="scrollContainer1">
                 <div class="card">
                     <img src="/Content/Images/place1.jpeg" alt="Forge of Legends">
                     <div class="card-overlay">
-                        <h5 class="card-title">Forge of Legends</h5>
-                        <p class="card-text">UNESCO’s Blacksmithing Masterpieces</p>
+                        <h5 class="card-title">@AppRes.ForgeOfLegends</h5>
+                        <p class="card-text">@AppRes.UNESCOսBlacksmithingMasterpieces</p>
                     </div>
+
                 </div>
                 <div class="card">
                     <img src="/Content/Images/place2.jpeg" alt="Architectural Time Travel">
                     <div class="card-overlay">
-                        <h5 class="card-title">Architectural Time Travel</h5>
-                        <p class="card-text">From Empires to Earthquakes</p>
+                        <h5 class="card-title">@AppRes.ArchitecturalTimeTravel</h5>
+                        <p class="card-text">@AppRes.FromEmpirestoEarthquakes</p>
                     </div>
+
                 </div>
                 <div class="card">
                     <img src="/Content/Images/place3.jpeg" alt="Cultural Renaissance">
                     <div class="card-overlay">
-                        <h5 class="card-title">Cultural Renaissance</h5>
-                        <p class="card-text">Where Art, Tech, and Tradition Collide</p>
+                        <h5 class="card-title">@AppRes.CulturalRenaissance</h5>
+                        <p class="card-text">@AppRes.ArtTechTraditionCollide</p>
                     </div>
+
                 </div>
                 <div class="card">
                     <img src="/Content/Images/place4.jpeg" alt="Gyumri's Heritage">
                     <div class="card-overlay">
-                        <h5 class="card-title">Gyumri's Heritage</h5>
-                        <p class="card-text">Discover the Heart of Armenia</p>
+                        <h5 class="card-title">@AppRes.GyumriHeritage</h5>
+                        <p class="card-text">@AppRes.DiscovertheHeartofArmenia</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="/Content/Images/place5.jpeg" alt="Gyumri's Culture">
                     <div class="card-overlay">
-                        <h5 class="card-title">Gyumri's Culture</h5>
-                        <p class="card-text">Tradition Meets Modernity</p>
+                        <h5 class="card-title">@AppRes.GyumrisCulture</h5>
+                        <p class="card-text">@AppRes.TraditionMeetsModernity</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
     <div class="container-fluid px-0">
         <!-- Discover Section -->
         <div class="discover-section d-flex align-items-center">
             <div class="container">
                 <div class="discover-overlay">
-                    <p class="text-uppercase text-muted mb-1">Discover</p>
-                    <h2 class="discover-title">Gyumri’s Unique Districts</h2>
-                    <p>A Journey Through History, Culture, and Creativity</p>
-                    <a href=@Url.Action("Index", "Map") class="btn btn-dark">Learn about Gyumri’s districts</a>
+                        <p class="text-uppercase text-muted mb-1">@AppRes.Discover</p>
+                        <h2 class="discover-title">@AppRes.GyumrisUniqueDistricts</h2>
+                        <p>@AppRes.JourneyThroughHistoryCultureCreativit</p>
+                        <a href=@Url.Action("Index", "Map") class="btn btn-dark">@AppRes.LearnaboutGyumrisdistricts</a>
                 </div>
                 <div class="decorative-art"></div>
             </div>
@@ -146,50 +147,50 @@
         <div class="coupon-section d-flex align-items-center">
             <div class="container">
                 <div class="coupon-overlay">
-                    <p class="section-title">Take your <strong style="font-weight:800">COUPON</strong> and explore <strong style="font-weight:800">Gyumri</strong></p>
-                    <p>Our coupon feature is on the way - check back soon for <strong style="font-weight:500">great deals!</strong></p>
+                        <p class="section-title"> @AppRes.TakeYour <strong style="font-weight:800">@AppRes.CuponUpperCase</strong> @AppRes.AndExplore <strong style="font-weight:800">@AppRes.GyumriUpperCase</strong></p>
+                        <p>@AppRes.CuponFeature <strong style="font-weight:500">@AppRes.greatDeals</strong></p>
                 </div>
             </div>
         </div>
         <div class="container-fluid py-5 ms-5">
             <div>
-                <p class="section-title"><b class="fw-bold">Looking For More? </b>Dive Deeper into Gyumri’s Hidden Gems</p>
-                <p class="section-subtitle">Gyumri is more than just a collection of beautiful buildings and museums — it’s a city brimming with hidden corners, untold stories, and vibrant traditions that go beyond the obvious. Whether you’re a local or a visitor, there’s always something new to uncover.</p>
+                    <p class="section-title"><b class="fw-bold">@AppRes.LookingForMore </b>@AppRes.DiveDeeperIntoGyumrisHiddenGems</p>
+                    <p class="section-subtitle">@AppRes.LookingForPartTextt</p>
                 <a href="#" class="see-more-link-black">See More<span class="arrow"> &#8702;</span></a>
                 <div class="scroll-container" id="scrollContainer1">
                     <div class="card">
                         <img src="/Content/Images/more1.jpeg" alt="Forge of Legends">
                         <div class="card-overlay">
-                            <h5 class="card-title">Explore the Underground Arts Scene</h5>
-                            <p class="card-text">Gyumri’s arts scene isn’t limited to its galleries and theaters.</p>
+                                <h5 class="card-title">@AppRes.ExploretheUndergroundArtsScene</h5>
+                                <p class="card-text">@AppRes.ExploretheUndergroundArtsSceneText</p>
                         </div>
                     </div>
                     <div class="card">
                         <img src="/Content/Images/more2.jpeg" alt="Architectural Time Travel">
                         <div class="card-overlay">
-                            <h5 class="card-title">Take a Workshop with Local Artisans</h5>
-                            <p class="card-text">Gyumri is a city of makers.</p>
+                                <h5 class="card-title">@AppRes.TakeWorkshopWithLocalArtisans</h5>
+                                <p class="card-text">@AppRes.TakeWorkshopWithLocalArtisansText</p>
                         </div>
                     </div>
                     <div class="card">
                         <img src="/Content/Images/place3.jpeg" alt="Cultural Renaissance">
                         <div class="card-overlay">
-                            <h5 class="card-title">Experience Gyumri After Dark</h5>
-                            <p class="card-text">The city comes alive in a different way after sunset.</p>
+                                <h5 class="card-title">@AppRes.ExperienceGyumriAfterDark</h5>
+                                <p class="card-text">@AppRes.ExperienceGyumriAfterDarkText</p>
                         </div>
                     </div>
                     <div class="card">
                         <img src="/Content/Images/more3.jpeg" alt="Gyumri's Heritage">
                         <div class="card-overlay">
-                            <h5 class="card-title">Gyumri's Heritage</h5>
-                            <p class="card-text">Discover the Heart of Armenia</p>
+                                <h5 class="card-title">@AppRes.GyumriHeritage</h5>
+                                <p class="card-text">@AppRes.DiscovertheHeartofArmenia</p>
                         </div>
                     </div>
                     <div class="card">
                         <img src="/Content/Images/more4.jpeg" alt="Gyumri's Culture">
                         <div class="card-overlay">
-                            <h5 class="card-title">Gyumri's Culture</h5>
-                            <p class="card-text">Tradition Meets Modernity</p>
+                                <h5 class="card-title">@AppRes.GyumrisCulture</h5>
+                                <p class="card-text">@AppRes.TraditionMeetsModernity</p>
                         </div>
                     </div>
                 </div>

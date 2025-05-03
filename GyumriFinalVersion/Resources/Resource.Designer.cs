@@ -61,11 +61,254 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Adults.
+        /// </summary>
+        public static string Adults {
+            get {
+                return ResourceManager.GetString("Adults", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to and explore.
+        /// </summary>
+        public static string AndExplore {
+            get {
+                return ResourceManager.GetString("AndExplore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Architectural Time Travel.
+        /// </summary>
+        public static string ArchitecturalTimeTravel {
+            get {
+                return ResourceManager.GetString("ArchitecturalTimeTravel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Where Art, Tech, and Tradition Collide.
+        /// </summary>
+        public static string ArtTechTraditionCollide {
+            get {
+                return ResourceManager.GetString("ArtTechTraditionCollide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cultural Renaissance.
+        /// </summary>
+        public static string CulturalRenaissance {
+            get {
+                return ResourceManager.GetString("CulturalRenaissance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Our coupon feature is on the way – check back soon for.
+        /// </summary>
+        public static string CuponFeature {
+            get {
+                return ResourceManager.GetString("CuponFeature", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to COUPON.
+        /// </summary>
+        public static string CuponUpperCase {
+            get {
+                return ResourceManager.GetString("CuponUpperCase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Discover.
+        /// </summary>
+        public static string Discover {
+            get {
+                return ResourceManager.GetString("Discover", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Discover the Heart of Armenia.
+        /// </summary>
+        public static string DiscovertheHeartofArmenia {
+            get {
+                return ResourceManager.GetString("DiscovertheHeartofArmenia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dive Deeper into Gyumri’s Hidden Gems.
+        /// </summary>
+        public static string DiveDeeperIntoGyumrisHiddenGems {
+            get {
+                return ResourceManager.GetString("DiveDeeperIntoGyumrisHiddenGems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Experience Gyumri After Dark.
+        /// </summary>
+        public static string ExperienceGyumriAfterDark {
+            get {
+                return ResourceManager.GetString("ExperienceGyumriAfterDark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The city comes alive in a different way after sunset..
+        /// </summary>
+        public static string ExperienceGyumriAfterDarkText {
+            get {
+                return ResourceManager.GetString("ExperienceGyumriAfterDarkText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Explore the Underground Arts Scene.
+        /// </summary>
+        public static string ExploretheUndergroundArtsScene {
+            get {
+                return ResourceManager.GetString("ExploretheUndergroundArtsScene", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gyumri’s arts scene isn’t limited to its galleries and theaters..
+        /// </summary>
+        public static string ExploretheUndergroundArtsSceneText {
+            get {
+                return ResourceManager.GetString("ExploretheUndergroundArtsSceneText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forge of Legends.
+        /// </summary>
+        public static string ForgeOfLegends {
+            get {
+                return ResourceManager.GetString("ForgeOfLegends", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to From Empires to Earthquakes.
+        /// </summary>
+        public static string FromEmpirestoEarthquakes {
+            get {
+                return ResourceManager.GetString("FromEmpirestoEarthquakes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Next: Getting Here.
+        /// </summary>
+        public static string GettingHere {
+            get {
+                return ResourceManager.GetString("GettingHere", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to great deals!.
+        /// </summary>
+        public static string greatDeals {
+            get {
+                return ResourceManager.GetString("greatDeals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gyumri&apos;s Heritage.
+        /// </summary>
+        public static string GyumriHeritage {
+            get {
+                return ResourceManager.GetString("GyumriHeritage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gyumri&apos;s Culture.
+        /// </summary>
+        public static string GyumrisCulture {
+            get {
+                return ResourceManager.GetString("GyumrisCulture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gyumri’s Unique Districts.
+        /// </summary>
+        public static string GyumrisUniqueDistricts {
+            get {
+                return ResourceManager.GetString("GyumrisUniqueDistricts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GYUMRI.
+        /// </summary>
+        public static string GyumriUpperCase {
+            get {
+                return ResourceManager.GetString("GyumriUpperCase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
         public static string Home {
             get {
                 return ResourceManager.GetString("Home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Journey Through History, Culture, and Creativit.
+        /// </summary>
+        public static string JourneyThroughHistoryCultureCreativit {
+            get {
+                return ResourceManager.GetString("JourneyThroughHistoryCultureCreativit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Learn about Gyumri’s districts.
+        /// </summary>
+        public static string LearnaboutGyumrisdistricts {
+            get {
+                return ResourceManager.GetString("LearnaboutGyumrisdistricts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Let&apos;s Plan Your Trip!.
+        /// </summary>
+        public static string LetsPlanYourTrip {
+            get {
+                return ResourceManager.GetString("LetsPlanYourTrip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Looking For More? .
+        /// </summary>
+        public static string LookingForMore {
+            get {
+                return ResourceManager.GetString("LookingForMore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gyumri is more than just a collection of beautiful buildings and museums — it’s a city brimming with hidden corners, untold stories, and vibrant traditions that go beyond the obvious. Whether you’re a local or a visitor, there’s always something new to uncover..
+        /// </summary>
+        public static string LookingForPartTextt {
+            get {
+                return ResourceManager.GetString("LookingForPartTextt", resourceCulture);
             }
         }
         
@@ -88,11 +331,65 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Take a Workshop with Local Artisans.
+        /// </summary>
+        public static string TakeWorkshopWithLocalArtisans {
+            get {
+                return ResourceManager.GetString("TakeWorkshopWithLocalArtisans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gyumri is a city of makers..
+        /// </summary>
+        public static string TakeWorkshopWithLocalArtisansText {
+            get {
+                return ResourceManager.GetString("TakeWorkshopWithLocalArtisansText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Take your.
+        /// </summary>
+        public static string TakeYour {
+            get {
+                return ResourceManager.GetString("TakeYour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tradition Meets Modernity.
+        /// </summary>
+        public static string TraditionMeetsModernity {
+            get {
+                return ResourceManager.GetString("TraditionMeetsModernity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use this tool to organize your travel, stay, and activities for an unforgettable trip to Cymru. Get a personalized plan emailed or downloaded at the end!.
+        /// </summary>
+        public static string TripPageText {
+            get {
+                return ResourceManager.GetString("TripPageText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Your trip plan.
         /// </summary>
         public static string TripPlan {
             get {
                 return ResourceManager.GetString("TripPlan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UNESCO’s Blacksmithing Masterpieces.
+        /// </summary>
+        public static string UNESCOսBlacksmithingMasterpieces {
+            get {
+                return ResourceManager.GetString("UNESCOսBlacksmithingMasterpieces", resourceCulture);
             }
         }
         

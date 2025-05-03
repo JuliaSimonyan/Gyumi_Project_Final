@@ -18,15 +18,15 @@ namespace GyumriFinalVersion.Controllers
         private readonly IActivityService _activityService;
         private readonly IConverter _converter;
 
-        public TripController(ICategory categoryService, ApplicationContext context, IApartment apartment, IActivityService activityService, IConverter converter)
+        public TripController(ICategory categoryService, ApplicationContext context, IApartment apartment, IActivityService activityService)
         {
             _categoryService = categoryService;
             _context = context;
             _apartmentService = apartment;
             _activityService = activityService;
-            _converter = converter;
         }
 
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
             ViewBag.Categories = await _categoryService.GetAllCategories();
@@ -140,31 +140,31 @@ namespace GyumriFinalVersion.Controllers
 
         //________________Download PDF____________________
 
-        public IActionResult DownloadTripPlanPdf()
-        {
-            var body = $"<h1>Ճանապարհորդության պլան</h1>" +
-                       $"<h3>Այստեղ կարող է լինել ձեր գովազդը :D </h3>";
+        //public IActionResult DownloadTripPlanPdf()
+        //{
+        //    var body = $"<h1>Ճանապարհորդության պլան</h1>" +
+        //               $"<h3>Այստեղ կարող է լինել ձեր գովազդը :D </h3>";
 
-            var doc = new HtmlToPdfDocument()
-            {
-                GlobalSettings = new GlobalSettings
-                {
-                    PaperSize = PaperKind.A4,
-                    Orientation = Orientation.Portrait,
-                },
-                Objects = {
-                new ObjectSettings
-                {
-                    HtmlContent = body,
-                    WebSettings = { DefaultEncoding = "utf-8" }
-                }
-            }
-            };
+        //    var doc = new HtmlToPdfDocument()
+        //    {
+        //        GlobalSettings = new GlobalSettings
+        //        {
+        //            PaperSize = PaperKind.A4,
+        //            Orientation = Orientation.Portrait,
+        //        },
+        //        Objects = {
+        //        new ObjectSettings
+        //        {
+        //            HtmlContent = body,
+        //            WebSettings = { DefaultEncoding = "utf-8" }
+        //        }
+        //    }
+        //    };
 
-            var pdf = _converter.Convert(doc);
+        //    var pdf = _converter.Convert(doc);
 
-            return File(pdf, "application/pdf", "TripPlan.pdf");
-        }
+        //    return File(pdf, "application/pdf", "TripPlan.pdf");
+        //}
 
         //________________Download PDF____________________
     }

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Gyumri.Data.Models
 {
@@ -12,6 +13,12 @@ namespace Gyumri.Data.Models
         public string? DescriptionArm { get; set; }
         public string? DescriptionRu { get; set; }
         public string Photo { get; set; }
+
+        public int MinPrice { get; set; }
+
+        public int MaxPrice { get; set; }
+
+        public int Raiting { get; set; }
 
         [ForeignKey("Subcategory")]
         public int SubcategoryId { get; set; }
