@@ -8,8 +8,7 @@ using Microsoft.AspNetCore.Localization.Routing;
 using Microsoft.AspNetCore.Localization;
 using System.Globalization;
 using Gyumri.Middleware;
-using Gyumri.App.Interfaces;
-using Gyumri.App.Services;
+
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
@@ -36,8 +35,6 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<ICategory, CategoryService>();
 builder.Services.AddScoped<ISubcategory, SubcategoryService>();
 builder.Services.AddScoped<IPlace, PlaceService>();
-builder.Services.AddScoped<IApartment, ApartmentService>();
-builder.Services.AddScoped<IActivityService, ActivityService>();
 builder.Services.AddLocalization();
 
 

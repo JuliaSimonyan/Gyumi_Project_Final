@@ -1,8 +1,5 @@
-﻿using Gyumri.App.Services;
-using Gyumri.Application.Interfaces;
-using Gyumri.Common.ViewModel.Apartment;
+﻿using Gyumri.Application.Interfaces;
 using Gyumri.Common.ViewModel.Place;
-using Gyumri.Common.ViewModel.Subcategory;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.IO;

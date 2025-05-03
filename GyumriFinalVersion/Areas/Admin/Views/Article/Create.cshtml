@@ -1,0 +1,46 @@
+﻿@model Gyumri.Data.Models.Article
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+@{
+    ViewData["Title"] = "Create Article";
+}
+<h1>Create Article</h1>
+
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    <label>Title:</label>
+    <input asp-for="Title" class="form-control" />
+    <hr />
+
+    <div id="blockContainer"></div>
+
+    <button type="button" onclick="addBlock('Paragraph')">Add Paragraph</button>
+    <button type="button" onclick="addBlock('Image')">Add Image</button>
+
+    <br /><br />
+    <button type="submit">Save</button>
+</form>
+
+    <script>
+        let blockIndex = 0;
+
+        function addBlock(type) {
+            const container = document.getElementById("blockContainer");
+            let html = `<div class="mb-3">
+                <input type="hidden" name="Blocks[${blockIndex}].BlockType" value="${type}" />
+                <input type="hidden" name="Blocks[${blockIndex}].Order" value="${blockIndex}" />`;
+
+            if (type === "Paragraph") {
+                html += `<label>Paragraph:</label>
+                    <textarea name="Blocks[${blockIndex}].Content" class="form-control"></textarea>`;
+            } else {
+                html += `<label>Image:</label>
+                    <input type="file" name="imageFiles" class="form-control" />`;
+            }
+
+            html += `</div>`;
+            container.insertAdjacentHTML("beforeend", html);
+            blockIndex++;
+        }
+    </script>
+

@@ -1,5 +1,4 @@
-﻿using Gyumri.App.Interfaces;
-using Gyumri.Application.Interfaces;
+﻿using Gyumri.Application.Interfaces;
 using Gyumri.Data.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Mail;
@@ -14,16 +13,12 @@ namespace GyumriFinalVersion.Controllers
         private const string CultureCookieName = "UserCulture";
         private readonly ApplicationContext _context;
         private readonly ICategory _categoryService;
-        private readonly IApartment _apartmentService;
-        private readonly IActivityService _activityService;
         private readonly IConverter _converter;
 
-        public TripController(ICategory categoryService, ApplicationContext context, IApartment apartment, IActivityService activityService)
+        public TripController(ICategory categoryService, ApplicationContext context)
         {
             _categoryService = categoryService;
-            _context = context;
-            _apartmentService = apartment;
-            _activityService = activityService;
+            _context = context;        
         }
 
         [HttpGet]
@@ -47,7 +42,6 @@ namespace GyumriFinalVersion.Controllers
         public async Task<IActionResult> SecondStep(int categoryId)
         {
             ViewBag.Categories = await _categoryService.GetAllCategories();
-            ViewBag.Apartments = await _apartmentService.GetAllApartments();
             var currentCulture = Request.Cookies["UserCulture"] ?? "en";
             var cultureInfo = new System.Globalization.CultureInfo(currentCulture);
             Thread.CurrentThread.CurrentCulture = cultureInfo;
@@ -59,7 +53,6 @@ namespace GyumriFinalVersion.Controllers
         public async Task<IActionResult> ThirdStep(int categoryId)
         {
             ViewBag.Categories = await _categoryService.GetAllCategories();
-            ViewBag.Activities = await _activityService.GetAllActivities();
             var currentCulture = Request.Cookies["UserCulture"] ?? "en";
             var cultureInfo = new System.Globalization.CultureInfo(currentCulture);
             Thread.CurrentThread.CurrentCulture = cultureInfo;
@@ -71,8 +64,6 @@ namespace GyumriFinalVersion.Controllers
         public async Task<IActionResult> ForthStep(int categoryId)
         {
             ViewBag.Categories = await _categoryService.GetAllCategories();
-            ViewBag.Apartments = await _apartmentService.GetAllApartments();
-            ViewBag.Activities = await _activityService.GetAllActivities();
             var currentCulture = Request.Cookies["UserCulture"] ?? "en";
             var cultureInfo = new System.Globalization.CultureInfo(currentCulture);
             Thread.CurrentThread.CurrentCulture = cultureInfo;
@@ -84,8 +75,7 @@ namespace GyumriFinalVersion.Controllers
         public async Task<IActionResult> Final(int categoryId)
         {
             ViewBag.Categories = await _categoryService.GetAllCategories();
-            ViewBag.Apartments = await _apartmentService.GetAllApartments();
-            ViewBag.Activities = await _activityService.GetAllActivities();
+
             var currentCulture = Request.Cookies["UserCulture"] ?? "en";
             var cultureInfo = new System.Globalization.CultureInfo(currentCulture);
             Thread.CurrentThread.CurrentCulture = cultureInfo;

@@ -1,0 +1,15 @@
+﻿@model Gyumri.Data.Models.Article
+
+<h2>@Model.Title</h2>
+
+@foreach (var block in Model.Blocks.OrderBy(b => b.Order))
+{
+    if (block.BlockType == "Paragraph")
+    {
+        <p>@block.Content</p>
+    }
+    else if (block.BlockType == "Image")
+    {
+        <img src="@block.Content" style="max-width: 500px;" />
+    }
+}

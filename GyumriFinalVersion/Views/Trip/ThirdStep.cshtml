@@ -1,6 +1,5 @@
 ﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @using Gyumri.Data.Models;
-@model Gyumri.Common.ViewModel.Activity.ActivityViewModel
 @{
     ViewData["Title"] = "Where to Stay";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -85,7 +84,7 @@
         </div>
 
         <!-- Accommodation List -->
-        <div class="accommodation-list">
+       @*  <div class="accommodation-list">
             <!-- Villa Kars Hotel -->
             @foreach (var item in ViewBag.Activities)
             {
@@ -180,9 +179,9 @@
                     </div>
                     <a href="#" class="more-details">More Details <i class="fa-solid fa-chevron-right"></i></a>
                 </div>
-            </div> *@
+            </div> 
         </div>
-
+ *@
         <!-- Pagination -->
         <div class="pagination-container">
             <div class="navigation-buttons">
