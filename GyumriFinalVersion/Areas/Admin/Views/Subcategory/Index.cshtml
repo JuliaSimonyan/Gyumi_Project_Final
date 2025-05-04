@@ -1,10 +1,13 @@
 ﻿@model IEnumerable<Gyumri.Common.ViewModel.Subcategory.SubcategoryViewModel>
 
 @{
-    ViewData["Title"] = "Subcategory List";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Subcategories";
 }
 
-<h1>Subcategories</h1>
+<h1>Article Categories</h1>
+
+<a href="@Url.Action("Add", "Subcategory", new { area = "Admin" })" class="btn btn-success mb-3">Add Article Categories</a>
 
 
 <table class="table table-bordered">
@@ -34,4 +37,3 @@
     </tbody>
 </table>
 
-<a href="@Url.Action("Add", "Subcategory", new { area = "Admin" })" class="btn btn-success mb-3">Add Subcategory</a>

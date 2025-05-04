@@ -1,5 +1,6 @@
 ﻿using Gyumri.Common.ViewModel.Category;
 using Gyumri.Data.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,7 @@ namespace Gyumri.Application.Interfaces
         Task<bool> Edit(EditCategoryViewModel model);
         Task<bool> Delete(int id);
         Task<List<CategoryViewModel>> GetAllCategories();
+        Task SeedDefaultCategoriesAsync();
 
     }
 }

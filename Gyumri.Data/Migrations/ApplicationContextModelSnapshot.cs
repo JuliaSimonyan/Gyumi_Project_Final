@@ -70,6 +70,9 @@ namespace Gyumri.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PlaceId"));
 
+                    b.Property<int?>("ArticleId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -100,13 +103,15 @@ namespace Gyumri.Data.Migrations
                     b.Property<string>("PlaceNameRu")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Raiting")
+                    b.Property<int?>("Raiting")
                         .HasColumnType("int");
 
                     b.Property<int>("SubcategoryId")
                         .HasColumnType("int");
 
                     b.HasKey("PlaceId");
+
+                    b.HasIndex("ArticleId");
 
                     b.HasIndex("SubcategoryId");
 
@@ -356,7 +361,7 @@ namespace Gyumri.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("ArticleId")
+                    b.Property<int>("ArticleId")
                         .HasColumnType("int");
 
                     b.Property<string>("BlockType")
@@ -379,11 +384,17 @@ namespace Gyumri.Data.Migrations
 
             modelBuilder.Entity("Gyumri.Data.Models.Place", b =>
                 {
+                    b.HasOne("Gyumri.Data.Models.Article", "Article")
+                        .WithMany()
+                        .HasForeignKey("ArticleId");
+
                     b.HasOne("Gyumri.Data.Models.Subcategory", "Subcategory")
                         .WithMany("Places")
                         .HasForeignKey("SubcategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Article");
 
                     b.Navigation("Subcategory");
                 });
@@ -452,9 +463,13 @@ namespace Gyumri.Data.Migrations
 
             modelBuilder.Entity("WebApplication20.Models.ArticleBlock", b =>
                 {
-                    b.HasOne("Gyumri.Data.Models.Article", null)
+                    b.HasOne("Gyumri.Data.Models.Article", "Article")
                         .WithMany("Blocks")
-                        .HasForeignKey("ArticleId");
+                        .HasForeignKey("ArticleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Article");
                 });
 
             modelBuilder.Entity("Gyumri.Data.Models.Article", b =>

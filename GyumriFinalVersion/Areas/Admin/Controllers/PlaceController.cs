@@ -1,4 +1,5 @@
-﻿using Gyumri.Application.Interfaces;
+﻿using Gyumri.App.Interfaces;
+using Gyumri.Application.Interfaces;
 using Gyumri.Common.ViewModel.Place;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -14,12 +15,14 @@ namespace Gyumri.Areas.Admin.Controllers
     {
         private readonly IPlace _placeService;
         private readonly ISubcategory _subcategoryService;
+        private readonly IArticle _articleService;
         private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public PlaceController(IPlace placeService, ISubcategory subcategoryService, IWebHostEnvironment webHostEnvironment)
+        public PlaceController(IPlace placeService, ISubcategory subcategoryService, IArticle article, IWebHostEnvironment webHostEnvironment)
         {
             _placeService = placeService;
             _subcategoryService = subcategoryService;
+            _articleService = article;
             _webHostEnvironment = webHostEnvironment;
         }
 
@@ -33,7 +36,9 @@ namespace Gyumri.Areas.Admin.Controllers
         public async Task<IActionResult> Add()
         {
             var subcategories = await _subcategoryService.GetAllSubcategories();
+            var articles = await _articleService.GetAllArticles();
             ViewBag.Subcategories = subcategories;
+            ViewBag.Articles = articles;
             return View();
         }
 
@@ -71,6 +76,8 @@ namespace Gyumri.Areas.Admin.Controllers
 
             var subcategories = await _subcategoryService.GetAllSubcategories();
             ViewBag.Subcategories = subcategories;
+            var articles = await _articleService.GetAllArticles();
+            ViewBag.Articles = articles;
 
             var model = new AddEditPlaceViewModel
             {
@@ -82,13 +89,16 @@ namespace Gyumri.Areas.Admin.Controllers
                 DescriptionArm = place.DescriptionArm,
                 DescriptionRu = place.DescriptionRu,
                 Photo = place.Photo,
+                MinPrice = place.MinPrice,
+                MaxPrice = place.MaxPrice,
+                Raiting = place.Raiting,
+                ArticleId = place.ArticleId,
                 SubcategoryId = place.SubcategoryId
             };
 
             return View(model);
         }
 
-        [HttpPost]
         [HttpPost]
         public async Task<IActionResult> Edit(AddEditPlaceViewModel model, IFormFile photo)
         {

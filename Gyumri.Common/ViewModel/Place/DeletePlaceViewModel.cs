@@ -15,7 +15,12 @@ namespace Gyumri.Common.ViewModel.Place
         public string Description { get; set; }
         public string DescriptionArm { get; set; }
         public string DescriptionRu { get; set; }
-        public string Photo { get; set; }
+        public int MinPrice { get; set; }
+
+        public int MaxPrice { get; set; }
+
+        public int? Raiting { get; set; }
+        public int? ArticleId { get; set; }
         public int SubcategoryId { get; set; }
     }
 }

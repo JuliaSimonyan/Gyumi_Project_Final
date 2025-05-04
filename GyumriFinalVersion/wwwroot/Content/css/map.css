@@ -282,13 +282,17 @@ ul {
     margin-bottom: 10px;
 }
 
-.hero-content p {
-    max-width: 800px;
-    margin: 0 auto;
+    .hero-content p {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+.info-panel {
+    left: 0px;
+    position: relative;
 }
 /* Map container */
 .map-container {
-    position: relative;
+
     margin: 20px 0%;
     background-color: white;
     border-radius: 10px;
@@ -421,7 +425,6 @@ ul {
     z-index: 1000;
     display: none;
     max-height: 100%;
-    left: 30px;
     overflow-y: auto;
     position: relative;
     flex-shrink: 0;

@@ -1,4 +1,5 @@
 body {
+    background-color: black;
     font-family: "Montserratarm", sans-serif;
     font-weight: 300;
 }
@@ -160,11 +161,11 @@ body {
 }
 
 .nav-link {
-  color: white;
+  color: white !important;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 16px !important;
   position: relative;
-  padding: 5px;
+  padding: 5px !important;
 }
 
 .nav-link:hover {
@@ -439,6 +440,7 @@ body {
    margin-top: 50px;
     position:relative;
     top:180px;
+    right:22px;
     border-radius:0 !important;
     height:300px;
 }
@@ -556,7 +558,7 @@ body {
   }
   .footer {
       background-color:black;
-      margin: 50px auto;
+      margin: 40px auto 30px auto;
     color: #fff;            /* White text */
     padding: 40px 0;        /* Spacing for the footer */
     width: 100%;            /* Ensure full width */

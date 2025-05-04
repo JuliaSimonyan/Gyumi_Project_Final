@@ -1,31 +1,71 @@
 ﻿@model Gyumri.Common.ViewModel.LoginViewModel
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
-
-<h2>Login</h2>
-
-<form asp-action="Login" method="post">
-    <input type="hidden" name="returnUrl" value="@ViewData["ReturnUrl"]" />
-
-    <div>
-        <label asp-for="Email"></label>
-        <input asp-for="Email" />
-        <span asp-validation-for="Email"></span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyumri Tourism Admin - Login</title>
+    <link rel="stylesheet" href="~/css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
     </div>
 
-    <div>
-        <label asp-for="Password"></label>
-        <input asp-for="Password" type="password" />
-        <span asp-validation-for="Password"></span>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h2>Admin Panel</h2>
+                <p>Enter your credentials to access the dashboard</p>
+            </div>
+
+            <div class="login-body">
+                <form asp-action="Login" method="post">
+                    <input type="hidden" name="returnUrl" value="@ViewData["ReturnUrl"]" />
+
+                    <div class="form-group">
+                        <label asp-for="Email"></label>
+                        <i class="fas fa-user form-icon"></i>
+                        <input asp-for="Email" class="form-control" placeholder="Enter your email" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Password"></label>
+                        <i class="fas fa-lock form-icon"></i>
+                        <input asp-for="Password" class="form-control" placeholder="Enter your password" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <div class="remember-me">
+                        <label class="custom-checkbox">
+                            @Html.DisplayNameFor(m => m.RememberMe)
+                            <input asp-for="RememberMe" />
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="login-btn">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </button>
+                </form>
+
+                <div class="forgot-password">
+                    <a href="#">Forgot password?</a>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div>
-        <input asp-for="RememberMe" type="checkbox" />
-        <label asp-for="RememberMe"></label>
-    </div>
-
-    <button type="submit">Login</button>
-</form>
-@section Scripts {
-    <partial name="_ValidationScriptsPartial" />
-}
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }
+</body>
+</html>

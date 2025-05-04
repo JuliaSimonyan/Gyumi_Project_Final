@@ -31,7 +31,7 @@ namespace Gyumri.Application.Services
                 CategoryId = model.CategoryId,
                 Description = model.Description,
                 DescriptionArm = model.DescriptionArm,
-                DescriptionRu = model.DescriptionRu
+                DescriptionRu = model.DescriptionRu,
             };
             await _context.AddAsync(subcategory);
             await _context.SaveChangesAsync();

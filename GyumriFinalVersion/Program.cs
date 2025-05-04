@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Localization.Routing;
 using Microsoft.AspNetCore.Localization;
 using System.Globalization;
 using Gyumri.Middleware;
+using Gyumri.App.Interfaces;
+using Gyumri.App.Services;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,6 +30,8 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.AccessDeniedPath = "/Admin/Account/AccessDenied";
 });
 
+
+
 // Add MVC (controllers & views)
 builder.Services.AddControllersWithViews();
 
@@ -35,13 +39,19 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<ICategory, CategoryService>();
 builder.Services.AddScoped<ISubcategory, SubcategoryService>();
 builder.Services.AddScoped<IPlace, PlaceService>();
+builder.Services.AddScoped<IArticle, ArticleService>();
 builder.Services.AddLocalization();
 
-
+builder.Services.AddDistributedMemoryCache(); // Required for session state
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Set session timeout
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 
 
 var app = builder.Build();
-
 
 // SEED admin user/roles
 using (var scope = app.Services.CreateScope())
@@ -49,7 +59,9 @@ using (var scope = app.Services.CreateScope())
     var services = scope.ServiceProvider;
     var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
     var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
+    var context = services.GetRequiredService<ApplicationContext>();
 
+    // ✅ Seed roles
     string[] roles = { "Admin", "User" };
     foreach (var role in roles)
     {
@@ -57,10 +69,9 @@ using (var scope = app.Services.CreateScope())
             await roleManager.CreateAsync(new IdentityRole(role));
     }
 
+    // ✅ Seed admin user
     var adminEmail = "admin@admin.com";
     var adminPassword = "Admin123!";
-
-    // Check if user exists
     var adminUser = await userManager.FindByEmailAsync(adminEmail);
 
     if (adminUser == null)
@@ -91,6 +102,9 @@ using (var scope = app.Services.CreateScope())
     {
         Console.WriteLine("ℹ️ Admin user already exists.");
     }
+    var categoryService = services.GetRequiredService<ICategory>();
+    await categoryService.SeedDefaultCategoriesAsync();
+
 }
 
 
@@ -115,10 +129,11 @@ app.UseCookiePolicy();
 // Routing
 app.MapControllerRoute(
     name: "areas",
-    pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");
+    pattern: "gyumri/secure-portal/where-the-content-is-created/{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
 
 app.Run();

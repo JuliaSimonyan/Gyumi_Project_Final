@@ -1,0 +1,48 @@
+﻿@model Gyumri.Data.Models.Article
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+@{
+    ViewData["Title"] = "Edit Article";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+
+}
+
+<h2>Edit Article</h2>
+
+<form asp-action="Edit" enctype="multipart/form-data" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label for="Title">Title</label>
+        <input asp-for="Title" class="form-control" />
+    </div>
+
+    <div id="blocks-container">
+        @for (int i = 0; i < Model.Blocks.Count; i++)
+        {
+            <input type="hidden" name="Blocks[@i].Id" value="@Model.Blocks[i].Id" />
+            <input type="hidden" name="Blocks[@i].Order" value="@Model.Blocks[i].Order" />
+            <input type="hidden" name="Blocks[@i].BlockType" value="@Model.Blocks[i].BlockType" />
+
+            @if (Model.Blocks[i].BlockType == "Paragraph")
+            {
+                <div class="mb-3">
+                    <label>Paragraph Block #@(i + 1)</label>
+                    <textarea name="Blocks[@i].Content" class="form-control">@Model.Blocks[i].Content</textarea>
+                </div>
+            }
+            else if (Model.Blocks[i].BlockType == "Image")
+            {
+                <div class="mb-3">
+                    <label>Current Image:</label><br />
+                    <img src="@Model.Blocks[i].Content" width="200" />
+                    <input type="file" name="imageFiles" class="form-control" />
+                    <input type="hidden" name="Blocks[@i].Content" value="@Model.Blocks[i].Content" />
+                </div>
+            }
+        }
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>

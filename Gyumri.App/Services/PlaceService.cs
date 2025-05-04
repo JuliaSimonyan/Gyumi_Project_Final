@@ -29,7 +29,11 @@ namespace Gyumri.Application.Services
                     PlaceNameArm = p.PlaceNameArm,
                     PlaceNameRu = p.PlaceNameRu,
                     SubcategoryId = p.SubcategoryId,
-                    Photo = p.Photo
+                    Photo = p.Photo,
+                    MinPrice = p.MinPrice,
+                    MaxPrice = p.MaxPrice,
+                    Raiting = p.Raiting,
+                    ArticleId = p.ArticleId
                 })
                 .ToListAsync();
         }
@@ -49,7 +53,11 @@ namespace Gyumri.Application.Services
                 DescriptionArm = place.DescriptionArm,
                 DescriptionRu = place.DescriptionRu,
                 Photo = place.Photo,
-                SubcategoryId = place.SubcategoryId
+                SubcategoryId = place.SubcategoryId,
+                MinPrice = place.MinPrice,
+                MaxPrice = place.MaxPrice,
+                Raiting = place.Raiting,
+                ArticleId = place.ArticleId
             };
         }
 
@@ -64,7 +72,11 @@ namespace Gyumri.Application.Services
                 DescriptionArm = model.DescriptionArm,
                 DescriptionRu = model.DescriptionRu,
                 Photo = model.Photo,
-                SubcategoryId = model.SubcategoryId
+                SubcategoryId = model.SubcategoryId,
+                MinPrice = model.MinPrice,
+                MaxPrice = model.MaxPrice,
+                Raiting = model.Raiting,
+                ArticleId = model.ArticleId
             };
 
             await _context.Places.AddAsync(place);
@@ -85,6 +97,11 @@ namespace Gyumri.Application.Services
             place.DescriptionRu = model.DescriptionRu;
             place.Photo = model.Photo;
             place.SubcategoryId = model.SubcategoryId;
+            place.MinPrice = model.MinPrice;
+            place.MaxPrice = model.MaxPrice;
+            place.Raiting = model.Raiting;
+            place.ArticleId = model.ArticleId;
+
 
             _context.Places.Update(place);
             await _context.SaveChangesAsync();
@@ -114,11 +131,22 @@ namespace Gyumri.Application.Services
                     Description = p.Description,
                     DescriptionArm = p.DescriptionArm,
                     DescriptionRu = p.DescriptionRu,
-                    Photo = p.Photo
+                    Photo = p.Photo,
+                    MinPrice = p.MinPrice,
+                    MaxPrice = p.MaxPrice,
+                    Raiting = p.Raiting,
+                    ArticleId = p.ArticleId,
                 })
                 .ToListAsync();
 
             return places;
+        }
+
+        public async Task<Place> GetPlaceByArticleId(int? articleId)
+        {
+            return await _context.Places
+        .Include(p => p.Article)
+        .FirstOrDefaultAsync(p => p.ArticleId == articleId);
         }
     }
 }

@@ -18,10 +18,14 @@ namespace Gyumri.Data.Models
 
         public int MaxPrice { get; set; }
 
-        public int Raiting { get; set; }
+        public int? Raiting { get; set; }
 
         [ForeignKey("Subcategory")]
         public int SubcategoryId { get; set; }
         public Subcategory Subcategory { get; set; }
+
+        [ForeignKey("Article")]
+        public int? ArticleId { get; set; }
+        public Article? Article { get; set; }
     }
 }

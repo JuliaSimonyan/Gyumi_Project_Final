@@ -117,5 +117,26 @@ namespace Gyumri.Application.Services
                             })
                             .ToListAsync();
         }
+        public async Task SeedDefaultCategoriesAsync()
+        {
+            var defaultCategories = new List<string> { "See & Do", "Eat & Drink", "Relax & Sleep", "Live & Work" };
+
+            foreach (var name in defaultCategories)
+            {
+                if (!_context.Categories.Any(c => c.Name == name))
+                {
+                    var category = new Category
+                    {
+                        Name = name,
+                        NameArm = name, 
+                        NameRu = name   
+                    };
+
+                    await _context.Categories.AddAsync(category);
+                }
+            }
+
+            await _context.SaveChangesAsync();
+        }
     }
 }

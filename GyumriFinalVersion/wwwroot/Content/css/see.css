@@ -7,7 +7,6 @@
 
 .header-image {
     background: rgba(0, 0, 0, 0.311);
-    background-image: url('../Images/seeheader.png'); /* Replace with actual image path */
     background-size: cover;
     background-position: top;
     height: 500px;
@@ -86,6 +85,12 @@
     font-size: 1.1rem;
     font-weight: bold;
 }
+.card-title a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    cursor:pointer;
+}
 
 .card-description {
     color: #bbbbbb;
@@ -127,7 +132,6 @@
 
 /* Horizontal Scrollable Container */
 .scroll-container {
-    height: 400px;
     display: flex;
     flex-wrap: nowrap; /* Prevent wrapping */
     overflow-x: auto;
@@ -151,7 +155,7 @@
 
 /* Card Styles */
 .card {
-    width: 400px;
+    width: 350px;
     height: 300px !important;
     flex: 0 0 auto; /* Prevent shrinking or wrapping */
     position: relative;
@@ -174,12 +178,16 @@
     left: 15px;
     right: 15px;
 }
+    .card-body p {
+        font-size: 1rem;
+        color: white;
+    }
 
-.card-title {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #fff !important;
-}
+    .card-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #fff !important;
+    }
 
 .card-text {
     font-size: 0.85rem;
@@ -190,31 +198,30 @@
 .category-tag {
     position: absolute;
     z-index: 2;
-    top: 10px;
-    left: 10px;
+    width: 120px;
     background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
+    color: #181818;
     font-size: 0.8rem;
     font-weight: bold;
     padding: 5px 10px;
-    border-radius: 5px;
 }
 
-.category-tag.cultural {
-    background-color: #f4c542;
-}
+    .category-tag.cultural {
+        background-color:#FBE6CD;
+    }
 
-.category-tag.art {
-    background-color: #8cc63e;
-}
+    .category-tag.art {
+        background-color:#F6F5AD;
+    }
 
-.category-tag.concerts {
-    background-color: #f15a5a;
-}
+    .category-tag.concerts {
+        background-color:  #FEB9B9;
+    }
 
-.category-tag.activity {
-    background-color: #5aa9f4;
-}
+    .category-tag.activity {
+        background-color:#CEF0FF;
+        ;
+    }
 
 .gyumri-coupon-container {
     display: flex;

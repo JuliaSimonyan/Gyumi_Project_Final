@@ -1,92 +1,408 @@
-﻿<link rel="stylesheet" href="~/content/style.css">
-<link rel="stylesheet" href="~/content/css/responsive.css">
-
+﻿
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="~/content/css/eat.css">
+<link rel="stylesheet" href="~/content/css/lifeandwork.css">
+<link rel="stylesheet" href="~/content/css/relax.css">
 <link rel="stylesheet" href="~/content/css/see.css">
 
 <title>Document</title>
 
+@{
+    var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    string GetTranslatedName(Gyumri.Common.ViewModel.Subcategory.SubcategoryViewModel subcategory)
+    {
+        return currentCulture switch
+        {
+            "hy" => subcategory.NameArm,
+            "ru" => subcategory.NameRu,
+            _ => subcategory.Name, // default to English
+        };
+    }
 
-<section class="see-do-section">
+    string GetTranslatedDescription(Gyumri.Common.ViewModel.Subcategory.SubcategoryViewModel subcategory)
+    {
+        return currentCulture switch
+        {
+            "hy" => subcategory.DescriptionArm,
+            "ru" => subcategory.DescriptionRu,
+            _ => subcategory.Description,
+        };
+    }
+}
+
+
+@if (ViewBag.CategoryName == "See & Do")
+{
+    <section class="see-do-section">
+        <div class="header-image" style="background-image: url('@Url.Content("~/Content/Images/seeheader.png")') !important;">
+            <h1 class=" header-title">@ViewBag.CategoryName</h1>
+            <div><img class="" src="~/Content/Images/Group.png" alt="Symbols"></div>
+        </div>
+        <div class="nav-links">
+            <a href="#">In Focus</a>
+            <a href="#">Activities</a>
+            <a href="#">Tourist Attractions</a>
+            <a href="#">Excursion</a>
+            <a href="#">Shopping</a>
+        </div>
+
+    </section>
+     <div class="container-fluid py-5 mainsection">
+        <!-- Summer in Gyumri Section -->
+        <div class="mb-1 ms-6">
+            <!-- Activities Section -->
+            <div class="section">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2 class="section-heading" style="color:white;" >Activities</h2>
+                </div>
+                <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="scroll-container">
+                    <!-- Card 1 -->
+                    <div class="card" style="width:280px;">
+                        <span class="category-tag cultural">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            Cultural
+                        </span>
+                        <img src="~/Content/Images/place1.jpeg" class="card-img-top" alt="Gyumri Drama Theatre">
+                        <div class="card-body">
+                            <h3 class="card-title">Gyumri Drama Theatre</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="card" style="width:280px;">
+                        <span class="category-tag art">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            Art
+                        </span>
+                        <img src="~/Content/Images/nights.png" class="card-img-top" alt="Museum Nights">
+                        <div class="card-body">
+                            <h3 class="card-title">
+                                Museum Nights
+                            </h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="card" style="width:280px;">
+                        <span class="category-tag concerts">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            Concerts
+                        </span>
+                        <img src="~/Content/Images/reason5.jpeg" class="card-img-top" alt="The Day of Gyumri">
+                        <div class="card-body">
+                            <h3 class="card-title">The Day of Gyumri</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="card" style="width:280px;">
+                        <span class="category-tag activity">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            Activity Type
+                        </span>
+                        <img src="~/Content/Images/place4.jpeg" class="card-img-top" alt="Gyumri Drama Theatre">
+                        <div class="card-body">
+                            <h3 class="card-title">Gyumri Drama Theatre</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="card" style="width:280px;">
+                        <span class="category-tag art">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            Art
+                        </span>
+                        <img src="~/Content/Images/place5.jpeg" class="card-img-top" alt="Museum Nights">
+                        <div class="card-body">
+                            <h3 class="card-title">Museum Nights</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="card" style="width:280px;">
+                        <span class="category-tag concerts">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            Concerts
+                        </span>
+                        <img src="~/Content/Images/place1.jpeg" class="card-img-top" alt="The Day of Gyumri">
+                        <div class="card-body">
+                            <h3 class="card-title">The Day of Gyumri</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+                    <!-- Card 7 -->
+                    <div class="card" style="width:280px;">
+                        <span class="category-tag activity">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            Activity Type
+                        </span>
+                        <img src="~/Content/Images/place2.jpeg" class="card-img-top" alt="Gyumri Drama Theatre">
+                        <div class="card-body">
+                            <h5 class="card-title">Gyumri Drama Theatre</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else if (ViewBag.CategoryName == "Eat & Drink")
+{
+   <section class="see-do-section">
     <!-- Header Image with Title -->
-    <div class="header-image">
-        <h1 class=" header-title">@ViewBag.Category.Name</h1>
-        <div><img class="" src="~/content/Images/Vector (1).png" alt="Symbols"></div>
+        <div class="header-image" style="background-image: url('@Url.Content("~/Content/Images/eatheader.jpeg")') !important;">
+            <h1 class=" header-title" >@ViewBag.CategoryName</h1>
+            <div><img class="" src="~/Content/Images/Vector (1).png" alt="Symbols"></div>
     </div>
 
     <!-- Navigation Links -->
     <div class="nav-links">
+      <a href="#">In Focus</a>
+      <a href="#">Activities</a>
+      <a href="#">Tourist Attractions</a>
+      <a href="#">Excursion</a>
+      <a href="#">Shopping</a>
+    </div>
+
+    <!-- Summer in Gyumri Section -->
+    
+  </section>
+  <div class="container py-5 mainsection">
+    <!-- Summer in Gyumri Section -->
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <h2 class="summer-title">Foodie paradise</h2>
+      </div>
+      <p class="description-text">Diverse and innovative, Gyumri's culinary scene grows more exciting by the year.</p>
+            <a href="#" class="see-more-link-black" style="color:white !important;">See More<span class="arrow"> &#8702;</span>
+
+    </a>
+
+      <!-- Cards Section -->
+      <div class="row card-container">
+        <!-- Card 1 -->
+        <div class="col-md-3">
+          <div class="items">
+
+                        <span class="category-tag cultural"> <i class="fa-solid fa-wand-magic-sparkles"></i>Traditinal</span>
+                        <img src="~/Content/Images/eat1.jpeg" class="card-img-top" alt="Gallery of Mariam and Eranuhi Aslamazyan Sisters">
+            <div class="card-body">
+              <h5 class="card-title">Poloz Mukuch</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-3">
+          <div class="items">
+                        <span class="category-tag art"> <i class="fa-solid fa-wand-magic-sparkles"></i>Drinks</span>
+                        <img src="~/Content/Images/eat2.jpeg" class="card-img-top" alt="Hovhannes Shiraz Museum">
+            <div class="card-body">
+                            <h5 class="card-title">Shiraz</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-3">
+          <div class="items">
+                        <span class="category-tag concerts"> <i class="fa-solid fa-wand-magic-sparkles"></i>Dessert</span>
+                        <img src="~/Content/Images/eat3.jpeg" class="card-img-top" alt="Dzitoghtsyan Museum">
+            <div class="card-body">
+                            <h5 class="card-title">La Strada</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="items">
+                        <span class="category-tag activity"> <i class="fa-solid fa-wand-magic-sparkles"></i>Fast Food</span>
+                        <img src="~/Content/Images/eat4.jpeg" class="card-img-top" alt="Dzitoghtsyan Museum">
+            <div class="card-body">
+                            <h5 class="card-title">Food Time</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+}
+else if (ViewBag.CategoryName == "Relax & Sleep")
+{ 
+    <section class="see-do-section">
+      <!-- Header Image with Title -->
+        <div class="header-image" style="background-image: url('@Url.Content("~/Content/Images/relaxheader.jpeg")') !important;">
+        <h1 class=" header-title">Relax & Sleep</h1>
+        <div><img class="" src="~/Content/Images/Vector (2).png" alt="Symbols"></div>
+      </div>
+  
+      <!-- Navigation Links -->
+      <div class="nav-links">
         <a href="#">In Focus</a>
         <a href="#">Activities</a>
         <a href="#">Tourist Attractions</a>
         <a href="#">Excursion</a>
         <a href="#">Shopping</a>
+      </div>
+  
+  
+  </section>
+  <div class="container py-5 mainsection">
+    <!-- Summer in Gyumri Section -->
+    <div class="container-fluid">
+      <div class="d-flex justify-content-between align-items-center">
+                <h2 class="summer-title">Insider tips</h2>
+      </div>
+            <p class="description-text">
+                Diverse and innovative, Gyumri's culinary scene grows more exciting by the year.
+
+            </p>
+      <a href="#" class="see-more-link-black" style="color:white !important;">See More<span class="arrow"> &#8702;</span></a>
+      <!-- Cards Section -->
+      <div class="row card-container">
+        <!-- Card 1 -->
+        <div class="col-md-3">
+          <div class="items">
+                        <span class="category-tag traditional"><i class="fa-solid fa-wand-magic-sparkles"></i>Activities</span>
+                        <img src="~/Content/Images/eat1.jpeg" class="card-img-top" alt="Gallery of Mariam and Eranuhi Aslamazyan Sisters">
+            <div class="card-body">
+                            <h5 class="card-title">Lorem ipsum</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-3">
+          <div class="items">
+                        <span class="category-tag art"><i class="fa-solid fa-wand-magic-sparkles"></i>Events</span>
+                        <img src="~/Content/Images/eat2.jpeg" class="card-img-top" alt="Hovhannes Shiraz Museum">
+            <div class="card-body">
+                            <h5 class="card-title">Lorem ipsum</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-3">
+          <div class="items">
+                        <span class="category-tag concerts"><i class="fa-solid fa-wand-magic-sparkles"></i>Places</span>
+                        <img src="~/Content/Images/eat3.jpeg" class="card-img-top" alt="Dzitoghtsyan Museum">
+            <div class="card-body">
+                            <h5 class="card-title">Lorem ipsum</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="items">
+                        <span class="category-tag activity"><i class="fa-solid fa-wand-magic-sparkles"></i>Type</span>
+                        <img src="~/Content/Images/eat4.jpeg" class="card-img-top" alt="Dzitoghtsyan Museum">
+            <div class="card-body">
+                            <h5 class="card-title">Lorem ipsum</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Summer in Gyumri Section -->
-
-</section>
-<div class="container py-5 mainsection">
-    <!-- Summer in Gyumri Section -->
-    <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
-            <h2 class="summer-title">Summer in Gyumri</h2>
+</div>
+}
+else if (ViewBag.CategoryName == "Live & Work")
+{
+    <section class="see-do-section">
+        <div class="header-image" style="background-image: url('@Url.Content("~/Content/Images/seeheader.png")') !important;">
+            <h1 class=" header-title">@ViewBag.CategoryName</h1>
+            <div><img class="" src="~/Content/Images/Group.png" alt="Symbols"></div>
         </div>
-        <p class="description-text">Enjoy a warm day in Gyumri, enjoy great music and food, or explore Gyumri's fascinating museums.</p>
-        <a href="#" class="see-more-link-black">See More<span class="arrow"> &#8702;</span></a>
-        <!-- Cards Section -->
-        <div class="row card-container">
-            <!-- Card 1 -->
-            <div class="col-md-4">
-                <div>
-                    <img src="~/content/Images/see1.png" class="card-img-top" alt="Gallery of Mariam and Eranuhi Aslamazyan Sisters">
+        <div class="nav-links">
+            <a href="#">In Focus</a>
+            <a href="#">Activities</a>
+            <a href="#">Tourist Attractions</a>
+            <a href="#">Excursion</a>
+            <a href="#">Shopping</a>
+        </div>
 
-                </div>
+    </section>
+    <div class="container-fluid py-5 mainsection">
+        <!-- Summer in Gyumri Section -->
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h2 class="summer-title">Summer in Gyumri</h2>
             </div>
+            <p class="description-text">Enjoy a warm day in Gyumri, enjoy great music and food, or explore Gyumri's fascinating museums.</p>
+            <a href="#" class="see-more-link-black">See More<span class="arrow"> &#8702;</span></a>
+            <!-- Cards Section -->
+            <div class="row card-container">
+                <!-- Card 1 -->
+                <div class="col-md-3">
+                    <div>
+                        <img src="~/Content/Images/see1.png" class="card-img-top" alt="Gallery of Mariam and Eranuhi Aslamazyan Sisters">
 
-            <!-- Card 2 -->
-            <div class="col-md-4">
-                <div>
-                    <img src="~/content/Images/see2.png" class="card-img-top" alt="Hovhannes Shiraz Museum">
-
+                    </div>
                 </div>
-            </div>
 
-            <!-- Card 3 -->
-            <div class="col-md-4">
-                <div>
-                    <img src="~/content/Images/see3.png" class="card-img-top" alt="Dzitoghtsyan Museum">
+                <!-- Card 2 -->
+                <div class="col-md-3">
+                    <div>
+                        <img src="~/Content/Images/see2.png" class="card-img-top" alt="Hovhannes Shiraz Museum">
 
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-3">
+                    <div>
+                        <img src="~/Content/Images/see3.png" class="card-img-top" alt="Dzitoghtsyan Museum">
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
+}
     <!-- Activities Section -->
     <div class="mb-1 ms-6">
     </div>
     <!-- Tourist Attractions Section -->
     @foreach (var item in ViewBag.Subcategories)
     {
-        <div class="section mb-1 ms-6">
+        <div class="section mb-5 ms-6">
             <div class="d-flex justify-content-between align-items-center">
                 <h2 class="section-heading">@item.Name</h2>
-            </div>
+            <img width="80%" src="~/Content/Images/Group 15.png" alt="Symbol">
+
+        </div>
+
             <p class="section-subtitle">@item.Description</p>
             <a href="#" class="see-more-link-black">See More<span class="arrow"> &#8702;</span></a>
-            <div class="row">
+            <div class="row" style="margin:0">
                 @foreach (var place in item.Places)
                 {
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="card">
                             <img src="~/Images/places/@place.Photo" class="card-img-top" alt="Gyumri Drama Theatre">
                             <div class="card-body">
-                                <h5 class="card-title">@place.Description</h5>
+                                <h5 class="card-title">
+                                <a asp-controller="Home" asp-action="Articles" asp-route-articleId="@place.ArticleId">
+                                    @place.PlaceName
+                                     </a>
+                                </h5>
+                                <p>@place.Description</p>
                             </div>
                         </div>
                     </div>
@@ -168,3 +484,4 @@
         </div>
     </div> *@
 </div>
+<script src="https://kit.fontawesome.com/e8c2e1c09c.js" crossorigin="anonymous"></script>

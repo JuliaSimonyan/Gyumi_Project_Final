@@ -22,8 +22,8 @@ namespace Gyumri.Common.ViewModel.Place
 
         public int MaxPrice { get; set; }
 
-        public int Raiting { get; set; }
-        public int ArticleId { get; set; }
+        public int? Raiting { get; set; }
+        public int? ArticleId { get; set; }
         public int SubcategoryId { get; set; }
     }
 

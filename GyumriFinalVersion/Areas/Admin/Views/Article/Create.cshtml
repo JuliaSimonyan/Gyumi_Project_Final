@@ -1,11 +1,12 @@
 ﻿@model Gyumri.Data.Models.Article
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
-
 @{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+
     ViewData["Title"] = "Create Article";
 }
-<h1>Create Article</h1>
+<h1>Add Article</h1>
 
 <form asp-action="Create" method="post" enctype="multipart/form-data">
     <label>Title:</label>

@@ -1,6 +1,8 @@
 ﻿@model Gyumri.Common.ViewModel.Place.AddEditPlaceViewModel
 @{
     ViewData["Title"] = "Edit Place";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+
 }
 
 <h2>@ViewData["Title"]</h2>
@@ -48,7 +50,6 @@
             }
         </select>
     </div>
-
     <div class="form-group">
         <label for="Photo">Upload Photo (Optional)</label>
         <input type="file" class="form-control-file" id="Photo" name="photo" />
@@ -59,6 +60,35 @@
             </div>
         }
     </div>
+    <div class="form-group">
+        <label asp-for="MinPrice" class="control-label">Edit MinPrice</label>
+        <input asp-for="MinPrice" type="number" value="@Model.MinPrice" />
+        <span asp-validation-for="MinPrice" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="MaxPrice" class="control-label">Edit MaxPrice</label>
+        <input asp-for="MaxPrice" type="number" value="@Model.MaxPrice"/>
+        <span asp-validation-for="MaxPrice" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Raiting" class="control-label">Edit Raiting</label>
+        <input asp-for="Raiting" type="number" value="@Model.Raiting" class="form-control" />
+        <span asp-validation-for="Raiting" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ArticleId">Article</label>
+        <select class="form-control" class="form-control" name="ArticleId">
+            <option value="">Select Article</option>
+            @foreach (var article in ViewBag.Articles as List<Gyumri.Data.Models.Article>)
+            {
+                <option value="@article.Id" @(article.Id == Model.ArticleId ? "selected" : "")>
+                    @article.Title
+                </option>
+            }
+        </select>
+        <span asp-validation-for="ArticleId" class="text-danger"></span>
+    </div>
+
 
     <button type="submit" class="btn btn-primary">Save Changes</button>
     <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>

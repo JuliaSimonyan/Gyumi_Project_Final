@@ -1,6 +1,8 @@
 ﻿@model Gyumri.Common.ViewModel.Subcategory.EditSubcategoryViewModel
 
 @{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+
     ViewData["Title"] = "Edit Subcategory";
 }
 
@@ -10,8 +12,33 @@
     <input type="hidden" name="SubcategoryId" value="@Model.SubcategoryId" />
 
     <div class="form-group">
-        <label for="Name">Subcategory Name</label>
-        <input type="text" class="form-control" id="Name" name="Name" value="@Model.Name" required />
+        <label asp-for="Name" for="Name">Category Name (English)</label>
+        <input asp-for="Name" type="text" class="form-control" id="Name" name="Name" value="@Model.Name" required />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NameArm" for="NameArm">Category Name (Armenian)</label>
+        <input asp-for="NameArm" type="text" class="form-control" id="NameArm" name="NameArm" value="@Model.NameArm" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NameRu" for="NameRu">Category Name (Russian)</label>
+        <input asp-for="NameRu" type="text" class="form-control" id="NameRu" name="NameRu" value="@Model.NameRu" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description" for="Description">Category Description (English)</label>
+        <textarea asp-for="Description" class="form-control" id="Description" name="Description"  required>@Model.Description</textarea>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DescriptionArm" for="DescriptionArm">Category Description (Armenian)</label>
+        <textarea asp-for="DescriptionArm" class="form-control" id="DescriptionArm" name="DescriptionArm">@Model.DescriptionArm</textarea>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DescriptionRu" for="DescriptionRu">Category Description (Russian)</label>
+        <textarea asp-for="DescriptionRu" class="form-control" id="DescriptionRu" name="DescriptionRu">@Model.DescriptionRu</textarea>
     </div>
 
     <div class="form-group">
