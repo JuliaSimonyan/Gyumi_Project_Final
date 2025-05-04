@@ -239,4 +239,49 @@
   <data name="GettingHere" xml:space="preserve">
     <value>Далее: Как добраться</value>
   </data>
+  <data name="Children" xml:space="preserve">
+    <value>Дети</value>
+  </data>
+  <data name="GettingToAround" xml:space="preserve">
+    <value>Как добраться и передвигаться</value>
+  </data>
+  <data name="WheretoStay" xml:space="preserve">
+    <value>Где остановиться</value>
+  </data>
+  <data name="WhatToDo" xml:space="preserve">
+    <value>Чем заняться</value>
+  </data>
+  <data name="Finalizing" xml:space="preserve">
+    <value>Завершение</value>
+  </data>
+  <data name="Yerevan" xml:space="preserve">
+    <value>Ереван</value>
+  </data>
+  <data name="RoutInfo" xml:space="preserve">
+    <value>Вы находитесь в 120 км от Гюмри.</value>
+  </data>
+  <data name="Gyumri" xml:space="preserve">
+    <value>Гюмри</value>
+  </data>
+  <data name="km" xml:space="preserve">
+    <value>км</value>
+  </data>
+  <data name="Taxi" xml:space="preserve">
+    <value>такси</value>
+  </data>
+  <data name="Bus" xml:space="preserve">
+    <value>Автобус</value>
+  </data>
+  <data name="Train" xml:space="preserve">
+    <value>Поезд</value>
+  </data>
+  <data name="PrivateCar" xml:space="preserve">
+    <value>Личный автомобиль</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Назад</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Следующий</value>
+  </data>
 </root>

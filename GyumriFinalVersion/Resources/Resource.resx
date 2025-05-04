@@ -237,4 +237,49 @@
   <data name="GettingHere" xml:space="preserve">
     <value>Next: Getting Here</value>
   </data>
+  <data name="Children" xml:space="preserve">
+    <value>Children</value>
+  </data>
+  <data name="GettingToAround" xml:space="preserve">
+    <value>Getting to/around</value>
+  </data>
+  <data name="WheretoStay" xml:space="preserve">
+    <value>Where to Stay</value>
+  </data>
+  <data name="WhatToDo" xml:space="preserve">
+    <value>What to Do</value>
+  </data>
+  <data name="Finalizing" xml:space="preserve">
+    <value>Finalizing</value>
+  </data>
+  <data name="Yerevan" xml:space="preserve">
+    <value>Yerevan</value>
+  </data>
+  <data name="RoutInfo" xml:space="preserve">
+    <value>You're 120 km away from Gyumri</value>
+  </data>
+  <data name="Gyumri" xml:space="preserve">
+    <value>Gyumri</value>
+  </data>
+  <data name="km" xml:space="preserve">
+    <value>km</value>
+  </data>
+  <data name="Taxi" xml:space="preserve">
+    <value>Taxi</value>
+  </data>
+  <data name="Bus" xml:space="preserve">
+    <value>Bus</value>
+  </data>
+  <data name="Train" xml:space="preserve">
+    <value>Train</value>
+  </data>
+  <data name="PrivateCar" xml:space="preserve">
+    <value>Private Car</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
 </root>

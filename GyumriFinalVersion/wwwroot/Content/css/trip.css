@@ -171,7 +171,7 @@ ul {
     background-image:  url("../Images/Trip/tripheader.png");
     background-size: cover;
     background-position: center;
-    height: 65vh; /* Reduced height */
+    min-height: 65vh; /* Reduced height */
     display: flex;
     align-items: center;
     justify-content: center;
