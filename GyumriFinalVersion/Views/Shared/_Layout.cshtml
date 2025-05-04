@@ -1,6 +1,6 @@
 ﻿@{
-   // ViewData["Title"] = "Home Page";
-   var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
+    // ViewData["Title"] = "Home Page";
+    var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -29,73 +29,70 @@
             <!-- Navbar Content -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class ="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" asp-controller="Home" asp-action="Index">
                             @AppRes.Home
                         </a>
                     </li>
-                        @foreach (var menuItem in ViewBag.Categories)
-                        {
+                    @foreach (var menuItem in ViewBag.Categories)
+                    {
                         <li class="nav-item">
                             <a class="nav-link" asp-action="Category" asp-controller="Home" asp-route-categoryId="@menuItem.CategoryId">
-                                    @menuItem.Name
+                                @menuItem.Name
                             </a>
                         </li>
-                        }
-                    
-                </ul> 
-               
+                    }
+
+                </ul>
+
                 <div class="d-flex" style="display:flex;align-items: center;justify-content: center;">
                     <div class="search-container">
                         <a class="nav-link search-icon" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
                         <input type="text" class="search-input" placeholder="Search...">
                     </div>
                     <a class="nav-link" href="#"><i class="fa-regular fa-bookmark"></i></a>
-                                            <div class="language-dropdown">
+                    <div class="language-dropdown">
 
-                    <form asp-controller="Home" asp-action="ChangeLanguage" method="POST">
+                        <form asp-controller="Home" asp-action="ChangeLanguage" method="POST">
 
-                        <select style="border:none; background-color:transparent; color:white;" name="lang" onchange="this.form.submit()">
-                            @if (currentCulture == "en")
-                            {
-                                
+                            <select style="border:none; background-color:transparent; color:white;" name="lang" onchange="this.form.submit()">
+                                @if (currentCulture == "en")
+                                {
                                     <option class="nav-link" value="en" selected>English</option>
-                            }
-                            else
-                            {
+                                }
+                                else
+                                {
+                                    <option class="nav-link" style="color:#000;" value="en">English</option>
+                                }
+                                @if (currentCulture == "hy-AM")
+                                {
+                                    <option value="hy-AM" selected>Հայերեն</option>
+                                }
+                                else
+                                {
+                                    <option value="hy-AM" style="color:#000;">Հայերեն</option>
+                                }
+                                @if (currentCulture == "ru-RU")
+                                {
+                                    <option value="ru-RU" selected>Русский</option>
+                                }
+                                else
+                                {
+                                    <option value="ru-RU" style="color:#000;">Русский</option>
+                                }
 
-                                    <option class="nav-link" value="en">English</option>
-                            }
-                            @if (currentCulture == "hy-AM")
-                            {
+                            </select>
 
-                                    <option  value="hy-AM" selected>Հայերեն</option>
-                            }
-                            else
-                            {
-                                    <option value="hy-AM">Հայերեն</option>
-                            }
-                            @if (currentCulture == "ru-RU")
-                            {
-                                    <option  value="ru-RU" selected>Русский</option>
-                            }
-                            else
-                            {
-                                    <option  value="ru-RU">Русский</option>
-                            }
-
-                        </select>
-
-                    </form>
+                        </form>
                     </div>
 
-                  
+
                 </div>
             </div>
         </div>
     </nav>
-    <div >
-        <main role="main" >
+    <div>
+        <main role="main">
             @RenderBody()
         </main>
     </div>
@@ -130,7 +127,7 @@
         </div>
     </div>
 
-  
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

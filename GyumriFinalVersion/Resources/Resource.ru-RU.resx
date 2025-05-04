@@ -284,4 +284,16 @@
   <data name="Next" xml:space="preserve">
     <value>Следующий</value>
   </data>
+  <data name="min" xml:space="preserve">
+    <value>минут</value>
+  </data>
+  <data name="night" xml:space="preserve">
+    <value>ночь</value>
+  </data>
+  <data name="GettingtoGyumri" xml:space="preserve">
+    <value>Как добраться до Гюмри</value>
+  </data>
+  <data name="Complete" xml:space="preserve">
+    <value>Завершить</value>
+  </data>
 </root>

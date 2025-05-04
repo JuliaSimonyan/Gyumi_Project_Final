@@ -282,4 +282,16 @@
   <data name="Next" xml:space="preserve">
     <value>Հաջորդ</value>
   </data>
+  <data name="min" xml:space="preserve">
+    <value>րոպե</value>
+  </data>
+  <data name="night" xml:space="preserve">
+    <value>գիշեր</value>
+  </data>
+  <data name="GettingtoGyumri" xml:space="preserve">
+    <value>Ինչպե՞ս հասնել Գյումրի</value>
+  </data>
+  <data name="Complete" xml:space="preserve">
+    <value>Ավարտել</value>
+  </data>
 </root>

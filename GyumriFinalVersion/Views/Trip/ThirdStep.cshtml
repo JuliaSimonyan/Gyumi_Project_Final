@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Where to Stay";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -21,188 +22,168 @@
 
 </head>
 <body>
-    <h1>Third step</h1>
     <!-- Main Content -->
     <div class="main-content" style="background-color:white;">
         <!-- Progress Steps -->
         <div class="progress-steps">
-            <div class="step completed">
+            <div class="step">
                 <div class="step-icon">
                     <i class="fa-solid fa-car"></i>
                 </div>
-                <div class="step-text">Getting to/around</div>
+                <div class="step-text"> @AppRes.GettingToAround </div>
             </div>
             <div class="step-divider"></div>
-            <div class="step completed">
+            <div class="step">
                 <div class="step-icon">
                     <i class="fa-solid fa-bed"></i>
                 </div>
-                <div class="step-text">Where to Stay</div>
+                <div class="step-text"> @AppRes.WheretoStay </div>
             </div>
             <div class="step-divider"></div>
-            <div class="step active">
+            <div class="step actiive">
                 <div class="step-icon">
                     <i class="fa-solid fa-location-dot"></i>
                 </div>
-                <div class="step-text">What to Do</div>
+                <div class="step-text">@AppRes.WhatToDo</div>
             </div>
             <div class="step-divider"></div>
             <div class="step">
                 <div class="step-icon">
                     <i class="fa-solid fa-check"></i>
                 </div>
-                <div class="step-text">Finalizing</div>
+                <div class="step-text">@AppRes.Finalizing</div>
             </div>
         </div>
 
         <!-- Accommodation Filters -->
         <div class="accommodation-filters">
-            <button class="filter-btn active">
-                <i class="fa-solid fa-building-columns"></i>
-                <span>Museums</span>
-            </button>
-            <button class="filter-btn">
-                <i class="fa-solid fa-compass-drafting"></i>
-                <span>Crafts</span>
-            </button>
-            <button class="filter-btn">
-                <i class="fa-regular fa-chess-rook"></i>
-                <span>History</span>
-            </button>
-            <button class="filter-btn">
-                <i class="fa-solid fa-mountain-sun"></i>
-                <span>Outdoors</span>
-            </button>
-            <button class="filter-btn">
-                <i class="fa-solid fa-plate-wheat"></i>
-                <span>Cafes</span>
-            </button>
-            <button class="filter-btn">
-                <i class="fa-solid fa-utensils"></i>
-                <span>Restaurants</span>
-            </button>
-        </div>
-
-        <!-- Accommodation List -->
-       @*  <div class="accommodation-list">
-            <!-- Villa Kars Hotel -->
-            @foreach (var item in ViewBag.Activities)
+            @foreach (var item in ViewBag.AllSubcategories)
             {
-                <div class="accommodation-item">
-                    <div class="item-selection">
-                        <input type="radio" name="accommodation" id="villa-kars" checked>
-                        <label for="villa-kars"></label>
-                    </div>
-                    <div class="item-image">
-                        <img src="~/Images/activities/@item.Image" alt="Villa Kars Hotel">
-                    </div>
-                    <div class="item-details">
-                        <h3>@item.Name</h3>
-                        <div class="item-rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                        <p>@item.Description</p>
-                    </div>
-                    <div class="item-price">
-                        <div class="price-tag">
-                            <i class="fa-solid fa-tag"></i>
-                            <span>@item.PriceMin - @item.PriceMax ֏ AMD / night</span>
-                        </div>
-                        <a href="#" class="more-details">More Details <i class="fa-solid fa-chevron-right"></i></a>
-                    </div>
-                </div>
+                <a href="@Url.Action("SecondStep", "Trip", new { subcategoryId = item.SubcategoryId, currentPage = 1 })">
+                    <button class="filter-btn">
+                        <i class="fa-solid fa-hotel"></i>  @*TODO:  ներկայիս ընտրվածի գույնը փոխել *@
+                        @if (currentCulture == "ru-RU")
+                        {
+                            <span>@item.NameRu</span>
+                        }
+                        else if (currentCulture == "hy-AM")
+                        {
+                            <span>@item.NameArm</span>
+                        }
+                        else
+                        {
+                            <span>@item.Name</span>
+                        }
 
+                    </button>
+                </a>
             }
-          @*   <!-- Berlin Art Hotel -->
-            <div class="accommodation-item">
-                <div class="item-selection">
-                    <input type="radio" name="accommodation" id="berlin-art">
-                    <label for="berlin-art"></label>
-                </div>
-                <div class="item-image">
-                    <img src="Images/museum3.png" alt="Berlin Art Hotel">
-                </div>
-                <div class="item-details">
-                    <h3>Gallery of Mariam and Eranuhi Aslamazyan Sisters</h3>
-                    <div class="item-rating">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                    </div>
-                    <p>
-                        The Gallery is a distinguished cultural institution in Gyumri, Armenia,
-                        dedicated to celebrating the artistic legacy of two pioneering Armenian sisters.
-                    </p>
-                </div>
-                <div class="item-price">
-                    <div class="price-tag">
-                        <i class="fa-solid fa-tag"></i>
-                        <span>1,000  (֏) AMD</span>
-                    </div>
-                    <a href="#" class="more-details">More Details <i class="fa-solid fa-chevron-right"></i></a>
-                </div>
-            </div>
 
-            <!-- Radisson Hotel & Spa Gyumri -->
-            <div class="accommodation-item">
-                <div class="item-selection">
-                    <input type="radio" name="accommodation" id="radisson">
-                    <label for="radisson"></label>
-                </div>
-                <div class="item-image">
-                    <img src="Images/museum1.png" alt="Radisson Hotel & Spa Gyumri">
-                </div>
-                <div class="item-details">
-                    <h3>Mher Mkrtchyan Museum</h3>
-                    <div class="item-rating">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                    </div>
-                    <p>
-                        This museum honors Mher Mkrtchyan, a celebrated Armenian actor
-                        known for his roles in cinema and theater.
-                    </p>
-                </div>
-                <div class="item-price">
-                    <div class="price-tag">
-                        <i class="fa-solid fa-tag"></i>
-                        <span>700  (֏) AMD</span>
-                    </div>
-                    <a href="#" class="more-details">More Details <i class="fa-solid fa-chevron-right"></i></a>
-                </div>
-            </div> 
         </div>
- *@
-        <!-- Pagination -->
+
+        <div class="accommodation-list">
+            <form id="placeForm" asp-action="ThirdStep" asp-controller="Trip" method="post">
+                @foreach (var place in ViewBag.Places)
+                {
+                    <div class="accommodation-item">
+                        <div class="item-selection">
+                            <input type="radio" name="placeId" value="@place.Id" id="villa-kars" checked>
+                            <label for="villa-kars"></label>
+                        </div>
+                        <div class="item-image">
+                            <img src="~/Images/accomodations/@place.Photo" alt="Villa Kars Hotel">
+                        </div>
+                        <div class="item-details">
+                            @if (currentCulture == "ru-RU")
+                            {
+                                <h3>@place.PlaceNamePlaceNameRu</h3>
+                            }
+                            else if (currentCulture == "hy-AM")
+                            {
+                                <h3>@place.PlaceNameArm</h3>
+                            }
+                            else
+                            {
+                                <h3>@place.PlaceName</h3>
+                            }
+                            <div class="item-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            @if (currentCulture == "ru-RU")
+                            {
+                                <p>@place.DescriptionRu</p>
+                            }
+                            else if (currentCulture == "hy-AM")
+                            {
+                                <p>@place.DescriptionArm</p>
+                            }
+                            else
+                            {
+                                <p>@place.Description</p>
+                            }
+                        </div>
+                        <div class="item-price">
+                            <div class="price-tag">
+                                <i class="fa-solid fa-tag"></i>
+                                <span>@place.MinPrice - @place.MaxPrice ֏ AMD / night</span>
+                            </div>
+                            <a href="#" class="more-details">@AppRes.SeeMore <i class="fa-solid fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                }
+            </form>
+        </div>
+
         <div class="pagination-container">
             <div class="navigation-buttons">
-                <a href=@Url.Action("SecondStep", "Trip") class="back-btn">
+                <a href=@Url.Action("FirstStep", "Trip") class="back-btn">
                     <i class="fa-solid fa-arrow-left"></i>
-                    Back
+                    @AppRes.Back
                 </a>
                 <div class="pagination">
-                    <a href="#" class="page-item active">1</a>
-                    <a href="#" class="page-item">2</a>
-                    <a href="#" class="page-item">...</a>
-                    <a href="#" class="page-item">9</a>
-                    <a href="#" class="page-item">10</a>
+                    @if (ViewBag.CurrentPage > 1)
+                    {
+                        <a href="@Url.Action("SecondStep", "Trip", new { subcategoryId = ViewBag.CurrentSubcategory.SubcategoryId, currentPage = ViewBag.CurrentPage - 1 })" class="page-item"><i class="fa-solid fa-arrow-left"></i></a>
+                    }
+                    @if (ViewBag.CurrentPage > 3)
+                    {
+                        <a href="@Url.Action("SecondStep", "Trip", new { subcategoryId = ViewBag.CurrentSubcategory.SubcategoryId, currentPage = 1 })" class="page-item">1</a>
+                        <span class="page-item">...</span>
+                    }
+
+                    @for (int i = Math.Max(1, ViewBag.CurrentPage - 2); i <= Math.Min(ViewBag.PagesCount, ViewBag.CurrentPage + 2); i++)
+                    {
+                        var activeClass = (i == ViewBag.CurrentPage) ? "active" : "";
+                        <a href="@Url.Action("SecondStep", "Trip", new { subcategoryId = ViewBag.CurrentSubcategory.SubcategoryId, currentPage = i })"
+                           class="page-item @activeClass">@i</a>
+                    }
+
+                    @if (ViewBag.CurrentPage < ViewBag.PagesCount - 2)
+                    {
+                        <span class="page-item">...</span>
+                        <a href="@Url.Action("SecondStep", "Trip", new { subcategoryId = ViewBag.CurrentSubcategory.SubcategoryId, currentPage = ViewBag.PagesCount })" class="page-item">@ViewBag.PagesCount</a>
+                    }
+
+                    @if (ViewBag.CurrentPage < ViewBag.PagesCount)
+                    {
+                        <a href="@Url.Action("SecondStep", "Trip", new { subcategoryId = ViewBag.CurrentSubcategory.SubcategoryId, currentPage = ViewBag.CurrentPage + 1 })" class="page-item"><i class="fa-solid fa-arrow-right"></i></a>
+                    }
                 </div>
-                <a href=@Url.Action("ForthStep", "Trip") class="next-btn">
-                    Next
+
+                <button type="submit" form="placeForm">
+                    @AppRes.Next
                     <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                </button>
             </div>
 
         </div>
+
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

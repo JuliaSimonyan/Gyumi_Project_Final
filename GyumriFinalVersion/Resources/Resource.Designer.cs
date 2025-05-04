@@ -124,6 +124,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Complete.
+        /// </summary>
+        public static string Complete {
+            get {
+                return ResourceManager.GetString("Complete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cultural Renaissance.
         /// </summary>
         public static string CulturalRenaissance {
@@ -259,6 +268,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Getting to Gyumri.
+        /// </summary>
+        public static string GettingtoGyumri {
+            get {
+                return ResourceManager.GetString("GettingtoGyumri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to great deals!.
         /// </summary>
         public static string greatDeals {
@@ -376,11 +394,29 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to min.
+        /// </summary>
+        public static string min {
+            get {
+                return ResourceManager.GetString("min", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Next.
         /// </summary>
         public static string Next {
             get {
                 return ResourceManager.GetString("Next", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to night.
+        /// </summary>
+        public static string night {
+            get {
+                return ResourceManager.GetString("night", resourceCulture);
             }
         }
         

@@ -59,22 +59,24 @@
         <div class="accommodation-filters">
             @foreach (var item in ViewBag.AllSubcategories)
             {
-                <button class="filter-btn">
-                    <i class="fa-solid fa-house"></i>  @* ներկայիս ընտրվածի գույնը փոխել *@
-                    @if (currentCulture == "ru-RU")
-                    {
-                        <span>@item.NameRu</span>
-                    }
-                    else if (currentCulture == "hy-AM")
-                    {
-                        <span>@item.NameArm</span>
-                    }
-                    else
-                    {
-                        <span>@item.Name</span>
-                    }
+                <a href="@Url.Action("SecondStep", "Trip", new { subcategoryId = item.SubcategoryId, currentPage = 1 })">
+                    <button class="filter-btn">
+                        <i class="fa-solid fa-hotel"></i>  @*TODO:  ներկայիս ընտրվածի գույնը փոխել *@
+                        @if (currentCulture == "ru-RU")
+                        {
+                            <span>@item.NameRu</span>
+                        }
+                        else if (currentCulture == "hy-AM")
+                        {
+                            <span>@item.NameArm</span>
+                        }
+                        else
+                        {
+                            <span>@item.Name</span>
+                        }
 
-                </button>
+                    </button>
+                </a>
             }
 
             @* <button class="filter-btn active">
@@ -92,59 +94,61 @@
         </div>
 
         <div class="accommodation-list">
-            @foreach (var place in ViewBag.Places)
-            {
-                <div class="accommodation-item">
-                    <div class="item-selection">
-                        <input type="radio" name="accommodation" id="villa-kars" checked>
-                        <label for="villa-kars"></label>
-                    </div>
-                    <div class="item-image">
-                        <img src="~/Images/accomodations/@place.Photo" alt="Villa Kars Hotel">
-                    </div>
-                    <div class="item-details">
-                        @if (currentCulture == "ru-RU")
-                        {
-                            <h3>@place.PlaceNamePlaceNameRu</h3>
-                        }
-                        else if (currentCulture == "hy-AM")
-                        {
-                            <h3>@place.PlaceNameArm</h3>
-                        }
-                        else
-                        {
-                            <h3>@place.PlaceName</h3>
-                        }
-                        <div class="item-rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
+            <form id="placeForm" asp-action="SecondStep" asp-controller="Trip" method="post">
+                @foreach (var place in ViewBag.Places)
+                {
+                    <div class="accommodation-item">
+                        <div class="item-selection">
+                            <input type="radio" name="placeId" value="@place.Id" id="villa-kars" checked>
+                            <label for="villa-kars"></label>
                         </div>
-                        
-                        @if (currentCulture == "ru-RU")
-                        {
-                            <p>@place.DescriptionRu</p>
-                        }
-                        else if (currentCulture == "hy-AM")
-                        {
-                            <p>@place.DescriptionArm</p>
-                        }
-                        else
-                        {
-                            <p>@place.Description</p>
-                        }
-                    </div>
-                    <div class="item-price">
-                        <div class="price-tag">
-                            <i class="fa-solid fa-tag"></i>
-                            <span>@place.MinPrice - @place.MaxPrice ֏ AMD / night</span>
+                        <div class="item-image">
+                            <img src="~/Images/accomodations/@place.Photo" alt="Villa Kars Hotel">
                         </div>
-                        <a href="#" class="more-details">@AppRes.SeeMore <i class="fa-solid fa-chevron-right"></i></a>
+                        <div class="item-details">
+                            @if (currentCulture == "ru-RU")
+                            {
+                                <h3>@place.PlaceNamePlaceNameRu</h3>
+                            }
+                            else if (currentCulture == "hy-AM")
+                            {
+                                <h3>@place.PlaceNameArm</h3>
+                            }
+                            else
+                            {
+                                <h3>@place.PlaceName</h3>
+                            }
+                            <div class="item-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            @if (currentCulture == "ru-RU")
+                            {
+                                <p>@place.DescriptionRu</p>
+                            }
+                            else if (currentCulture == "hy-AM")
+                            {
+                                <p>@place.DescriptionArm</p>
+                            }
+                            else
+                            {
+                                <p>@place.Description</p>
+                            }
+                        </div>
+                        <div class="item-price">
+                            <div class="price-tag">
+                                <i class="fa-solid fa-tag"></i>
+                                <span>@place.MinPrice - @place.MaxPrice ֏ AMD / night</span>
+                            </div>
+                            <a href="#" class="more-details">@AppRes.SeeMore <i class="fa-solid fa-chevron-right"></i></a>
+                        </div>
                     </div>
-                </div>
-            }
+                }
+            </form>
         </div>
 
         <div class="pagination-container">
@@ -154,17 +158,43 @@
                     @AppRes.Back
                 </a>
                 <div class="pagination">
-                    @for (int i = 1; i <= ViewBag.PagesCount; i++)
+                    @if (ViewBag.CurrentPage > 1)
+                    {
+                        <a href="@Url.Action("SecondStep", "Trip", new { subcategoryId = ViewBag.CurrentSubcategory.SubcategoryId, currentPage = ViewBag.CurrentPage - 1 })" class="page-item"><i class="fa-solid fa-arrow-left"></i></a>
+                    }
+                    @if (ViewBag.CurrentPage > 3)
+                    {
+                        <a href="@Url.Action("SecondStep", "Trip", new { subcategoryId = ViewBag.CurrentSubcategory.SubcategoryId, currentPage = 1 })" class="page-item">1</a>
+                        <span class="page-item">...</span>
+                    }
+
+                    @for (int i = Math.Max(1, ViewBag.CurrentPage - 2); i <= Math.Min(ViewBag.PagesCount, ViewBag.CurrentPage + 2); i++)
                     {
                         var activeClass = (i == ViewBag.CurrentPage) ? "active" : "";
                         <a href="@Url.Action("SecondStep", "Trip", new { subcategoryId = ViewBag.CurrentSubcategory.SubcategoryId, currentPage = i })"
                            class="page-item @activeClass">@i</a>
                     }
+
+                    @if (ViewBag.CurrentPage < ViewBag.PagesCount - 2)
+                    {
+                        <span class="page-item">...</span>
+                        <a href="@Url.Action("SecondStep", "Trip", new { subcategoryId = ViewBag.CurrentSubcategory.SubcategoryId, currentPage = ViewBag.PagesCount })" class="page-item">@ViewBag.PagesCount</a>
+                    }
+
+                    @if (ViewBag.CurrentPage < ViewBag.PagesCount)
+                    {
+                        <a href="@Url.Action("SecondStep", "Trip", new { subcategoryId = ViewBag.CurrentSubcategory.SubcategoryId, currentPage = ViewBag.CurrentPage + 1 })" class="page-item"><i class="fa-solid fa-arrow-right"></i></a>
+                    }
                 </div>
-                <a href=@Url.Action("ThirdStep", "Trip") class="next-btn">
+
+                <button type="submit" form="placeForm">
                     @AppRes.Next
                     <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                </button>
+                @* <a href=@Url.Action("ThirdStep", "Trip") class="next-btn">
+                    @AppRes.Next
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a> *@
             </div>
 
         </div>
@@ -198,15 +228,6 @@
             });
 
             document.querySelector('.accommodation-item').classList.add('selected');
-
-            const paginationItems = document.querySelectorAll('.page-item');
-            paginationItems.forEach(item => {
-                item.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    paginationItems.forEach(i => i.classList.remove('active'));
-                    this.classList.add('active');
-                });
-            });
 
 
         });

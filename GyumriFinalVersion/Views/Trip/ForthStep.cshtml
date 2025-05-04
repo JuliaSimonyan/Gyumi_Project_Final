@@ -10,47 +10,47 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="~/Content/style.css">
     <link rel="stylesheet" href="~/Content/css/step4.css">
-
-
+    @{
+        var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
+    }
 </head>
 <body>
-    <h1>Forth Step page</h1>
     <!-- Main Content -->
-    <div class="main-content" style="background-color:white";>
+    <div class="main-content" style="background-color:white" ;>
         <!-- Progress Steps -->
         <div class="progress-steps">
-            <div class="step completed">
+            <div class="step">
                 <div class="step-icon">
                     <i class="fa-solid fa-car"></i>
                 </div>
-                <div class="step-text">Getting to/around</div>
+                <div class="step-text"> @AppRes.GettingToAround </div>
             </div>
             <div class="step-divider"></div>
-            <div class="step completed">
+            <div class="step">
                 <div class="step-icon">
                     <i class="fa-solid fa-bed"></i>
                 </div>
-                <div class="step-text">Where to Stay</div>
+                <div class="step-text"> @AppRes.WheretoStay </div>
             </div>
             <div class="step-divider"></div>
-            <div class="step completed">
+            <div class="step">
                 <div class="step-icon">
                     <i class="fa-solid fa-location-dot"></i>
                 </div>
-                <div class="step-text">What to Do</div>
+                <div class="step-text">@AppRes.WhatToDo</div>
             </div>
             <div class="step-divider"></div>
-            <div class="step active">
+            <div class="step actiive">
                 <div class="step-icon">
                     <i class="fa-solid fa-check"></i>
                 </div>
-                <div class="step-text">Finalizing</div>
+                <div class="step-text">@AppRes.Finalizing</div>
             </div>
         </div>
         <!-- Travel Guide Section -->
         <section class="travel-guide">
             <div class="guide-section">
-                <h2>Getting to Gyumri</h2>
+                <h2>@AppRes.GettingtoGyumri</h2>
                 <div class="guide-item">
                     <div class="item-content">
                         <div class="item-icon">
@@ -60,13 +60,13 @@
                             </svg>
                         </div>
                         <div class="item-details">
-                            <h3>GG Taxi</h3>
+                            <h3 style="color:#000;">GG Taxi</h3>
                             <div class="item-time">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="12" cy="12" r="10"></circle>
                                     <polyline points="12 6 12 12 16 14"></polyline>
                                 </svg>
-                                90 min
+                                90 @AppRes.min
                             </div>
                         </div>
                     </div>
@@ -77,59 +77,81 @@
                             <path d="M8 12h8"></path>
                         </svg>
                         12,000 (֏) AMD
-                        <button class="change-btn">Change</button>
+                        @* <button class="change-btn">Change</button> *@
                     </div>
                 </div>
             </div>
 
             <div class="guide-section">
-                <h2>Where to Stay</h2>
+                <h2>@AppRes.WheretoStay</h2>
                 <div class="guide-item">
                     <div class="item-content">
                         <div class="item-thumbnail">
                             <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-kUJhL8uD96j8xGMUGnXmdJFprk4qId.png" alt="Berlin Art Hotel">
                         </div>
                         <div class="item-details">
-                            <h3>Berlin Art Hotel</h3>
-                            <div class="item-address">
+                            @if (currentCulture == "ru-RU")
+                            {
+                                <h3>@ViewBag.Place1.NameRu</h3>
+                            }
+                            else if (currentCulture == "hy-AM")
+                            {
+                                <h3>@ViewBag.Place1.NameArm</h3>
+                            }
+                            else
+                            {
+                                <h3>@ViewBag.Place1.Name</h3>
+                            }
+                            <div class="item-address" style="color:#000;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                     <circle cx="12" cy="10" r="3"></circle>
                                 </svg>
-                                25 Haghtanaki Avenue, Gyumri
+                                25 Haghtanaki Avenue, Gyumri @* TODO:: get address from backend *@
                             </div>
                         </div>
                     </div>
-                    <div class="item-price">
+                    <div class="item-price" style="color:#000;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="2" y="4" width="20" height="16" rx="2"></rect>
                             <path d="M12 8v8"></path>
                             <path d="M8 12h8"></path>
                         </svg>
-                        19,500 - 31,000 (֏) AMD / night
-                        <div class="action-buttons">
+                        @(ViewBag.Place1.MinPrice) - @(ViewBag.Place1.MAxPrice) (֏) AMD / @AppRes.night
+                        @* <div class="action-buttons">
                             <button class="change-btn">Change</button>
                             <button class="remove-btn">×</button>
-                        </div>
+                        </div> *@
                     </div>
                 </div>
             </div>
 
             <div class="guide-section">
-                <h2>What to Do</h2>
+                <h2>@AppRes.WhatToDo</h2>
                 <div class="guide-item">
                     <div class="item-content">
                         <div class="item-thumbnail">
                             <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-kUJhL8uD96j8xGMUGnXmdJFprk4qId.png" alt="Dzitoghtsyan Museum">
                         </div>
                         <div class="item-details">
-                            <h3>Dzitoghtsyan Museum</h3>
-                            <div class="item-address">
+                            <@if (currentCulture == "ru-RU")
+                            {
+                                <h3>@ViewBag.Place2.NameRu</h3>
+                            }
+                            else if (currentCulture == "hy-AM")
+                            {
+                                <h3>@ViewBag.Place2.NameArm</h3>
+                            }
+                            else
+                            {
+                                <h3>@ViewBag.Place2.Name</h3>
+                            }
+                            <div class="item-address" style="color:#000;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                     <circle cx="12" cy="10" r="3"></circle>
                                 </svg>
-                                47 Haghtanaki Avenue, Gyumri
+                                47 Haghtanaki Avenue, Gyumri@* TODO:: get address from backend *@
                             </div>
                         </div>
                     </div>
@@ -139,15 +161,15 @@
                             <path d="M12 8v8"></path>
                             <path d="M8 12h8"></path>
                         </svg>
-                        3,000 - 5,000 (֏) AMD
+                        @(ViewBag.Place2.MinPrice) - @(ViewBag.Place2.MAxPrice) (֏) AMD
                         <div class="action-buttons">
-                            <button class="change-btn">Change</button>
-                            <button class="remove-btn">×</button>
+                            @* <button class="change-btn">Change</button>
+                            <button class="remove-btn">×</button> *@
                         </div>
                     </div>
                 </div>
 
-                <div class="guide-item">
+                @* <div class="guide-item">
                     <div class="item-content">
                         <div class="item-thumbnail">
                             <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-kUJhL8uD96j8xGMUGnXmdJFprk4qId.png" alt="Aregak Bakery & Café">
@@ -169,7 +191,7 @@
                             <button class="remove-btn">×</button>
                         </div>
                     </div>
-                </div>
+                </div> 
 
                 <div class="guide-item">
                     <div class="item-content">
@@ -193,7 +215,7 @@
                             <button class="remove-btn">×</button>
                         </div>
                     </div>
-                </div>
+                </div>*@
             </div>
         </section>
 
@@ -202,17 +224,17 @@
             <div class="navigation-buttons">
                 <a href=@Url.Action("ThirdStep", "Trip") class="back-btn">
                     <i class="fa-solid fa-arrow-left"></i>
-                    Back
+                    @AppRes.Back
                 </a>
-                <div class="pagination">
+                @*  <div class="pagination">
                     <a href="#" class="page-item active">1</a>
                     <a href="#" class="page-item">2</a>
                     <a href="#" class="page-item">...</a>
                     <a href="#" class="page-item">9</a>
                     <a href="#" class="page-item">10</a>
-                </div>
+                </div> *@
                 <a href=@Url.Action("Final", "Trip") class="next-btn">
-                    Complete
+                    @AppRes.Complete
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
