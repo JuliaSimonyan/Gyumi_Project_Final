@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Montserrat", sans-serif;
+    color: #181818 !important;
 }
 
 .main-content {
@@ -311,6 +312,10 @@ input[type='radio'] {
 .distance-marker div {
     color: #333;
     font-weight: 500;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Responsive styles */

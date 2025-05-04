@@ -10,51 +10,51 @@
     <link rel="stylesheet" href="~/Content/css/trip.css">
 </head>
 <body>
-
     <!-- Hero Section with Trip Planner -->
     <section class="hero-section">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="display-3 fw-bold" style="margin-top: 200px;">@AppRes.LetsPlanYourTrip</h1>
-            <p class="lead" style="margin-bottom: 100px;">@AppRes.TripPageText</p>
+            <h1 class="display-3 fw-bold" style="margin-top: 100px;">@AppRes.LetsPlanYourTrip</h1>
+            <p class="lead text-center" style="margin-bottom: 100px;">@AppRes.TripPageText</p>
+            <form asp-controller="Trip" asp-action="Index" method="POST"> 
+                <div class="trip-planner-container">
+                    <div class="trip-planner">
+                        <div class="date-picker">
+                            <label for="dates" class="date-label">
+                                <i class="fa-regular fa-calendar"></i>
+                                <input name="dates" type="text" class="date-input" value="Mar 15 - Mar 21" readonly>
+                            </label>
+                        </div>
 
-            <div class="trip-planner-container">
-                <div class="trip-planner">
-                    <div class="date-picker">
-                        <label for="trip-dates" class="date-label">
-                            <i class="fa-regular fa-calendar"></i>
-                            <input type="text" id="trip-dates" class="date-input" value="Mar 15 - Mar 21" readonly>
-                        </label>
-                    </div>
+                        <div class="people-counter">
+                            <div class="counter-group">
+                                <label>@AppRes.Adults</label>
+                                <div class="counter">
+                                    <button type="button" class="counter-btn decrease">-</button>
+                                    <input name="adult" type="text" class="count-input" value="2" readonly>
+                                    <button type="button" class="counter-btn increase">+</button>
+                                </div>
+                            </div>
 
-                    <div class="people-counter">
-                        <div class="counter-group">
-                            <label>Adults</label>
-                            <div class="counter">
-                                <button type="button" class="counter-btn decrease">-</button>
-                                <input type="text" class="count-input" value="2" readonly>
-                                <button type="button" class="counter-btn increase">+</button>
+                            <div class="counter-group">
+                                <label>@AppRes.Children</label>
+                                <div class="counter">
+                                    <button type="button" class="counter-btn decrease">-</button>
+                                    <input name="children" type="text" class="count-input" value="2" readonly>
+                                    <button type="button" class="counter-btn increase">+</button>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="counter-group">
-                            <label>Children</label>
-                            <div class="counter">
-                                <button type="button" class="counter-btn decrease">-</button>
-                                <input type="text" class="count-input" value="2" readonly>
-                                <button type="button" class="counter-btn increase">+</button>
-                            </div>
+                        <div class="next-step">
+                            <button type="submit" class="next-btn">
+                                @AppRes.GettingHere
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
                         </div>
-                    </div>
-
-                    <div class="next-step">
-                        <a href=@Url.Action("FirstStep", "Trip") class="next-btn">
-                            @AppRes.GettingHere
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
     </section>
 

@@ -97,6 +97,42 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Back.
+        /// </summary>
+        public static string Back {
+            get {
+                return ResourceManager.GetString("Back", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bus.
+        /// </summary>
+        public static string Bus {
+            get {
+                return ResourceManager.GetString("Bus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Children.
+        /// </summary>
+        public static string Children {
+            get {
+                return ResourceManager.GetString("Children", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Complete.
+        /// </summary>
+        public static string Complete {
+            get {
+                return ResourceManager.GetString("Complete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cultural Renaissance.
         /// </summary>
         public static string CulturalRenaissance {
@@ -187,6 +223,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Finalizing.
+        /// </summary>
+        public static string Finalizing {
+            get {
+                return ResourceManager.GetString("Finalizing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Forge of Legends.
         /// </summary>
         public static string ForgeOfLegends {
@@ -214,11 +259,38 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Getting to/around.
+        /// </summary>
+        public static string GettingToAround {
+            get {
+                return ResourceManager.GetString("GettingToAround", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Getting to Gyumri.
+        /// </summary>
+        public static string GettingtoGyumri {
+            get {
+                return ResourceManager.GetString("GettingtoGyumri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to great deals!.
         /// </summary>
         public static string greatDeals {
             get {
                 return ResourceManager.GetString("greatDeals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gyumri.
+        /// </summary>
+        public static string Gyumri {
+            get {
+                return ResourceManager.GetString("Gyumri", resourceCulture);
             }
         }
         
@@ -277,6 +349,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to km.
+        /// </summary>
+        public static string km {
+            get {
+                return ResourceManager.GetString("km", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Learn about Gyumri’s districts.
         /// </summary>
         public static string LearnaboutGyumrisdistricts {
@@ -313,11 +394,56 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to min.
+        /// </summary>
+        public static string min {
+            get {
+                return ResourceManager.GetString("min", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Next.
+        /// </summary>
+        public static string Next {
+            get {
+                return ResourceManager.GetString("Next", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to night.
+        /// </summary>
+        public static string night {
+            get {
+                return ResourceManager.GetString("night", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Plan a Trip.
         /// </summary>
         public static string PlanATrip {
             get {
                 return ResourceManager.GetString("PlanATrip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Private Car.
+        /// </summary>
+        public static string PrivateCar {
+            get {
+                return ResourceManager.GetString("PrivateCar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You&apos;re 120 km away from Gyumri.
+        /// </summary>
+        public static string RoutInfo {
+            get {
+                return ResourceManager.GetString("RoutInfo", resourceCulture);
             }
         }
         
@@ -358,11 +484,29 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Taxi.
+        /// </summary>
+        public static string Taxi {
+            get {
+                return ResourceManager.GetString("Taxi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tradition Meets Modernity.
         /// </summary>
         public static string TraditionMeetsModernity {
             get {
                 return ResourceManager.GetString("TraditionMeetsModernity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Train.
+        /// </summary>
+        public static string Train {
+            get {
+                return ResourceManager.GetString("Train", resourceCulture);
             }
         }
         
@@ -417,6 +561,33 @@ namespace GyumriFinalVersion.Resources {
         public static string WelcomeGyumri {
             get {
                 return ResourceManager.GetString("WelcomeGyumri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to What to Do.
+        /// </summary>
+        public static string WhatToDo {
+            get {
+                return ResourceManager.GetString("WhatToDo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Where to Stay.
+        /// </summary>
+        public static string WheretoStay {
+            get {
+                return ResourceManager.GetString("WheretoStay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yerevan.
+        /// </summary>
+        public static string Yerevan {
+            get {
+                return ResourceManager.GetString("Yerevan", resourceCulture);
             }
         }
     }

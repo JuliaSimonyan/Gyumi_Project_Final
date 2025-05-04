@@ -226,7 +226,7 @@
     <value>Քաղաքը կյանքի է կոչվում ուրիշ ձևով արևածագից հետո։</value>
   </data>
   <data name="LetsPlanYourTrip" xml:space="preserve">
-    <value>Արի պլանավորենք քո ճամփորդությունը։</value>
+    <value>Արի պլանավորենք քո ճամփորդությունը</value>
   </data>
   <data name="TripPageText" xml:space="preserve">
     <value>Օգտագործիր այս գործիքը՝ քո ճամփորդությունը, կեցությունը և զբաղմունքները կազմակերպելու համար՝ անմոռանալի ճանապարհորդություն դեպի Գյումրի ապահովելու նպատակով։ Վերջում կարող ես ստանալ քո անհատականացված պլանը՝ էլ․ փոստով կամ ներբեռնմամբ։</value>
@@ -236,5 +236,62 @@
   </data>
   <data name="GettingHere" xml:space="preserve">
     <value>Հաջորդը՝ Ինչպես հասնել այստեղ</value>
+  </data>
+  <data name="Children" xml:space="preserve">
+    <value>Երեխաներ</value>
+  </data>
+  <data name="GettingToAround" xml:space="preserve">
+    <value> Հասնել և տեղաշարժվել</value>
+  </data>
+  <data name="WheretoStay" xml:space="preserve">
+    <value>Որտեղ մնալ</value>
+  </data>
+  <data name="WhatToDo" xml:space="preserve">
+    <value>Ինչ անել</value>
+  </data>
+  <data name="Finalizing" xml:space="preserve">
+    <value>Վերջին քայլ</value>
+  </data>
+  <data name="Yerevan" xml:space="preserve">
+    <value>Երևան</value>
+  </data>
+  <data name="RoutInfo" xml:space="preserve">
+    <value>Դուք Գյումրիից 120 կմ հեռավորության վրա եք։</value>
+  </data>
+  <data name="Gyumri" xml:space="preserve">
+    <value>Գյումրի</value>
+  </data>
+  <data name="km" xml:space="preserve">
+    <value>կմ</value>
+  </data>
+  <data name="Taxi" xml:space="preserve">
+    <value>տաքսի</value>
+  </data>
+  <data name="Bus" xml:space="preserve">
+    <value>Ավտոբուս</value>
+  </data>
+  <data name="Train" xml:space="preserve">
+    <value>Գնացք</value>
+  </data>
+  <data name="PrivateCar" xml:space="preserve">
+    <value>Անհատական մեքենա</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Հետ</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Հաջորդ</value>
+  </data>
+  <data name="min" xml:space="preserve">
+    <value>րոպե</value>
+  </data>
+  <data name="night" xml:space="preserve">
+    <value>գիշեր</value>
+  </data>
+  <data name="GettingtoGyumri" xml:space="preserve">
+    <value>Ինչպե՞ս հասնել Գյումրի</value>
+  </data>
+  <data name="Complete" xml:space="preserve">
+    <value>Ավարտել</value>
   </data>
 </root>

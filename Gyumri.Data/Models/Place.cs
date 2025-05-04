@@ -12,6 +12,10 @@ namespace Gyumri.Data.Models
         public string Description { get; set; }
         public string? DescriptionArm { get; set; }
         public string? DescriptionRu { get; set; }
+        //public string Address { get; set; }
+        //public string? AddressArm { get; set; }
+        //public string? AddressRu { get; set; }
+
         public string Photo { get; set; }
 
         public int MinPrice { get; set; }
