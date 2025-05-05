@@ -92,49 +92,6 @@ namespace GyumriFinalVersion.Controllers
             var seeAndDoCategory = categories.FirstOrDefault(c => c.Name == "See & Do");
             var subcategories = await _subCategoryService.GetSubcategoriesByCategoryId(seeAndDoCategory.CategoryId);
 
-            // Create test subcategories if none exist
-            if (!subcategories.Any())
-            {
-                for (int i = 1; i <= 2; i++)
-                {
-                    var newSubcategory = new AddSubcategoryViewModel
-                    {
-                        Name = $"Test Subcategory {i}",
-                        NameArm = $"Թեստ Սուբկատեգորիա {i}",
-                        NameRu = $"Тестовая Подкатегория {i}",
-                        Description = $"Test Subcategory {i}",
-                        DescriptionArm = $"Թեստ Սուբկատեգորիա {i}",
-                        DescriptionRu = $"Тестовая Подкатегория {i}",
-                        CategoryId = seeAndDoCategory.CategoryId
-                    };
-                    await _subCategoryService.AddSubcategory(newSubcategory);
-                }
-                subcategories = await _subCategoryService.GetSubcategoriesByCategoryId(seeAndDoCategory.CategoryId);
-            }
-
-            foreach (var sub in subcategories)
-            {
-                var existingPlaces = await _placeService.GetPlacesBySubCategoryId(sub.SubcategoryId);
-
-                for (int i = 1; i <= 25; i++)
-                {
-                    var newPlace = new AddEditPlaceViewModel
-                    {
-                        SubcategoryId = sub.SubcategoryId,
-                        PlaceName = $"Test Place {i} - {sub.Name}",
-                        PlaceNameArm = $"Թեստ Տեղ {i} - {sub.NameArm}",
-                        PlaceNameRu = $"Тестовое место {i} - {sub.NameRu}",
-                        Description = "This is a test description.",
-                        DescriptionArm = "Սա թեստ նկարագրություն է։",
-                        DescriptionRu = "Это тестовое описание.",
-                        MinPrice = 10000 + i * 1000,
-                        MaxPrice = 15000 + i * 1000,
-                        Photo = "default.jpg"
-                    };
-                    await _placeService.AddPlace(newPlace);
-                }
-            }
-
             if (subcategoryId == -1 && subcategories.Any())
             {
                 subcategoryId = subcategories.First().SubcategoryId;
@@ -174,49 +131,6 @@ namespace GyumriFinalVersion.Controllers
             var categories = await _categoryService.GetAllCategories();
             var seeAndDoCategory = categories.FirstOrDefault(c => c.Name == "Relax & Sleep");
             var subcategories = await _subCategoryService.GetSubcategoriesByCategoryId(seeAndDoCategory.CategoryId);
-
-            // Create test subcategories if none exist
-            if (!subcategories.Any())
-            {
-                for (int i = 1; i <= 2; i++)
-                {
-                    var newSubcategory = new AddSubcategoryViewModel
-                    {
-                        Name = $"Test Subcategory Relax & Sleep {i}",
-                        NameArm = $"Թեստ Սուբկատեգորիա {i}",
-                        NameRu = $"Тестовая Подкатегория {i}",
-                        Description = $"Test Subcategory {i}",
-                        DescriptionArm = $"Թեստ Սուբկատեգորիա {i}",
-                        DescriptionRu = $"Тестовая Подкатегория {i}",
-                        CategoryId = seeAndDoCategory.CategoryId
-                    };
-                    await _subCategoryService.AddSubcategory(newSubcategory);
-                }
-                subcategories = await _subCategoryService.GetSubcategoriesByCategoryId(seeAndDoCategory.CategoryId);
-            }
-
-            foreach (var sub in subcategories)
-            {
-                var existingPlaces = await _placeService.GetPlacesBySubCategoryId(sub.SubcategoryId);
-
-                for (int i = 1; i <= 25; i++)
-                {
-                    var newPlace = new AddEditPlaceViewModel
-                    {
-                        SubcategoryId = sub.SubcategoryId,
-                        PlaceName = $"Test Place Relax & Sleep {i} - {sub.Name}",
-                        PlaceNameArm = $"Թեստ Տեղ {i} - {sub.NameArm}",
-                        PlaceNameRu = $"Тестовое место {i} - {sub.NameRu}",
-                        Description = "This is a test description.",
-                        DescriptionArm = "Սա թեստ նկարագրություն է։",
-                        DescriptionRu = "Это тестовое описание.",
-                        MinPrice = 10000 + i * 1000,
-                        MaxPrice = 15000 + i * 1000,
-                        Photo = "default.jpg"
-                    };
-                    await _placeService.AddPlace(newPlace);
-                }
-            }
 
             if (subcategoryId == -1 && subcategories.Any())
             {
