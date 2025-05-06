@@ -14,7 +14,7 @@
 {
     if (block.BlockType == "Paragraph")
     {
-        <p>@block.Content</p>
+        <p>@Html.Raw(@block.Content)</p>
     }
     else if (block.BlockType == "Image")
     {

@@ -102,8 +102,6 @@ namespace Gyumri.Areas.Admin.Controllers
 
             return View(article);
         }
-
-
         [HttpPost]
         public async Task<IActionResult> Edit(Article model, List<IFormFile> imageFiles)
         {
@@ -114,7 +112,6 @@ namespace Gyumri.Areas.Admin.Controllers
             if (existing == null)
                 return NotFound();
 
-            // Update the article title
             existing.Title = model.Title;
 
             int imageIndex = 0;
@@ -126,12 +123,10 @@ namespace Gyumri.Areas.Admin.Controllers
 
                 if (existingBlock != null)
                 {
-                    // Update the text block content
-                    if (existingBlock.BlockType == "Text")
+                    if (existingBlock.BlockType == "Paragraph")
                     {
-                        existingBlock.Content = newBlock.Content;  // Here we save the edited paragraph content
+                        existingBlock.Content = newBlock.Content;
                     }
-                    // Update the image block content
                     else if (existingBlock.BlockType == "Image")
                     {
                         if (imageFiles.Count > imageIndex && imageFiles[imageIndex]?.Length > 0)
@@ -152,7 +147,7 @@ namespace Gyumri.Areas.Admin.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction("Index");
+            return RedirectToAction("Details", new { id = model.Id });
         }
 
         [HttpPost]

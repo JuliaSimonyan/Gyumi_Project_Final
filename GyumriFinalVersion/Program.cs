@@ -113,6 +113,7 @@ using (var scope = app.Services.CreateScope())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+app.UseSession();
 
 var supportedCultures = new[] { "en", "hy-AM", "ru-RU" };
 var localizationOptions = new RequestLocalizationOptions()

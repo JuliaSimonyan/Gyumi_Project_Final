@@ -31,5 +31,6 @@ namespace Gyumri.Data.Models
         [ForeignKey("Article")]
         public int? ArticleId { get; set; }
         public Article? Article { get; set; }
+
     }
 }

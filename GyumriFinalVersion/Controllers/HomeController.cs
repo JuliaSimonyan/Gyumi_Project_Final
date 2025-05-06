@@ -138,24 +138,25 @@ namespace GyumriFinalVersion.Controllers
 
             return View(places);
         }
-        [HttpPost]
-        public IActionResult RemovePlace([FromBody] int placeId)
+        public class RemovePlaceRequest
         {
-            // Get the list of saved places from the session
-            var savedPlaces = HttpContext.Session.Get<List<int>>("SavedPlaces") ?? new List<int>();
+            public int PlaceId { get; set; }
+        }
 
-            // Remove the place from the session list
+        [HttpPost]
+        public IActionResult RemovePlace([FromBody] RemovePlaceRequest request)
+        {
+            var placeId = request.PlaceId;
+
+            var savedPlaces = HttpContext.Session.Get<List<int>>("SavedPlaces") ?? new List<int>();
             if (savedPlaces.Contains(placeId))
             {
                 savedPlaces.Remove(placeId);
-                HttpContext.Session.Set("SavedPlaces", savedPlaces); // Update session with the new list
+                HttpContext.Session.Set("SavedPlaces", savedPlaces);
             }
-
-            // Optionally, if you're removing from the database, you'd do it here
 
             return Ok();
         }
-
 
 
         public async Task<IActionResult> Test()

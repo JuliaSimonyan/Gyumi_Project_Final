@@ -1,16 +1,14 @@
 ﻿@model Gyumri.Data.Models.Article
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
-
 @{
     ViewData["Title"] = "Edit Article";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
-
 }
 
 <h2>Edit Article</h2>
 
-<form asp-action="Edit" enctype="multipart/form-data" method="post">
+<form asp-action="Edit" method="post" enctype="multipart/form-data">
     <input type="hidden" asp-for="Id" />
 
     <div class="form-group">
@@ -25,11 +23,11 @@
             <input type="hidden" name="Blocks[@i].Order" value="@Model.Blocks[i].Order" />
             <input type="hidden" name="Blocks[@i].BlockType" value="@Model.Blocks[i].BlockType" />
 
-            @if (Model.Blocks[i].BlockType == "Paragraph")
+            if (Model.Blocks[i].BlockType == "Paragraph")
             {
                 <div class="mb-3">
                     <label>Paragraph Block #@(i + 1)</label>
-                    <textarea name="Blocks[@i].Content" class="form-control">@Model.Blocks[i].Content</textarea>
+                    <textarea id="editor-@i" name="Blocks[@i].Content" class="form-control">@Html.Raw(Model.Blocks[i].Content)</textarea>
                 </div>
             }
             else if (Model.Blocks[i].BlockType == "Image")
@@ -46,3 +44,29 @@
 
     <button type="submit" class="btn btn-primary">Save Changes</button>
 </form>
+
+<!-- CKEditor CDN -->
+<script src="https://cdn.ckeditor.com/ckeditor5/41.0.0/classic/ckeditor.js"></script>
+
+<script>
+    const editors = [];
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const textareas = document.querySelectorAll("textarea[id^='editor-']");
+        textareas.forEach((textarea) => {
+            ClassicEditor.create(textarea)
+                .then(editor => {
+                    editors.push(editor);
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        });
+
+        document.querySelector('form').addEventListener('submit', () => {
+            editors.forEach(editor => {
+                editor.updateSourceElement();
+            });
+        });
+    });
+</script>

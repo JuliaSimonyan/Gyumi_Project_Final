@@ -178,7 +178,7 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Dive Deeper into Gyumri’s Hidden Gems.
+        ///   Looks up a localized string similar to Skip the obvious..
         /// </summary>
         public static string DiveDeeperIntoGyumrisHiddenGems {
             get {
@@ -313,7 +313,7 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gyumri’s Unique Districts.
+        ///   Looks up a localized string similar to Gyumri s Must Visits.
         /// </summary>
         public static string GyumrisUniqueDistricts {
             get {
@@ -358,7 +358,7 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Learn about Gyumri’s districts.
+        ///   Looks up a localized string similar to Browse the Interactive Map.
         /// </summary>
         public static string LearnaboutGyumrisdistricts {
             get {
@@ -376,7 +376,7 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Looking For More? .
+        ///   Looks up a localized string similar to Want something new?.
         /// </summary>
         public static string LookingForMore {
             get {
@@ -385,7 +385,7 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gyumri is more than just a collection of beautiful buildings and museums — it’s a city brimming with hidden corners, untold stories, and vibrant traditions that go beyond the obvious. Whether you’re a local or a visitor, there’s always something new to uncover..
+        ///   Looks up a localized string similar to Whether you’re a local or a visitor, there’s always something new to uncover.Here’s where things get a little weird, wild, and wonderful. See More.
         /// </summary>
         public static string LookingForPartTextt {
             get {
@@ -538,7 +538,7 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 5 reasons to visit Gyumri.
+        ///   Looks up a localized string similar to 5 Reasons to Come to Gyumri.
         /// </summary>
         public static string Welcome {
             get {

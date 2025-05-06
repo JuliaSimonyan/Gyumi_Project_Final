@@ -3,9 +3,9 @@
 
 @{
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
-
     ViewData["Title"] = "Create Article";
 }
+
 <h1>Add Article</h1>
 
 <form asp-action="Create" method="post" enctype="multipart/form-data">
@@ -22,26 +22,40 @@
     <button type="submit">Save</button>
 </form>
 
-    <script>
-        let blockIndex = 0;
+<!-- CKEditor 5 from CDN -->
+<script src="https://cdn.ckeditor.com/ckeditor5/41.0.0/classic/ckeditor.js"></script>
 
-        function addBlock(type) {
-            const container = document.getElementById("blockContainer");
-            let html = `<div class="mb-3">
+<script>
+    let blockIndex = 0;
+
+    function addBlock(type) {
+        const container = document.getElementById("blockContainer");
+        let html = `<div class="mb-3">
                 <input type="hidden" name="Blocks[${blockIndex}].BlockType" value="${type}" />
                 <input type="hidden" name="Blocks[${blockIndex}].Order" value="${blockIndex}" />`;
 
-            if (type === "Paragraph") {
-                html += `<label>Paragraph:</label>
-                    <textarea name="Blocks[${blockIndex}].Content" class="form-control"></textarea>`;
-            } else {
-                html += `<label>Image:</label>
-                    <input type="file" name="imageFiles" class="form-control" />`;
-            }
-
-            html += `</div>`;
-            container.insertAdjacentHTML("beforeend", html);
-            blockIndex++;
+        if (type === "Paragraph") {
+            html += `<label>Paragraph:</label>
+                    <textarea id="editor-${blockIndex}" name="Blocks[${blockIndex}].Content" class="form-control"></textarea>`;
+        } else {
+            html += `<label>Image:</label>
+                    <input type="file" name="Blocks[${blockIndex}].ImageFile" class="form-control" />`;
         }
-    </script>
 
+        html += `</div>`;
+        container.insertAdjacentHTML("beforeend", html);
+
+        // Ensure CKEditor initializes properly
+        if (type === "Paragraph") {
+            ClassicEditor.create(document.querySelector(`#editor-${blockIndex}`))
+                .then(editor => {
+                    console.log('Editor initialized');
+                })
+                .catch(error => {
+                    console.error('Error initializing CKEditor:', error);
+                });
+        }
+
+        blockIndex++;
+    }
+</script>

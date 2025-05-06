@@ -1,20 +1,20 @@
-﻿
+﻿@{
+    var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="~/content/css/eat.css">
-<link rel="stylesheet" href="~/content/css/lifeandwork.css">
-<link rel="stylesheet" href="~/content/css/relax.css">
-<link rel="stylesheet" href="~/content/css/see.css">
+<link rel="stylesheet" href="~/Content/css/eat.css">
+<link rel="stylesheet" href="~/Content/css/lifeandwork.css">
+<link rel="stylesheet" href="~/Content/css/relax.css">
+<link rel="stylesheet" href="~/Content/css/see.css">
+<link rel="stylesheet" href="~/Content/css/responsive.css">
 
 <title>Document</title>
 
-@{
-    var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
 @{
     string GetTranslatedName(Gyumri.Common.ViewModel.Subcategory.SubcategoryViewModel subcategory)
     {
@@ -183,11 +183,8 @@ else if (ViewBag.CategoryName == "Eat & Drink")
         <h2 class="summer-title">Foodie paradise</h2>
       </div>
       <p class="description-text">Diverse and innovative, Gyumri's culinary scene grows more exciting by the year.</p>
-            <a href="#" class="see-more-link-black" style="color:white !important;">See More<span class="arrow"> &#8702;</span>
-
-    </a>
-
       <!-- Cards Section -->
+
       <div class="row card-container">
         <!-- Card 1 -->
         <div class="col-md-3">
@@ -269,7 +266,6 @@ else if (ViewBag.CategoryName == "Relax & Sleep")
                 Diverse and innovative, Gyumri's culinary scene grows more exciting by the year.
 
             </p>
-      <a href="#" class="see-more-link-black" style="color:white !important;">See More<span class="arrow"> &#8702;</span></a>
       <!-- Cards Section -->
       <div class="row card-container">
         <!-- Card 1 -->
@@ -338,42 +334,66 @@ else if (ViewBag.CategoryName == "Live & Work")
         </div>
 
     </section>
-    <div class="container-fluid py-5 mainsection">
+    <div class="container py-5 mainsection">
         <!-- Summer in Gyumri Section -->
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
-                <h2 class="summer-title">Summer in Gyumri</h2>
+                <h2 class="summer-title">Foodie paradise</h2>
             </div>
-            <p class="description-text">Enjoy a warm day in Gyumri, enjoy great music and food, or explore Gyumri's fascinating museums.</p>
-            <a href="#" class="see-more-link-black">See More<span class="arrow"> &#8702;</span></a>
+            <p class="description-text">Diverse and innovative, Gyumri's culinary scene grows more exciting by the year.</p>
             <!-- Cards Section -->
+
             <div class="row card-container">
                 <!-- Card 1 -->
                 <div class="col-md-3">
-                    <div>
-                        <img src="~/Content/Images/see1.png" class="card-img-top" alt="Gallery of Mariam and Eranuhi Aslamazyan Sisters">
+                    <div class="items">
 
+                        <span class="category-tag cultural"> <i class="fa-solid fa-wand-magic-sparkles"></i>Traditinal</span>
+                        <img src="~/Content/Images/eat1.jpeg" class="card-img-top" alt="Gallery of Mariam and Eranuhi Aslamazyan Sisters">
+                        <div class="card-body">
+                            <h5 class="card-title">Poloz Mukuch</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet</p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Card 2 -->
                 <div class="col-md-3">
-                    <div>
-                        <img src="~/Content/Images/see2.png" class="card-img-top" alt="Hovhannes Shiraz Museum">
-
+                    <div class="items">
+                        <span class="category-tag art"> <i class="fa-solid fa-wand-magic-sparkles"></i>Drinks</span>
+                        <img src="~/Content/Images/eat2.jpeg" class="card-img-top" alt="Hovhannes Shiraz Museum">
+                        <div class="card-body">
+                            <h5 class="card-title">Shiraz</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet</p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Card 3 -->
                 <div class="col-md-3">
-                    <div>
-                        <img src="~/Content/Images/see3.png" class="card-img-top" alt="Dzitoghtsyan Museum">
-
+                    <div class="items">
+                        <span class="category-tag concerts"> <i class="fa-solid fa-wand-magic-sparkles"></i>Dessert</span>
+                        <img src="~/Content/Images/eat3.jpeg" class="card-img-top" alt="Dzitoghtsyan Museum">
+                        <div class="card-body">
+                            <h5 class="card-title">La Strada</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="items">
+                        <span class="category-tag activity"> <i class="fa-solid fa-wand-magic-sparkles"></i>Fast Food</span>
+                        <img src="~/Content/Images/eat4.jpeg" class="card-img-top" alt="Dzitoghtsyan Museum">
+                        <div class="card-body">
+                            <h5 class="card-title">Food Time</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 }
     <!-- Activities Section -->
     <div class="mb-1 ms-6">
@@ -384,12 +404,11 @@ else if (ViewBag.CategoryName == "Live & Work")
         <div class="section mb-5 ms-6">
             <div class="d-flex justify-content-between align-items-center">
                 <h2 class="section-heading">@item.Name</h2>
-            <img width="80%" src="~/Content/Images/Group 15.png" alt="Symbol">
+            <img class="logoimage" width="60%" min-width="50%" src="~/Content/Images/Group 15.png" alt="Symbol">
 
         </div>
 
             <p class="section-subtitle">@item.Description</p>
-            <a href="#" class="see-more-link-black">See More<span class="arrow"> &#8702;</span></a>
             <div class="row" style="margin:0">
                 @foreach (var place in item.Places)
                 {
@@ -420,7 +439,6 @@ else if (ViewBag.CategoryName == "Live & Work")
             <h2 class="section-heading">Cafes</h2>
         </div>
         <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <a href="#" class="see-more-link-black">See More<span class="arrow"> &#8702;</span></a>
         <div class="row">
             <div class="col-md-4">
                 <div class="card">

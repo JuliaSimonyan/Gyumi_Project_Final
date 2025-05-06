@@ -1,222 +1,370 @@
-@media (max-width: 992px) {
-    /* Navbar */
-    .navbar-collapse {
-        text-align: center;
-    }
-    .navbar-nav {
-        flex-direction: column;
-    }
-    .search-container {
-        display: none; /* Hide search on smaller screens */
+/* Enhanced responsive styles */
+@media (min-width: 1440px) {
+    /* Large desktop styles - Fix navbar alignment */
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1320px;
+        margin: 0 auto;
     }
 
-    /* Hero Section */
-    .hero-content {
-        text-align: center;
-        padding: 20px;
-    }
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-    .hero-content p {
-        font-size: 1rem;
-    }
-    .hero-design img {
-        max-width: 80%;
-    }
-
-    /* Scroll Containers */
-    .scroll-container {
+    /* Center the navbar on large screens */
+    .navbar > .container {
         display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-    }
-    .card {
-        flex: 0 0 80%; /* Show one full card at a time */
-        margin-right: 10px;
-        scroll-snap-align: start;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
     }
 
-    /* Footer */
-    .footer .row {
-        flex-direction: column;
-        text-align: center;
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
     }
-    .footer-section {
-        margin-bottom: 20px;
+
+        .navbar-nav .nav-item {
+            margin: 0 20px;
+        }
+
+    .ml-auto {
+        margin-left: auto !important;
+    }
+
+    /* Keep footer centered */
+    .footer > .container {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+
+    .footer-logo {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    /* Desktop styles */
+    .navbar-nav .nav-item {
+        margin-left: 10px;
+    }
+
+    .ml-auto .nav-link {
+        margin-left: 15px;
+    }
+
+    .hero-content {
+        margin: 80px;
+    }
+
+    .hero-design {
+        right: -5%;
+    }
+
+    .scroll-container {
+        scroll-padding-left: 20px;
+    }
+
+    .decorative-art {
+        width: 500px;
+        height: 600px;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Tablet styles */
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 15px;
+        border-radius: 5px;
+    }
+
+    .navbar-nav .nav-link {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+        .navbar-nav .nav-link:hover {
+            transform: none;
+            border-bottom: none;
+        }
+
+    .ml-auto {
+        margin-top: 15px;
+        justify-content: center;
+    }
+
+    .hero-section {
+        background-size: cover;
+        background-position: center;
+        height: 80vh;
+    }
+
+    .hero-content {
+        margin: 60px;
+    }
+
+    .hero-design {
+        right: -10%;
+        max-width: 350px;
+    }
+
+    .scroll-container {
+        padding-left: 20px;
+        scroll-padding-left: 20px;
+    }
+
+    .card {
+        width: 100% !important;
+    }
+
+        .card img {
+            height: 350px;
+        }
+
+    .decorative-art {
+        width: 400px;
+        height: 500px;
+        right: 20px;
+    }
+
+    .discover-overlay {
+        max-width: 500px;
+        height: 350px;
+    }
+
+    .footer-logo {
+        margin-left: 0;
+        text-align: center;
     }
 }
 
 @media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 1.8rem;
+    /* Mobile landscape styles */
+    .navbar-toggler {
+        margin-right: 15px;
     }
-    .hero-content p {
-        font-size: 0.9rem;
+
+    .hero-section {
+        height: 70vh;
+        align-items: center;
     }
-    .btn-plan {
-        font-size: 0.9rem;
-        padding: 10px 20px;
-    }
-    .coupon-section {
+
+    .hero-content {
+        margin: 30px;
         text-align: center;
-        padding: 20px;
+    }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+        }
+
+    .hero-design {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+        .hero-design img {
+            max-width: 80%;
+        }
+
+    .section-title1, .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-subtitle1, .section-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .ms-5 {
+        margin-left: 1rem !important;
+    }
+
+    /* Improved horizontal scrolling for mobile */
+    .scroll-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        min-width: 300px;
+        width: 300px;
+        scroll-snap-align: start;
+        margin-right: 15px;
+    }
+
+        .card img {
+            height: 350px;
+        }
+
+    .card-title {
+        font-size: 1.4rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .discover-section {
+        height: auto;
+        min-height: 600px;
+    }
+
+    .decorative-art {
+        width: 300px;
+        height: 400px;
+        right: 10px;
+        top: 10%;
+    }
+
+    .discover-overlay {
+        max-width: 400px;
+        height: 300px;
+        padding: 30px;
+    }
+
+    .discover-title {
+        font-size: 2rem;
+    }
+
+    .coupon-section {
+        height: 400px;
+    }
+
+    .footer [class*="col-"] {
+        margin-bottom: 20px;
+        text-align: center;
     }
 }
 
 @media (max-width: 576px) {
+    /* Mobile portrait styles */
     .hero-section {
-        padding: 40px 10px;
+        height: 100vh;
     }
-    .hero-content h1 {
-        font-size: 2rem;
+
+    .hero-content {
+        margin: 20px;
     }
-    .hero-content p {
-        font-size: 0.8rem;
+
+        .hero-content h1 {
+            margin-left:20px;
+            font-size: 2rem;
+        }
+
+        .hero-content p {
+            margin-left: 20px;
+            font-size: 0.9rem;
+        }
+    .btn-plan{
+margin-left: 20px;
     }
+    .coupon-overlay {
+        margin-top:170px !important;
+        padding: 1rem !important;
+    }
+
+    .hero-design {
+        right: -40%;
+    }
+
+    /* Improved card display for small screens */
     .scroll-container {
-        flex-direction: column;
-        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
     }
+
     .card {
-        flex: 0 0 80%;
-        margin-bottom: 15px;
+        min-width: 300px !important;
+        width: 300px !important;
+        height: 200px !important;
     }
+    .card-title {
+        font-size: 1.3rem !important;
+    }
+    .card-text {
+        font-size: 0.9rem !important;
+    }
+    .card img {
+        width: 100% !important;
+        height: 200px !important;
+    }
+
+    .card-overlay {
+        left: 22%;
+        width: 75%;
+    }
+
+    .ms-5 {
+        margin-left: 0 !important;
+    }
+
+    .section-title1 {
+        font-size: 1.2rem !important;
+    }
+
+    .section-subtitle1 {
+        font-size: 0.7rem !important;
+    }
+
+    .see-more-link, .see-more-link-black {
+        margin-top: -20px;
+        margin-right: 5%;
+    }
+
+    .discover-section {
+        min-height: 500px;
+    }
+
     .decorative-art {
         top: 1% !important;
-    right: 2% !important;
-    width: 250px !important;
-    height: 300px !important;
+        right: 2% !important;
+        width: 250px !important;
+        height: 300px !important;
     }
-    .discover-overlay {
-        width: 340px !important;
 
+    .discover-overlay {
+        margin-top: 300px !important;
+        width: 340px !important;
+        padding: 20px !important;
+        border-top-right-radius: 110px !important;
     }
-    .discover-overlay-new {
-        margin:0 !important;
-        height: 380px !important;
+        .discover-overlay img {
+            width: 50% !important;
+            left: 190px !important;
+            bottom: 220px !important;
+        }
+
+        .container-fluid .d-flex {
+            background-position-x: -222px !important;
+        }
+    .container .discover-overlay-new {
+        background-position-x: 150px !important;
+        margin: 0 !important;
+        height: 330px !important;
         width: 340px !important;
     }
-    .footer-logo {
-    margin-left: 0 !important;
+
+    .coupon-section {
+        height: 380px;
     }
+
+
+    .footer-logo {
+        margin-left: 0 !important;
+    }
+
     .row {
         display: block !important;
     }
-}
 
-@media (max-width: 768px) { 
-    .scroll-container {
-        flex-wrap: nowrap; /* Keep horizontal scroll on mobile */
-        overflow-x: auto;
-    }
-
-    .card {
-        width: 85%; /* Bigger cards for better readability */
-        margin-right: 10px;
-    }
-}
-
-@media (max-width: 480px) { 
-    .scroll-container {
-        justify-content: center; /* Center cards on extra small screens */
-    }
-
-    .card {
-        width: 90%; /* Make cards almost full width */
-    }
-}
-/* Responsive Styles */
-@media screen and (max-width: 1200px) {
-    .header-title {
-        font-size: 3.5rem;
-        padding-left: 50px;
-    }
-    
-    .gyumri-coupon-text h2 {
-        font-size: 2rem;
-        margin-left: 3rem;
-    }
-
-    .gyumri-coupon-button {
-        margin-left: 3rem;
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .header-title {
-        font-size: 3rem;
-        padding-left: 30px;
-    }
-
-    .nav-links {
-        text-align: center;
-        padding: 20px;
-    }
-
-    .nav-links a {
-        font-size: 0.9rem;
-    }
-
-    .card {
-        width: 300px;
-        height: 250px !important;
-    }
-
-    .gyumri-coupon-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .gyumri-coupon-text h2 {
-        margin-left: 0;
-    }
-
-    .gyumri-coupon-button {
-        margin-left: 0;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .see-do-section {
-        height: auto;
-        padding-bottom: 30px;
-    }
-
-    .header-image {
-        height: 400px;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .header-title {
-        font-size: 2.5rem;
-        padding-left: 0;
-    }
-
-    .card {
-        width: 250px;
-        height: 220px !important;
-    }
-
-    .scroll-container {
-        height: auto;
-        gap: 10px;
-    }
-
-    .gyumri-coupon-text h2 {
-        font-size: 1.75rem !important;
-        margin:  1.5rem auto !important;    }
-
-    .gyumri-coupon-button {
-        margin:  1rem auto !important;
-        font-size: 0.9rem !important;
-        padding: 0.5rem 1rem !important;
-    }
-    .ms-6{
-        margin: 0 !important;
+    .col-md-4, .col-md-3 {
+        margin-bottom: 20px;
     }
 }
 
@@ -248,16 +396,7 @@
         font-size: 1rem;
     }
 
-    .card {
-        width: 100%;
-        height: auto !important;
-    }
-
-    .card-body {
-        position: relative;
-        bottom: 0;
-        text-align: center;
-    }
+    
 
     .gyumri-coupon-text h2 {
         font-size: 1.5rem;
@@ -278,5 +417,163 @@
     }
     .relaxtitle {
         right: 22% !important;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .btn-plan {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    .coupon-section {
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 40px 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 0.8rem;
+    }
+
+    .card {
+        flex: 0 0 80%;
+        margin-bottom: 15px;
+    }
+
+    .decorative-art {
+        top: 1% !important;
+        right: 2% !important;
+        width: 250px !important;
+        height: 300px !important;
+    }
+
+    .discover-overlay {
+        width: 340px !important;
+    }
+
+    .discover-overlay-new {
+        margin: 0 !important;
+        height: 380px !important;
+        width: 340px !important;
+    }
+
+    .footer-logo {
+        margin-left: 0 !important;
+    }
+
+    .row {
+        display: block !important;
+    }
+}
+
+
+
+@media screen and (max-width: 992px) {
+    .header-title {
+        font-size: 3rem;
+        padding-left: 30px;
+    }
+
+    .nav-links {
+        text-align: center;
+        padding: 20px;
+    }
+
+        .nav-links a {
+            font-size: 0.9rem;
+        }
+
+
+    .gyumri-coupon-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .gyumri-coupon-text h2 {
+        margin-left: 0;
+    }
+
+    .gyumri-coupon-button {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .see-do-section {
+        height: auto;
+        padding-bottom: 30px;
+    }
+
+    .header-image {
+        height: 400px;
+        flex-direction: column;
+        /* text-align: center; */
+    }
+
+
+    .gyumri-coupon-text h2 {
+        font-size: 1.75rem !important;
+        margin: 1.5rem auto !important;
+    }
+
+    .gyumri-coupon-button {
+        margin: 1rem auto !important;
+        font-size: 0.9rem !important;
+        padding: 0.5rem 1rem !important;
+    }
+
+    .ms-6 {
+        margin: 0 20px !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .mainsection {
+        margin-top: -6rem !important;
+    }
+    .logoimage{
+        display:none;
+    }
+    .header-title {
+        right: 25% !important;
+        top: 65% !important;
+        font-size: 2.6rem !important;
+    }
+
+    .nav-links {
+        padding: 10px;
+    }
+
+        .nav-links a {
+            font-size: 0.8rem;
+            margin: 0 5px;
+        }
+
+    .summer-title {
+        font-size: 1.5rem;
+    }
+
+    .description-text {
+        font-size: 1rem;
     }
 }

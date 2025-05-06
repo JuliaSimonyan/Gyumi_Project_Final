@@ -28,4 +28,5 @@ document.querySelectorAll('.scroll-container').forEach(container => {
       const walk = (x - startX) ; 
       container.scrollLeft = scrollLeft - walk;
     });
-  });
+});
+ 
