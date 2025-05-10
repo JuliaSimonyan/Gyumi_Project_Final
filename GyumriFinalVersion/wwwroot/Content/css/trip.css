@@ -10,7 +10,7 @@ body {
     font-weight: 300;
     line-height: 1.6;
     color: #333;
-    background-color: black;
+    background-color: #1e1e1e;
 }
 
 .container {
@@ -168,10 +168,10 @@ ul {
 
 /* Hero section styles */
 .hero-section {
-    background-image:  url("../Images/Trip/tripheader.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1520986606214-8b456906c813?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
     background-size: cover;
     background-position: center;
-    min-height: 65vh; /* Reduced height */
+    height: 65vh; /* Reduced height */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -190,7 +190,7 @@ ul {
 }
 
 .hero-content {
-    position: absolute;
+    position: relative;
     z-index: 1;
     color: white;
     max-width: 1000px;
@@ -198,7 +198,6 @@ ul {
 }
 
     .hero-content h1 {
-        text-align:center;
         font-size: 42px;
         font-weight: 700;
         margin-bottom: 20px;
@@ -212,7 +211,7 @@ ul {
 
 /* Trip planner styles */
 .trip-planner-container {
-    height: 200px; 
+    top: 200px;
     width: 1000px;
     margin: 0 auto;
 }
@@ -339,8 +338,9 @@ ul {
 
 /* Footer styles */
 .footer {
+    background-color: #000; /* Black background */
     color: #fff; /* White text */
-    padding: 50px 0; /* Spacing for the footer */
+    padding: 150px 0; /* Spacing for the footer */
     width: 100%; /* Ensure full width */
 }
 

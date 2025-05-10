@@ -145,7 +145,7 @@
     <value>Գլխավոր</value>
   </data>
   <data name="PlanATrip" xml:space="preserve">
-    <value>Պլանավորել ճանապարհորդություն</value>
+    <value>Պլանավորի’ր քո այցը</value>
   </data>
   <data name="SeeMore" xml:space="preserve">
     <value>Տեսնել ավելին</value>
@@ -160,7 +160,7 @@
     <value>5 պատճառ Գյումրի այցելելու համար</value>
   </data>
   <data name="WelcomeDescription" xml:space="preserve">
-    <value>Բաց քաղաք, որտեղ ծնվում են նորարարությունները, արվեստն ու արհեստները, ավանդույթներն ու հումորը։&lt;br&gt; Քաղաք՝ քեզ համար։</value>
+    <value>Բաց քաղաք, որտեղ ծնվում են նորարարությունները, արվեստն ու արհեստները,  &lt;br&gt; ավանդույթներն ու հումորը։Հայաստանի մշակութային հոգին ու ստեղծարար ոգին&lt;br&gt; մի վայրում, որտեղ ամեն ինչ ընդամենը մեկ քայլ հեռու է։</value>
   </data>
   <data name="WelcomeGyumri" xml:space="preserve">
     <value>Բարի Գալուստ Գյումրի</value>
@@ -181,19 +181,19 @@
     <value>Ճանապարհորդություն պատմության, մշակույթի և ստեղծագործության միջոցով</value>
   </data>
   <data name="TakeYour" xml:space="preserve">
-    <value>Վերցրու քո</value>
+    <value>Օգտվեք Ձեր</value>
   </data>
   <data name="AndExplore" xml:space="preserve">
-    <value>և ուսումնասիրիր</value>
+    <value>և բացահայտեք</value>
   </data>
   <data name="GyumriUpperCase" xml:space="preserve">
     <value>ԳՅՈՒՄՐԻ</value>
   </data>
   <data name="CuponUpperCase" xml:space="preserve">
-    <value>ԿՈՒՊՈՆԸ</value>
+    <value>ԿՈՒՊՈՆ-ից</value>
   </data>
   <data name="CuponFeature" xml:space="preserve">
-    <value>Մեր կտրոնների հնարավորությունը շուտով հասանելի կլինի՝ վերադարձիր շուտով՝</value>
+    <value>Մեր կուպոնների գործառույթը մշակման փուլում է։ Մեծ զեղչերի համար հետևեք թարմացումներին շուտով։</value>
   </data>
   <data name="greatDeals" xml:space="preserve">
     <value>հրաշալի առաջարկների համար։</value>

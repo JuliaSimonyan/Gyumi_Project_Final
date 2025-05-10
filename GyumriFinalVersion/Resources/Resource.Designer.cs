@@ -547,7 +547,7 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An open city where innovations, arts and crafts, traditions, and humor are born.&lt;br&gt; A place for you..
+        ///   Looks up a localized string similar to An open city where innovations, arts and crafts, traditions, and humor are born. &lt;br&gt;Armenia’s cultural soul and creative spirit in one walkable city..
         /// </summary>
         public static string WelcomeDescription {
             get {

@@ -145,7 +145,7 @@
     <value>Главная</value>
   </data>
   <data name="PlanATrip" xml:space="preserve">
-    <value>Спланировать поездку</value>
+    <value>Планируй свой визит</value>
   </data>
   <data name="SeeMore" xml:space="preserve">
     <value>Смотреть больше</value>
@@ -160,10 +160,10 @@
     <value>Добро пожаловать</value>
   </data>
   <data name="WelcomeDescription" xml:space="preserve">
-    <value>Открытый город, где рождаются инновации, искусство и ремёсла, традиции и юмор.&lt;br&gt; Город для тебя.</value>
+    <value>Открытый город, где рождаются инновации, искусство и ремёсла, традиции и юмор. &lt;br&gt;Культурная душа и творческий дух Армении — здесь всё рядом, на расстоянии одного шага.</value>
   </data>
   <data name="WelcomeGyumri" xml:space="preserve">
-    <value>Добро пожаловать Гюмри</value>
+    <value>Добро пожаловать в Гюмри</value>
   </data>
   <data name="TraditionMeetsModernity" xml:space="preserve">
     <value>Традиция встречает современность</value>
@@ -181,19 +181,19 @@
     <value>Путешествие через историю, культуру и творчество</value>
   </data>
   <data name="TakeYour" xml:space="preserve">
-    <value>Возьми свой</value>
+    <value>Воспользуйтесь своим</value>
   </data>
   <data name="AndExplore" xml:space="preserve">
-    <value>и исследуй</value>
+    <value>и исследуйте</value>
   </data>
   <data name="GyumriUpperCase" xml:space="preserve">
     <value>ГЮМРИ</value>
   </data>
   <data name="CuponUpperCase" xml:space="preserve">
-    <value>КУПОН</value>
+    <value>КУПОНОМ</value>
   </data>
   <data name="CuponFeature" xml:space="preserve">
-    <value>Функция купонов уже в пути — загляните позже, чтобы не пропустить</value>
+    <value>Наша функция купонов находится в разработке - следите за обновлениями, скоро появятся отличные предложения!</value>
   </data>
   <data name="greatDeals" xml:space="preserve">
     <value>отличные предложения!</value>
