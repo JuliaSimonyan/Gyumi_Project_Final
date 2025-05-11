@@ -171,8 +171,7 @@ body {
     box-sizing: border-box;
 }
 
-    .route-info-container-black h5,
-    p {
+    .route-info-container-black h5 {
         color: white !important;
     }
 
