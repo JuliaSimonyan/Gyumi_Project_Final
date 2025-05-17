@@ -88,6 +88,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Aregak Bakery and Cafe.
+        /// </summary>
+        public static string AregakBakery {
+            get {
+                return ResourceManager.GetString("AregakBakery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Where Art, Tech, and Tradition Collide.
         /// </summary>
         public static string ArtTechTraditionCollide {
@@ -102,6 +111,15 @@ namespace GyumriFinalVersion.Resources {
         public static string Back {
             get {
                 return ResourceManager.GetString("Back", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Baked with Love, Served with Purpose..
+        /// </summary>
+        public static string BakedwithLove {
+            get {
+                return ResourceManager.GetString("BakedwithLove", resourceCulture);
             }
         }
         
@@ -453,6 +471,15 @@ namespace GyumriFinalVersion.Resources {
         public static string SeeMore {
             get {
                 return ResourceManager.GetString("SeeMore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Star of the Month..
+        /// </summary>
+        public static string StaroftheMonth {
+            get {
+                return ResourceManager.GetString("StaroftheMonth", resourceCulture);
             }
         }
         

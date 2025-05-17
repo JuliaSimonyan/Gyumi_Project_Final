@@ -373,12 +373,6 @@ margin-left: 20px;
         height: 300px;
     }
 
-    .header-title {
-        right: 25% !important;
-        top: 65% !important;
-        font-size: 2.6rem !important;
-        }
-
     .nav-links {
         padding: 10px;
     }
@@ -555,9 +549,16 @@ margin-left: 20px;
         display:none;
     }
     .header-title {
-        right: 25% !important;
-        top: 65% !important;
+        margin: 180px auto 0;
+        padding:0 !important;
         font-size: 2.6rem !important;
+    }
+    .newheader {
+        padding:0;
+        text-align:center;
+    }
+    .newheader h1, p {
+        text-align:center !important;
     }
 
     .nav-links {

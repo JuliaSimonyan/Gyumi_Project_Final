@@ -15,7 +15,26 @@
     justify-content: space-between;
     position: relative;
 }
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+.newheader {
+    padding-left:65px;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items:flex-start;
+}
 
+    .newheader p {
+        font-size:20px;
+    }
 .header-image::after {
     content: "";
     position: absolute;
@@ -23,10 +42,14 @@
     left: 0;
     width: 100%;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
 }
-
+.newheader, .header-title, .newheader p {
+    position: relative;
+    z-index: 2;
+}
 .header-title {
-    padding-left: 100px;
     position: relative;
     font-size: 4.5rem;
     font-weight: bold;

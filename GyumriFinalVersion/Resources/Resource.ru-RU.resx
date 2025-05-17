@@ -296,4 +296,13 @@
   <data name="Complete" xml:space="preserve">
     <value>Завершить</value>
   </data>
+  <data name="AregakBakery" xml:space="preserve">
+    <value>Пекарня и кафе Арегак</value>
+  </data>
+  <data name="BakedwithLove" xml:space="preserve">
+    <value>Испечено с любовью, подано с целью.</value>
+  </data>
+  <data name="StaroftheMonth" xml:space="preserve">
+    <value>Звезда месяца.</value>
+  </data>
 </root>
