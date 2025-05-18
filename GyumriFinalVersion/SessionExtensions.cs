@@ -1,7 +1,4 @@
 ﻿using Newtonsoft.Json;
-using Microsoft.AspNetCore.Http;
-using Newtonsoft.Json;
-
 
 namespace GyumriFinalVersion
 {

@@ -294,4 +294,22 @@
   <data name="Complete" xml:space="preserve">
     <value>Ավարտել</value>
   </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Կապ</value>
+  </data>
+  <data name="AddressGyumri" xml:space="preserve">
+    <value>Գյումրի, Շիրակի մարզ, ՀՀ</value>
+  </data>
+  <data name="AboutThisWebsite" xml:space="preserve">
+    <value>Այս Կայքի Մասին</value>
+  </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>Գաղտնիության Քաղաքականություն</value>
+  </data>
+  <data name="AccessibilityStatement" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OtherLinks" xml:space="preserve">
+    <value>Այլ Հղումներ</value>
+  </data>
 </root>

@@ -2,11 +2,6 @@
 using Gyumri.Common.ViewModel.Category;
 using Gyumri.Data.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Gyumri.Application.Services
 {
@@ -27,7 +22,7 @@ namespace Gyumri.Application.Services
                 Name = category.Name,
                 NameArm = category.NameArm,
                 NameRu = category.NameRu,
-          
+
             };
             await _context.Categories.AddAsync(newCategory);
             await _context.SaveChangesAsync();
@@ -58,7 +53,7 @@ namespace Gyumri.Application.Services
                     Name = category.Name,
                     NameArm = category.NameArm,
                     NameRu = category.NameRu,
-                };  
+                };
                 return categoryViewModel;
             }
             return null;
@@ -76,7 +71,7 @@ namespace Gyumri.Application.Services
 
                 category.Name = model.Name;
 
-                _context.Entry(category).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                _context.Entry(category).State = EntityState.Modified;
 
                 int rowsAffected = await _context.SaveChangesAsync();
                 if (rowsAffected > 0)
@@ -119,23 +114,48 @@ namespace Gyumri.Application.Services
         }
         public async Task SeedDefaultCategoriesAsync()
         {
-            var defaultCategories = new List<string> { "See & Do", "Eat & Drink", "Relax & Sleep", "Live & Work" };
-
-            foreach (var name in defaultCategories)
+            var defaultCategories = new List<Category>
             {
-                if (!_context.Categories.Any(c => c.Name == name))
+                new Category()
+                {
+                    Name = "See & Do",
+                    NameArm="Տեսնել և անել",
+                    NameRu="Что посмотреть и чем заняться",
+                },
+                new Category()
+                {
+                    Name = "Eat & Drink",
+                    NameArm="Ուտել-խմել",
+                    NameRu="Есть и Пить",
+                },
+                new Category()
+                {
+                    Name = "Relax & Sleep",
+                    NameArm="Հանգիստ և գիշերակաց",
+                    NameRu="Отдых и ночёвка",
+                },
+                new Category()
+                {
+                    Name = "Live & Work",
+                    NameArm="Կյանք և աշխատանք",
+                    NameRu="Жизнь и работа",
+                },
+
+            };
+            foreach (var item in defaultCategories)
+            {
+                if (!_context.Categories.Any(c => c.Name == item.Name))
                 {
                     var category = new Category
                     {
-                        Name = name,
-                        NameArm = name, 
-                        NameRu = name   
+                        Name = item.Name,
+                        NameArm = item.NameArm,
+                        NameRu = item.NameRu,
                     };
 
                     await _context.Categories.AddAsync(category);
                 }
             }
-
             await _context.SaveChangesAsync();
         }
     }
