@@ -1,0 +1,147 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var bgImage = ViewBag.Image as string;
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Reasons to Come to Gyumri - Visit Gyumri</title>
+    <link rel="stylesheet" href="~/Content/css/article.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="article-container">
+        <!-- Article Header -->
+        <header class="article-header" style="background-image: url(@bgImage)">
+            <div class="container">
+                <h1>5 Reasons to Come to Gyumri</h1>
+            </div>
+        </header>
+
+        <!-- Article Content -->
+        <div class="container">
+            <article class="article-content">
+                <div class="article-intro">
+                    <p>
+                        Tucked in the northwestern corner of Armenia, Gyumri is a city that surprises you—not with skyscrapers or glitter, but with soul. It doesn't shout for attention. It whispers stories through its streets, scents, and sunsets. Here's why your next trip should bring you to this one-of-a-kind city.
+                    </p>
+                </div>
+
+                <section class="article-section">
+                    <div class="section-content">
+                        <h2>1. Architectural Time Travel</h2>
+                        <p>
+                            In Gyumri, every step is a step through time. The moment you enter the historic Kumayri district, you're surrounded by 19th-century buildings carved from the city's signature black tuff stone. Their thick walls and ornate wooden balconies have stood through earthquakes and empires, and they still hold the rhythm of old conversations and distant music.
+                        </p>
+                        <p>
+                            Keep walking and you'll find splashes of color in unexpected places—Soviet-era mosaics tucked between courtyards, ironwork gates that creak with age, and fading shop signs in retro Cyrillic script. It's a rare kind of city where history hasn't just been preserved—it's lived in. Cafés operate out of century-old homes, and artisan workshops are nestled in what used to be merchant houses.
+                        </p>
+                        <p>
+                            In Gyumri, architecture isn't a background. It's a co-narrator.
+                        </p>
+                    </div>
+                    <div class="section-image">
+                        <img src="~/Content/Images/Architectural Time Travel.png" alt="Historic architecture in Gyumri showing black tuff stone buildings">
+                    </div>
+                </section>
+
+                <section class="article-section reverse">
+                    <div class="section-content">
+                        <h2>2. Creative Renaissance</h2>
+                        <p>
+                            Gyumri has always been Armenia's cultural capital—but lately, something new is stirring. The city's rich heritage in theater, music, and visual arts is fusing with a younger generation's bold experimentation. Painters, potters, coders, animators, filmmakers, and fashion designers are redefining what it means to be "creative" in Gyumri.
+                        </p>
+                        <p>
+                            The streets hum with creative energy: mural art on old facades, digital artists working out of tech hubs, handmade jewelry on display in boutique shops. Institutions like the Gyumri Technology Center and TUMO support a growing wave of innovation, blending tradition with tomorrow.
+                        </p>
+                        <p>
+                            And it's not just about the art—it's about the atmosphere. You feel it in conversations at gallery openings. You hear it in the fusion of old folk melodies and electronic beats drifting from rehearsal rooms. You see it in workshops where Soviet tools are repurposed to make something entirely new.
+                        </p>
+                    </div>
+                    <div class="section-image">
+                        <img src="~/Content/Images/Creative Renaissance.png" alt="Artists and creatives working in Gyumri">
+                    </div>
+                </section>
+
+                <section class="article-section">
+                    <div class="section-content">
+                        <h2>3. The Walking Supremacy</h2>
+                        <p>
+                            In Gyumri, your feet are your best travel guide. The city was made for walking—not just because the layout is compact and scenic, but because the real magic happens when you take your time.
+                        </p>
+                        <p>
+                            Stroll along Rustaveli Street and pop into an antique shop. Cut through a courtyard and find yourself in front of an impromptu <em>nardi</em> game. Sit on a public bench, and a local might start telling you about the earthquake, the artists, or the best ponchik in town.
+                        </p>
+                        <p>
+                            There's no need for taxis, timetables, or noise-canceling headphones. The silence is soft, the air is fresh, and the streets reward the curious. You won't just get from point A to point B—you'll get a hundred little stories in between.
+                        </p>
+                    </div>
+                    <div class="section-image">
+                        <img src="~/Content/Images/Walking Supremacy.png" alt="Walkable streets of Gyumri with pedestrians">
+                    </div>
+                </section>
+
+                <section class="article-section reverse">
+                    <div class="section-content">
+                        <h2>4. Affordable Adventure</h2>
+                        <p>
+                            Let's be honest—travel can get expensive. But in Gyumri, your money stretches without cutting corners on experience. You can enjoy a full homemade lunch, coffee, and dessert for the price of a metro ticket in most major cities. Boutique guesthouses offer character and comfort at a fraction of what you'd pay elsewhere.
+                        </p>
+                        <p>
+                            Whether you're touring local museums, enjoying live music, or hopping into a marshrutka for a scenic countryside ride, you don't need to budget your joy. Even high-value experiences—like attending a puppet show, taking a pottery class, or spending an afternoon in a traditional bathhouse—are refreshingly affordable.
+                        </p>
+                        <p>
+                            Gyumri proves that adventure doesn't have to be expensive. It just has to be real.
+                        </p>
+                    </div>
+                    <div class="section-image">
+                        <img src="~/Content/Images/See&Do Hero Banner.png" alt="Affordable experiences in Gyumri">
+                    </div>
+                </section>
+
+                <section class="article-section">
+                    <div class="section-content">
+                        <h2>5. A Culinary Love Letter</h2>
+                        <p>
+                            Every city has a flavor, and Gyumri's is unforgettable. The day might begin with a breakfast of fresh cheese, herbs, and warm lavash from a corner bakery. By midday, you're hunting down the famous "Ponchik Monchik"—a hot, cream-filled doughnut so good it has its own legend.
+                        </p>
+                        <p>
+                            Lunch could bring you to a family-run fish restaurant, where trout from local rivers is served grilled and smoky, alongside roasted potatoes and pickled vegetables. You might sip homemade oghi (fruit vodka) with your host, or taste jams made from wild rose petals and walnuts.
+                        </p>
+                        <p>
+                            And dinner? Maybe a cozy bistro in a renovated brick building, offering modern takes on traditional dishes—like lamb stew with herbs, or beetroot salads with garlic and walnuts. Every bite tells a story of land, season, and hospitality.
+                        </p>
+                        <p>
+                            In Gyumri, food isn't just sustenance. It's poetry.
+                        </p>
+                    </div>
+                    <div class="section-image">
+                        <img src="~/Content/Images/Culinary Love Letter.png" alt="Traditional Armenian cuisine in Gyumri">
+                    </div>
+                </section>
+
+                <div class="article-conclusion">
+                    <h3>So why come to Gyumri?</h3>
+                    <p>
+                        Because it's not trying to be like anywhere else. It's not racing to keep up with trends. It's walking to its own rhythm—inviting you to slow down, look closer, and stay longer.
+                    </p>
+                    <p class="conclusion-tagline">
+                        <em>Ready when you are.</em>
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </main>
+</body>
+</html>

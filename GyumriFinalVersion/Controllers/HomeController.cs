@@ -70,6 +70,19 @@ namespace GyumriFinalVersion.Controllers
             Thread.CurrentThread.CurrentUICulture = cultureInfo;
             return View();
         }
+        public async Task<IActionResult> MainArticle(string image)
+        {
+            ViewBag.Categories = await _categoryService.GetAllCategories();
+            ViewBag.Subcategories = await _subcategoryService.GetAllSubcategories();
+            ViewBag.Places = await _placeService.GetAllPlaces();
+            var currentCulture = Request.Cookies["UserCulture"] ?? "en";
+            var cultureInfo = new System.Globalization.CultureInfo(currentCulture);
+
+            Thread.CurrentThread.CurrentCulture = cultureInfo;
+            Thread.CurrentThread.CurrentUICulture = cultureInfo;
+            ViewBag.Image = image;  
+            return View();
+        }
         [HttpGet]
         public async Task<IActionResult> Category(int categoryId)
         {

@@ -121,25 +121,25 @@
     <value>Architectural Time Travel</value>
   </data>
   <data name="ArtTechTraditionCollide" xml:space="preserve">
-    <value>Where Art, Tech, and Tradition Collide</value>
+    <value>Sidewalks Speak and Balconies Remember</value>
   </data>
   <data name="CulturalRenaissance" xml:space="preserve">
-    <value>Cultural Renaissance</value>
+    <value>The Walking Supremacy</value>
   </data>
   <data name="DiscovertheHeartofArmenia" xml:space="preserve">
-    <value>Discover the Heart of Armenia</value>
+    <value>Big Culture, Small Budget – Always in Season</value>
   </data>
   <data name="ForgeOfLegends" xml:space="preserve">
-    <value>Forge of Legends</value>
+    <value>Creative Renaissance</value>
   </data>
   <data name="FromEmpirestoEarthquakes" xml:space="preserve">
-    <value>From Empires to Earthquakes</value>
+    <value>Echoes of Gyumri's Past, Standing Proud</value>
   </data>
   <data name="GyumrisCulture" xml:space="preserve">
-    <value>Gyumri's Culture</value>
+    <value>A Culinary Love Letter</value>
   </data>
   <data name="GyumriHeritage" xml:space="preserve">
-    <value>Gyumri's Heritage</value>
+    <value>Affordable Adventure</value>
   </data>
   <data name="Home" xml:space="preserve">
     <value>Home</value>
@@ -154,7 +154,7 @@
     <value>Your trip plan</value>
   </data>
   <data name="UNESCOսBlacksmithingMasterpieces" xml:space="preserve">
-    <value>UNESCO’s Blacksmithing Masterpieces</value>
+    <value>Forging Identity in the Fires of Tradition</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>5 Reasons to Come to Gyumri</value>
@@ -166,7 +166,7 @@
     <value>Welcome to Gyumri</value>
   </data>
   <data name="TraditionMeetsModernity" xml:space="preserve">
-    <value>Tradition Meets Modernity</value>
+    <value>Flavors Passed Down Through Time and Stone</value>
   </data>
   <data name="LearnaboutGyumrisdistricts" xml:space="preserve">
     <value>Browse the Interactive Map</value>
@@ -175,10 +175,10 @@
     <value>Discover</value>
   </data>
   <data name="GyumrisUniqueDistricts" xml:space="preserve">
-    <value>Gyumri s Must Visits</value>
+    <value>Gyumri’s Must Visits</value>
   </data>
   <data name="JourneyThroughHistoryCultureCreativit" xml:space="preserve">
-    <value>A Journey Through History, Culture, and Creativit</value>
+    <value>A Journey Through History, Culture, and Creativity</value>
   </data>
   <data name="TakeYour" xml:space="preserve">
     <value>Take your</value>
@@ -320,5 +320,41 @@
   </data>
   <data name="StaroftheMonth" xml:space="preserve">
     <value>Star of the Month.</value>
+  </data>
+  <data name="Aslamazyan" xml:space="preserve">
+    <value>Aslamazyan Sisters’ Gallery</value>
+  </data>
+  <data name="AslamazyanDesc" xml:space="preserve">
+    <value>Colorful, fearless, and full of stories—art by two iconic Armenian sisters.</value>
+  </data>
+  <data name="CentralPark" xml:space="preserve">
+    <value>Central Park Ferris Wheel</value>
+  </data>
+  <data name="CentralParkDesc" xml:space="preserve">
+    <value>A slow spin above the rooftops—see the city from a whole new angle.</value>
+  </data>
+  <data name="DzitoghtsyanMuseum" xml:space="preserve">
+    <value>Dzitoghtsyan Museum</value>
+  </data>
+  <data name="DzitoghtsyanMuseumDesc" xml:space="preserve">
+    <value>A 19th-century home that captures the spirit of old Gyumri.</value>
+  </data>
+  <data name="MostPopular" xml:space="preserve">
+    <value>Most Popular Right Now</value>
+  </data>
+  <data name="SevBerd" xml:space="preserve">
+    <value>Sev Berd Fortress</value>
+  </data>
+  <data name="SevBerdDesc" xml:space="preserve">
+    <value>An imposing 19th-century stronghold overlooking all of Gyumri.</value>
+  </data>
+  <data name="VaremMarem" xml:space="preserve">
+    <value>Varem &amp; Marem Art Studio</value>
+  </data>
+  <data name="VaremMaremDesc" xml:space="preserve">
+    <value>Whimsical, handmade ceramic magic you won’t forget.</value>
+  </data>
+  <data name="WelcomeSubHeadline" xml:space="preserve">
+    <value>A city where every street corner holds a story—and every visit leaves one behind.</value>
   </data>
 </root>

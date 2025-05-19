@@ -121,25 +121,25 @@
     <value>Архитектурное путешествие во времени</value>
   </data>
   <data name="ArtTechTraditionCollide" xml:space="preserve">
-    <value>Там, где искусство, технологии и традиции сталкиваются</value>
+    <value>Тротуары говорят, а балконы помнят</value>
   </data>
   <data name="CulturalRenaissance" xml:space="preserve">
-    <value>Культурное возрождение</value>
+    <value>Величие прогулок</value>
   </data>
   <data name="DiscovertheHeartofArmenia" xml:space="preserve">
-    <value>Откройте сердце Армении</value>
+    <value>Большая культура, маленький бюджет — в любое время года</value>
   </data>
   <data name="ForgeOfLegends" xml:space="preserve">
-    <value>Кузница легенд</value>
+    <value>Творческое Возрождение</value>
   </data>
   <data name="FromEmpirestoEarthquakes" xml:space="preserve">
-    <value>От империй до землетрясений</value>
+    <value>Эхо прошлого Гюмри, гордо стоящее в настоящем</value>
   </data>
   <data name="GyumrisCulture" xml:space="preserve">
-    <value>Культура Гюмри</value>
+    <value>Кулинарное любовное письмо</value>
   </data>
   <data name="GyumriHeritage" xml:space="preserve">
-    <value>Наследие Гюмри</value>
+    <value>Доступные приключения</value>
   </data>
   <data name="Home" xml:space="preserve">
     <value>Главная</value>
@@ -154,7 +154,7 @@
     <value>План вашего путешествия</value>
   </data>
   <data name="UNESCOսBlacksmithingMasterpieces" xml:space="preserve">
-    <value>Шедевры кузнечного дела ЮНЕСКО</value>
+    <value>Ковка идентичности в огне традиций</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Добро пожаловать</value>
@@ -166,19 +166,19 @@
     <value>Добро пожаловать в Гюмри</value>
   </data>
   <data name="TraditionMeetsModernity" xml:space="preserve">
-    <value>Традиция встречает современность</value>
+    <value>Вкусы, передающиеся сквозь время и камень</value>
   </data>
   <data name="LearnaboutGyumrisdistricts" xml:space="preserve">
-    <value>Узнайте о районах Гюмри</value>
+    <value>Открой интерактивную карту</value>
   </data>
   <data name="Discover" xml:space="preserve">
     <value>Открыть</value>
   </data>
   <data name="GyumrisUniqueDistricts" xml:space="preserve">
-    <value>Уникальные районы Гюмри</value>
+    <value>Обязательные места для посещения в Гюмри</value>
   </data>
   <data name="JourneyThroughHistoryCultureCreativit" xml:space="preserve">
-    <value>Путешествие через историю, культуру и творчество</value>
+    <value>Путешествие сквозь историю, культуру и творчество</value>
   </data>
   <data name="TakeYour" xml:space="preserve">
     <value>Воспользуйтесь своим</value>
@@ -322,5 +322,41 @@
   </data>
   <data name="StaroftheMonth" xml:space="preserve">
     <value>Звезда месяца.</value>
+  </data>
+  <data name="Aslamazyan" xml:space="preserve">
+    <value>Галерея сестёр Асламазян</value>
+  </data>
+  <data name="AslamazyanDesc" xml:space="preserve">
+    <value>Яркое, смелое и полное историй искусство от двух легендарных армянских сестёр.</value>
+  </data>
+  <data name="CentralPark" xml:space="preserve">
+    <value>Колесо обозрения в Центральном парке</value>
+  </data>
+  <data name="CentralParkDesc" xml:space="preserve">
+    <value>Медленное вращение над крышами города — открой Гюмри с новой стороны.</value>
+  </data>
+  <data name="DzitoghtsyanMuseum" xml:space="preserve">
+    <value>Музей семьи Цитогтянов</value>
+  </data>
+  <data name="DzitoghtsyanMuseumDesc" xml:space="preserve">
+    <value>Дом XIX века, передающий дух старого Гюмри.</value>
+  </data>
+  <data name="MostPopular" xml:space="preserve">
+    <value>Самый популярный сейчас</value>
+  </data>
+  <data name="SevBerd" xml:space="preserve">
+    <value>Крепость Сев Берд</value>
+  </data>
+  <data name="SevBerdDesc" xml:space="preserve">
+    <value>Величественная крепость XIX века, возвышающаяся над всем Гюмри.</value>
+  </data>
+  <data name="VaremMarem" xml:space="preserve">
+    <value>Арт-студия Varem &amp; Marem</value>
+  </data>
+  <data name="VaremMaremDesc" xml:space="preserve">
+    <value>Фантазийная керамика ручной работы, которую невозможно забыть.</value>
+  </data>
+  <data name="WelcomeSubHeadline" xml:space="preserve">
+    <value>Город, где каждый уголок хранит историю — и каждое посещение оставляет свою.</value>
   </data>
 </root>
