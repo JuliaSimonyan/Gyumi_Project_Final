@@ -294,6 +294,24 @@
   <data name="Complete" xml:space="preserve">
     <value>Complete</value>
   </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="AddressGyumri" xml:space="preserve">
+    <value>Gyumri, Shirak Marz, RA</value>
+  </data>
+  <data name="AboutThisWebsite" xml:space="preserve">
+    <value>ABOUT THIS WEBSITE</value>
+  </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>Privacy Policy</value>
+  </data>
+  <data name="AccessibilityStatement" xml:space="preserve">
+    <value>Accessibility statement</value>
+  </data>
+  <data name="OtherLinks" xml:space="preserve">
+    <value>Other Links</value>
+  </data>
   <data name="AregakBakery" xml:space="preserve">
     <value>Aregak Bakery and Cafe</value>
   </data>

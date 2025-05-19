@@ -4,11 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using System.Net.Mail;
 using System.Net;
 using DinkToPdf.Contracts;
-using DinkToPdf;
-using Gyumri.Application.Services;
-using System.Drawing.Printing;
-using Gyumri.Common.ViewModel.Place;
-using Gyumri.Common.ViewModel.Subcategory;
 
 namespace GyumriFinalVersion.Controllers
 {

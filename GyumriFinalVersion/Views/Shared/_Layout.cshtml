@@ -129,21 +129,21 @@
                 </div>
 
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 footer-section footer-contact">
-                    <div class="footer-section">CONTACT</div><br>
-                    <p>Vardanants St. 1</p>
-                    <p>Gyumri, Shirak Marz, RA</p>
-                    <p>+ 374 95 2 58 206</p>
+                    <div class="footer-section">@AppRes.Contact.ToUpper()</div><br>
+                    <p>contact@visitgyumri.info</p>
+                    <p>@AppRes.AddressGyumri</p>
+                    <p>+374 95 2 58 206</p>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 footer-section footer-about">
-                    <div class="footer-section">ABOUT THIS WEBSITE</div><br>
+                    <div class="footer-section">@AppRes.AboutThisWebsite.ToUpper()</div><br>
                     <p><a href="#" class="footer-link">About gyumritourism.com</a></p>
-                    <p><a href="#" class="footer-link">Privacy Policy</a></p>
-                    <p><a href="#" class="footer-link">Accessibility statement</a></p>
+                    <p><a href="#" class="footer-link">@AppRes.PrivacyPolicy</a></p>
+                    <p><a href="#" class="footer-link">@AppRes.AccessibilityStatement</a></p> @* TODO:: Create Translation for this *@
                 </div>
                 <div class="col-lg-3 col-md-6 footer-section footer-links">
-                    <div class="footer-section">OTHER LINKS</div><br>
-                    <p><a href="#" class="footer-link">Plan a Trip</a></p>
-                    <p><a href="#" class="footer-link">For Media</a></p>
+                    <div class="footer-section">@AppRes.OtherLinks.ToUpper()</div><br>
+                    <p><a asp-controller="Trip" asp-action="Index" class="footer-link">@AppRes.PlanATrip</a></p>
+                    @* <p><a href="#" class="footer-link">For Media</a></p>  TODO:: What is this part?*@
                 </div>
             </div>
         </div>

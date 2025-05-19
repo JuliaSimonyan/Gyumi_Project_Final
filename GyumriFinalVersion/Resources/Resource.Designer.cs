@@ -61,6 +61,33 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ABOUT THIS WEBSITE.
+        /// </summary>
+        public static string AboutThisWebsite {
+            get {
+                return ResourceManager.GetString("AboutThisWebsite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Accessibility statement.
+        /// </summary>
+        public static string AccessibilityStatement {
+            get {
+                return ResourceManager.GetString("AccessibilityStatement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gyumri, Shirak Marz, RA.
+        /// </summary>
+        public static string AddressGyumri {
+            get {
+                return ResourceManager.GetString("AddressGyumri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Adults.
         /// </summary>
         public static string Adults {
@@ -147,6 +174,15 @@ namespace GyumriFinalVersion.Resources {
         public static string Complete {
             get {
                 return ResourceManager.GetString("Complete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contact.
+        /// </summary>
+        public static string Contact {
+            get {
+                return ResourceManager.GetString("Contact", resourceCulture);
             }
         }
         
@@ -439,11 +475,29 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Other Links.
+        /// </summary>
+        public static string OtherLinks {
+            get {
+                return ResourceManager.GetString("OtherLinks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Plan a Trip.
         /// </summary>
         public static string PlanATrip {
             get {
                 return ResourceManager.GetString("PlanATrip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Privacy Policy.
+        /// </summary>
+        public static string PrivacyPolicy {
+            get {
+                return ResourceManager.GetString("PrivacyPolicy", resourceCulture);
             }
         }
         

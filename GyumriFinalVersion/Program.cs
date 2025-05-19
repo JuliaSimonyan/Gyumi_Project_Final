@@ -4,13 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Gyumri.Data.Models;
 using Gyumri.Application.Interfaces;
 using Gyumri.Application.Services;
-using Microsoft.AspNetCore.Localization.Routing;
-using Microsoft.AspNetCore.Localization;
-using System.Globalization;
 using Gyumri.Middleware;
 using Gyumri.App.Interfaces;
 using Gyumri.App.Services;
-
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
@@ -29,8 +25,6 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.LoginPath = "/Admin/Account/Login";
     options.AccessDeniedPath = "/Admin/Account/AccessDenied";
 });
-
-
 
 // Add MVC (controllers & views)
 builder.Services.AddControllersWithViews();
@@ -106,8 +100,6 @@ using (var scope = app.Services.CreateScope())
     await categoryService.SeedDefaultCategoriesAsync();
 
 }
-
-
 
 // Middleware setup
 app.UseHttpsRedirection();
