@@ -1,0 +1,91 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Visit Gyumri</title>
+    <link rel="stylesheet" href="~/Content/css/pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-about">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>About Visit Gyumri</h1>
+                <p>Your guide to experiencing Armenia's cultural capital</p>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="container content-section">
+            <div class="content-wrapper">
+                <p class="lead-text">
+                    This website is your guide to <strong>experiencing Gyumri fully and authentically</strong>—whether you're
+                    here for a weekend, a month, or making the city your new home. It brings together everything you need to
+                    explore Armenia's cultural capital, from iconic landmarks and historic neighborhoods to offbeat
+                    adventures, cozy cafés, and local favorites.
+                </p>
+
+                <h2>You'll find:</h2>
+                <ul class="feature-list">
+                    <li>
+                        Real recommendations on where to eat, sleep, and relax—based on what's truly popular, not paid
+                        placements.
+                    </li>
+                    <li>
+                        Practical info to help you <strong>navigate life in Gyumri</strong>—transport, services, housing, remote
+                        work, and more.
+                    </li>
+                    <li>Curated listings of events, seasonal experiences, and neighborhood highlights.</li>
+                    <li>
+                        Tools to help you <strong>plan your trip, submit an event</strong>, or even
+                        <strong>ask locals your questions (upcoming)</strong>.
+                    </li>
+                    <li>
+                        And soon: a <strong>local coupon system</strong> offering discounts and perks at featured cafés, shops,
+                        and guesthouses around the city.
+                    </li>
+                </ul>
+
+                <div class="info-box">
+                    <p class="italic">
+                        This platform was created as part of the
+                        <strong>"Open Data Project for Accurate Visitor Information in Gyumri,"</strong> a sub-project within
+                        the <strong>"Mayors for Economic Growth"</strong> grant program. The program is
+                        <strong>funded by the European Union</strong> and <strong>implemented by UNDP</strong>, with this
+                        project brought to life by the <strong>Gyumri Technology Center (GTC)</strong> and
+                        <strong>Vanadzor Technology Center (VTC)</strong> by the
+                        <strong>Enterprise Incubator Foundation (EIF).</strong>
+                    </p>
+                </div>
+
+                <p class="conclusion-text">
+                    This isn't just a website—it's a tool to make Gyumri more visible, accessible, and welcoming, for visitors
+                    and locals alike.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to explore Gyumri?</h2>
+                <p>
+                    Start planning your trip today and discover the authentic charm of Armenia's cultural capital.
+                </p>
+                <a href="trip.html" class="cta-button">Plan Your Trip</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

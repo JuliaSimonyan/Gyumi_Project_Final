@@ -11,6 +11,7 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #1e1e1e;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .container {
@@ -170,13 +171,15 @@ ul {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1520986606214-8b456906c813?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
     background-size: cover;
     background-position: center;
-    height: 65vh; /* Reduced height */
+    min-height: auto; /* Auto height to fit content */
+    padding: 100px 20px 40px; /* Top padding to account for navbar + content spacing */
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    text-align: left;
     position: relative;
-    margin-top: 76px; /* To account for fixed navbar */
+    margin-top: 40px; /* To account for fixed navbar */
 }
 
 .hero-overlay {
@@ -188,251 +191,498 @@ ul {
     background: rgba(0, 0, 0, 0.5);
 }
 
-.hero-content {
-    position: relative;
-    z-index: 1;
-    color: white;
-    max-width: 1000px;
-    padding: 0 20px;
-}
-
-    .hero-content h1 {
-        font-size: 42px;
-        font-weight: 700;
-        margin-bottom: 20px;
-    }
-
-    .hero-content p {
-        font-size: 16px;
-        max-width: 700px;
-        margin: 0 auto 30px;
-    }
-
-/* Trip planner styles */
-.trip-planner-container {
-    top: 200px;
-    width: 1000px;
-    margin: 0 auto;
-}
-
-.trip-planner {
-    background-color: white;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.date-picker {
-    display: flex;
-    align-items: center;
-    padding-right: 20px;
-    border-right: 1px solid #eee;
-    flex: 1;
-    color: #333;
-}
-
-.date-label {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    width: 100%;
-}
-
-.date-input {
-    border: none;
-    background: transparent;
-    font-size: 14px;
-    color: #333;
-    cursor: pointer;
-    width: 100%;
-}
-
-    .date-input:focus {
-        outline: none;
-    }
-
-.date-picker i {
-    color: #666;
-}
-
-.people-counter {
-    display: flex;
-    gap: 30px;
-    padding: 0 20px;
-    flex: 2;
-    justify-content: space-evenly;
-}
-
-.counter-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-    .counter-group label {
-        font-size: 14px;
-        color: #333;
-        margin-bottom: 8px;
-    }
-
-.counter {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.counter-btn {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background-color: #f0f0f0;
-    color: #333;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-    .counter-btn:hover {
-        background-color: #e0e0e0;
-    }
-
-.count-input {
-    width: 30px;
-    text-align: center;
-    border: none;
-    background: transparent;
-    font-weight: 500;
-    color: #333;
-}
-
-.next-step {
-    flex: 1;
-    text-align: right;
-}
-
-.next-btn {
-    background-color: #000;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 5px;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-    .next-btn:hover {
-        background-color: #333;
-    }
-
-/* Footer styles */
-.footer {
-    background-color: #000; /* Black background */
-    color: #fff; /* White text */
-    padding: 150px 0; /* Spacing for the footer */
-    width: 100%; /* Ensure full width */
-}
-
-.footer-logo {
-    margin-left: 15%;
-    font-size: 3rem;
-    font-weight: bold;
-}
-
-.footer-section-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-/* Link styling for the footer */
-.footer-link {
-    color: #bbb;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-    .footer-link:hover {
-        color: #fff;
-        text-decoration: underline;
-    }
-
-/* Ensure padding inside columns */
-.footer-contact p, .footer-about p, .footer-links p {
-    margin: 5px 0;
-}
-
-/* Flatpickr customization */
-.flatpickr-calendar {
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.flatpickr-day.selected {
-    background: #000;
-    border-color: #000;
-}
-
-    .flatpickr-day.selected:hover {
-        background: #333;
-        border-color: #333;
-    }
-
-/* Responsive styles */
 @media (max-width: 992px) {
-    .trip-planner {
-        gap: 20px;
-    }
-
-    .date-picker {
-        border-right: none;
-        border-bottom: 1px solid #eee;
-        padding-bottom: 15px;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .people-counter {
-        width: 100%;
-    }
-
-    .next-step {
-        width: 100%;
-        text-align: center;
+    .hero-section {
+        height: 107vh
     }
 }
 
 @media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 32px;
-    }
-
-    .hero-content p {
-        font-size: 14px;
-    }
-
-    .people-counter {
-        flex-direction: column;
-        gap: 15px;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero-content h1 {
-        font-size: 28px;
-    }
-
     .hero-section {
-        height: 80vh;
+        height: 110vh;
     }
 }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            width: 100%;
+            max-width: 400px; /* Match form width on mobile */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+            .hero-content h1 {
+                margin: 10px 0 !important;
+                font-size: 28px;
+                font-weight: 700;
+
+            }
+
+            .hero-content p {
+                margin: 0 0 20px 0 !important;
+                font-size: 14px;
+                text-align: left;
+            }
+
+        /* Trip planner styles */
+        .trip-planner-container {
+            width: 100%;
+            max-width: 400px;
+            margin: 0;
+        }
+
+        .trip-planner {
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .date-picker {
+            display: flex;
+            align-items: center;
+            padding: 0 0 15px 0;
+            border-right: none;
+            border-bottom: 1px solid #eee;
+            width: 100%;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .date-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .date-input {
+            border: none;
+            background: transparent;
+            font-size: 14px;
+            color: #333;
+            cursor: pointer;
+            width: 100%;
+            pointer-events: none; /* Make sure the input itself doesn't interfere with the flatpickr */
+        }
+
+            .date-input:focus {
+                outline: none;
+            }
+
+        .date-picker i {
+            color: #666;
+        }
+
+        .people-counter {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 0;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .counter-group {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 5px 0;
+        }
+
+            .counter-group label {
+                font-size: 14px;
+                color: #333;
+                margin-bottom: 0;
+            }
+
+        .counter {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        main {
+            padding-bottom: 0 !important;
+        }
+
+        .footer {
+            padding: 50px !important;
+        }
+
+        .counter-btn {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background-color: #f0f0f0;
+            color: #333;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+            .counter-btn:hover {
+                background-color: #e0e0e0;
+            }
+
+        .count-input {
+            width: 30px;
+            text-align: center;
+            border: none;
+            background: transparent;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .next-step {
+            width: 100%;
+        }
+
+        .next-btn {
+            background-color: #000;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            width: 100%;
+        }
+
+            .next-btn:hover {
+                background-color: #333;
+            }
+
+        /* Footer styles */
+        .footer {
+            background-color: #000;
+            color: #fff;
+            padding: 150px 0;
+            width: 100%;
+        }
+
+        .footer-logo {
+            margin-left: 15%;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .footer-section-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .footer-link {
+            color: #bbb;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+            .footer-link:hover {
+                color: #fff;
+                text-decoration: underline;
+            }
+
+        .footer-contact p, .footer-about p, .footer-links p {
+            margin: 5px 0;
+        }
+
+        /* Flatpickr customization */
+        .flatpickr-calendar {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .flatpickr-day.selected {
+            background: #000;
+            border-color: #000;
+        }
+
+            .flatpickr-day.selected:hover {
+                background: #333;
+                border-color: #333;
+            }
+
+        /* Fix for form container */
+        form {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* IMPROVED RESPONSIVE STYLES WITH MULTIPLE BREAKPOINTS */
+
+        /* Small tablets (portrait) */
+        @media (min-width: 480px) {
+            .hero-content {
+                max-width: 450px;
+            }
+            .hero-content p,h1 {
+                margin: 0 !important;
+            }
+
+            .trip-planner-container,
+            form {
+                max-width: 450px;
+            }
+
+            .hero-content h1 {
+                text-align:center;
+                font-size: 30px;
+            }
+
+            .hero-content p {
+                font-size: 15px;
+            }
+        }
+
+        /* Medium tablets - FOCUSED FIX FOR 600-780px RANGE */
+        @media (min-width: 600px) and (max-width: 780px) {
+            .hero-section {
+                padding: 80px 20px 40px;
+            }
+
+            .hero-content {
+                max-width: 540px;
+                margin: 0 auto;
+            }
+
+                .hero-content h1 {
+                    font-size: 32px;
+                    margin-top: 20px !important;
+                    margin-bottom: 15px !important;
+                    text-align: center;
+                }
+
+                .hero-content p {
+                    font-size: 15px;
+                    margin: 0 auto 30px !important;
+                    text-align: center;
+                }
+
+            .trip-planner-container,
+            form {
+                max-width: 540px;
+                margin: 0 auto;
+            }
+
+            /* Keep the mobile vertical layout but with improved spacing */
+            .trip-planner {
+                padding: 25px;
+            }
+
+            .date-picker {
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+            }
+
+            /* Make the people counter more tablet-friendly */
+            .people-counter {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                margin-bottom: 25px;
+            }
+
+            .counter-group {
+                width: 100%;
+            }
+
+            /* Make the button look better */
+            .next-btn {
+                padding: 15px 20px;
+            }
+        }
+
+        /* Large tablets and small laptops */
+        @media (min-width: 781px) {
+            .hero-section {
+                min-height: auto;
+                padding: 40px 20px;
+                align-items: center;
+                text-align: center;
+            }
+
+            .hero-content {
+                max-width: 700px;
+                align-items: center;
+                text-align: center;
+            }
+
+                .hero-content h1 {
+                    font-size: 38px;
+                    text-align: center;
+                    margin-top: 60px !important;
+                }
+
+                .hero-content p {
+                    font-size: 16px;
+                    text-align: center;
+                    margin: 0 auto 60px !important;
+                }
+
+            .trip-planner-container,
+            form {
+                max-width: 700px;
+                margin: 0 auto;
+            }
+
+            /* Transition to horizontal layout */
+            .trip-planner {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding: 25px;
+            }
+
+            .date-picker {
+                flex: 1 1 100%;
+                margin-bottom: 20px;
+            }
+
+            .people-counter {
+                flex: 1 1 60%;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 0;
+                padding-right: 20px;
+            }
+
+            .counter-group {
+                width: auto;
+            }
+
+            .next-step {
+                flex: 1 1 35%;
+                display: flex;
+                align-items: center;
+            }
+
+            .next-btn {
+                width: 100%;
+            }
+        }
+
+        /* Medium laptops and desktops */
+        @media (min-width: 992px) {
+            .hero-content {
+                max-width: 900px;
+            }
+
+                .hero-content h1 {
+                    font-size: 40px;
+                    margin-top: 80px !important;
+                }
+
+                .hero-content p {
+                    margin-bottom: 80px !important;
+                }
+
+            .trip-planner-container,
+            form {
+                max-width: 900px;
+            }
+
+            .trip-planner {
+                flex-wrap: nowrap;
+            }
+
+            .date-picker {
+                flex: 1;
+                border-right: 1px solid #eee;
+                border-bottom: none;
+                padding-right: 20px;
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
+
+            .people-counter {
+                flex: 2;
+                padding: 0 20px;
+                border-right: 1px solid #eee;
+            }
+
+            .counter-group {
+                flex-direction: column;
+            }
+
+                .counter-group label {
+                    margin-bottom: 8px;
+                }
+
+            .next-step {
+                flex: 1;
+                text-align: right;
+            }
+
+            .next-btn {
+                width: auto;
+                display: inline-flex;
+                justify-content: center;
+                gap: 10px;
+            }
+        }
+
+        /* Large desktops */
+        @media (min-width: 1200px) {
+            .hero-content {
+                max-width: 1000px;
+            }
+
+                .hero-content h1 {
+                    font-size: 42px;
+                    margin-top: 100px !important;
+                }
+
+                .hero-content p {
+                    margin-bottom: 100px !important;
+                }
+
+            .trip-planner-container,
+            form {
+                max-width: 1000px;
+            }
+        }
+
+        /* Fix for very small screens */
+        @media (max-width: 360px) {
+            .hero-content h1 {
+                font-size: 24px;
+            }
+
+            .hero-content p {
+                font-size: 12px;
+            }
+
+            .trip-planner {
+                padding: 15px;
+            }
+        }
+
+        /* Ensure smooth transitions between breakpoints */
+        .hero-section,
+        .hero-content,
+        .trip-planner-container,
+        .trip-planner,
+        .date-picker,
+        .people-counter,
+        .next-step,
+        .next-btn {
+            transition: all 0.3s ease-in-out;
+        }
