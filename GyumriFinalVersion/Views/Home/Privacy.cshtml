@@ -1,6 +1,97 @@
-﻿@{
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "Privacy Policy";
 }
-<h1>@ViewData["Title"]</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Visit Gyumri</title>
+    <link rel="stylesheet" href="~/Content/css/pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="main-content">
+        <!-- Header -->
+        <section class="privacy-header">
+            <div class="container">
+                <h1>Privacy Policy</h1>
+                <p>Your privacy matters to us. We're committed to protecting your personal information.</p>
+            </div>
+        </section>
 
-<p>Use this page to detail your site's privacy policy.</p>
+        <!-- Main Content -->
+        <section class="container content-section">
+            <div class="content-wrapper privacy-content">
+                <p class="lead-text">
+                    Your privacy matters to us. This website is committed to protecting your personal information and being
+                    transparent about how we collect, use, and store data. Below is a summary of what you need to know.
+                </p>
+
+                <h2>What We Collect</h2>
+                <p>We only collect the information you choose to share with us, such as:</p>
+                <ul>
+                    <li>
+                        Event-related information when you use the <strong>Submit an Event</strong> form
+                    </li>
+                    <li>
+                        Anonymous browsing data (like location and device type) to help us improve user experience and offer a
+                        best experience for features like "Plan A Trip".
+                    </li>
+                </ul>
+
+                <h2>Why We Collect It</h2>
+                <p>We collect this data to:</p>
+                <ul>
+                    <li>Provide accurate responses to your questions</li>
+                    <li>Feature events submitted by users</li>
+                    <li>Improve website performance and content based on visitor behavior</li>
+                    <li>Ensure a smooth, secure experience for all visitors</li>
+                </ul>
+
+                <h2>How We Store & Protect It</h2>
+                <p>
+                    Your data is stored securely on servers managed by our technology partner. We use industry-standard
+                    security measures to protect it from unauthorized access, modification, or disclosure.
+                </p>
+                <p class="bold-text">We never sell your data to third parties. Ever.</p>
+
+                <h2>Third-Party Tools</h2>
+                <p>
+                    We may use services like Google Analytics, social media integrations (e.g. Instagram embeds), or email
+                    marketing tools to better understand usage and reach. These platforms have their own privacy policies,
+                    which we recommend reviewing.
+                </p>
+
+                <h2>Your Choices</h2>
+                <p>You can:</p>
+                <ul>
+                    <li>Choose not to provide personal data by avoiding forms and interactive tools</li>
+                    <li>
+                        Request that we delete any personal information you've submitted via email:
+                        <a href="mailto:info@visitgyumri.info">info@visitgyumri.info</a>
+                    </li>
+                </ul>
+
+                <h2>Updates to This Policy</h2>
+                <p>
+                    We may update this privacy policy if new features or services are added. Any changes will be reflected on
+                    this page with an updated date.
+                </p>
+
+                <div class="info-box">
+                    <p>
+                        If you have questions about this privacy policy, email us at
+                        <a href="mailto:info@visitgyumri.info">info@visitgyumri.info</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -46,7 +46,30 @@ namespace GyumriFinalVersion.Controllers
 
             return View();
         }
+        public async  Task<IActionResult> AboutUs()
+        {
+            ViewBag.Categories = await _categoryService.GetAllCategories();
+            ViewBag.Subcategories = await _subcategoryService.GetAllSubcategories();
+            ViewBag.Places = await _placeService.GetAllPlaces();
+            var currentCulture = Request.Cookies["UserCulture"] ?? "en";
+            var cultureInfo = new System.Globalization.CultureInfo(currentCulture);
 
+            Thread.CurrentThread.CurrentCulture = cultureInfo;
+            Thread.CurrentThread.CurrentUICulture = cultureInfo;
+            return View();
+        }
+        public async Task<IActionResult> Privacy()
+        {
+            ViewBag.Categories = await _categoryService.GetAllCategories();
+            ViewBag.Subcategories = await _subcategoryService.GetAllSubcategories();
+            ViewBag.Places = await _placeService.GetAllPlaces();
+            var currentCulture = Request.Cookies["UserCulture"] ?? "en";
+            var cultureInfo = new System.Globalization.CultureInfo(currentCulture);
+
+            Thread.CurrentThread.CurrentCulture = cultureInfo;
+            Thread.CurrentThread.CurrentUICulture = cultureInfo;
+            return View();
+        }
         [HttpGet]
         public async Task<IActionResult> Category(int categoryId)
         {

@@ -312,6 +312,15 @@
   <data name="OtherLinks" xml:space="preserve">
     <value>Այլ Հղումներ</value>
   </data>
+  <data name="AregakBakery" xml:space="preserve">
+    <value>Արեգակ Սրճարան</value>
+  </data>
+  <data name="BakedwithLove" xml:space="preserve">
+    <value>Սիրով թխված, նպատակով մատուցված։</value>
+  </data>
+  <data name="StaroftheMonth" xml:space="preserve">
+    <value>Ամսվա աստղը</value>
+  </data>
   <data name="GGTitle" xml:space="preserve">
     <value> GG Shuttle</value>
   </data>

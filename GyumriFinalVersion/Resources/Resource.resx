@@ -312,6 +312,15 @@
   <data name="OtherLinks" xml:space="preserve">
     <value>Other Links</value>
   </data>
+  <data name="AregakBakery" xml:space="preserve">
+    <value>Aregak Bakery and Cafe</value>
+  </data>
+  <data name="BakedwithLove" xml:space="preserve">
+    <value>Baked with Love, Served with Purpose.</value>
+  </data>
+  <data name="StaroftheMonth" xml:space="preserve">
+    <value>Star of the Month.</value>
+  </data>
   <data name="GGTitle" xml:space="preserve">
     <value> GG Shuttle</value>
   </data>

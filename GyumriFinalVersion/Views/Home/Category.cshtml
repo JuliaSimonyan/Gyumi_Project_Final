@@ -41,8 +41,16 @@
 @if (ViewBag.CategoryName == "See & Do")
 {
     <section class="see-do-section">
-        <div class="header-image" style="background-image: url('@Url.Content("~/Content/Images/seeheader.png")') !important;">
+                <div class="overlay"></div>
+
+        <div class="header-image" style="background-image: url('@Url.Content("~/Content/Images/See&Do Hero Banner.png")') !important;">
+            <div class="overlay"></div>
+
+            <div class="newheader">
             <h1 class=" header-title">@ViewBag.CategoryName</h1>
+            <p>Whether you’re here for a day or a week, you’ll find stories, places, and people worth your time.</p>
+            </div>
+
             <div><img class="" src="~/Content/Images/Group.png" alt="Symbols"></div>
         </div>
         <div class="nav-links">
@@ -158,9 +166,14 @@
 else if (ViewBag.CategoryName == "Eat & Drink")
 {
    <section class="see-do-section">
-    <!-- Header Image with Title -->
-        <div class="header-image" style="background-image: url('@Url.Content("~/Content/Images/eatheader.jpeg")') !important;">
+        <div class="overlay"></div>
+
+        <div class="header-image" style="background-image: url('@Url.Content("~/Content/Images/eat drink hero banner.png")') !important;">
+            <div class="newheader">
+
             <h1 class=" header-title" >@ViewBag.CategoryName</h1>
+                <p>Cafés with character, restaurants with soul, and flavors you won’t forget.</p>
+</div>
             <div><img class="" src="~/Content/Images/Vector (1).png" alt="Symbols"></div>
     </div>
 
@@ -237,11 +250,16 @@ else if (ViewBag.CategoryName == "Eat & Drink")
     </div>
 }
 else if (ViewBag.CategoryName == "Relax & Sleep")
-{ 
+{
     <section class="see-do-section">
-      <!-- Header Image with Title -->
-        <div class="header-image" style="background-image: url('@Url.Content("~/Content/Images/relaxheader.jpeg")') !important;">
-        <h1 class=" header-title">Relax & Sleep</h1>
+            <div class="overlay"></div>
+        <div class="header-image" style="background-image: url('@Url.Content("~/Content/Images/Relax & Sleep Hero Banner.png")') !important;">
+            <div class="newheader">
+
+            <h1 class=" header-title">Relax & Sleep</h1>
+                <p>Cafés with character, restaurants with soul, and flavors you won’t forget.</p>
+                </div>
+
         <div><img class="" src="~/Content/Images/Vector (2).png" alt="Symbols"></div>
       </div>
   
@@ -320,9 +338,16 @@ else if (ViewBag.CategoryName == "Relax & Sleep")
 }
 else if (ViewBag.CategoryName == "Live & Work")
 {
+   
     <section class="see-do-section">
-        <div class="header-image" style="background-image: url('@Url.Content("~/Content/Images/seeheader.png")') !important;">
+                <div class="overlay"></div>
+
+        <div class="header-image" style="background-image: url('@Url.Content("~/Content/Images/Live and Work Hero Banner.png")') !important;">
+                <div class="newheader">
+
             <h1 class=" header-title">@ViewBag.CategoryName</h1>
+                <p> Move here, work remotely, open a business—or just experience everyday life like a local.</p>
+                    </div>
             <div><img class="" src="~/Content/Images/Group.png" alt="Symbols"></div>
         </div>
         <div class="nav-links">
