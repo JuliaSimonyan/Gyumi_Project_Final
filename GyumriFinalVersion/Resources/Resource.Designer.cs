@@ -277,6 +277,24 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Download App.
+        /// </summary>
+        public static string DownloadApp {
+            get {
+                return ResourceManager.GetString("DownloadApp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Every day.
+        /// </summary>
+        public static string Everyday {
+            get {
+                return ResourceManager.GetString("Everyday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Dzitoghtsyan Museum.
         /// </summary>
         public static string DzitoghtsyanMuseum {
@@ -331,6 +349,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Express Train.
+        /// </summary>
+        public static string ExpressTrain {
+            get {
+                return ResourceManager.GetString("ExpressTrain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Finalizing.
         /// </summary>
         public static string Finalizing {
@@ -381,6 +408,15 @@ namespace GyumriFinalVersion.Resources {
         public static string GettingtoGyumri {
             get {
                 return ResourceManager.GetString("GettingtoGyumri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  GG Shuttle.
+        /// </summary>
+        public static string GGTitle {
+            get {
+                return ResourceManager.GetString("GGTitle", resourceCulture);
             }
         }
         
@@ -448,6 +484,16 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to հ.
+        /// </summary>
+        public static string hourShort {
+            get {
+                return ResourceManager.GetString("hourShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Journey Through History, Culture, and Creativit.
         ///   Looks up a localized string similar to A Journey Through History, Culture, and Creativity.
         /// </summary>
         public static string JourneyThroughHistoryCultureCreativit {
@@ -619,6 +665,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Start from:.
+        /// </summary>
+        public static string StartFrom {
+            get {
+                return ResourceManager.GetString("StartFrom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Take a Workshop with Local Artisans.
         /// </summary>
         public static string TakeWorkshopWithLocalArtisans {
@@ -673,6 +728,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Yerevan, Northern Bus Station.
+        /// </summary>
+        public static string TrainAddress {
+            get {
+                return ResourceManager.GetString("TrainAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Use this tool to organize your travel, stay, and activities for an unforgettable trip to Cymru. Get a personalized plan emailed or downloaded at the end!.
         /// </summary>
         public static string TripPageText {
@@ -696,6 +760,24 @@ namespace GyumriFinalVersion.Resources {
         public static string UNESCOսBlacksmithingMasterpieces {
             get {
                 return ResourceManager.GetString("UNESCOսBlacksmithingMasterpieces", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Visit Website.
+        /// </summary>
+        public static string VisitWebsite {
+            get {
+                return ResourceManager.GetString("VisitWebsite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Friday, Saturday, Sunday  .
+        /// </summary>
+        public static string WeekDayTrain {
+            get {
+                return ResourceManager.GetString("WeekDayTrain", resourceCulture);
             }
         }
         

@@ -9,31 +9,34 @@ namespace GyumriFinalVersion.Controllers
 {
     public class TripController : Controller
     {
-        private const string CultureCookieName = "UserCulture";
         private readonly ApplicationContext _context;
         private readonly ICategory _categoryService;
         private readonly ISubcategory _subCategoryService;
         private readonly IPlace _placeService;
 
-        private readonly IConverter _converter;
+        private readonly string fromEmail = "inesamkrtchyan9999@gmail.com";
+        private readonly string password = "lhwd zttk xque sajp";
 
-        public TripController(ICategory categoryService, ApplicationContext context, IPlace placeServoce, ISubcategory subcategoryService)
+        public TripController(ICategory categoryService, ApplicationContext context, IPlace placeService, ISubcategory subcategoryService)
         {
             _categoryService = categoryService;
             _context = context;
             _subCategoryService = subcategoryService;
-            _placeService = placeServoce;
+            _placeService = placeService;
+        }
+
+        private void SetCulture()
+        {
+            var currentCulture = Request.Cookies["UserCulture"] ?? "en";
+            var cultureInfo = new System.Globalization.CultureInfo(currentCulture);
+            Thread.CurrentThread.CurrentCulture = cultureInfo;
+            Thread.CurrentThread.CurrentUICulture = cultureInfo;
         }
 
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            ViewBag.Categories = await _categoryService.GetAllCategories();
-            var currentCulture = Request.Cookies["UserCulture"] ?? "en";
-            var cultureInfo = new System.Globalization.CultureInfo(currentCulture);
-            Thread.CurrentThread.CurrentCulture = cultureInfo;
-            Thread.CurrentThread.CurrentUICulture = cultureInfo;
-
+            SetCulture();
             ViewBag.Categories = await _categoryService.GetAllCategories();
             return View();
         }
@@ -41,52 +44,43 @@ namespace GyumriFinalVersion.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(string dates, string adult, string children)
         {
+            SetCulture();
             ViewBag.Categories = await _categoryService.GetAllCategories();
-            var currentCulture = Request.Cookies["UserCulture"] ?? "en";
-            var cultureInfo = new System.Globalization.CultureInfo(currentCulture);
-            Thread.CurrentThread.CurrentCulture = cultureInfo;
-            Thread.CurrentThread.CurrentUICulture = cultureInfo;
-            if (dates is null && adult is null && children is null)
+
+            if (string.IsNullOrEmpty(dates) && string.IsNullOrEmpty(adult) && string.IsNullOrEmpty(children))
             {
                 return View();
             }
+
             TempData["Dates"] = dates;
-            TempData["AductCount"] = adult;
+            TempData["AdultCount"] = adult;
             TempData["ChildrenCount"] = children;
 
-            ViewBag.Categories = await _categoryService.GetAllCategories();
             return RedirectToAction("FirstStep");
         }
 
         [HttpGet]
         public async Task<IActionResult> FirstStep()
         {
-
             ViewBag.Categories = await _categoryService.GetAllCategories();
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> FirstStep(string transport)
+        public IActionResult FirstStep(string transport)
         {
-            ViewBag.Categories = await _categoryService.GetAllCategories();
-            TempData[transport] = transport;
-
+            TempData["Transport"] = transport;
             return RedirectToAction("SecondStep");
         }
 
         [HttpGet]
         public async Task<IActionResult> SecondStep(int subcategoryId = -1, int currentPage = 1)
         {
-            var currentCulture = Request.Cookies["UserCulture"] ?? "en";
-            var cultureInfo = new System.Globalization.CultureInfo(currentCulture);
-            Thread.CurrentThread.CurrentCulture = cultureInfo;
-            Thread.CurrentThread.CurrentUICulture = cultureInfo;
-
+            SetCulture();
             var categories = await _categoryService.GetAllCategories();
             var seeAndDoCategory = categories.FirstOrDefault(c => c.Name == "See & Do");
-            var subcategories = await _subCategoryService.GetSubcategoriesByCategoryId(seeAndDoCategory.CategoryId);
 
+            var subcategories = await _subCategoryService.GetSubcategoriesByCategoryId(seeAndDoCategory.CategoryId);
             if (subcategoryId == -1 && subcategories.Any())
             {
                 subcategoryId = subcategories.First().SubcategoryId;
@@ -94,17 +88,13 @@ namespace GyumriFinalVersion.Controllers
 
             var places = await _placeService.GetPlacesBySubCategoryId(subcategoryId);
 
-            ViewBag.PagesCount = places.Any() ? (int)Math.Ceiling((double)places.Count() / 5) : 1;
+            ViewBag.PagesCount = (int)Math.Ceiling((double)places.Count() / 5);
             ViewBag.AllSubcategories = subcategories;
             ViewBag.CurrentSubcategory = subcategories.FirstOrDefault(sc => sc.SubcategoryId == subcategoryId);
             ViewBag.CurrentPage = currentPage;
-
-            ViewBag.Places = places
-                                .Skip((currentPage - 1) * 5)
-                                .Take(5)
-                                .ToList();
-
+            ViewBag.Places = places.Skip((currentPage - 1) * 5).Take(5).ToList();
             ViewBag.Categories = categories;
+
             return View();
         }
 
@@ -118,15 +108,11 @@ namespace GyumriFinalVersion.Controllers
         [HttpGet]
         public async Task<IActionResult> ThirdStep(int subcategoryId = -1, int currentPage = 1)
         {
-            var currentCulture = Request.Cookies["UserCulture"] ?? "en";
-            var cultureInfo = new System.Globalization.CultureInfo(currentCulture);
-            Thread.CurrentThread.CurrentCulture = cultureInfo;
-            Thread.CurrentThread.CurrentUICulture = cultureInfo;
-
+            SetCulture();
             var categories = await _categoryService.GetAllCategories();
-            var seeAndDoCategory = categories.FirstOrDefault(c => c.Name == "Relax & Sleep");
-            var subcategories = await _subCategoryService.GetSubcategoriesByCategoryId(seeAndDoCategory.CategoryId);
+            var relaxCategory = categories.FirstOrDefault(c => c.Name == "Relax & Sleep");
 
+            var subcategories = await _subCategoryService.GetSubcategoriesByCategoryId(relaxCategory.CategoryId);
             if (subcategoryId == -1 && subcategories.Any())
             {
                 subcategoryId = subcategories.First().SubcategoryId;
@@ -134,20 +120,15 @@ namespace GyumriFinalVersion.Controllers
 
             var places = await _placeService.GetPlacesBySubCategoryId(subcategoryId);
 
-            ViewBag.PagesCount = places.Any() ? (int)Math.Ceiling((double)places.Count() / 5) : 1;
+            ViewBag.PagesCount = (int)Math.Ceiling((double)places.Count() / 5);
             ViewBag.AllSubcategories = subcategories;
             ViewBag.CurrentSubcategory = subcategories.FirstOrDefault(sc => sc.SubcategoryId == subcategoryId);
             ViewBag.CurrentPage = currentPage;
-
-            ViewBag.Places = places
-                                .Skip((currentPage - 1) * 5)
-                                .Take(5)
-                                .ToList();
-
+            ViewBag.Places = places.Skip((currentPage - 1) * 5).Take(5).ToList();
             ViewBag.Categories = categories;
+
             return View();
         }
-
 
         [HttpPost]
         public IActionResult ThirdStep(int placeId)
@@ -156,43 +137,42 @@ namespace GyumriFinalVersion.Controllers
             return RedirectToAction("ForthStep");
         }
 
-        public async Task<IActionResult> ForthStep(int categoryId)
+        public async Task<IActionResult> ForthStep()
         {
-            ViewBag.Categories = await _categoryService.GetAllCategories();
             var currentCulture = Request.Cookies["UserCulture"] ?? "en";
             var cultureInfo = new System.Globalization.CultureInfo(currentCulture);
             Thread.CurrentThread.CurrentCulture = cultureInfo;
             Thread.CurrentThread.CurrentUICulture = cultureInfo;
+            ViewBag.Categories = await _categoryService.GetAllCategories();
 
-            var place1 = await _placeService.GetPlaceById(Convert.ToInt32((TempData["place1Id"])));
-            var place2 = await _placeService.GetPlaceById(Convert.ToInt32((TempData["place2Id"])));
+            if (!TempData.TryGetValue("Place1Id", out var place1IdObj) || !TempData.TryGetValue("Place2Id", out var place2IdObj))
+            {
+                return RedirectToAction("Index");
+            }
 
+            int place1Id = Convert.ToInt32(place1IdObj);
+            int place2Id = Convert.ToInt32(place2IdObj);
+
+            var place1 = await _placeService.GetPlaceById(place1Id);
+            var place2 = await _placeService.GetPlaceById(place2Id);
+            ViewBag.CurrentCulture = currentCulture;
             ViewBag.Place1 = place1;
             ViewBag.Place2 = place2;
 
-            ViewBag.Categories = await _categoryService.GetAllCategories();
             return View();
         }
-        public async Task<IActionResult> Final(int categoryId)
+
+        public async Task<IActionResult> Final()
         {
-            ViewBag.Categories = await _categoryService.GetAllCategories();
-
-            var currentCulture = Request.Cookies["UserCulture"] ?? "en";
-            var cultureInfo = new System.Globalization.CultureInfo(currentCulture);
-            Thread.CurrentThread.CurrentCulture = cultureInfo;
-            Thread.CurrentThread.CurrentUICulture = cultureInfo;
-
+            SetCulture();
             ViewBag.Categories = await _categoryService.GetAllCategories();
             return View();
         }
 
-        // ______________________Send email ____________________
-        private readonly string fromEmail = "inesamkrtchyan9999@gmail.com";
-        private readonly string password = "lhwd zttk xque sajp";
-
+        // ______________________ Send Email ____________________
         public void SendEmail(string toEmail, string subject, string body)
         {
-            var fromAddress = new MailAddress(fromEmail, "Your Name");
+            var fromAddress = new MailAddress(fromEmail, "Gyumri Trip Planner");
             var toAddress = new MailAddress(toEmail);
 
             var smtp = new SmtpClient
@@ -204,99 +184,72 @@ namespace GyumriFinalVersion.Controllers
                 Credentials = new NetworkCredential(fromEmail, password)
             };
 
-            using (var message = new MailMessage(fromAddress, toAddress)
+            using var message = new MailMessage(fromAddress, toAddress)
             {
                 Subject = subject,
                 Body = body,
                 IsBodyHtml = true
-            })
-            {
-                smtp.Send(message);
-            }
+            };
+
+            smtp.Send(message);
         }
 
         [HttpPost]
         public async Task<IActionResult> SendWelcomeEmail(string email)
         {
-            var currentCulture = Request.Cookies["UserCulture"] ?? "en";
-            var cultureInfo = new System.Globalization.CultureInfo(currentCulture);
-            Thread.CurrentThread.CurrentCulture = cultureInfo;
-            Thread.CurrentThread.CurrentUICulture = cultureInfo;
+            SetCulture();
 
-            var place1 = await _placeService.GetPlaceById(Convert.ToInt32((TempData["place1Id"])));
-            var place2 = await _placeService.GetPlaceById(Convert.ToInt32((TempData["place2Id"])));
+            if (!TempData.TryGetValue("Place1Id", out var place1IdObj) || !TempData.TryGetValue("Place2Id", out var place2IdObj))
+            {
+                return RedirectToAction("Index");
+            }
+
+            int place1Id = Convert.ToInt32(place1IdObj);
+            int place2Id = Convert.ToInt32(place2IdObj);
+
+            var place1 = await _placeService.GetPlaceById(place1Id);
+            var place2 = await _placeService.GetPlaceById(place2Id);
 
             var subject = AppRes.WelcomeGyumri;
             string body;
 
+            string currentCulture = Request.Cookies["UserCulture"] ?? "en";
+
             if (currentCulture == "ru-RU")
             {
-                body = $"<h1>{AppRes.TripPlan}</h1>" +
-                $"<h3>{@AppRes.WheretoStay} </h3>" +
-                $"<p>{place1.PlaceNameRu}</p>" +
-                $"<p> place1.Address </p>" +
-                $"<br/>" +
-                $"<h3>{@AppRes.WhatToDo} </h3>" +
-                $"<p>{place2.PlaceNameRu}</p>" +
-                $"<p> place1.Address </p>";
+                body = $@"
+        <h1>{AppRes.TripPlan}</h1>
+        <h3>{AppRes.WheretoStay}</h3>
+        <p>{(place1?.PlaceNameRu ?? "N/A")}</p>
+        <br/>
+        <h3>{AppRes.WhatToDo}</h3>
+        <p>{(place2?.PlaceNameRu ?? "N/A")}</p>";
             }
             else if (currentCulture == "hy-AM")
             {
-                body = $"<h1>{AppRes.TripPlan}</h1>" +
-                $"<h3>{@AppRes.WheretoStay} </h3>" +
-                $"<p>{place1.PlaceNameArm}</p>" +
-                $"<p> place1.Address </p>" +
-                $"<br/>" +
-                $"<h3>{@AppRes.WhatToDo} </h3>" +
-                $"<p>{place2.PlaceNameArm}</p>" +
-                $"<p> place1.Address </p>";
+                body = $@"
+        <h1>{AppRes.TripPlan}</h1>
+        <h3>{AppRes.WheretoStay}</h3>
+        <p>{(place1?.PlaceNameArm ?? "N/A")}</p>
+        <br/>
+        <h3>{AppRes.WhatToDo}</h3>
+        <p>{(place2?.PlaceNameArm ?? "N/A")}</p>";
             }
             else
             {
-                body = $"<h1>{AppRes.TripPlan}</h1>" +
-                $"<h3>{@AppRes.WheretoStay} </h3>" +
-                $"<p>{place1.PlaceName}</p>" +
-                $"<p> place1.Address </p>" +
-                $"<br/>" +
-                $"<h3>{@AppRes.WhatToDo} </h3>" +
-                $"<p>{place2.PlaceName}</p>" +
-                $"<p> place1.Address </p>";
+                body = $@"
+        <h1>{AppRes.TripPlan}</h1>
+        <h3>{AppRes.WheretoStay}</h3>
+        <p>{(place1?.PlaceName ?? "N/A")}</p>
+        <br/>
+        <h3>{AppRes.WhatToDo}</h3>
+        <p>{(place2?.PlaceName ?? "N/A")}</p>";
             }
+
+
             SendEmail(email, subject, body);
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Final");
         }
-
-        // ______________________Send email ____________________
-
-        //________________Download PDF____________________
-
-        //public IActionResult DownloadTripPlanPdf()
-        //{
-        //    var body = $"<h1>Ճանապարհորդության պլան</h1>" +
-        //               $"<h3>Այստեղ կարող է լինել ձեր գովազդը :D </h3>";
-
-        //    var doc = new HtmlToPdfDocument()
-        //    {
-        //        GlobalSettings = new GlobalSettings
-        //        {
-        //            PaperSize = PaperKind.A4,
-        //            Orientation = Orientation.Portrait,
-        //        },
-        //        Objects = {
-        //        new ObjectSettings
-        //        {
-        //            HtmlContent = body,
-        //            WebSettings = { DefaultEncoding = "utf-8" }
-        //        }
-        //    }
-        //    };
-
-        //    var pdf = _converter.Convert(doc);
-
-        //    return File(pdf, "application/pdf", "TripPlan.pdf");
-        //}
-
-        //________________Download PDF____________________
     }
 }

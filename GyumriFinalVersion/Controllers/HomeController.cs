@@ -135,6 +135,7 @@ namespace GyumriFinalVersion.Controllers
             ViewBag.Articles = await _articleService.GetAllArticles();
             return View(article);
         }
+
         [HttpPost] // Make this a POST request
         public async Task<IActionResult> SavePlace(int articleId)
         {
