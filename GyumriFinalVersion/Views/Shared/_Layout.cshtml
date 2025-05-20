@@ -64,14 +64,17 @@
                 </ul>
 
                 <div class="d-flex" style="display:flex;align-items: center;justify-content: center;">
-                    <div class="search-container">
+                    <div class="search-container position-relative" style="max-width: 300px;">
                         <a class="nav-link search-icon" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                        <input type="text" class="search-input" placeholder="Search...">
+                        <input type="text" id="searchInput" class="form-control search-input" placeholder="Search...">
+                        <ul id="searchResults" class="list-group position-absolute w-100" style="z-index: 1000; max-height: 300px; overflow-y: auto;"></ul>
                     </div>
+
+
                     <a class="nav-link" href="@Url.Action("MyList", "Home")"><i class="fa-regular fa-bookmark"></i></a>
                     <div class="language-dropdown">
 
-                        <form asp-controller="Home" asp-action="ChangeLanguage" method="POST">
+                        <form asp-controller="Home" asp-action="ChangeLanguage" method="POST" style="margin: 0 10px;">
 
                             <select style="border:none;cursor:pointer; background-color:#000;; color:white;" name="lang" onchange="this.form.submit()">
                                 @if (currentCulture == "en")
@@ -124,7 +127,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
                     <div class="footer-logo">
-                        <img src="~/content/Images/Vector.png" alt="Logo" style="width: 60px; height: 60px;">
+                        <img src="~/content/Images/Vector.png" alt="Logo" style="width: 86px; height: 60px;">
                     </div>
                 </div>
 
@@ -136,8 +139,8 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 footer-section footer-about">
                     <div class="footer-section">@AppRes.AboutThisWebsite.ToUpper()</div><br>
-                    <p><a href="@Url.Action("AboutUs")" class="footer-link">About gyumritourism.com</a></p>
-                    <p><a href="@Url.Action("Privacy")" class="footer-link">@AppRes.PrivacyPolicy</a></p>
+                    <p><a href="@Url.Action("AboutUs", "Home")" class="footer-link">About visitgyumri.info</a></p>
+                    <p><a href="@Url.Action("Privacy", "Home")" class="footer-link">@AppRes.PrivacyPolicy</a></p>
                     <p><a href="#" class="footer-link">@AppRes.AccessibilityStatement</a></p> @* TODO:: Create Translation for this *@
                 </div>
                 <div class="col-lg-3 col-md-6 footer-section footer-links">
@@ -180,7 +183,63 @@
 
     <script src="https://kit.fontawesome.com/e8c2e1c09c.js" crossorigin="anonymous"></script>
 
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const searchResults = document.getElementById("searchResults");
 
+        // Function to get all visible text content nodes
+        function getVisibleTextNodes() {
+            const excludedTags = ['SCRIPT', 'STYLE', 'NOSCRIPT', 'HEAD', 'TITLE', 'META', 'LINK', 'NAV', 'FOOTER'];
+            const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+                acceptNode: (node) => {
+                    const parent = node.parentElement;
+                    if (!parent || excludedTags.includes(parent.tagName)) return NodeFilter.FILTER_REJECT;
+                    if (!node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+                    if (window.getComputedStyle(parent).display === 'none') return NodeFilter.FILTER_REJECT;
+                    return NodeFilter.FILTER_ACCEPT;
+                }
+            });
+
+            const nodes = [];
+            let node;
+            while (node = walker.nextNode()) {
+                nodes.push({
+                    text: node.nodeValue.trim(),
+                    element: node.parentElement
+                });
+            }
+
+            return nodes;
+        }
+
+        const allTextNodes = getVisibleTextNodes();
+
+        searchInput.addEventListener("input", () => {
+            const query = searchInput.value.toLowerCase();
+            searchResults.innerHTML = "";
+
+            if (!query) return;
+
+            const matches = allTextNodes.filter(item => item.text.toLowerCase().includes(query));
+
+            matches.slice(0, 10).forEach(match => {
+                const li = document.createElement("li");
+                li.textContent = match.text.length > 100 ? match.text.slice(0, 100) + "..." : match.text;
+                li.addEventListener("click", () => {
+                    match.element.scrollIntoView({ behavior: "smooth", block: "center" });
+                    searchResults.innerHTML = "";
+                    searchInput.value = match.text;
+                });
+                searchResults.appendChild(li);
+            });
+        });
+
+        document.addEventListener("click", (e) => {
+            if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+                searchResults.innerHTML = "";
+            }
+        });
+    </script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

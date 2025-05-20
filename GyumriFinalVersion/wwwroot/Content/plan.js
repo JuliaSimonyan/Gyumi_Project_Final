@@ -535,3 +535,4 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("There was an error loading the map. Please refresh the page and try again.")
     }
 })
+

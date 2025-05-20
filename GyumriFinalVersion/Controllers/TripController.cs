@@ -155,7 +155,7 @@ namespace GyumriFinalVersion.Controllers
 
             var place1 = await _placeService.GetPlaceById(place1Id);
             var place2 = await _placeService.GetPlaceById(place2Id);
-            ViewBag.CurrentCulture = currentCulture;
+            ViewBag.CurrentCulture = string.IsNullOrEmpty(currentCulture) ? "en" : currentCulture;
             ViewBag.Place1 = place1;
             ViewBag.Place2 = place2;
 

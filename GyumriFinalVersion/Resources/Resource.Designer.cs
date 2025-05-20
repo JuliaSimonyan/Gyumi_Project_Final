@@ -286,15 +286,6 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Every day.
-        /// </summary>
-        public static string Everyday {
-            get {
-                return ResourceManager.GetString("Everyday", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Dzitoghtsyan Museum.
         /// </summary>
         public static string DzitoghtsyanMuseum {
@@ -309,6 +300,15 @@ namespace GyumriFinalVersion.Resources {
         public static string DzitoghtsyanMuseumDesc {
             get {
                 return ResourceManager.GetString("DzitoghtsyanMuseumDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Every day.
+        /// </summary>
+        public static string Everyday {
+            get {
+                return ResourceManager.GetString("Everyday", resourceCulture);
             }
         }
         
@@ -493,7 +493,6 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Journey Through History, Culture, and Creativit.
         ///   Looks up a localized string similar to A Journey Through History, Culture, and Creativity.
         /// </summary>
         public static string JourneyThroughHistoryCultureCreativit {
@@ -737,7 +736,7 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Use this tool to organize your travel, stay, and activities for an unforgettable trip to Cymru. Get a personalized plan emailed or downloaded at the end!.
+        ///   Looks up a localized string similar to Use this tool to organize your travel, stay, and activities for an unforgettable trip to Gyumri. Get a personalized plan emailed or downloaded at the end!.
         /// </summary>
         public static string TripPageText {
             get {
@@ -764,24 +763,6 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Visit Website.
-        /// </summary>
-        public static string VisitWebsite {
-            get {
-                return ResourceManager.GetString("VisitWebsite", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Friday, Saturday, Sunday  .
-        /// </summary>
-        public static string WeekDayTrain {
-            get {
-                return ResourceManager.GetString("WeekDayTrain", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Varem &amp; Marem Art Studio.
         /// </summary>
         public static string VaremMarem {
@@ -796,6 +777,24 @@ namespace GyumriFinalVersion.Resources {
         public static string VaremMaremDesc {
             get {
                 return ResourceManager.GetString("VaremMaremDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Visit Website.
+        /// </summary>
+        public static string VisitWebsite {
+            get {
+                return ResourceManager.GetString("VisitWebsite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Friday, Saturday, Sunday  .
+        /// </summary>
+        public static string WeekDayTrain {
+            get {
+                return ResourceManager.GetString("WeekDayTrain", resourceCulture);
             }
         }
         
