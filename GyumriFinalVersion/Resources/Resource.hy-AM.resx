@@ -312,4 +312,31 @@
   <data name="OtherLinks" xml:space="preserve">
     <value>Այլ Հղումներ</value>
   </data>
+  <data name="GGTitle" xml:space="preserve">
+    <value> GG Shuttle</value>
+  </data>
+  <data name="VisitWebsite" xml:space="preserve">
+    <value>Այցելել կայք</value>
+  </data>
+  <data name="DownloadApp" xml:space="preserve">
+    <value>Ներբեռնել հավելվածը</value>
+  </data>
+  <data name="ExpressTrain" xml:space="preserve">
+    <value>Express Գնացք</value>
+  </data>
+  <data name="hourShort" xml:space="preserve">
+    <value>ժ</value>
+  </data>
+  <data name="WeekDayTrain" xml:space="preserve">
+    <value>Ուրբաթ, շաբաթ, կիրակի  </value>
+  </data>
+  <data name="StartFrom" xml:space="preserve">
+    <value>Սկսած</value>
+  </data>
+  <data name="TrainAddress" xml:space="preserve">
+    <value>Երևան, Հյուսիսային ավտոկայան</value>
+  </data>
+  <data name="Everyday" xml:space="preserve">
+    <value>Ամեն օր</value>
+  </data>
 </root>

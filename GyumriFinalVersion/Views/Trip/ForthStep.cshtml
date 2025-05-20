@@ -1,5 +1,6 @@
 ﻿@{
-    var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
+    ViewData["Title"] = "Where to Stay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -91,11 +92,11 @@
                             <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-kUJhL8uD96j8xGMUGnXmdJFprk4qId.png" alt="Berlin Art Hotel">
                         </div>
                         <div class="item-details">
-                            @if (currentCulture == "ru-RU")
+                            @if (ViewBag.CurrentCulture == "ru-RU")
                             {
                                 <h3>@ViewBag.Place1.NameRu</h3>
                             }
-                            else if (currentCulture == "hy-AM")
+                            else if (ViewBag.CurrentCulture == "hy-AM")
                             {
                                 <h3>@ViewBag.Place1.NameArm</h3>
                             }
@@ -135,11 +136,11 @@
                             <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-kUJhL8uD96j8xGMUGnXmdJFprk4qId.png" alt="Dzitoghtsyan Museum">
                         </div>
                         <div class="item-details">
-                            <@if (currentCulture == "ru-RU")
+                            <@if (ViewBag.CurrentCulture == "ru-RU")
                             {
                                 <h3>@ViewBag.Place2.NameRu</h3>
                             }
-                            else if (currentCulture == "hy-AM")
+                            else if (ViewBag.CurrentCulture == "hy-AM")
                             {
                                 <h3>@ViewBag.Place2.NameArm</h3>
                             }

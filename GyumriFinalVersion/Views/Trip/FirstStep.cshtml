@@ -56,298 +56,298 @@
                     <p color="white">You're 120 km away from Gyumri</p>
             </div>
         </div>
-        <form method="post">
-        <!-- Two-column layout for map and transportation options -->
-        <div class="trip-planner-container">
-            <!-- Left column - Map -->
-            <div class="map-column">
-                <div class="map-wrapper">
-                    <!-- Add location search input -->
-                    <div class="location-search-container">
-                        <input type="text" id="location-search" placeholder="Enter a location" class="location-search-input">
-                        <button id="search-button" class="search-button">
-                            <i class="fa-solid fa-search"></i>
-                        </button>
+        <form asp-action="FirstStep" asp-controller="Trip" method="post">
+            <!-- Two-column layout for map and transportation options -->
+            <div class="trip-planner-container">
+                <!-- Left column - Map -->
+                <div class="map-column">
+                    <div class="map-wrapper">
+                        <!-- Add location search input -->
+                        <div class="location-search-container">
+                            <input type="text" id="location-search" placeholder="Enter a location" class="location-search-input">
+                            <button id="search-button" class="search-button">
+                                <i class="fa-solid fa-search"></i>
+                            </button>
+                        </div>
+                        <div id="map"></div>
                     </div>
-                    <div id="map"></div>
+                </div>
+
+                <!-- Right column - Transportation options -->
+                <div class="options-column">
+                    <div class="route-info-container">
+                        <div class="route-info">
+                            <h3 id="route-title">Yerevan - Gyumri</h3>
+                            <p id="route-distance">353 @AppRes.km</p>
+                        </div>
+                    </div>
+                    <!-- Taxi Dropdown -->
+                    <div class="transport-option-group">
+                        <div class="transport-header expanded">
+                            <div class="transport-icon">
+                                <i class="fa-solid fa-taxi"></i>
+                            </div>
+                            <div class="transport-name">@AppRes.Taxi</div>
+                            <div class="dropdown-arrow">
+                                <i class="fa-solid fa-chevron-up"></i>
+                            </div>
+                        </div>
+
+                        <div class="transport-content">
+                            <!-- GG Shuttle -->
+                            <div class="transport-item selected">
+                                <div class="item-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="item-radio">
+                                    <input type="radio" name="transport" value="@AppRes.GGTitle" id="gg-shuttle" checked>
+                                    <label for="gg-shuttle"> @AppRes.GGTitle </label>
+                                </div>
+                                <div class="item-details">
+                                    <div class="detail">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span>90 @AppRes.min</span>
+                                    </div>
+                                    <div class="detail">
+                                        <i class="fa-solid fa-money-bill"></i>
+                                        <span>1500 - 2000 (֏) AMD</span>
+                                    </div>
+                                </div>
+                                <div class="item-link">
+                                    <a href="https://www.team.gg/gg-shuttle?lang=hy" target="_blank" class="service-link">
+                                        @AppRes.VisitWebsite <i class="fa-solid fa-external-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- YevYev Shuttle -->
+                            <div class="transport-item">
+                                <div class="item-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <div class="item-radio">
+                                    <input type="radio" name="transport" value="YevYevShuttle" id="yevyev-shuttle">
+                                    <label for="yevyev-shuttle">YevYevShuttle</label>
+                                </div>
+                                <div class="item-details">
+                                    <div class="detail">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span>90 @AppRes.min</span>
+                                    </div>
+                                    <div class="detail">
+                                        <i class="fa-solid fa-money-bill"></i>
+                                        <span>1500 (֏) AMD</span>
+                                    </div>
+                                </div>
+                                <div class="item-link">
+                                    <a href="https://apps.apple.com/am/app/yev-yev/id1564473555" target="_blank" class="service-link">
+                                        @AppRes.DownloadApp <i class="fa-solid fa-external-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bus Dropdown -->
+                    <div class="transport-option-group bus-group" style="display: none;">
+                        <div class="transport-header">
+                            <div class="transport-icon">
+                                <i class="fa-solid fa-bus"></i>
+                            </div>
+                            <div class="transport-name">@AppRes.Bus</div>
+                            <div class="dropdown-arrow">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="transport-content" style="display: none;">
+                            <!-- Bus N358 -->
+                            <div class="transport-item">
+                                <div class="item-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <div class="item-radio">
+                                    <input type="radio" name="transport" value="@($"{AppRes.Bus}N358")" id="bus-n358">
+                                    <label for="bus-n358">N358</label>
+                                </div>
+                                <div class="item-details">
+                                    <div class="detail">
+                                        <i class="fa-solid fa-money-bill"></i>
+                                        <span>1500 (֏) AMD</span>
+                                    </div>
+                                </div>
+                                <div class="schedule-info">
+                                    <p><strong>@(AppRes.Everyday)</strong> 10:00; 11:15; 12:30; 13:30</p>
+                                </div>
+                            </div>
+
+                            <!-- Bus N359 -->
+                            <div class="transport-item">
+                                <div class="item-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <div class="item-radio">
+                                    <input type="radio" name="transport" value="@($"{AppRes.Bus}N359")" id="bus-n359">
+                                    <label for="bus-n359">N359</label>
+                                </div>
+                                <div class="item-details">
+                                    <div class="detail">
+                                        <i class="fa-solid fa-money-bill"></i>
+                                        <span>1500 (֏) AMD</span>
+                                    </div>
+                                </div>
+                                <div class="schedule-info">
+                                    <p><strong>@(AppRes.Everyday)</strong> 14:30; 15:45; 17:00; 18:00</p>
+                                </div>
+                            </div>
+
+                            <div class="bus-info">
+                                <p><strong>@(AppRes.StartFrom)</strong> @(AppRes.TrainAddress)</p>
+                                <div class="item-link">
+                                    <a href="tel:+37410621670" class="service-link">
+                                        <i class="fa-solid fa-phone"></i> +374 10 621 670
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Train Dropdown -->
+                    <div class="transport-option-group train-group" style="display: none;">
+                        <div class="transport-header">
+                            <div class="transport-icon">
+                                <i class="fa-solid fa-train"></i>
+                            </div>
+                            <div class="transport-name">@AppRes.Train</div>
+                            <div class="dropdown-arrow">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="transport-content" style="display: none;">
+                            <!-- Express Train -->
+                            <div class="transport-item">
+                                <div class="item-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="item-radio">
+                                    <input type="radio" name="transport" value="@($"{AppRes.ExpressTrain}N358")" id="express-train">
+                                    <label for="express-train">@(AppRes.ExpressTrain)</label>
+                                </div>
+                                <div class="item-details">
+                                    <div class="detail">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span>2 @(AppRes.hourShort) 10 @(AppRes.min)</span>
+                                    </div>
+                                    <div class="detail">
+                                        <i class="fa-solid fa-money-bill"></i>
+                                        <span>1400 (֏) AMD</span>
+                                    </div>
+                                </div>
+                                <div class="schedule-info">
+                                    <p><strong>@(AppRes.WeekDayTrain)</strong> 9:15</p>
+                                </div>
+                            </div>
+
+                            <!-- Gyumri Train -->
+                            <div class="transport-item">
+                                <div class="item-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <div class="item-radio">
+                                    <input type="radio" name="transport" value="@(AppRes.Train)" id="gyumri-train">
+                                    <label for="gyumri-train">@(AppRes.Train)</label>
+                                </div>
+                                <div class="item-details">
+                                    <div class="detail">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span>3 @(AppRes.hourShort) 11 @(AppRes.min)</span>
+                                    </div>
+                                    <div class="detail">
+                                        <i class="fa-solid fa-money-bill"></i>
+                                        <span>1200 (֏) AMD</span>
+                                    </div>
+                                </div>
+                                <div class="schedule-info">
+                                    <p><strong> @(AppRes.Everyday) </strong> 7:55; 14:25; 18:25</p>
+                                </div>
+                            </div>
+
+                            <div class="train-info">
+                                <div class="item-link">
+                                    <a href="https://www.railway.am/" target="_blank" class="service-link">
+                                        Visit Railway Website <i class="fa-solid fa-external-link"></i>
+                                    </a>
+                                </div>
+                                <div class="available-stations">
+                                    <p><strong>Available at:</strong> Yerevan, Noragavit, Masis, Sis, Haykashen, Ejmiatsin, Artashat, Armavir, Araqs, Dalarik, Qarakert, Arteni, Aragats, Ani, Bagravan, Jrapi, Shirakavan, Bayandur.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Private Car Dropdown -->
+                    <div class="transport-option-group">
+                        <div class="transport-header">
+                            <div class="transport-icon">
+                                <i class="fa-solid fa-car"></i>
+                            </div>
+                            <div class="transport-name">@AppRes.PrivateCar</div>
+                            <div class="dropdown-arrow">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="transport-content" style="display: none;">
+                            <div class="navigation-options">
+                                <div class="navigation-option">
+                                    <a href="https://maps.app.goo.gl/ZvsXEEhohAGTJ6pW9" target="_blank" class="nav-link">
+                                        <i class="fa-brands fa-google"></i> Google Maps Navigation
+                                    </a>
+                                </div>
+                                <div class="navigation-option">
+                                    <a href="https://yandex.com/maps/-/CHrkNO5S" target="_blank" class="nav-link">
+                                        <i class="fa-solid fa-location-dot"></i> Yandex Maps Navigation
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Right column - Transportation options -->
-            <div class="options-column">
-                <div class="route-info-container">
-                    <div class="route-info">
-                        <h3 id="route-title">Yerevan - Gyumri</h3>
-                        <p id="route-distance">353 @AppRes.km</p>
-                    </div>
-                </div>
-                <!-- Taxi Dropdown -->
-                <div class="transport-option-group">
-                    <div class="transport-header expanded">
-                        <div class="transport-icon">
-                            <i class="fa-solid fa-taxi"></i>
-                        </div>
-                        <div class="transport-name">@AppRes.Taxi</div>
-                        <div class="dropdown-arrow">
-                            <i class="fa-solid fa-chevron-up"></i>
-                        </div>
-                    </div>
-
-                    <div class="transport-content">
-                        <!-- GG Shuttle -->
-                        <div class="transport-item selected">
-                            <div class="item-rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="item-radio">
-                                <input type="radio" name="transport" id="gg-shuttle" checked>
-                                <label for="gg-shuttle">GG Shuttle</label>
-                            </div>
-                            <div class="item-details">
-                                <div class="detail">
-                                    <i class="fa-regular fa-clock"></i>
-                                    <span>90 min</span>
-                                </div>
-                                <div class="detail">
-                                    <i class="fa-solid fa-money-bill"></i>
-                                    <span>1500 - 2000 (֏) AMD</span>
-                                </div>
-                            </div>
-                            <div class="item-link">
-                                <a href="https://www.team.gg/gg-shuttle?lang=hy" target="_blank" class="service-link">
-                                    Visit Website <i class="fa-solid fa-external-link"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- YevYev Shuttle -->
-                        <div class="transport-item">
-                            <div class="item-rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </div>
-                            <div class="item-radio">
-                                <input type="radio" name="transport" id="yevyev-shuttle">
-                                <label for="yevyev-shuttle">YevYev Shuttle</label>
-                            </div>
-                            <div class="item-details">
-                                <div class="detail">
-                                    <i class="fa-regular fa-clock"></i>
-                                    <span>90 min</span>
-                                </div>
-                                <div class="detail">
-                                    <i class="fa-solid fa-money-bill"></i>
-                                    <span>1500 (֏) AMD</span>
-                                </div>
-                            </div>
-                            <div class="item-link">
-                                <a href="https://apps.apple.com/am/app/yev-yev/id1564473555" target="_blank" class="service-link">
-                                    Download App <i class="fa-solid fa-external-link"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bus Dropdown -->
-                <div class="transport-option-group bus-group" style="display: none;">
-                    <div class="transport-header">
-                        <div class="transport-icon">
-                            <i class="fa-solid fa-bus"></i>
-                        </div>
-                        <div class="transport-name">@AppRes.Bus</div>
-                        <div class="dropdown-arrow">
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                    </div>
-                    <div class="transport-content" style="display: none;">
-                        <!-- Bus N358 -->
-                        <div class="transport-item">
-                            <div class="item-rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </div>
-                            <div class="item-radio">
-                                <input type="radio" name="transport" id="bus-n358">
-                                <label for="bus-n358">N358</label>
-                            </div>
-                            <div class="item-details">
-                                <div class="detail">
-                                    <i class="fa-solid fa-money-bill"></i>
-                                    <span>1500 (֏) AMD</span>
-                                </div>
-                            </div>
-                            <div class="schedule-info">
-                                <p><strong>Every day:</strong> 10:00; 11:15; 12:30; 13:30</p>
-                            </div>
-                        </div>
-
-                        <!-- Bus N359 -->
-                        <div class="transport-item">
-                            <div class="item-rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </div>
-                            <div class="item-radio">
-                                <input type="radio" name="transport" id="bus-n359">
-                                <label for="bus-n359">N359</label>
-                            </div>
-                            <div class="item-details">
-                                <div class="detail">
-                                    <i class="fa-solid fa-money-bill"></i>
-                                    <span>1500 (֏) AMD</span>
-                                </div>
-                            </div>
-                            <div class="schedule-info">
-                                <p><strong>Every day:</strong> 14:30; 15:45; 17:00; 18:00</p>
-                            </div>
-                        </div>
-
-                        <div class="bus-info">
-                            <p><strong>Start from:</strong> Yerevan, Northern Bus Station</p>
-                            <div class="item-link">
-                                <a href="tel:+37410621670" class="service-link">
-                                    <i class="fa-solid fa-phone"></i> +374 10 621 670
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Train Dropdown -->
-                <div class="transport-option-group train-group" style="display: none;">
-                    <div class="transport-header">
-                        <div class="transport-icon">
-                            <i class="fa-solid fa-train"></i>
-                        </div>
-                        <div class="transport-name">@AppRes.Train</div>
-                        <div class="dropdown-arrow">
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                    </div>
-                    <div class="transport-content" style="display: none;">
-                        <!-- Express Train -->
-                        <div class="transport-item">
-                            <div class="item-rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="item-radio">
-                                <input type="radio" name="transport" id="express-train">
-                                <label for="express-train">Express Train</label>
-                            </div>
-                            <div class="item-details">
-                                <div class="detail">
-                                    <i class="fa-regular fa-clock"></i>
-                                    <span>2h 10min</span>
-                                </div>
-                                <div class="detail">
-                                    <i class="fa-solid fa-money-bill"></i>
-                                    <span>1400 (֏) AMD</span>
-                                </div>
-                            </div>
-                            <div class="schedule-info">
-                                <p><strong>Friday, Saturday, Sunday:</strong> 9:15</p>
-                            </div>
-                        </div>
-
-                        <!-- Gyumri Train -->
-                        <div class="transport-item">
-                            <div class="item-rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </div>
-                            <div class="item-radio">
-                                <input type="radio" name="transport" id="gyumri-train">
-                                <label for="gyumri-train">Gyumri Train</label>
-                            </div>
-                            <div class="item-details">
-                                <div class="detail">
-                                    <i class="fa-regular fa-clock"></i>
-                                    <span>3h 11min</span>
-                                </div>
-                                <div class="detail">
-                                    <i class="fa-solid fa-money-bill"></i>
-                                    <span>1200 (֏) AMD</span>
-                                </div>
-                            </div>
-                            <div class="schedule-info">
-                                <p><strong>Every day:</strong> 7:55; 14:25; 18:25</p>
-                            </div>
-                        </div>
-
-                        <div class="train-info">
-                            <div class="item-link">
-                                <a href="https://www.railway.am/" target="_blank" class="service-link">
-                                    Visit Railway Website <i class="fa-solid fa-external-link"></i>
-                                </a>
-                            </div>
-                            <div class="available-stations">
-                                <p><strong>Available at:</strong> Yerevan, Noragavit, Masis, Sis, Haykashen, Ejmiatsin, Artashat, Armavir, Araqs, Dalarik, Qarakert, Arteni, Aragats, Ani, Bagravan, Jrapi, Shirakavan, Bayandur.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Private Car Dropdown -->
-                <div class="transport-option-group">
-                    <div class="transport-header">
-                        <div class="transport-icon">
-                            <i class="fa-solid fa-car"></i>
-                        </div>
-                        <div class="transport-name">@AppRes.PrivateCar</div>
-                        <div class="dropdown-arrow">
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                    </div>
-                    <div class="transport-content" style="display: none;">
-                        <div class="navigation-options">
-                            <div class="navigation-option">
-                                <a href="https://maps.app.goo.gl/ZvsXEEhohAGTJ6pW9" target="_blank" class="nav-link">
-                                    <i class="fa-brands fa-google"></i> Google Maps Navigation
-                                </a>
-                            </div>
-                            <div class="navigation-option">
-                                <a href="https://yandex.com/maps/-/CHrkNO5S" target="_blank" class="nav-link">
-                                    <i class="fa-solid fa-location-dot"></i> Yandex Maps Navigation
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Navigation Buttons -->
-        <div class="navigation-buttons">
-            <a href =@Url.Action("Index", "Trip") class="back-btn">
-                <i class="fa-solid fa-arrow-left"></i>
-                @AppRes.Back
-            </a>
+            <!-- Navigation Buttons -->
+            <div class="navigation-buttons">
+                <a href=@Url.Action("Index", "Trip") class="back-btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    @AppRes.Back
+                </a>
                 <button type="submit" class="next-btn">
                     @AppRes.Next
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
-        </div>
+            </div>
         </form>
     </div>
 

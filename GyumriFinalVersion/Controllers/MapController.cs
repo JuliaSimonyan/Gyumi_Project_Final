@@ -35,7 +35,6 @@ namespace GyumriFinalVersion.Controllers
 
             ViewBag.Categories = await _categoryService.GetAllCategories();
             return View();
-            return View();
         }
     }
 }

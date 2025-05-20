@@ -312,6 +312,33 @@
     <value />
   </data>
   <data name="OtherLinks" xml:space="preserve">
-    <value />
+    <value>Другие ссылки</value>
+  </data>
+  <data name="GGTitle" xml:space="preserve">
+    <value> GG Shuttle</value>
+  </data>
+  <data name="VisitWebsite" xml:space="preserve">
+    <value>Посетить сайт</value>
+  </data>
+  <data name="DownloadApp" xml:space="preserve">
+    <value>Скачать приложение</value>
+  </data>
+  <data name="ExpressTrain" xml:space="preserve">
+    <value>Express поезд</value>
+  </data>
+  <data name="hourShort" xml:space="preserve">
+    <value>ч</value>
+  </data>
+  <data name="WeekDayTrain" xml:space="preserve">
+    <value>Пятница, суббота, воскресенье  </value>
+  </data>
+  <data name="StartFrom" xml:space="preserve">
+    <value>От</value>
+  </data>
+  <data name="TrainAddress" xml:space="preserve">
+    <value>Ереван, Северный автовокзал</value>
+  </data>
+  <data name="Everyday" xml:space="preserve">
+    <value>Каждый день</value>
   </data>
 </root>

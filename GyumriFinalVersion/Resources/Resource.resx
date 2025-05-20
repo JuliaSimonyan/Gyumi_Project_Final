@@ -312,4 +312,31 @@
   <data name="OtherLinks" xml:space="preserve">
     <value>Other Links</value>
   </data>
+  <data name="GGTitle" xml:space="preserve">
+    <value> GG Shuttle</value>
+  </data>
+  <data name="VisitWebsite" xml:space="preserve">
+    <value>Visit Website</value>
+  </data>
+  <data name="DownloadApp" xml:space="preserve">
+    <value>Download App</value>
+  </data>
+  <data name="ExpressTrain" xml:space="preserve">
+    <value>Express Train</value>
+  </data>
+  <data name="hourShort" xml:space="preserve">
+    <value>հ</value>
+  </data>
+  <data name="WeekDayTrain" xml:space="preserve">
+    <value>Friday, Saturday, Sunday  </value>
+  </data>
+  <data name="StartFrom" xml:space="preserve">
+    <value>Start from:</value>
+  </data>
+  <data name="TrainAddress" xml:space="preserve">
+    <value>Yerevan, Northern Bus Station</value>
+  </data>
+  <data name="Everyday" xml:space="preserve">
+    <value>Every day</value>
+  </data>
 </root>
