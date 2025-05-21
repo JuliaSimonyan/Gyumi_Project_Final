@@ -36,14 +36,26 @@ namespace GyumriFinalVersion.Controllers
         {
             ViewBag.Categories = await _categoryService.GetAllCategories();
             ViewBag.Subcategories = await _subcategoryService.GetAllSubcategories();
-            ViewBag.Places = await _placeService.GetAllPlaces();
             var currentCulture = Request.Cookies["UserCulture"] ?? "en";
             var cultureInfo = new System.Globalization.CultureInfo(currentCulture);
 
             // Set the culture for the request
             Thread.CurrentThread.CurrentCulture = cultureInfo;
             Thread.CurrentThread.CurrentUICulture = cultureInfo;
+            var homeCategory = await _context.Categories.FirstOrDefaultAsync(c => c.Name == "Home");
 
+            if (homeCategory == null)
+            {
+                return View(new List<Place>()); // or handle error
+            }
+
+            // Get places from subcategories under Home
+            var homePlaces = await _context.Places
+                .Include(p => p.Subcategory)
+                .Where(p => p.Subcategory.CategoryId == homeCategory.CategoryId)
+                .ToListAsync();
+
+            ViewBag.Places = homePlaces;
             return View();
         }
         public async  Task<IActionResult> AboutUs()
@@ -93,8 +105,11 @@ namespace GyumriFinalVersion.Controllers
                 item.Places = await _placeService.GetPlacesBySubCategoryId(item.SubcategoryId);
             }
             ViewBag.Subcategories = subcategories;
-            ViewBag.Category = category;
             ViewBag.Categories = await _categoryService.GetAllCategories();
+            var categories = await _categoryService.GetAllCategories();
+            categories = categories.Where(c => c.Name != "Home").ToList();
+            ViewBag.Category = categories;
+
 
             if (categoryId > 0)
             {

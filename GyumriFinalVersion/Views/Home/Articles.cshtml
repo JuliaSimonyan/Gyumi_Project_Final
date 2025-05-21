@@ -74,7 +74,7 @@
         {
             if (block.BlockType == "Paragraph")
             {
-                <p style="max-width:80%">@block.Content</p>
+                <p style="max-width:80%">@Html.Raw(@block.Content)</p>
             }
             else if (block.BlockType == "Image")
             {

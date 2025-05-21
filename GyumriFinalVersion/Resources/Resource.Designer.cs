@@ -79,7 +79,7 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gyumri, Shirak Marz, RA.
+        ///   Looks up a localized string similar to Vardanants sq. 1.
         /// </summary>
         public static string AddressGyumri {
             get {
