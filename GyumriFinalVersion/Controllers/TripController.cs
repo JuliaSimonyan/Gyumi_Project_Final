@@ -3,7 +3,6 @@ using Gyumri.Data.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Mail;
 using System.Net;
-using DinkToPdf.Contracts;
 
 namespace GyumriFinalVersion.Controllers
 {

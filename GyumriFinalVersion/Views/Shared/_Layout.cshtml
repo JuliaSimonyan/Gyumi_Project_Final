@@ -70,9 +70,7 @@
                     </div>
                     <a class="nav-link" href="@Url.Action("MyList", "Home")"><i class="fa-regular fa-bookmark"></i></a>
                     <div class="language-dropdown">
-
                         <form asp-controller="Home" asp-action="ChangeLanguage" method="POST">
-
                             <select style="border:none;cursor:pointer; background-color:#000;; color:white;" name="lang" onchange="this.form.submit()">
                                 @if (currentCulture == "en")
                                 {
@@ -100,21 +98,14 @@
                                 }
 
                             </select>
-
                         </form>
                     </div>
-
-
                 </div>
             </div>
-
-
         </div>
     </nav>
     <div>
-        <main role="main" style="background-color:white; padding-bottom:60px;">
-
-
+        <main role="main" style="background-color:white;">
             @RenderBody()
         </main>
     </div>

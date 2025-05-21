@@ -1,0 +1,101 @@
+﻿.tripMainSection {
+    color: #fff;
+    width: 100%;
+    padding: 6vw 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1520986606214-8b456906c813?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'); /* ::TODO download image*/
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.font-3vw {
+    font-size: 3vw;
+}
+
+.trip-input-info-div {
+    width: 70%;
+    background-color: #fff;
+    color: #000;
+    padding: 2vw 2vw;
+    border-radius: 20px;
+    position: absolute;
+    bottom: -50px;
+    left: 15%;
+}
+
+    .trip-input-info-div div {
+        flex: 1;
+    }
+
+.input-div {
+    background-color: #e5e5e5;
+    padding: 5px;
+    min-width: 150px;
+    height: 50px;
+    padding-left: 10px;
+    border-radius: 20px;
+}
+
+.adults-div {
+    background-color: #e5e5e5;
+    padding: 5px;
+    height: 50px;
+    /* min-width: 250px; */
+    padding-left: 10px;
+    border-radius: 20px;
+}
+
+.date-input {
+    width: auto;
+    min-width: 10ch;
+    border: none;
+    background: transparent;
+}
+
+.counter-button {
+    border-radius: 100%;
+    border: none;
+    background-color: #cfcfcf;
+    width: 30px;
+    height: 30px;
+}
+
+.custom-counter-input {
+    width: 33px;
+    border: none;
+    background: transparent;
+}
+
+.next-button {
+    /* min-width:250px; */
+    background-color: #000;
+    color: #fff;
+    border-radius: 20px;
+    height: 50px;
+}
+
+.text-div {
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .trip-input-info-div {
+        width: 100%;
+        left: 0px;
+    }
+}
+
+@media (max-width: 900px) {
+    .trip-input-info-div {
+        display: block;
+        flex-wrap: wrap;
+        position: static;
+    }
+
+    .text-div {
+        width: 100%;
+        text-align: left;
+    }
+}
