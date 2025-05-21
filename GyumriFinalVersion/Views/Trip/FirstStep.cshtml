@@ -56,25 +56,26 @@
                     <p style="color:white !important;">You're 120 km away from Gyumri</p>
             </div>
         </div>
-        <form asp-action="FirstStep" asp-controller="Trip" method="post">
-            <!-- Two-column layout for map and transportation options -->
-            <div class="trip-planner-container">
-                <!-- Left column - Map -->
-                <div class="map-column">
-                    <div class="map-wrapper">
-                        <!-- Add location search input -->
-                        <div class="location-search-container">
-                            <input type="text" id="location-search" placeholder="Enter a location" class="location-search-input">
-                            <button id="search-button" class="search-button">
-                                <i class="fa-solid fa-search"></i>
-                            </button>
-                        </div>
-                        <div id="map"></div>
-                    </div>
-                </div>
 
-                <!-- Right column - Transportation options -->
-                <div class="options-column">
+        <!-- Two-column layout for map and transportation options -->
+        <div class="trip-planner-container">
+            <!-- Left column - Map -->
+            <div class="map-column">
+                <div class="map-wrapper">
+                    <!-- Add location search input -->
+                    <div class="location-search-container">
+                        <input type="text" id="location-search" placeholder="Enter a location" class="location-search-input">
+                        <button id="search-button" class="search-button">
+                            <i class="fa-solid fa-search"></i>
+                        </button>
+                    </div>
+                    <div id="map"></div>
+                </div>
+            </div>
+
+            <!-- Right column - Transportation options -->
+            <div class="options-column">
+                <form id="myForm" asp-action="FirstStep" asp-controller="Trip" method="post">
                     <div class="route-info-container">
                         <div class="route-info">
                             <h3 id="route-title">Yerevan - Gyumri</h3>
@@ -334,21 +335,21 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
+        </div>
 
-            <!-- Navigation Buttons -->
-            <div class="navigation-buttons">
-                <a href=@Url.Action("Index", "Trip") class="back-btn">
-                    <i class="fa-solid fa-arrow-left"></i>
-                    @AppRes.Back
-                </a>
-                <button type="submit" class="next-btn">
-                    @AppRes.Next
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-            </div>
-        </form>
+        <!-- Navigation Buttons -->
+        <div class="navigation-buttons">
+            <a href=@Url.Action("Index", "Trip") class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+                @AppRes.Back
+            </a>
+            <button type="submit" form="myForm" class="next-btn">
+                @AppRes.Next
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
     </div>
 
 
