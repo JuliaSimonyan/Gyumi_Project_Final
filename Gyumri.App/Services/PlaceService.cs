@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Gyumri.Data.Models;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 
 namespace Gyumri.Application.Services
 {
@@ -33,7 +34,11 @@ namespace Gyumri.Application.Services
                     MinPrice = p.MinPrice,
                     MaxPrice = p.MaxPrice,
                     Raiting = p.Raiting,
-                    ArticleId = p.ArticleId
+                    ArticleId = p.ArticleId,
+                    PlaceType = p.PlaceType,
+                    Address = p.Address,
+                    AddressArm = p.AddressArm,
+                    AddressRu = p.AddressRu,
                 })
                 .ToListAsync();
         }
@@ -57,7 +62,11 @@ namespace Gyumri.Application.Services
                 MinPrice = place.MinPrice,
                 MaxPrice = place.MaxPrice,
                 Raiting = place.Raiting,
-                ArticleId = place.ArticleId
+                ArticleId = place.ArticleId,
+                PlaceType = place.PlaceType,
+                Address = place.Address,
+                AddressArm = place.AddressArm,
+                AddressRu = place.AddressRu,
             };
         }
 
@@ -76,7 +85,11 @@ namespace Gyumri.Application.Services
                 MinPrice = model.MinPrice,
                 MaxPrice = model.MaxPrice,
                 Raiting = model.Raiting,
-                ArticleId = model.ArticleId
+                ArticleId = model.ArticleId,
+                PlaceType = model.PlaceType,
+                Address = model.Address,
+                AddressArm = model.AddressArm,
+                AddressRu = model.AddressRu,
             };
 
             await _context.Places.AddAsync(place);
@@ -101,7 +114,10 @@ namespace Gyumri.Application.Services
             place.MaxPrice = model.MaxPrice;
             place.Raiting = model.Raiting;
             place.ArticleId = model.ArticleId;
-
+            place.PlaceType = model.PlaceType;
+            place.Address = model.Address;
+            place.AddressArm = model.AddressArm;
+            place.AddressRu = model.AddressRu;
 
             _context.Places.Update(place);
             await _context.SaveChangesAsync();
@@ -136,6 +152,10 @@ namespace Gyumri.Application.Services
                     MaxPrice = p.MaxPrice,
                     Raiting = p.Raiting,
                     ArticleId = p.ArticleId,
+                    PlaceType = p.PlaceType,
+                    Address = p.Address,
+                    AddressArm = p.AddressArm,
+                    AddressRu = p.AddressRu,
                 })
                 .ToListAsync();
 
