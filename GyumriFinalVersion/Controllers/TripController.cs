@@ -72,7 +72,38 @@ namespace GyumriFinalVersion.Controllers
         public IActionResult FirstStep(string transport)
         {
             TempData["Transport"] = transport;
-            return RedirectToAction("SecondStep");
+            return RedirectToAction("WheretoStay");
+        }
+        [HttpGet]
+        public async Task<IActionResult> WheretoStay(int subcategoryId = -1, int currentPage = 1)
+        {
+            SetCulture();
+            var categories = await _categoryService.GetAllCategories();
+            var seeAndDoCategory = categories.FirstOrDefault(c => c.Name == "See & Do");
+
+            var subcategories = await _subCategoryService.GetSubcategoriesByCategoryId(seeAndDoCategory.CategoryId);
+            if (subcategoryId == -1 && subcategories.Any())
+            {
+                subcategoryId = subcategories.First().SubcategoryId;
+            }
+
+            var places = await _placeService.GetPlacesBySubCategoryId(subcategoryId);
+
+            ViewBag.PagesCount = (int)Math.Ceiling((double)places.Count() / 5);
+            ViewBag.AllSubcategories = subcategories;
+            ViewBag.CurrentSubcategory = subcategories.FirstOrDefault(sc => sc.SubcategoryId == subcategoryId);
+            ViewBag.CurrentPage = currentPage;
+            ViewBag.Places = places.Skip((currentPage - 1) * 5).Take(5).ToList();
+            ViewBag.Categories = categories;
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult WheretoStay(int placeId)
+        {
+            TempData["Place1Id"] = placeId;
+            return RedirectToAction("ThirdStep");
         }
 
         //[HttpGet]
@@ -100,7 +131,7 @@ namespace GyumriFinalVersion.Controllers
         //    return View();
         //}
         [HttpGet]
-        public async Task<IActionResult> SecondStep()
+        public async Task<IActionResult> WhatToDo()
         {/*await _placeService.GetPlacesWithPlaceType()*/
             var allPlaces = new List<PlacesViewModel>
             {
@@ -172,14 +203,8 @@ namespace GyumriFinalVersion.Controllers
             return View();
         }
 
-        //[HttpPost]
-        //public IActionResult SecondStep(int placeId)
-        //{
-        //    TempData["Place1Id"] = placeId;
-        //    return RedirectToAction("ThirdStep");
-        //}
         [HttpPost]
-        public IActionResult ThirthStep(List<int> selectedPlaceIds)
+        public IActionResult WhatToDo(List<int> selectedPlaceIds)
         {
             if (selectedPlaceIds == null || selectedPlaceIds.Count == 0)
             {
