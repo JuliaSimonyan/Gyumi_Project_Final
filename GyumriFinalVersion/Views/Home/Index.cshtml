@@ -1,5 +1,4 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
     var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
     Layout = "~/Views/Shared/_Layout.cshtml";
     var places = ViewBag.Places as List<Gyumri.Common.ViewModel.Place.PlacesViewModel>;
@@ -38,90 +37,113 @@
         <!-- Section 1 -->
         <div class="mb-1 ms-5">
             <h2 class="section-title1">@AppRes.Welcome</h2>
-            <p class="section-subtitle1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p class="section-subtitle1">@AppRes.WelcomeSubHeadline</p>
             <div class="scroll-container" id="scrollContainer1">
-                <div class="card">
-                    <img src="/Content/Images/reason1.jpeg" alt="Forge of Legends">
-                    <div class="card-overlay">
-                        <h5 class="card-title">@AppRes.ForgeOfLegends</h5>
-                        <p class="card-text">@AppRes.UNESCOսBlacksmithingMasterpieces</p>
-                    </div>
+                <a href="@Url.Action("MainArticle")">
+                    <div class="card">
+                        <img src="~/Content/Images/reason1.jpeg" alt="Forge of Legends">
+                        <img class="FrameImages" src="~/Content/Images/Frame (4).png" alt="Forge of Legends">
 
-                </div>
+                        <div class="card-overlay">
+                            <h5 class="card-title">Forge of Legends</h5>
+                            <p class="card-text">UNESCO Blacksmithing Masterpieces</p>
+
+                        </div>
+                    </div>
+                </a>
+                <a href="@Url.Action("MainArticle")">
+
                 <div class="card">
-                    <img src="/Content/Images/reason2.jpeg" alt="Architectural Time Travel">
+                    <img src="/Content/Images/reason4.jpeg" alt="Architectural Time Travel">
+                        <img class="FrameImages" src="~/Content/Images/Frame (5).png" alt="Forge of Legends">
+
                     <div class="card-overlay">
                         <h5 class="card-title">@AppRes.ArchitecturalTimeTravel</h5>
                         <p class="card-text">@AppRes.FromEmpirestoEarthquakes</p>
                     </div>
 
                 </div>
+                </a>
+                <a href="@Url.Action("MainArticle")">
+
                 <div class="card">
-                    <img src="/Content/Images/reason3.jpeg" alt="Cultural Renaissance">
+                    <img src="/Content/Images/reason2.jpeg" alt="Cultural Renaissance">
+                        <img class="FrameImages" src="~/Content/Images/Frame (6).png" alt="Forge of Legends">
+
                     <div class="card-overlay">
                         <h5 class="card-title">@AppRes.CulturalRenaissance</h5>
                         <p class="card-text">@AppRes.ArtTechTraditionCollide</p>
                     </div>
 
                 </div>
+                </a>
+                <a href="@Url.Action("MainArticle")">
+
                 <div class="card">
-                    <img src="/Content/Images/reason4.jpeg" alt="Gyumri's Heritage">
+                    <img src="/Content/Images/reason3.jpeg" alt="Gyumri's Heritage">
+                        <img class="FrameImages" src="~/Content/Images/Frame (4).png" alt="Forge of Legends">
+
                     <div class="card-overlay">
                         <h5 class="card-title">@AppRes.GyumriHeritage</h5>
                         <p class="card-text">@AppRes.DiscovertheHeartofArmenia</p>
                     </div>
                 </div>
+                </a>
+                <a href="@Url.Action("MainArticle")">
+
                 <div class="card">
                     <img src="/Content/Images/reason5.jpeg" alt="Gyumri's Culture">
+                        <img class="FrameImages" src="~/Content/Images/Frame (5).png" alt="Forge of Legends">
+
                     <div class="card-overlay">
                         <h5 class="card-title">@AppRes.GyumrisCulture</h5>
                         <p class="card-text">@AppRes.TraditionMeetsModernity</p>
                     </div>
                 </div>
+                </a>
             </div>
         </div>
 
         <!-- Section 2 -->
         <div class="mb-1 ms-5">
-            <h2 class="section-title1">@AppRes.Welcome</h2>
-            <p class="section-subtitle1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h2 class="section-title1">@AppRes.MostPopular</h2>
             <div class="scroll-container" id="scrollContainer1">
-                <div class="card">
-                    <img src="/Content/Images/place1.jpeg" alt="Forge of Legends">
+                <div class="card newCard">
+                    <img src="/Content/Images/Sev Berd.png" alt="Forge of Legends">
                     <div class="card-overlay">
-                        <h5 class="card-title">@AppRes.ForgeOfLegends</h5>
-                        <p class="card-text">@AppRes.UNESCOսBlacksmithingMasterpieces</p>
+                        <h5 class="card-title">@AppRes.SevBerd</h5>
+                        <p class="card-text">@AppRes.SevBerdDesc</p>
                     </div>
 
                 </div>
-                <div class="card">
-                    <img src="/Content/Images/place2.jpeg" alt="Architectural Time Travel">
+                <div class="card newCard">
+                    <img src="/Content/Images/ferris wheel.png" alt="Architectural Time Travel">
                     <div class="card-overlay">
-                        <h5 class="card-title">@AppRes.ArchitecturalTimeTravel</h5>
-                        <p class="card-text">@AppRes.FromEmpirestoEarthquakes</p>
+                        <h5 class="card-title">@AppRes.CentralPark</h5>
+                        <p class="card-text">@AppRes.CentralParkDesc</p>
                     </div>
 
                 </div>
-                <div class="card">
-                    <img src="/Content/Images/place3.jpeg" alt="Cultural Renaissance">
+                <div class="card newCard">
+                    <img src="/Content/Images/Dzitoghtsonc.png" alt="Cultural Renaissance">
                     <div class="card-overlay">
-                        <h5 class="card-title">@AppRes.CulturalRenaissance</h5>
-                        <p class="card-text">@AppRes.ArtTechTraditionCollide</p>
+                        <h5 class="card-title">@AppRes.DzitoghtsyanMuseum</h5>
+                        <p class="card-text">@AppRes.DzitoghtsyanMuseumDesc</p>
                     </div>
 
                 </div>
-                <div class="card">
-                    <img src="/Content/Images/place4.jpeg" alt="Gyumri's Heritage">
+                <div class="card newCard">
+                    <img src="/Content/Images/see1.png" alt="Gyumri's Heritage">
                     <div class="card-overlay">
-                        <h5 class="card-title">@AppRes.GyumriHeritage</h5>
-                        <p class="card-text">@AppRes.DiscovertheHeartofArmenia</p>
+                        <h5 class="card-title">@AppRes.Aslamazyan</h5>
+                        <p class="card-text">@AppRes.AslamazyanDesc</p>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="/Content/Images/place5.jpeg" alt="Gyumri's Culture">
+                <div class="card newCard">
+                    <img src="/Content/Images/Varem MArem.png" alt="Gyumri's Culture">
                     <div class="card-overlay">
-                        <h5 class="card-title">@AppRes.GyumrisCulture</h5>
-                        <p class="card-text">@AppRes.TraditionMeetsModernity</p>
+                        <h5 class="card-title">@AppRes.VaremMarem</h5>
+                        <p class="card-text">@AppRes.VaremMaremDesc</p>
                     </div>
                 </div>
             </div>
@@ -154,6 +176,33 @@
                 </div>
             </div>
         </div>
+
+            <div class="container-fluid py-5 ms-5">
+                <div>
+                    <p class="section-title"><b class="fw-bold">@AppRes.LookingForMore </b>@AppRes.DiveDeeperIntoGyumrisHiddenGems</p>
+                    <p class="section-subtitle">@AppRes.LookingForPartTextt</p>
+                <div class="scroll-container" id="scrollContainer1">
+
+                    @foreach (var item in ViewBag.Places)
+                    {
+                        <a asp-controller="Home" asp-action="Articles" asp-route-articleId="@item.ArticleId">
+                            <div class="card">
+                                <img src="~/Images/places/@item.Photo" class="card-img-top" alt="Gyumri Drama Theatre">
+
+                                <div class="card-overlay">
+                                    <div>
+                                        <h2 class="card-title">@item.PlaceName</h2>
+                                        <p class="card-text">@item.Description</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    }
+
+                </div>
+                </div>
+            </div>
+
         <div class="container-fluid py-5 ms-5">
             <div>
                     <p class="section-title"><b class="fw-bold">@AppRes.LookingForMore </b>@AppRes.DiveDeeperIntoGyumrisHiddenGems</p>
@@ -209,11 +258,14 @@
                 </div>
             </div>
         </div>
-    </div>
+          
+        </div>
+
+
     <script src="~/content/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/e8c2e1c09c.js" crossorigin="anonymous"></script>
-   
+
 
 </body>
 </html>

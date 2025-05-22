@@ -93,7 +93,11 @@ namespace Gyumri.Areas.Admin.Controllers
                 MaxPrice = place.MaxPrice,
                 Raiting = place.Raiting,
                 ArticleId = place.ArticleId,
-                SubcategoryId = place.SubcategoryId
+                SubcategoryId = place.SubcategoryId,
+                PlaceType = place.PlaceType,
+                Address = place.Address,
+                AddressArm = place.AddressArm,
+                AddressRu = place.AddressRu,
             };
 
             return View(model);

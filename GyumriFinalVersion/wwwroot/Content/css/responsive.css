@@ -253,24 +253,30 @@
     }
 
         .hero-content h1 {
-            margin-left:20px;
+            margin-left:5px;
             font-size: 2rem;
         }
 
         .hero-content p {
-            margin-left: 20px;
+            margin-left: 5px;
             font-size: 0.9rem;
         }
     .btn-plan{
 margin-left: 20px;
     }
     .coupon-overlay {
+        width: 100% !important;
         margin-top:170px !important;
         padding: 1rem !important;
     }
+    .coupon-section {
+        height:600px !important;
+    }
 
     .hero-design {
-        right: -40%;
+        right: -33% !important;
+        top:37% !important;
+        width: 350px !important;
     }
 
     /* Improved card display for small screens */
@@ -290,8 +296,13 @@ margin-left: 20px;
     .card-text {
         font-size: 0.9rem !important;
     }
+  
     .card img {
-        width: 100% !important;
+        width: 100%;
+        height: 200px !important;
+    }
+    .FrameImages {
+        width: 40% !important;
         height: 200px !important;
     }
 
@@ -329,9 +340,8 @@ margin-left: 20px;
     }
 
     .discover-overlay {
-        margin-top: 300px !important;
         width: 340px !important;
-        padding: 20px !important;
+        padding: 30px !important;
         border-top-right-radius: 110px !important;
     }
         .discover-overlay img {
@@ -557,9 +567,7 @@ margin-left: 20px;
         padding:0;
         text-align:center;
     }
-    .newheader h1, p {
-        text-align:center !important;
-    }
+
 
     .nav-links {
         padding: 10px;

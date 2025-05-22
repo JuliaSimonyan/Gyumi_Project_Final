@@ -2,6 +2,7 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
     ViewData["Title"] = "Places";
 }
+@using Gyumri.Data.Models
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @model Gyumri.Common.ViewModel.Place.AddEditPlaceViewModel
@@ -38,7 +39,21 @@
         <textarea asp-for="DescriptionRu" class="form-control" required></textarea>
         <span asp-validation-for="DescriptionRu" class="text-danger"></span>
     </div>
-
+    <div class="form-group">
+        <label asp-for="Address" class="control-label"></label>
+        <textarea asp-for="Address" class="form-control" required></textarea>
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="AddressRu" class="control-label"></label>
+        <textarea asp-for="AddressRu" class="form-control" required></textarea>
+        <span asp-validation-for="AddressRu" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="AddressArm" class="control-label"></label>
+        <textarea asp-for="AddressArm" class="form-control" required></textarea>
+        <span asp-validation-for="AddressArm" class="text-danger"></span>
+    </div>
     <div class="form-group">
         <label asp-for="Photo" class="control-label"></label>
         <input asp-for="Photo" type="file" class="form-control" />
@@ -63,11 +78,21 @@
         </select>
         <span asp-validation-for="SubcategoryId" class="text-danger"></span>
     </div>
-<div class="form-group">
+    <div class="form-group">
+        <label asp-for="PlaceType" class="control-label"></label>
+        <select asp-for="SubcategoryId" class="form-control">
+            <option value="">Select Place Type(not optional)</option>
+            @foreach (PlaceType placeType in Enum.GetValues(typeof(PlaceType)))
+            {
+                <option value="@placeType">@placeType</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
         <label asp-for="MinPrice" class="control-label">Add MinPrice</label>
         <input asp-for="MinPrice" type="number" />
         <span asp-validation-for="MinPrice" class="text-danger"></span>
-        </div>
+    </div>
     <div class="form-group">
         <label asp-for="MaxPrice" class="control-label">Add MaxPrice</label>
         <input asp-for="MaxPrice" type="number" />
@@ -81,20 +106,20 @@
     <div class="form-group">
         <label asp-for="ArticleId" class="control-label"></label>
 
-    <select asp-for="ArticleId" class="form-control" required>
-        <option value="">Select Article</option>
-        @if (ViewBag.Articles != null)
-        {
-            foreach (var article in ViewBag.Articles as List<Gyumri.Data.Models.Article>)
+        <select asp-for="ArticleId" class="form-control" >
+            <option value="">Select Article</option>
+            @if (ViewBag.Articles != null)
             {
-                <option asp-for="ArticleId" value="@article.Id">@article.Title</option>
+                foreach (var article in ViewBag.Articles as List<Gyumri.Data.Models.Article>)
+                {
+                    <option asp-for="ArticleId" value="@article.Id">@article.Title</option>
+                }
             }
-        }
-        else
-        {
-            <option disabled>No Subcategories Available</option>
-        }
-    </select>
+            else
+            {
+                <option disabled>No Subcategories Available</option>
+            }
+        </select>
     </div>
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Add Place</button>

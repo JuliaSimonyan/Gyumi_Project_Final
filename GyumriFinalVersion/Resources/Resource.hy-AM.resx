@@ -118,28 +118,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ArchitecturalTimeTravel" xml:space="preserve">
-    <value>Ճարտարապետական ժամանակային ճանապարհորդություն</value>
+    <value>Ճարտարապետական ճանապարհորդություն</value>
   </data>
   <data name="ArtTechTraditionCollide" xml:space="preserve">
-    <value>Որտեղ արվեստը, տեխնոլոգիան և ավանդույթը բախվում են</value>
+    <value>Հետքերը պատմում են, իսկ պատշգամբները՝ հիշում</value>
   </data>
   <data name="CulturalRenaissance" xml:space="preserve">
-    <value>Մշակութային վերաբեաշխում</value>
+    <value>Քայլելը որպես քաղաքը բացահայտելու միջոց</value>
   </data>
   <data name="DiscovertheHeartofArmenia" xml:space="preserve">
-    <value>Բացահայտեք Հայաստանի սիրտը</value>
+    <value>Մեծ մշակույթ, փոքր բյուջե՝ տարվա բոլոր եղանակներին</value>
   </data>
   <data name="ForgeOfLegends" xml:space="preserve">
-    <value>Լեգենդների դարբնոց</value>
+    <value>Ստեղծարար վերածնունդ</value>
   </data>
   <data name="FromEmpirestoEarthquakes" xml:space="preserve">
-    <value>Իմպերիայից մինչև երկրաշարժեր</value>
+    <value>Գյումրու անցյալի ճարտարապետական կոթողները</value>
   </data>
   <data name="GyumrisCulture" xml:space="preserve">
-    <value>Գյումրիի մշակույթ</value>
+    <value>Խոհարարական սիրո նամակ</value>
   </data>
   <data name="GyumriHeritage" xml:space="preserve">
-    <value>Գյումրիի ժառանգություն</value>
+    <value>Մատչելի արկածներ</value>
   </data>
   <data name="Home" xml:space="preserve">
     <value>Գլխավոր</value>
@@ -154,7 +154,7 @@
     <value>Ձեր ուղևորության պլանը</value>
   </data>
   <data name="UNESCOսBlacksmithingMasterpieces" xml:space="preserve">
-    <value>ՅՈՒՆԵՍԿՕ-ի դարբնության գլուխգործոցները</value>
+    <value>Ինքնության ձուլումը ավանդույթի հետ</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>5 պատճառ Գյումրի այցելելու համար</value>
@@ -166,19 +166,19 @@
     <value>Բարի Գալուստ Գյումրի</value>
   </data>
   <data name="TraditionMeetsModernity" xml:space="preserve">
-    <value>Ավանդույթը հանդիպում է մոդեռնությանը</value>
+    <value>Համեր՝ ժառանգված ժամանակի միջով</value>
   </data>
   <data name="LearnaboutGyumrisdistricts" xml:space="preserve">
-    <value>Ուսումնասիրեք Գյումրիի շրջանները</value>
+    <value>Բացահայտիր ինտերակտիվ քարտեզը</value>
   </data>
   <data name="Discover" xml:space="preserve">
     <value>Բացահայտել</value>
   </data>
   <data name="GyumrisUniqueDistricts" xml:space="preserve">
-    <value>Գյումրիի յուրահատուկ շրջանները</value>
+    <value>Գյումրու Must-visit վայրերը</value>
   </data>
   <data name="JourneyThroughHistoryCultureCreativit" xml:space="preserve">
-    <value>Ճանապարհորդություն պատմության, մշակույթի և ստեղծագործության միջոցով</value>
+    <value>Ճամփորդություն պատմության, մշակույթի և ստեղծարարության միջով</value>
   </data>
   <data name="TakeYour" xml:space="preserve">
     <value>Օգտվեք Ձեր</value>
@@ -298,7 +298,7 @@
     <value>Կապ</value>
   </data>
   <data name="AddressGyumri" xml:space="preserve">
-    <value>Գյումրի, Շիրակի մարզ, ՀՀ</value>
+    <value>Վարդանանց հր. 1</value>
   </data>
   <data name="AboutThisWebsite" xml:space="preserve">
     <value>Այս Կայքի Մասին</value>
@@ -347,5 +347,41 @@
   </data>
   <data name="Everyday" xml:space="preserve">
     <value>Ամեն օր</value>
+  </data>
+  <data name="Aslamazyan" xml:space="preserve">
+    <value>Ասլամազյան քույրերի պատկերասրահ</value>
+  </data>
+  <data name="AslamazyanDesc" xml:space="preserve">
+    <value>Գունեղ, անվախ և լի պատմություններով - երկու խորհրդանշական հայ քույրերի արվեստ։</value>
+  </data>
+  <data name="CentralPark" xml:space="preserve">
+    <value>Կենտրոնական այգու պտտվող անիվ</value>
+  </data>
+  <data name="CentralParkDesc" xml:space="preserve">
+    <value>Դանդաղ պտույտ քաղաքային տանիքներից վեր՝ բացահայտելու Գյումրին նոր տեսանկյունից։</value>
+  </data>
+  <data name="DzitoghtsyanMuseum" xml:space="preserve">
+    <value>Ձիթողցոնց տուն-թանգարան</value>
+  </data>
+  <data name="DzitoghtsyanMuseumDesc" xml:space="preserve">
+    <value>19-րդ դարի տուն, որն արտացոլում է հին Գյումրու ոգին։</value>
+  </data>
+  <data name="MostPopular" xml:space="preserve">
+    <value>Ամենահայտնիները հենց հիմա</value>
+  </data>
+  <data name="SevBerd" xml:space="preserve">
+    <value>Սև բերդ</value>
+  </data>
+  <data name="SevBerdDesc" xml:space="preserve">
+    <value>Տպավորիչ 19-րդ դարի ամրոց՝ հսկելու ողջ Գյումրին։</value>
+  </data>
+  <data name="VaremMarem" xml:space="preserve">
+    <value>Վառեմ՞Մարեմ արվեստանոց</value>
+  </data>
+  <data name="VaremMaremDesc" xml:space="preserve">
+    <value>Ձեռքով պատրաստված, հեքիաթային կերամիկայի կախարդանք։</value>
+  </data>
+  <data name="WelcomeSubHeadline" xml:space="preserve">
+    <value>Քաղաք, որտեղ յուրաքանչյուր փողոցի անկյուն մի պատմություն ունի, և ամեն այցելություն՝ նոր հետք է թողնում։</value>
   </data>
 </root>

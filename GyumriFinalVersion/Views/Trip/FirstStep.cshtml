@@ -17,46 +17,46 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
 
-<!-- Main Content -->
-<div class="main-content">
-    <!-- Progress Steps -->
-    <div class="progress-steps">
-        <div class="step active">
-            <div class="step-icon">
-                <i class="fa-solid fa-car"></i>
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Progress Steps -->
+        <div class="progress-steps">
+            <div class="step active">
+                <div class="step-icon">
+                    <i class="fa-solid fa-car"></i>
+                </div>
+                <div class="step-text"> @AppRes.GettingToAround </div>
             </div>
-            <div class="step-text"> @AppRes.GettingToAround </div>
-        </div>
-        <div class="step-divider"></div>
-        <div class="step">
-            <div class="step-icon">
-                <i class="fa-solid fa-bed"></i>
+            <div class="step-divider"></div>
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fa-solid fa-bed"></i>
+                </div>
+                <div class="step-text"> @AppRes.WheretoStay </div>
             </div>
-            <div class="step-text"> @AppRes.WheretoStay </div>
-        </div>
-        <div class="step-divider"></div>
-        <div class="step">
-            <div class="step-icon">
-                <i class="fa-solid fa-location-dot"></i>
+            <div class="step-divider"></div>
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="step-text">@AppRes.WhatToDo</div>
             </div>
-            <div class="step-text">@AppRes.WhatToDo</div>
-        </div>
-        <div class="step-divider"></div>
-        <div class="step">
-            <div class="step-icon">
-                <i class="fa-solid fa-check"></i>
+            <div class="step-divider"></div>
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <div class="step-text">@AppRes.Finalizing</div>
             </div>
-            <div class="step-text">@AppRes.Finalizing</div>
         </div>
-    </div>
-    <div class="route-info-container-black">
-        <div class="route-info-white">
-            <h5>
-                <i style="border: 1ps solid white; padding: 5px;" class="fa-solid fa-location-dot"></i>Yerevan </h3>
-                <p color="white">You're 120 km away from Gyumri</p>
+        <div class="route-info-container-black">
+            <div class="route-info-white">
+                <h5>
+                    <i style="border: 1ps solid white; padding: 5px;" class="fa-solid fa-location-dot"></i>Yerevan </h3>
+                    <p style="color:white !important;">You're 120 km away from Gyumri</p>
+            </div>
         </div>
-    </div>
-    <form asp-action="FirstStep" asp-controller="Trip" method="post">
+
         <!-- Two-column layout for map and transportation options -->
         <div class="trip-planner-container">
             <!-- Left column - Map -->
@@ -75,23 +75,24 @@
 
             <!-- Right column - Transportation options -->
             <div class="options-column">
-                <div class="route-info-container">
-                    <div class="route-info">
-                        <h3 id="route-title">Yerevan - Gyumri</h3>
-                        <p id="route-distance">353 @AppRes.km</p>
-                    </div>
-                </div>
-                <!-- Taxi Dropdown -->
-                <div class="transport-option-group">
-                    <div class="transport-header expanded">
-                        <div class="transport-icon">
-                            <i class="fa-solid fa-taxi"></i>
-                        </div>
-                        <div class="transport-name">@AppRes.Taxi</div>
-                        <div class="dropdown-arrow">
-                            <i class="fa-solid fa-chevron-up"></i>
+                <form id="myForm" asp-action="FirstStep" asp-controller="Trip" method="post">
+                    <div class="route-info-container">
+                        <div class="route-info">
+                            <h3 id="route-title">Yerevan - Gyumri</h3>
+                            <p id="route-distance">353 @AppRes.km</p>
                         </div>
                     </div>
+                    <!-- Taxi Dropdown -->
+                    <div class="transport-option-group">
+                        <div class="transport-header expanded">
+                            <div class="transport-icon">
+                                <i class="fa-solid fa-taxi"></i>
+                            </div>
+                            <div class="transport-name">@AppRes.Taxi</div>
+                            <div class="dropdown-arrow">
+                                <i class="fa-solid fa-chevron-up"></i>
+                            </div>
+                        </div>
 
                     <div class="transport-content">
                         <!-- GG Shuttle -->
@@ -308,32 +309,33 @@
                     </div>
                 </div>
 
-                <!-- Private Car Dropdown -->
-                <div class="transport-option-group">
-                    <div class="transport-header">
-                        <div class="transport-icon">
-                            <i class="fa-solid fa-car"></i>
-                        </div>
-                        <div class="transport-name">@AppRes.PrivateCar</div>
-                        <div class="dropdown-arrow">
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                    </div>
-                    <div class="transport-content" style="display: none;">
-                        <div class="navigation-options">
-                            <div class="navigation-option">
-                                <a href="https://maps.app.goo.gl/ZvsXEEhohAGTJ6pW9" target="_blank" class="nav-link">
-                                    <i class="fa-brands fa-google"></i> Google Maps Navigation
-                                </a>
+                    <!-- Private Car Dropdown -->
+                    <div class="transport-option-group">
+                        <div class="transport-header">
+                            <div class="transport-icon">
+                                <i class="fa-solid fa-car"></i>
                             </div>
-                            <div class="navigation-option">
-                                <a href="https://yandex.com/maps/-/CHrkNO5S" target="_blank" class="nav-link">
-                                    <i class="fa-solid fa-location-dot"></i> Yandex Maps Navigation
-                                </a>
+                            <div class="transport-name">@AppRes.PrivateCar</div>
+                            <div class="dropdown-arrow">
+                                <i class="fa-solid fa-chevron-down"></i>
                             </div>
                         </div>
+                        <div class="transport-content" style="display: none;">
+                            <div class="navigation-options">
+                                <div class="navigation-option">
+                                    <a href="https://maps.app.goo.gl/ZvsXEEhohAGTJ6pW9" target="_blank" class="nav-link">
+                                        <i class="fa-brands fa-google"></i> Google Maps Navigation
+                                    </a>
+                                </div>
+                                <div class="navigation-option">
+                                    <a href="https://yandex.com/maps/-/CHrkNO5S" target="_blank" class="nav-link">
+                                        <i class="fa-solid fa-location-dot"></i> Yandex Maps Navigation
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
 
@@ -343,13 +345,12 @@
                 <i class="fa-solid fa-arrow-left"></i>
                 @AppRes.Back
             </a>
-            <button type="submit" class="next-btn">
+            <button type="submit" form="myForm" class="next-btn">
                 @AppRes.Next
                 <i class="fa-solid fa-arrow-right"></i>
             </button>
         </div>
-    </form>
-</div>
+    </div>
 
 
 <!-- Leaflet JS -->

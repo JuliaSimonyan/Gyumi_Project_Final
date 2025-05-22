@@ -3,7 +3,7 @@
 <title>Gyumri's Districts</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/ccss2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="~/Content/style.css">
 <link rel="stylesheet" href="~/Content/css/responsive.css" />
@@ -15,22 +15,27 @@
     <section class="hero-section">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="display-3 fw-bold">Gyumri's Districts!</h1>
-            <p class="lead">Discover the soul of Gyumri through its historic quarters, vibrant neighborhoods, and hidden gems.</p>
+            <h1 class="display-3 fw-bold">Gyumri’s Must Visits</h1>
+            <p class="lead">A Journey Through History, Culture, and Creativity</p>
         </div>
     </section>
 
     <!-- Map Section -->
     <section class="map-container">
         <div class="map-filters">
-            <button class="filter-btn" data-category="hotels">
+            <button class="filter-btn" data-category="sights">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 22v-8.5a2.5 2.5 0 0 1 5 0V22"></path>
-                    <path d="M3 17h5"></path>
-                    <path d="M13 22v-7.5a2.5 2.5 0 0 1 5 0V22"></path>
-                    <path d="M13 17h5"></path>
+                    <path d="M12 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+                    <path d="M12 2v2"></path>
+                    <path d="M12 6v2"></path>
+                    <path d="m4.93 4.93 1.41 1.41"></path>
+                    <path d="m17.66 4.93-1.41 1.41"></path>
+                    <path d="M2 12h2"></path>
+                    <path d="M20 12h2"></path>
+                    <path d="m6.34 17.66 1.41-1.41"></path>
+                    <path d="m16.25 17.66-1.41-1.41"></path>
                 </svg>
-                Hotels
+                Sights
             </button>
             <button class="filter-btn" data-category="museums">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -43,38 +48,11 @@
                 </svg>
                 Museums
             </button>
-            <button class="filter-btn" data-category="crafts">
+            <button class="filter-btn" data-category="churches">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
-                    <path d="M8.5 8.5v.01"></path>
-                    <path d="M16 15.5v.01"></path>
-                    <path d="M12 12v.01"></path>
-                    <path d="M11 17v.01"></path>
-                    <path d="M7 14v.01"></path>
+                    <path d="m2 22 10-10m10 10-10-10m0-10v10"></path>
                 </svg>
-                Crafts
-            </button>
-            <button class="filter-btn" data-category="history">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
-                    <path d="M12 2v2"></path>
-                    <path d="M12 6v2"></path>
-                    <path d="m4.93 4.93 1.41 1.41"></path>
-                    <path d="m17.66 4.93-1.41 1.41"></path>
-                    <path d="M2 12h2"></path>
-                    <path d="M20 12h2"></path>
-                    <path d="m6.34 17.66 1.41-1.41"></path>
-                    <path d="m16.25 17.66-1.41-1.41"></path>
-                </svg>
-                History
-            </button>
-            <button class="filter-btn" data-category="outdoors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M2 22v-5l5-5 5 5-5 5z"></path>
-                    <path d="M9.5 14.5 16 8"></path>
-                    <path d="m17 2 5 5-5 5-5-5z"></path>
-                </svg>
-                Outdoors
+                Churches
             </button>
             <button class="filter-btn" data-category="cafes">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -86,21 +64,29 @@
                 </svg>
                 Cafes
             </button>
-            <button class="filter-btn" data-category="restaurants">
+            <button class="filter-btn" data-category="parks">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 2h18"></path>
-                    <path d="M3 7h18"></path>
-                    <path d="M3 12h18"></path>
-                    <path d="m3 17 5 5"></path>
-                    <path d="m8 17-5 5"></path>
-                    <path d="M13 17h8"></path>
+                    <path d="M2 22v-5l5-5 5 5-5 5z"></path>
+                    <path d="M9.5 14.5 16 8"></path>
+                    <path d="m17 2 5 5-5 5-5-5z"></path>
                 </svg>
-                Restaurants
+                Parks
+            </button>
+            <button class="filter-btn" data-category="entertainment">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
+                    <path d="M8.5 8.5v.01"></path>
+                    <path d="M16 15.5v.01"></path>
+                    <path d="M12 12v.01"></path>
+                    <path d="M11 17v.01"></path>
+                    <path d="M7 14v.01"></path>
+                </svg>
+                Entertainment
             </button>
         </div>
 
         <div class="map-content">
-            <!-- Info panels for districts -->
+            <!-- Info panel for Kumayri district -->
             <div id="kumayri-district-panel" class="info-panel district-panel">
                 <div class="info-header">
                     <h2>Kumayri</h2>
@@ -110,34 +96,17 @@
                 <div class="info-image">
                     <img src="~/Content/Images/kumayri.png" alt="Kumayri Historic District">
                 </div>
-                <div class="info-actions">
-                    <button class="action-btn save-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
-                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
-                            <polyline points="7 3 7 8 15 8"></polyline>
-                        </svg>
-                        Save
-                    </button>
-                    <button class="action-btn share-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="18" cy="5" r="3"></circle>
-                            <circle cx="6" cy="12" r="3"></circle>
-                            <circle cx="18" cy="19" r="3"></circle>
-                            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-                            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-                        </svg>
-                        Share
-                    </button>
-                </div>
+
                 <div class="info-section">
                     <h3>Quick Facts</h3>
                     <p>Kumayri is the heart of Gyumri's cultural heritage. This district is a living museum with its preserved 18th and 19th-century buildings that reflect Armenian and Russian Imperial architecture.</p>
-                    <a href="#" class="more-link">more</a>
                 </div>
+                <!-- I'm only showing the relevant section that needs to be changed -->
+                <!-- I'm only showing the relevant section that needs to be changed -->
                 <div class="info-section">
+                    <h3>Featured Locations</h3>
                     <div class="location-list">
-                        <div class="location-item">
+                        <div class="location-item featured-location-link" data-panel-id="aslamazyan-gallery-panel">
                             <div class="location-time-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="12" cy="12" r="10"></circle>
@@ -145,15 +114,15 @@
                                 </svg>
                             </div>
                             <div class="location-image">
-                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-v0iFzPomlnCxNBHxtGzd5a2IWtI6cY.png" alt="Aslamazyan Sisters Gallery">
+                                <img src="~/Content/Images/aslamazyan.png" alt="Aslamazyan Sisters' Gallery">
                             </div>
                             <div class="location-info">
-                                <h4>Aslamazyan Sisters Gallery</h4>
-                                <div class="location-time">10:30-17:00 •</div>
-                                <div class="location-address">25 Haghtanaki Avenue, Gyumri</div>
+                                <h4>Aslamazyan Sisters' Gallery</h4>
+                                <div class="location-time">10:30 AM - 5:00 PM (Closed Mon) •</div>
+                                <div class="location-address">Abovyan Street 240, Gyumri</div>
                             </div>
                         </div>
-                        <div class="location-item">
+                        <div class="location-item featured-location-link" data-panel-id="leo-art-panel">
                             <div class="location-time-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="12" cy="12" r="10"></circle>
@@ -161,15 +130,15 @@
                                 </svg>
                             </div>
                             <div class="location-image">
-                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uJPHLqIUMLZgQ8N9IXMLiM1xtSJh8k.png" alt="Leo Ceramics Studio">
+                                <img src="~/Content/Images/leo art studio.png" alt="Leo Art Studio">
                             </div>
                             <div class="location-info">
-                                <h4>Leo Ceramics Studio</h4>
-                                <div class="location-time">12:00-18:00 •</div>
-                                <div class="location-address">47 Haghtanaki Avenue, Gyumri</div>
+                                <h4>Leo Art Studio</h4>
+                                <div class="location-time">12 AM - 6 PM (Working days) •</div>
+                                <div class="location-address">5 Shiraz str</div>
                             </div>
                         </div>
-                        <div class="location-item">
+                        <div class="location-item featured-location-link" data-panel-id="friendship-park-panel">
                             <div class="location-time-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="12" cy="12" r="10"></circle>
@@ -177,284 +146,510 @@
                                 </svg>
                             </div>
                             <div class="location-image">
-                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-v0iFzPomlnCxNBHxtGzd5a2IWtI6cY.png" alt="Friendship Park">
+                                <img src="~/Content/Images/Friendship Park.png" alt="Friendship Park">
                             </div>
                             <div class="location-info">
                                 <h4>Friendship Park</h4>
-                                <div class="location-time">9:00-22:00 •</div>
-                                <div class="location-address">Abovyan St. 242, Gyumri</div>
+                                <div class="location-time">Public park, accessible anytime •</div>
+                                <div class="location-address">1/1, Garegin Nzhdeh Avenue</div>
                             </div>
                         </div>
                     </div>
-                    <button class="view-all-btn">VIEW MORE OPTIONS</button>
                 </div>
             </div>
 
-@*             To do  - remove thius section the remaining is the Kumayri DEstrinct
- *@            <div id="northern-district-panel" class="info-panel district-panel">
+            <!-- POI Info Panels -->
+            <!-- Sights -->
+            <div id="sev-berd-panel" class="info-panel">
                 <div class="info-header">
-                    <h2>Northern District</h2>
-                    <p class="subtitle">Modern Residential Area</p>
+                    <h2>Sev Berd Fortress (Black Fortress)</h2>
+                    <p class="subtitle">Historic Landmark</p>
                     <button class="close-btn">&times;</button>
                 </div>
                 <div class="info-image">
-                    <img src="~/Content/Images/creamics.png" alt="Northern District">
-                </div>
-                <div class="info-actions">
-                    <button class="action-btn save-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
-                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
-                            <polyline points="7 3 7 8 15 8"></polyline>
-                        </svg>
-                        Save
-                    </button>
-                    <button class="action-btn share-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="18" cy="5" r="3"></circle>
-                            <circle cx="6" cy="12" r="3"></circle>
-                            <circle cx="18" cy="19" r="3"></circle>
-                            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-                            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-                        </svg>
-                        Share
-                    </button>
+                    <img src="~/Content/Images/Sev Berd.png" alt="Sev Berd Fortress">
                 </div>
                 <div class="info-section">
-                    <h3>Quick Facts</h3>
-                    <p>The Northern District of Gyumri is a modern residential area developed after the 1988 earthquake. It features contemporary architecture, shopping centers, and recreational facilities.</p>
-                    <a href="#" class="more-link">more</a>
-                </div>
-                <div class="info-section">
-                    <div class="location-list">
-                        <div class="location-item">
-                            <div class="location-time-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polyline points="12 6 12 12 16 14"></polyline>
-                                </svg>
-                            </div>
-                            <div class="location-image">
-                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-v0iFzPomlnCxNBHxtGzd5a2IWtI6cY.png" alt="Friendship Park">
-                            </div>
-                            <div class="location-info">
-                                <h4>Friendship Park</h4>
-                                <div class="location-time">Open 24 hours •</div>
-                                <div class="location-address">Northern District, Gyumri</div>
-                            </div>
-                        </div>
-                        <div class="location-item">
-                            <div class="location-time-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polyline points="12 6 12 12 16 14"></polyline>
-                                </svg>
-                            </div>
-                            <div class="location-image">
-                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uJPHLqIUMLZgQ8N9IXMLiM1xtSJh8k.png" alt="Berlin Hotel">
-                            </div>
-                            <div class="location-info">
-                                <h4>Berlin Hotel</h4>
-                                <div class="location-time">Open 24 hours •</div>
-                                <div class="location-address">Northern District, Gyumri</div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="view-all-btn">VIEW MORE OPTIONS</button>
+                    <h3>Description</h3>
+                    <p>An imposing 19th-century circular Russian imperial fortress, Sev Berd stands on a hill offering panoramic views of Gyumri and the surrounding landscapes. Its dark volcanic tuff stone gives it a formidable appearance and it's a significant historical monument.</p>
+                    <div class="location-time">Exterior generally accessible anytime •</div>
+                    <div class="location-address">Located on a hill to the west of Gyumri city center</div>
                 </div>
             </div>
 
-            <div id="eastern-district-panel" class="info-panel district-panel">
+            <div id="mother-armenia-panel" class="info-panel">
                 <div class="info-header">
-                    <h2>Eastern District</h2>
-                    <p class="subtitle">Cultural and Educational Hub</p>
+                    <h2>Mother Armenia Monument</h2>
+                    <p class="subtitle">Monument</p>
                     <button class="close-btn">&times;</button>
                 </div>
                 <div class="info-image">
-                    <img class="red-tint" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-v0iFzPomlnCxNBHxtGzd5a2IWtI6cY.png" alt="Eastern District">
-                </div>
-                <div class="info-actions">
-                    <button class="action-btn save-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
-                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
-                            <polyline points="7 3 7 8 15 8"></polyline>
-                        </svg>
-                        Save
-                    </button>
-                    <button class="action-btn share-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="18" cy="5" r="3"></circle>
-                            <circle cx="6" cy="12" r="3"></circle>
-                            <circle cx="18" cy="19" r="3"></circle>
-                            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-                            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-                        </svg>
-                        Share
-                    </button>
+                    <img src="~/Content/Images/mother armenia.png" alt="Mother Armenia Monument">
                 </div>
                 <div class="info-section">
-                    <h3>Quick Facts</h3>
-                    <p>The Eastern District of Gyumri is known for its educational institutions and cultural venues. This area houses several schools, the Gyumri State Pedagogical Institute, and various museums.</p>
-                    <a href="#" class="more-link">more</a>
-                </div>
-                <div class="info-section">
-                    <div class="location-list">
-                        <div class="location-item">
-                            <div class="location-time-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polyline points="12 6 12 12 16 14"></polyline>
-                                </svg>
-                            </div>
-                            <div class="location-image">
-                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-v0iFzPomlnCxNBHxtGzd5a2IWtI6cY.png" alt="Gyumri Museum">
-                            </div>
-                            <div class="location-info">
-                                <h4>Gyumri Museum</h4>
-                                <div class="location-time">10:00-17:00 •</div>
-                                <div class="location-address">Eastern District, Gyumri</div>
-                            </div>
-                        </div>
-                        <div class="location-item">
-                            <div class="location-time-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polyline points="12 6 12 12 16 14"></polyline>
-                                </svg>
-                            </div>
-                            <div class="location-image">
-                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uJPHLqIUMLZgQ8N9IXMLiM1xtSJh8k.png" alt="Aregak Cafe">
-                            </div>
-                            <div class="location-info">
-                                <h4>Aregak Cafe</h4>
-                                <div class="location-time">09:00-20:00 •</div>
-                                <div class="location-address">Eastern District, Gyumri</div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="view-all-btn">VIEW MORE OPTIONS</button>
+                    <h3>Description</h3>
+                    <p>A monumental statue symbolizing strength and resilience, the Mother Armenia in Gyumri stands tall in Victory Park. It serves as a tribute and a powerful emblem of the nation's spirit, watching over the city.</p>
+                    <div class="location-time">Park generally open, monument accessible anytime •</div>
+                    <div class="location-address">Victory Park (Haghtanaki Aygi), Gyumri</div>
                 </div>
             </div>
 
-            <!-- Info panels for POIs -->
-            <div id="leo-ceramics-panel" class="info-panel">
+            <div id="iron-fountain-panel" class="info-panel">
                 <div class="info-header">
-                    <h2>Leo Ceramics</h2>
-                    <p class="subtitle">Pottery Studio</p>
+                    <h2>The Iron Fountain</h2>
+                    <p class="subtitle">Landmark</p>
                     <button class="close-btn">&times;</button>
                 </div>
                 <div class="info-image">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uJPHLqIUMLZgQ8N9IXMLiM1xtSJh8k.png" alt="Leo Ceramics Pottery Studio">
-                </div>
-                <div class="info-actions">
-                    <button class="action-btn save-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
-                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
-                            <polyline points="7 3 7 8 15 8"></polyline>
-                        </svg>
-                        Save
-                    </button>
-                    <button class="action-btn share-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="18" cy="5" r="3"></circle>
-                            <circle cx="6" cy="12" r="3"></circle>
-                            <circle cx="18" cy="19" r="3"></circle>
-                            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-                            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-                        </svg>
-                        Share
-                    </button>
+                    <img src="~/Content/Images/Soviet Echoes.png" alt="The Iron Fountain">
                 </div>
                 <div class="info-section">
-                    <h3>Quick Facts</h3>
-                    <p>Leo Ceramics Pottery Studio is a charming artisan space nestled in the heart of Gyumri. The studio is renowned for its handcrafted ceramic creations that blend traditional Armenian motifs with contemporary design.</p>
-                    <div class="location-time">12:00-18:00 •</div>
-                    <div class="location-address">47 Haghtanaki Avenue, Gyumri</div>
-                </div>
-                <div class="info-section">
-                    <h3>Photos</h3>
-                    <div class="photo-gallery">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uJPHLqIUMLZgQ8N9IXMLiM1xtSJh8k.png" alt="Ceramic pendant">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uJPHLqIUMLZgQ8N9IXMLiM1xtSJh8k.png" alt="Ceramic decoration">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uJPHLqIUMLZgQ8N9IXMLiM1xtSJh8k.png" alt="Ceramic vase">
-                    </div>
-                    <button class="view-all-btn">VIEW ALL PHOTOS</button>
+                    <h3>Description</h3>
+                    <p>A unique and somewhat surreal Soviet-era structure, the Iron Fountain resembles a futuristic sculpture with its concrete rings and spiraling metal. Though no longer functional as a fountain, it remains a fascinating and often photographed landmark from a bygone amusement park.</p>
+                    <div class="location-time">Publicly accessible outdoor structure, viewable anytime •</div>
+                    <div class="location-address">Located within the area of the former amusement park, near Charles Aznavour Square, Gyumri</div>
                 </div>
             </div>
 
-            <div id="gyumri-museum-panel" class="info-panel">
+            <div id="independence-square-panel" class="info-panel">
                 <div class="info-header">
-                    <h2>Gyumri Museum</h2>
-                    <p class="subtitle">History Museum</p>
+                    <h2>Independence Square</h2>
+                    <p class="subtitle">City Square</p>
                     <button class="close-btn">&times;</button>
                 </div>
                 <div class="info-image">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-v0iFzPomlnCxNBHxtGzd5a2IWtI6cY.png" alt="Gyumri Museum">
-                </div>
-                <div class="info-actions">
-                    <button class="action-btn save-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
-                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
-                            <polyline points="7 3 7 8 15 8"></polyline>
-                        </svg>
-                        Save
-                    </button>
-                    <button class="action-btn share-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="18" cy="5" r="3"></circle>
-                            <circle cx="6" cy="12" r="3"></circle>
-                            <circle cx="18" cy="19" r="3"></circle>
-                            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-                            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-                        </svg>
-                        Share
-                    </button>
+                    <img src="~/Content/Images/Independence Square.png" alt="Independence Square">
                 </div>
                 <div class="info-section">
-                    <h3>Quick Facts</h3>
-                    <p>The Gyumri Museum showcases the rich history and cultural heritage of Gyumri and the Shirak region. The museum houses archaeological artifacts, historical documents, and exhibits about the city's development through the centuries.</p>
-                    <div class="location-time">10:00-17:00 •</div>
-                    <div class="location-address">Eastern District, Gyumri</div>
+                    <h3>Description</h3>
+                    <p>Formerly Lenin Square, Independence Square is a central public space in Gyumri, now featuring a prominent monument dedicated to the victims of the 1988 Spitak earthquake. Surrounded by Soviet-era administrative buildings, it's a place of memory and civic importance.</p>
+                    <div class="location-time">Public square, accessible anytime •</div>
+                    <div class="location-address">Independence Square, Gyumri</div>
                 </div>
             </div>
 
-            <div id="berlin-hotel-panel" class="info-panel">
+            <div id="gyumri-bazar-panel" class="info-panel">
                 <div class="info-header">
-                    <h2>Berlin Hotel</h2>
-                    <p class="subtitle">Luxury Hotel</p>
+                    <h2>Gyumri Bazar (Shuka)</h2>
+                    <p class="subtitle">Market</p>
                     <button class="close-btn">&times;</button>
                 </div>
                 <div class="info-image">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uJPHLqIUMLZgQ8N9IXMLiM1xtSJh8k.png" alt="Berlin Hotel">
-                </div>
-                <div class="info-actions">
-                    <button class="action-btn save-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
-                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
-                            <polyline points="7 3 7 8 15 8"></polyline>
-                        </svg>
-                        Save
-                    </button>
-                    <button class="action-btn share-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="18" cy="5" r="3"></circle>
-                            <circle cx="6" cy="12" r="3"></circle>
-                            <circle cx="18" cy="19" r="3"></circle>
-                            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-                            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-                        </svg>
-                        Share
-                    </button>
+                    <img src="~/Content/Images/Shuka.png" alt="Gyumri Bazar">
                 </div>
                 <div class="info-section">
-                    <h3>Quick Facts</h3>
-                    <p>Berlin Hotel is a luxury accommodation option in Gyumri, offering modern amenities and comfortable rooms. The hotel features a restaurant serving Armenian and international cuisine, a fitness center, and conference facilities.</p>
-                    <div class="location-time">Open 24 hours •</div>
-                    <div class="location-address">Northern District, Gyumri</div>
+                    <h3>Description</h3>
+                    <p>The bustling heart of local commerce, Gyumri's Central Market (Shuka or Bazar) is a vibrant and authentic experience. Explore rows of fresh produce, local cheeses, meats, spices, and household goods while soaking in the lively atmosphere and daily interactions.</p>
+                    <div class="location-time">Typically early morning until late afternoon (e.g., ~8:00 AM - 5:00 PM) •</div>
+                    <div class="location-address">Garegin Nzhdeh Ave (near the bus station), Gyumri</div>
+                </div>
+            </div>
+
+            <div id="vardanants-square-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>Vardanants Square</h2>
+                    <p class="subtitle">City Square</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="~/Content/Images/vardanants.png" alt="Vardanants Square">
+                </div>
+                <div class="info-section">
+                    <h3>Description</h3>
+                    <p>The main central square of Gyumri, Vardanants Square is a grand plaza surrounded by significant buildings like the City Hall, Holy Saviours Church, and Yot Verk Church. It's a popular gathering place and the city's ceremonial heart.</p>
+                    <div class="location-time">Public square, accessible anytime •</div>
+                    <div class="location-address">Vardanants Square, Gyumri</div>
+                </div>
+            </div>
+
+            <div id="gtc-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>GTC (Gyumri Technology Center)</h2>
+                    <p class="subtitle">Technology Hub</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="~/Content/Images/gtc.png" alt="GTC">
+                </div>
+                <div class="info-section">
+                    <h3>Description</h3>
+                    <p>A hub of innovation and education, the Gyumri Technology Center is housed in a historic building that once hosted the first classes of Yerevan State University. It now supports startups, tech companies, and offers educational programs, symbolizing Gyumri's modern revival.</p>
+                    <div class="location-time">For visitors/tours, typically business hours (e.g., 9:00 AM - 6:00 PM, Mon-Fri) •</div>
+                    <div class="location-address">Gayi Street 1, Gyumri</div>
+                </div>
+            </div>
+
+            <div id="tumo-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>TUMO Gyumri</h2>
+                    <p class="subtitle">Educational Center</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="~/Content/Images/tumo.png" alt="TUMO Gyumri">
+                </div>
+                <div class="info-section">
+                    <h3>Description</h3>
+                    <p>Located in the historic building of Gyumri's first theatre in Central Park, TUMO Center for Creative Technologies offers free after-school programs for teens in tech and design. It's a vibrant space fostering the next generation of Armenian innovators.</p>
+                    <div class="location-time">Specific program hours; building exterior viewable anytime •</div>
+                    <div class="location-address">Central Park (Gorky Park), Gyumri</div>
+                </div>
+            </div>
+
+            <!-- Museums -->
+            <div id="dzitoghtsyan-museum-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>Dzitoghtsyan Museum</h2>
+                    <p class="subtitle">Museum of Architecture and Urban Life</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="~/Content/Images/Dzitoghtsonc.png" alt="Dzitoghtsyan Museum">
+                </div>
+                <div class="info-section">
+                    <h3>Description</h3>
+                    <p>Housed in a magnificent 19th-century mansion, this museum showcases the daily life, culture, and rich urban heritage of Gyumri (formerly Alexandropol). Explore traditional crafts, household items, and architectural exhibits.</p>
+                    <div class="location-time">Typically 11:00 AM - 5:00 PM (Closed Mondays) •</div>
+                    <div class="location-address">Victory Avenue (Haghtanaki Poghota) 47, Gyumri</div>
+                </div>
+            </div>
+
+            <div id="aslamazyan-gallery-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>Aslamazyan Sisters' Gallery</h2>
+                    <p class="subtitle">Art Gallery</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="~/Content/Images/aslamazyan.png" alt="Aslamazyan Sisters' Gallery">
+                </div>
+                <div class="info-section">
+                    <h3>Description</h3>
+                    <p>Celebrates the vibrant works of Mariam and Eranuhi Aslamazyan, pioneering Armenian female artists, housed in their former 1880s family mansion. The gallery features over 600 paintings, ceramics, and graphics reflecting their travels and Armenian heritage.</p>
+                    <div class="location-time">Typically 10:30 AM - 5:00 PM (Closed Mondays) •</div>
+                    <div class="location-address">Abovyan Street 240, Gyumri</div>
+                </div>
+            </div>
+
+            <div id="mkrtchyan-museum-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>Mher Mkrtchyan Museum</h2>
+                    <p class="subtitle">Biographical Museum</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="~/Content/Images/Mher mkRTCHYAN.png" alt="Mher Mkrtchyan Museum">
+                </div>
+                <div class="info-section">
+                    <h3>Description</h3>
+                    <p>Dedicated to the beloved Armenian actor Mher "Frunzik" Mkrtchyan, this museum is located in his former residence. It displays personal belongings, stage costumes, and memorabilia from his illustrious career.</p>
+                    <div class="location-time">Typically 11:00 AM - 5:00 PM (Closed Mondays) •</div>
+                    <div class="location-address">Rustaveli Street 30, Gyumri</div>
+                </div>
+            </div>
+
+            <div id="isahakyan-museum-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>Avetik Isahakyan Museum</h2>
+                    <p class="subtitle">Literary Museum</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="~/Content/Images/Isahakkyan.png" alt="Avetik Isahakyan Museum">
+                </div>
+                <div class="info-section">
+                    <h3>Description</h3>
+                    <p>Preserves the legacy of the prominent Armenian poet and public figure, Avetik Isahakyan. Explore his personal library, manuscripts, and photographs in his former Gyumri home.</p>
+                    <div class="location-time">Typically 10:00 AM - 5:00 PM (Closed Mondays) •</div>
+                    <div class="location-address">Jivani Street 15, Gyumri</div>
+                </div>
+            </div>
+
+            <div id="shiraz-museum-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>Hovhannes Shiraz Museum</h2>
+                    <p class="subtitle">Literary Museum</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="~/Content/Images/shiraz.png" alt="Hovhannes Shiraz Museum">
+                </div>
+                <div class="info-section">
+                    <h3>Description</h3>
+                    <p>Located in the former home of the celebrated poet Hovhannes Shiraz, this museum showcases his life and work. Exhibits include his manuscripts, personal items, and poetry reflecting his deep connection to Gyumri.</p>
+                    <div class="location-time">Typically 10:00 AM - 5:00 PM (Closed Mondays) •</div>
+                    <div class="location-address">Varpetats Street 101, Gyumri</div>
+                </div>
+            </div>
+
+            <!-- Churches -->
+            <div id="yot-verk-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>Yot Verk Church</h2>
+                    <p class="subtitle">Church</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="~/Content/Images/yot verk.png" alt="Yot Verk Church">
+                </div>
+                <div class="info-section">
+                    <h3>Description</h3>
+                    <p>Located in Vardanants Square, Yot Verk is a cherished 19th-century church that remained open during Soviet times. It's known for its intimate atmosphere and significant religious icons.</p>
+                    <div class="location-address">Vardanants Square, Gyumri</div>
+                </div>
+            </div>
+
+            <div id="holy-saviors-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>Holy Saviors Church</h2>
+                    <p class="subtitle">Cathedral</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="~/Content/Images/amenaprkich.png" alt="Holy Saviors Church">
+                </div>
+                <div class="info-section">
+                    <h3>Description</h3>
+                    <p>An iconic symbol of Gyumri, this grand 19th-century cathedral was modeled after the Cathedral of Ani. Though damaged in the 1988 earthquake, its imposing structure and ongoing restoration speak to the city's resilience.</p>
+                    <div class="location-address">Vardanants Square, Gyumri</div>
+                </div>
+            </div>
+
+            <div id="saint-nshan-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>Saint Nshan Church</h2>
+                    <p class="subtitle">Church</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="~/Content/Images/saint nshan.png" alt="Saint Nshan Church">
+                </div>
+                <div class="info-section">
+                    <h3>Description</h3>
+                    <p>An elegant 19th-century church located in the historic Kumayri district, known for its devoted congregation and beautiful, honest architecture. It offers a peaceful space for reflection away from the main squares.</p>
+                    <div class="location-address">Rustaveli Street (near the intersection with Abovyan St), Gyumri</div>
+                </div>
+            </div>
+
+            <!-- Cafes -->
+            <div id="aregak-bakery-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>Aregak Bakery & Café</h2>
+                    <p class="subtitle">Café</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="~/Content/Images/Aregak.png" alt="Aregak Bakery & Café">
+                </div>
+                <div class="info-section">
+                    <h3>Description</h3>
+                    <p>A heartwarming social enterprise offering delicious Italian-style coffee, freshly baked pastries, and light meals. It provides employment and support for disabled youth and their mothers.</p>
+                    <div class="location-time">Every day 9:00 AM - 9:00 PM •</div>
+                    <div class="location-address">Abovyan Street 244/1, Gyumri</div>
+                </div>
+            </div>
+
+            <div id="ponchik-monchik-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>Ponchik Monchik</h2>
+                    <p class="subtitle">Café</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="~/Content/Images/Ponchik.png" alt="Ponchik Monchik">
+                </div>
+                <div class="info-section">
+                    <h3>Description</h3>
+                    <p>An iconic Gyumri institution, famous for its legendary cream-filled <em>ponchiks</em> (doughnuts) – hot, airy, and utterly delicious. A must-try treat for any visitor.</p>
+                    <div class="location-time">Typically from 10:00 AM until late evenings •</div>
+                    <div class="location-address">Located in Bagratunyats Park & Main Square</div>
+                </div>
+            </div>
+
+            <div id="cherkezi-dzor-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>Cherkezi Dzor</h2>
+                    <p class="subtitle">Fish Farm-Restaurant</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="~/Content/Images/Cherkez.png" alt="Cherkezi Dzor">
+                </div>
+                <div class="info-section">
+                    <h3>Description</h3>
+                    <p>A unique dining destination built around its own fish farm, offering exceptionally fresh fish dishes, particularly trout, in a rustic, scenic setting. A countryside feel without leaving the city.</p>
+                    <div class="location-time">Every day 9 AM to 11 PM. Best to call ahead •</div>
+                    <div class="location-address">Kars Highway (Karsi khughi), on the outskirts of Gyumri</div>
+                </div>
+            </div>
+
+            <div id="sheeraz-cafe-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>Sheeraz Cafe</h2>
+                    <p class="subtitle">Café</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="~/Content/Images/Sheeraz.png" alt="Sheeraz Cafe">
+                </div>
+                <div class="info-section">
+                    <h3>Description</h3>
+                    <p>An elegant café housed in a beautifully restored 19th-century building, offering a refined atmosphere, diverse menu including interesting pasta dishes, and a wide variety of breakfast options.</p>
+                    <div class="location-time">Every day 10 AM - 12 AM •</div>
+                    <div class="location-address">31 Shiraz street</div>
+                </div>
+            </div>
+
+            <div id="herbs-honey-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>Herbs & Honey Teashop</h2>
+                    <p class="subtitle">Café</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="~/Content/Images/Herbs Honey.png" alt="Herbs & Honey Teashop">
+                </div>
+                <div class="info-section">
+                    <h3>Description</h3>
+                    <p>A cozy and tranquil teashop cafe offering healthy food sourced from local farmers, a wide array of herbal teas, unique honey-based treats, and handmade jams.</p>
+                    <div class="location-time">Every day 9 AM - 11 PM •</div>
+                    <div class="location-address">5 Rijkov Street</div>
+                </div>
+            </div>
+
+            <div id="gyumri-express-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>Gyumri Express Restaurant</h2>
+                    <p class="subtitle">Restaurant</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="~/Content/Images/Gyumri Express.png" alt="Gyumri Express Restaurant">
+                </div>
+                <div class="info-section">
+                    <h3>Description</h3>
+                    <p>A fun and unique family-friendly restaurant where some dishes are delivered to your table by a miniature train that circles the dining area. Offers a menu of burgers, wraps, shawarma, and more.</p>
+                    <div class="location-time">Every day 10 AM - 11 PM •</div>
+                    <div class="location-address">25 Gorki Street</div>
+                </div>
+            </div>
+
+            <!-- Parks -->
+            <div id="central-park-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>Central Park (Gorky Park)</h2>
+                    <p class="subtitle">Park</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="~/Content/Images/central park.png" alt="Central Park">
+                </div>
+                <div class="info-section">
+                    <h3>Description</h3>
+                    <p>Gyumri's largest and most iconic public park, offering long walking paths, plenty of benches, mature trees for shade, and the classic Ferris wheel. A cherished gathering place for locals.</p>
+                    <div class="location-time">Public park, generally accessible 24/7 •</div>
+                    <div class="location-address">Entrances from various streets, including Gayi Street and near TUMO Gyumri</div>
+                </div>
+            </div>
+
+            <div id="friendship-park-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>Friendship Park</h2>
+                    <p class="subtitle">Park</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+
+                <div class="info-section">
+                    <h3>Description</h3>
+                    <p>One of Gyumri's newer green spaces, Friendship Park offers a modern, clean, and open environment. It's good for walking, sitting with a book, and is generally less crowded.</p>
+                    <div class="location-time">Public park, accessible anytime •</div>
+                    <div class="location-address">1/1, Garegin Nzhdeh Avenue. Near the Russian consulate</div>
+                </div>
+            </div>
+
+            <div id="siremgy-park-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>Siremgy Mini-Park</h2>
+                    <p class="subtitle">Park</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="~/Content/Images/սիռեմգը (1).png" alt="Siremgy Mini-Park">
+                </div>
+                <div class="info-section">
+                    <h3>Description</h3>
+                    <p>A neat, small park located along Rustaveli Street, famous for its iconic oversized "G" sculpture, a playful symbol of Gyumri. A popular spot for photos and a brief rest.</p>
+                    <div class="location-time">Public park, accessible anytime •</div>
+                    <div class="location-address">Rustaveli Street, Gyumri</div>
+                </div>
+            </div>
+
+            <!-- Entertainment -->
+            <div id="drama-theatre-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>Drama Theatre</h2>
+                    <p class="subtitle">Theatre</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="~/Content/Images/drama theatre.png" alt="Drama Theatre">
+                </div>
+                <div class="info-section">
+                    <h3>Description</h3>
+                    <p>Gyumri's most iconic stage, founded in 1928 and named after legendary director Vardan Achemyan. It hosts a mix of classic Armenian dramas and contemporary works, upholding the city's rich theatrical tradition.</p>
+                    <div class="location-time">Performance times vary. Check their schedule for showtimes •</div>
+                    <div class="location-address">4 Sayat-Nova Avenue</div>
+                </div>
+            </div>
+
+            <div id="puppet-theatre-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>Puppet Theatre</h2>
+                    <p class="subtitle">Theatre</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="~/Content/Images/tiknikayin.png" alt="Puppet Theatre">
+                </div>
+                <div class="info-section">
+                    <h3>Description</h3>
+                    <p>Established in 1935, this is Armenia's first puppet theatre, located on Abovyan Street. It offers captivating performances for audiences of all ages, known for its intricate puppetry and engaging storytelling.</p>
+                    <div class="location-time">Performance times vary (often weekends/afternoons) •</div>
+                    <div class="location-address">Abovyan Street 232</div>
+                </div>
+            </div>
+
+            <div id="varem-marem-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>Varem & Marem Art Studio</h2>
+                    <p class="subtitle">Art Studio</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="~/Content/Images/Varem MArem.png" alt="Varem & Marem Art Studio">
+                </div>
+                <div class="info-section">
+                    <h3>Description</h3>
+                    <p>A whimsical and creative art studio in Gyumri, known for its unique handmade ceramics and other crafts, often with a touch of humor. A distinctive feature is their large wall where visitors are famously invited to "glue their name," creating a collective, ever-evolving piece of community art.</p>
+                    <div class="location-time">Every day 10 AM - 8 PM •</div>
+                    <div class="location-address">2 Ajemyan str</div>
+                </div>
+            </div>
+
+            <div id="leo-art-panel" class="info-panel">
+                <div class="info-header">
+                    <h2>Leo Art Studio</h2>
+                    <p class="subtitle">Ceramic Studio</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="info-image">
+                    <img src="~/Content/Images/leo art studio.png" alt="Leo Art Studio">
+                </div>
+                <div class="info-section">
+                    <h3>Description</h3>
+                    <p>A local ceramic studio where visitors can explore unique, handcrafted pottery and potentially witness the artistic process. It offers a chance to discover or purchase original ceramic pieces made in Gyumri and engage with the city's contemporary craft scene.</p>
+                    <div class="location-time">Working days 12 AM - 6 PM •</div>
+                    <div class="location-address">5 Shiraz str</div>
                 </div>
             </div>
 
@@ -465,9 +660,8 @@
         </div>
     </section>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/map.js"></script>
 </body>
-
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://kit.fontawesome.com/e8c2e1c09c.js" crossorigin="anonymous"></script>
-<script src="~/Content/map.js"></script>
+</html>

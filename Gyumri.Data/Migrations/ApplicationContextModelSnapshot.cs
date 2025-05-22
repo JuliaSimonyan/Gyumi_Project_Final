@@ -70,6 +70,15 @@ namespace Gyumri.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PlaceId"));
 
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AddressArm")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AddressRu")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int?>("ArticleId")
                         .HasColumnType("int");
 
@@ -102,6 +111,9 @@ namespace Gyumri.Data.Migrations
 
                     b.Property<string>("PlaceNameRu")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("PlaceType")
+                        .HasColumnType("int");
 
                     b.Property<int?>("Raiting")
                         .HasColumnType("int");

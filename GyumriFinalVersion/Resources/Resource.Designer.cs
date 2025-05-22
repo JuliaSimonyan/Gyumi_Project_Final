@@ -79,7 +79,7 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gyumri, Shirak Marz, RA.
+        ///   Looks up a localized string similar to Vardanants sq. 1.
         /// </summary>
         public static string AddressGyumri {
             get {
@@ -124,11 +124,29 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Where Art, Tech, and Tradition Collide.
+        ///   Looks up a localized string similar to Sidewalks Speak and Balconies Remember.
         /// </summary>
         public static string ArtTechTraditionCollide {
             get {
                 return ResourceManager.GetString("ArtTechTraditionCollide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aslamazyan Sisters’ Gallery.
+        /// </summary>
+        public static string Aslamazyan {
+            get {
+                return ResourceManager.GetString("Aslamazyan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Colorful, fearless, and full of stories—art by two iconic Armenian sisters..
+        /// </summary>
+        public static string AslamazyanDesc {
+            get {
+                return ResourceManager.GetString("AslamazyanDesc", resourceCulture);
             }
         }
         
@@ -160,6 +178,24 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Central Park Ferris Wheel.
+        /// </summary>
+        public static string CentralPark {
+            get {
+                return ResourceManager.GetString("CentralPark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A slow spin above the rooftops—see the city from a whole new angle..
+        /// </summary>
+        public static string CentralParkDesc {
+            get {
+                return ResourceManager.GetString("CentralParkDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Children.
         /// </summary>
         public static string Children {
@@ -187,7 +223,7 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cultural Renaissance.
+        ///   Looks up a localized string similar to The Walking Supremacy.
         /// </summary>
         public static string CulturalRenaissance {
             get {
@@ -223,7 +259,7 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Discover the Heart of Armenia.
+        ///   Looks up a localized string similar to Big Culture, Small Budget – Always in Season.
         /// </summary>
         public static string DiscovertheHeartofArmenia {
             get {
@@ -246,6 +282,24 @@ namespace GyumriFinalVersion.Resources {
         public static string DownloadApp {
             get {
                 return ResourceManager.GetString("DownloadApp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dzitoghtsyan Museum.
+        /// </summary>
+        public static string DzitoghtsyanMuseum {
+            get {
+                return ResourceManager.GetString("DzitoghtsyanMuseum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A 19th-century home that captures the spirit of old Gyumri..
+        /// </summary>
+        public static string DzitoghtsyanMuseumDesc {
+            get {
+                return ResourceManager.GetString("DzitoghtsyanMuseumDesc", resourceCulture);
             }
         }
         
@@ -313,7 +367,7 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Forge of Legends.
+        ///   Looks up a localized string similar to Creative Renaissance.
         /// </summary>
         public static string ForgeOfLegends {
             get {
@@ -322,7 +376,7 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to From Empires to Earthquakes.
+        ///   Looks up a localized string similar to Echoes of Gyumri&apos;s Past, Standing Proud.
         /// </summary>
         public static string FromEmpirestoEarthquakes {
             get {
@@ -385,7 +439,7 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gyumri&apos;s Heritage.
+        ///   Looks up a localized string similar to Affordable Adventure.
         /// </summary>
         public static string GyumriHeritage {
             get {
@@ -394,7 +448,7 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gyumri&apos;s Culture.
+        ///   Looks up a localized string similar to A Culinary Love Letter.
         /// </summary>
         public static string GyumrisCulture {
             get {
@@ -403,7 +457,7 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gyumri s Must Visits.
+        ///   Looks up a localized string similar to Gyumri’s Must Visits.
         /// </summary>
         public static string GyumrisUniqueDistricts {
             get {
@@ -439,7 +493,7 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Journey Through History, Culture, and Creativit.
+        ///   Looks up a localized string similar to A Journey Through History, Culture, and Creativity.
         /// </summary>
         public static string JourneyThroughHistoryCultureCreativit {
             get {
@@ -498,6 +552,15 @@ namespace GyumriFinalVersion.Resources {
         public static string min {
             get {
                 return ResourceManager.GetString("min", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Most Popular Right Now.
+        /// </summary>
+        public static string MostPopular {
+            get {
+                return ResourceManager.GetString("MostPopular", resourceCulture);
             }
         }
         
@@ -574,6 +637,24 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sev Berd Fortress.
+        /// </summary>
+        public static string SevBerd {
+            get {
+                return ResourceManager.GetString("SevBerd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An imposing 19th-century stronghold overlooking all of Gyumri..
+        /// </summary>
+        public static string SevBerdDesc {
+            get {
+                return ResourceManager.GetString("SevBerdDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Star of the Month..
         /// </summary>
         public static string StaroftheMonth {
@@ -628,7 +709,7 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tradition Meets Modernity.
+        ///   Looks up a localized string similar to Flavors Passed Down Through Time and Stone.
         /// </summary>
         public static string TraditionMeetsModernity {
             get {
@@ -655,7 +736,7 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Use this tool to organize your travel, stay, and activities for an unforgettable trip to Cymru. Get a personalized plan emailed or downloaded at the end!.
+        ///   Looks up a localized string similar to Use this tool to organize your travel, stay, and activities for an unforgettable trip to Gyumri. Get a personalized plan emailed or downloaded at the end!.
         /// </summary>
         public static string TripPageText {
             get {
@@ -673,11 +754,29 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to UNESCO’s Blacksmithing Masterpieces.
+        ///   Looks up a localized string similar to Forging Identity in the Fires of Tradition.
         /// </summary>
         public static string UNESCOսBlacksmithingMasterpieces {
             get {
                 return ResourceManager.GetString("UNESCOսBlacksmithingMasterpieces", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Varem &amp; Marem Art Studio.
+        /// </summary>
+        public static string VaremMarem {
+            get {
+                return ResourceManager.GetString("VaremMarem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Whimsical, handmade ceramic magic you won’t forget..
+        /// </summary>
+        public static string VaremMaremDesc {
+            get {
+                return ResourceManager.GetString("VaremMaremDesc", resourceCulture);
             }
         }
         
@@ -723,6 +822,15 @@ namespace GyumriFinalVersion.Resources {
         public static string WelcomeGyumri {
             get {
                 return ResourceManager.GetString("WelcomeGyumri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A city where every street corner holds a story—and every visit leaves one behind..
+        /// </summary>
+        public static string WelcomeSubHeadline {
+            get {
+                return ResourceManager.GetString("WelcomeSubHeadline", resourceCulture);
             }
         }
         

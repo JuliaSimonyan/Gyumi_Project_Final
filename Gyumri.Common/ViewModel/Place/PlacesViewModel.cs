@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gyumri.Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,5 +22,10 @@ namespace Gyumri.Common.ViewModel.Place
         public int? Raiting { get; set; }
         public int? ArticleId { get; set; }
         public int SubcategoryId { get; set; }
+        public string? Address { get; set; }
+        public string? AddressArm { get; set; }
+        public string? AddressRu { get; set; }
+
+        public PlaceType? PlaceType { get; set; }
     }
 }
