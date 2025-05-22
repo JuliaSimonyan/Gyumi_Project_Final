@@ -1,9 +1,5 @@
 ﻿using Gyumri.Data.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 namespace Gyumri.Common.Utility
 {
     public static class Util
@@ -21,10 +17,17 @@ namespace Gyumri.Common.Utility
                 PlaceType.OUTDOOR => AppRes.Outdoor,
                 PlaceType.CAFE => AppRes.Cafe,
                 PlaceType.RESTAURANT => AppRes.Restaurant,
-                _ => string.Empty 
+                _ => string.Empty
             };
         }
 
-
+        public static List<PlaceType> GetEnumForFirstPage()
+        {
+            return new List<PlaceType> { PlaceType.HOTEL, PlaceType.GUESTHOUSE, PlaceType.HOSTEL };
+        }
+        public static List<PlaceType> GetEnumForSecondPage()
+        {
+            return new List<PlaceType> { PlaceType.MUSEUM, PlaceType.CRAFTS, PlaceType.HISTORY, PlaceType.OUTDOOR, PlaceType.CAFE, PlaceType.RESTAURANT };
+        }
     }
 }

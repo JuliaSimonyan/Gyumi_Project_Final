@@ -28,7 +28,7 @@
             <a class="navbar-brand" href="@Url.Action("Index", "Home")"><img src="~/content/Images/Vector.png" alt="Logo" height="30"></a>
 
             <!-- Toggler button for small screens -->
-            <button class="navbar-toggler" type="button"  data-bs-target="#navbarNav"
+            <button class="navbar-toggler" type="button" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -41,28 +41,32 @@
                             @AppRes.Home
                         </a>
                     </li>
-                    @foreach (var menuItem in ViewBag.Categories)
+                    @if (ViewBag.Categories != null)
                     {
-                        if (menuItem.Name != "Home")
+                        @foreach (var menuItem in ViewBag.Categories)
                         {
-                            <li class="nav-item">
-                                <a class="nav-link" asp-action="Category" asp-controller="Home" asp-route-categoryId="@menuItem.CategoryId">
-                                    @if (currentCulture == "ru-RU")
-                                    {
-                                        @menuItem.NameRu
-                                    }
-                                    else if (currentCulture == "hy-AM")
-                                    {
-                                        @menuItem.NameArm
-                                    }
-                                    else
-                                    {
-                                        @menuItem.Name
-                                    }
-                                </a>
-                            </li>
+                            if (menuItem.Name != "Home")
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-action="Category" asp-controller="Home" asp-route-categoryId="@menuItem.CategoryId">
+                                        @if (currentCulture == "ru-RU")
+                                        {
+                                            @menuItem.NameRu
+                                        }
+                                        else if (currentCulture == "hy-AM")
+                                        {
+                                            @menuItem.NameArm
+                                        }
+                                        else
+                                        {
+                                            @menuItem.Name
+                                        }
+                                    </a>
+                                </li>
+                            }
                         }
                     }
+
 
                 </ul>
 
@@ -137,7 +141,7 @@
                     <div class="footer-section">@AppRes.AboutThisWebsite.ToUpper()</div><br>
                     <p><a href="@Url.Action("AboutUs", "Home")" class="footer-link">About visitgyumri.info</a></p>
                     <p><a href="@Url.Action("Privacy", "Home")" class="footer-link">@AppRes.PrivacyPolicy</a></p>
-                   @*  <p><a href="#" class="footer-link">@AppRes.AccessibilityStatement</a></p> *@ @* TODO:: Create Translation for this *@
+                    @*  <p><a href="#" class="footer-link">@AppRes.AccessibilityStatement</a></p> *@ @* TODO:: Create Translation for this *@
                 </div>
                 <div class="col-lg-3 col-md-6 footer-section footer-links">
                     <div class="footer-section">@AppRes.OtherLinks.ToUpper()</div><br>

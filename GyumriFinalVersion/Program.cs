@@ -24,11 +24,16 @@ builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/Admin/Account/Login";
     options.AccessDeniedPath = "/Admin/Account/AccessDenied";
-});
+}); 
+
 
 // Add MVC (controllers & views)
-builder.Services.AddControllersWithViews();
 
+builder.Services.AddControllersWithViews()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.Converters.Add(new System.Text.Json.Serialization.JsonStringEnumConverter());
+    });
 // Custom services
 builder.Services.AddScoped<ICategory, CategoryService>();
 builder.Services.AddScoped<ISubcategory, SubcategoryService>();

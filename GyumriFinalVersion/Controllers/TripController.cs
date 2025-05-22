@@ -3,6 +3,9 @@ using Gyumri.Data.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Mail;
 using System.Net;
+using Gyumri.Common.Utility;
+using Microsoft.EntityFrameworkCore;
+using Gyumri.Common.ViewModel.Place;
 
 namespace GyumriFinalVersion.Controllers
 {
@@ -72,62 +75,147 @@ namespace GyumriFinalVersion.Controllers
             return RedirectToAction("SecondStep");
         }
 
+        //[HttpGet]
+        //public async Task<IActionResult> SecondStep(PlaceType placeType = PlaceType.HOTEL, int currentPage = 1)
+        //{
+        //    //SetCulture();
+        //    //var categories = await _categoryService.GetAllCategories();
+        //    //var seeAndDoCategory = categories.FirstOrDefault(c => c.Name == "See & Do");
+
+        //    //var subcategories = await _subCategoryService.GetSubcategoriesByCategoryId(seeAndDoCategory.CategoryId);
+        //    //if (subcategoryId == -1 && subcategories.Any())
+        //    //{
+        //    //    subcategoryId = subcategories.First().SubcategoryId;
+        //    //}
+
+        //    //var places = await _placeService.GetPlacesBySubCategoryId(subcategoryId);
+
+        //    //ViewBag.PagesCount = (int)Math.Ceiling((double)places.Count() / 5);
+        //    //ViewBag.AllSubcategories = subcategories;
+        //    //ViewBag.CurrentSubcategory = subcategories.FirstOrDefault(sc => sc.SubcategoryId == subcategoryId);
+        //    //ViewBag.CurrentPage = currentPage;
+        //    //ViewBag.Places = places.Skip((currentPage - 1) * 5).Take(5).ToList();
+        //    //ViewBag.Categories = categories;
+
+        //    return View();
+        //}
         [HttpGet]
-        public async Task<IActionResult> SecondStep(int subcategoryId = -1, int currentPage = 1)
-        {
-            SetCulture();
-            var categories = await _categoryService.GetAllCategories();
-            var seeAndDoCategory = categories.FirstOrDefault(c => c.Name == "See & Do");
-
-            var subcategories = await _subCategoryService.GetSubcategoriesByCategoryId(seeAndDoCategory.CategoryId);
-            if (subcategoryId == -1 && subcategories.Any())
+        public async Task<IActionResult> SecondStep()
+        {/*await _placeService.GetPlacesWithPlaceType()*/
+            var allPlaces = new List<PlacesViewModel>
             {
-                subcategoryId = subcategories.First().SubcategoryId;
-            }
+                new PlacesViewModel
+                {
+                    Id = 1,
+                    PlaceName = "Sunny Hotel",
+                    PlaceNameArm = "Արևոտ Հյուրանոց",
+                    PlaceNameRu = "Санни Отель",
+                    Description = "A cozy hotel in downtown.",
+                    DescriptionArm = "Հարմարավետ հյուրանոց քաղաքի կենտրոնում։",
+                    DescriptionRu = "Уютный отель в центре города.",
+                    Photo = "sunnyhotel.jpg",
+                    MinPrice = 20000,
+                    MaxPrice = 50000,
+                    Raiting = 5,
+                    ArticleId = null,
+                    SubcategoryId = 1,
+                    Address = "123 Main St",
+                    AddressArm = "Հիմնական 123",
+                    AddressRu = "Главная 123",
+                    PlaceType = PlaceType.HOTEL
+                },
+                new PlacesViewModel
+                {
+                    Id = 2,
+                    PlaceName = "Green Hostel",
+                    PlaceNameArm = "Կանաչ Հոսթել",
+                    PlaceNameRu = "Зелёный Хостел",
+                    Description = "Affordable place for backpackers.",
+                    DescriptionArm = "Մատչելի վայր ճանապարհորդների համար։",
+                    DescriptionRu = "Доступное место для путешественников.",
+                    Photo = "greenhostel.jpg",
+                    MinPrice = 8000,
+                    MaxPrice = 15000,
+                    Raiting = 3,
+                    ArticleId = 2,
+                    SubcategoryId = 2,
+                    Address = "456 Backpacker Ave",
+                    AddressArm = "Ուղևորի 456",
+                    AddressRu = "Бэкпекер 456",
+                    PlaceType = PlaceType.HOSTEL
+                },
+                new PlacesViewModel
+                {
+                    Id = 3,
+                    PlaceName = "Family Guesthouse",
+                    PlaceNameArm = "Ընտանեկան Հյուրատուն",
+                    PlaceNameRu = "Семейный Гостевой Дом",
+                    Description = "Perfect for families.",
+                    DescriptionArm = "Իդեալական ընտանեկան հանգստի համար։",
+                    DescriptionRu = "Идеально для семейного отдыха.",
+                    Photo = "familyguesthouse.jpg",
+                    MinPrice = 12000,
+                    MaxPrice = 30000,
+                    Raiting = 4,
+                    ArticleId = null,
+                    SubcategoryId = 3,
+                    Address = "789 Family Rd",
+                    AddressArm = "Ընտանիքի 789",
+                    AddressRu = "Семейная 789",
+                    PlaceType = PlaceType.GUESTHOUSE
+                }
+            };
 
-            var places = await _placeService.GetPlacesBySubCategoryId(subcategoryId);
 
-            ViewBag.PagesCount = (int)Math.Ceiling((double)places.Count() / 5);
-            ViewBag.AllSubcategories = subcategories;
-            ViewBag.CurrentSubcategory = subcategories.FirstOrDefault(sc => sc.SubcategoryId == subcategoryId);
-            ViewBag.CurrentPage = currentPage;
-            ViewBag.Places = places.Skip((currentPage - 1) * 5).Take(5).ToList();
-            ViewBag.Categories = categories;
+            ViewBag.Places = allPlaces;
 
             return View();
         }
 
+        //[HttpPost]
+        //public IActionResult SecondStep(int placeId)
+        //{
+        //    TempData["Place1Id"] = placeId;
+        //    return RedirectToAction("ThirdStep");
+        //}
         [HttpPost]
-        public IActionResult SecondStep(int placeId)
+        public IActionResult ThirthStep(List<int> selectedPlaceIds)
         {
-            TempData["Place1Id"] = placeId;
-            return RedirectToAction("ThirdStep");
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> ThirdStep(int subcategoryId = -1, int currentPage = 1)
-        {
-            SetCulture();
-            var categories = await _categoryService.GetAllCategories();
-            var relaxCategory = categories.FirstOrDefault(c => c.Name == "Relax & Sleep");
-
-            var subcategories = await _subCategoryService.GetSubcategoriesByCategoryId(relaxCategory.CategoryId);
-            if (subcategoryId == -1 && subcategories.Any())
+            if (selectedPlaceIds == null || selectedPlaceIds.Count == 0)
             {
-                subcategoryId = subcategories.First().SubcategoryId;
+                ModelState.AddModelError("", "Խնդրում ենք ընտրել առնվազն մեկ տեղ։");
+                return RedirectToAction("SecondStep");
             }
 
-            var places = await _placeService.GetPlacesBySubCategoryId(subcategoryId);
+            // Process the selected places here...
 
-            ViewBag.PagesCount = (int)Math.Ceiling((double)places.Count() / 5);
-            ViewBag.AllSubcategories = subcategories;
-            ViewBag.CurrentSubcategory = subcategories.FirstOrDefault(sc => sc.SubcategoryId == subcategoryId);
-            ViewBag.CurrentPage = currentPage;
-            ViewBag.Places = places.Skip((currentPage - 1) * 5).Take(5).ToList();
-            ViewBag.Categories = categories;
-
-            return View();
+            return RedirectToAction("NextStep"); // or wherever you want to go
         }
+
+        //[HttpGet]
+        //public async Task<IActionResult> ThirdStep(int subcategoryId = -1, int currentPage = 1)
+        //{
+        //    SetCulture();
+        //    var categories = await _categoryService.GetAllCategories();
+        //    var relaxCategory = categories.FirstOrDefault(c => c.Name == "Relax & Sleep");
+
+        //    var subcategories = await _subCategoryService.GetSubcategoriesByCategoryId(relaxCategory.CategoryId);
+        //    if (subcategoryId == -1 && subcategories.Any())
+        //    {
+        //        subcategoryId = subcategories.First().SubcategoryId;
+        //    }
+
+        //    var places = await _placeService.GetPlacesBySubCategoryId(subcategoryId);
+
+        //    ViewBag.PagesCount = (int)Math.Ceiling((double)places.Count() / 5);
+        //    ViewBag.AllSubcategories = subcategories;
+        //    ViewBag.CurrentSubcategory = subcategories.FirstOrDefault(sc => sc.SubcategoryId == subcategoryId);
+        //    ViewBag.CurrentPage = currentPage;
+        //    ViewBag.Places = places.Skip((currentPage - 1) * 5).Take(5).ToList();
+        //    ViewBag.Categories = categories;
+
+        //    return View();
+        //}
 
         [HttpPost]
         public IActionResult ThirdStep(int placeId)
