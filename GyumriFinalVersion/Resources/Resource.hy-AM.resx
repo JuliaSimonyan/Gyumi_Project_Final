@@ -384,4 +384,16 @@
   <data name="WelcomeSubHeadline" xml:space="preserve">
     <value>Քաղաք, որտեղ յուրաքանչյուր փողոցի անկյուն մի պատմություն ունի, և ամեն այցելություն՝ նոր հետք է թողնում։</value>
   </data>
+  <data name="EatAndDrinkDesc" xml:space="preserve">
+    <value>Սրճարաններ՝ բնավորությամբ, ռեստորաններ՝ հոգով, և համեր, որոնք չեք մոռանա։</value>
+  </data>
+  <data name="LiveAndWorkDesc" xml:space="preserve">
+    <value>Տեղափոխվիր այստեղ, աշխատիր հեռավար, բացիր բիզնես կամ պարզապես ապրիր այս քաղաքի առօրյան՝ ինչպես գյումրեցիները։</value>
+  </data>
+  <data name="RelaxAndSleepDesc" xml:space="preserve">
+    <value>Պատմական հյուրատներից մինչև լուռ անկյուններ՝ քո կատարյալ հանգիստը Գյումրիում</value>
+  </data>
+  <data name="SeeAndDoDesc" xml:space="preserve">
+    <value>Անկախ նրանից՝ մեկ օրով եք Գյումրիում, թե մեկ շաբաթով, այստեղ կգտնեք պատմություններ, վայրեր ու մարդկանց, որոնք արժանի են ձեր ժամանակին։</value>
+  </data>
 </root>

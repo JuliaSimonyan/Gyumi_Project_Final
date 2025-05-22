@@ -384,4 +384,16 @@
   <data name="WelcomeSubHeadline" xml:space="preserve">
     <value>A city where every street corner holds a story—and every visit leaves one behind.</value>
   </data>
+  <data name="EatAndDrinkDesc" xml:space="preserve">
+    <value>Cafés with character, restaurants with soul, and flavors you won’t forget.</value>
+  </data>
+  <data name="LiveAndWorkDesc" xml:space="preserve">
+    <value>Move here, work remotely, open a business—or just experience everyday life like a local.</value>
+  </data>
+  <data name="RelaxAndSleepDesc" xml:space="preserve">
+    <value>From historic guesthouses to peaceful hideouts—rest the way Gyumri would want you to.</value>
+  </data>
+  <data name="SeeAndDoDesc" xml:space="preserve">
+    <value>Whether you’re here for a day or a week, you’ll find stories, places, and people worth your time.</value>
+  </data>
 </root>

@@ -1,15 +1,15 @@
 .see-do-section {
-    height: 900px;
+    height: 630px;
     background-color: #1a1a1a;
     color: white;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 .header-image {
     background: rgba(0, 0, 0, 0.311);
     background-size: cover;
     background-position: top;
-    height: 500px;
+    height: 530px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -19,7 +19,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.15);
     z-index: 1;
@@ -62,6 +61,8 @@
 }
 
 .nav-links a {
+    cursor: pointer;
+    z-index: 2;
     color: #ffffff;
     margin: 0 10px;
     font-size: 1rem;
@@ -176,9 +177,8 @@
 }
 
 /* Card Styles */
-.card {
-    width: 100%;
-    height: 300px !important;
+.cardnoarticle {
+    height: 250px !important;
     flex: 0 0 auto; /* Prevent shrinking or wrapping */
     position: relative;
     border: none;
@@ -186,13 +186,13 @@
 }
 
 
-.card img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    filter: brightness(70%);
-    border-radius: 0;
-}
+    .cardnoarticle img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        filter: brightness(70%);
+        border-radius: 0;
+    }
 
 .card-body {
     position: absolute;
@@ -301,4 +301,456 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+/* Article Content - Complete Responsive Typography */
+.article-content {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+    /* Base text styling */
+    .article-content * {
+        box-sizing: border-box;
+    }
+
+    /* Headings - Responsive scaling */
+    .article-content h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 2rem 0 1.5rem 0;
+        color: #1a1a1a;
+    }
+
+    .article-content h2 {
+        font-size: 2.2rem;
+        font-weight: 600;
+        line-height: 1.3;
+        margin: 1.8rem 0 1.2rem 0;
+        color: #1a1a1a;
+    }
+
+    .article-content h3 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 1.3;
+        margin: 1.5rem 0 1rem 0;
+        color: #1a1a1a;
+    }
+
+    .article-content h4 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 1.4;
+        margin: 1.3rem 0 0.8rem 0;
+        color: #1a1a1a;
+    }
+
+    .article-content h5 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        line-height: 1.4;
+        margin: 1.2rem 0 0.7rem 0;
+        color: #1a1a1a;
+    }
+
+    .article-content h6 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        line-height: 1.4;
+        margin: 1rem 0 0.5rem 0;
+        color: #1a1a1a;
+    }
+
+    /* Paragraphs */
+    .article-content p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+        color: #333;
+        text-align: justify;
+        hyphens: auto;
+    }
+
+    /* Spans and inline elements */
+    .article-content span {
+        font-size: inherit;
+        line-height: inherit;
+    }
+
+    .article-content strong,
+    .article-content b {
+        font-weight: 700;
+    }
+
+    .article-content em,
+    .article-content i {
+        font-style: italic;
+    }
+
+    .article-content u {
+        text-decoration: underline;
+    }
+
+    .article-content small {
+        font-size: 0.9em;
+    }
+
+    /* Links */
+    .article-content a {
+        color: #007bff;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 0.2s ease;
+    }
+
+        .article-content a:hover {
+            border-bottom-color: #007bff;
+        }
+
+    /* Lists */
+    .article-content ul,
+    .article-content ol {
+        margin: 1.5rem 0;
+        padding-left: 2rem;
+    }
+
+    .article-content li {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Blockquotes */
+    .article-content blockquote {
+        margin: 2rem 0;
+        padding: 1.5rem 2rem;
+        border-left: 4px solid #007bff;
+        background-color: #f8f9fa;
+        font-style: italic;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+        .article-content blockquote p {
+            margin-bottom: 0;
+        }
+
+    /* Code elements */
+    .article-content code {
+        background-color: #f1f3f4;
+        padding: 0.2rem 0.4rem;
+        border-radius: 3px;
+        font-family: 'Courier New', monospace;
+        font-size: 0.9em;
+    }
+
+    .article-content pre {
+        background-color: #f8f9fa;
+        padding: 1rem;
+        border-radius: 4px;
+        overflow-x: auto;
+        margin: 1.5rem 0;
+    }
+
+        .article-content pre code {
+            background: none;
+            padding: 0;
+        }
+
+    /* Images */
+    .article-content img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 2rem auto;
+        border-radius: 4px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Tables */
+    .article-content table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 2rem 0;
+        overflow-x: auto;
+        display: block;
+        white-space: nowrap;
+    }
+
+    .article-content th,
+    .article-content td {
+        padding: 0.75rem;
+        text-align: left;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .article-content th {
+        font-weight: 600;
+        background-color: #f8f9fa;
+    }
+
+/* Responsive Breakpoints */
+
+/* Large screens (1200px and up) */
+@media (min-width: 1200px) {
+    .article-content {
+        max-width: 900px;
+    }
+
+        .article-content h1 {
+            font-size: 2.8rem;
+        }
+
+        .article-content h2 {
+            font-size: 2.4rem;
+        }
+
+        .article-content h3 {
+            font-size: 2rem;
+        }
+
+        .article-content h4 {
+            font-size: 1.7rem;
+        }
+
+        .article-content h5 {
+            font-size: 1.4rem;
+        }
+
+        .article-content h6 {
+            font-size: 1.2rem;
+        }
+
+        .article-content p {
+            font-size: 1.15rem;
+        }
+
+        .article-content li {
+            font-size: 1.15rem;
+        }
+}
+
+/* Medium screens (768px to 1199px) */
+@media (max-width: 1199px) {
+    .article-content {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+        .article-content h1 {
+            font-size: 2.2rem;
+        }
+
+        .article-content h2 {
+            font-size: 1.9rem;
+        }
+
+        .article-content h3 {
+            font-size: 1.6rem;
+        }
+
+        .article-content h4 {
+            font-size: 1.4rem;
+        }
+
+        .article-content h5 {
+            font-size: 1.2rem;
+        }
+
+        .article-content h6 {
+            font-size: 1.05rem;
+        }
+
+        .article-content p {
+            font-size: 1.05rem;
+        }
+
+        .article-content li {
+            font-size: 1.05rem;
+        }
+}
+
+/* Small screens (576px to 767px) */
+@media (max-width: 767px) {
+    .article-content {
+        padding: 0 15px;
+    }
+
+        .article-content h1 {
+            font-size: 1.8rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .article-content h2 {
+            font-size: 1.6rem;
+            margin: 1.3rem 0 0.8rem 0;
+        }
+
+        .article-content h3 {
+            font-size: 1.4rem;
+            margin: 1.2rem 0 0.7rem 0;
+        }
+
+        .article-content h4 {
+            font-size: 1.25rem;
+            margin: 1rem 0 0.6rem 0;
+        }
+
+        .article-content h5 {
+            font-size: 1.1rem;
+            margin: 0.9rem 0 0.5rem 0;
+        }
+
+        .article-content h6 {
+            font-size: 1rem;
+            margin: 0.8rem 0 0.4rem 0;
+        }
+
+        .article-content p {
+            font-size: 1rem;
+            line-height: 1.7;
+            text-align: left; /* Remove justify on mobile */
+        }
+
+        .article-content li {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .article-content ul,
+        .article-content ol {
+            padding-left: 1.5rem;
+        }
+
+        .article-content blockquote {
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .article-content table {
+            font-size: 0.9rem;
+        }
+
+        .article-content th,
+        .article-content td {
+            padding: 0.5rem;
+        }
+}
+
+/* Extra small screens (575px and below) */
+@media (max-width: 575px) {
+    .article-content {
+        padding: 0 10px;
+    }
+
+        .article-content h1 {
+            font-size: 1.6rem;
+        }
+
+        .article-content h2 {
+            font-size: 1.4rem;
+        }
+
+        .article-content h3 {
+            font-size: 1.25rem;
+        }
+
+        .article-content h4 {
+            font-size: 1.1rem;
+        }
+
+        .article-content h5 {
+            font-size: 1rem;
+        }
+
+        .article-content h6 {
+            font-size: 0.95rem;
+        }
+
+        .article-content p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+        }
+
+        .article-content li {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .article-content blockquote {
+            padding: 0.8rem 1rem;
+            font-size: 1rem;
+        }
+
+        .article-content ul,
+        .article-content ol {
+            padding-left: 1.2rem;
+        }
+
+        .article-content table {
+            font-size: 0.85rem;
+            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+}
+
+/* Very small screens (400px and below) */
+@media (max-width: 400px) {
+    .article-content h1 {
+        font-size: 1.4rem;
+    }
+
+    .article-content h2 {
+        font-size: 1.25rem;
+    }
+
+    .article-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .article-content h4 {
+        font-size: 1rem;
+    }
+
+    .article-content h5 {
+        font-size: 0.95rem;
+    }
+
+    .article-content h6 {
+        font-size: 0.9rem;
+    }
+
+    .article-content p {
+        font-size: 0.9rem;
+    }
+
+    .article-content li {
+        font-size: 0.9rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    .article-content {
+        max-width: none;
+        padding: 0;
+    }
+
+        .article-content h1,
+        .article-content h2,
+        .article-content h3,
+        .article-content h4,
+        .article-content h5,
+        .article-content h6 {
+            page-break-after: avoid;
+        }
+
+        .article-content p {
+            font-size: 12pt;
+            line-height: 1.5;
+        }
 }

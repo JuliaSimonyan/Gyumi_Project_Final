@@ -528,7 +528,7 @@ margin-left: 20px;
     }
 
     .header-image {
-        height: 400px;
+        height: 100%;
         flex-direction: column;
         /* text-align: center; */
     }
@@ -570,12 +570,15 @@ margin-left: 20px;
 
 
     .nav-links {
+        display: flex;
+        justify-content: space-evenly;
         padding: 10px;
     }
 
         .nav-links a {
+            display:inline-block;
+            margin-top:20px;
             font-size: 0.8rem;
-            margin: 0 5px;
         }
 
     .summer-title {

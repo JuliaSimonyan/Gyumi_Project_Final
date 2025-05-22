@@ -115,6 +115,8 @@ namespace GyumriFinalVersion.Controllers
             {
                 var selectedCategory = await _categoryService.GetCategoryById(categoryId);
                 ViewBag.CategoryName = selectedCategory?.Name;
+                ViewBag.CategoryNameArm = selectedCategory?.NameArm;
+                ViewBag.CategoryNameRu = selectedCategory?.NameRu;
             }
             return View();
         }
