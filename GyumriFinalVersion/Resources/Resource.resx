@@ -384,4 +384,34 @@
   <data name="WelcomeSubHeadline" xml:space="preserve">
     <value>A city where every street corner holds a story—and every visit leaves one behind.</value>
   </data>
+  <data name="TravelDuration" xml:space="preserve">
+    <value>Travel duration</value>
+  </data>
+  <data name="Hotel" xml:space="preserve">
+    <value>Hotel</value>
+  </data>
+  <data name="Guesthouse" xml:space="preserve">
+    <value>Guesthouse</value>
+  </data>
+  <data name="Hostel" xml:space="preserve">
+    <value>Hostel</value>
+  </data>
+  <data name="Museum" xml:space="preserve">
+    <value>Museum</value>
+  </data>
+  <data name="Crafts" xml:space="preserve">
+    <value>Crafts</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="Outdoor" xml:space="preserve">
+    <value>Outdoor</value>
+  </data>
+  <data name="Cafe" xml:space="preserve">
+    <value>Cafe</value>
+  </data>
+  <data name="Restaurant" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
 </root>

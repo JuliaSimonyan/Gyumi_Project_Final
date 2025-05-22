@@ -13,5 +13,7 @@ namespace Gyumri.Application.Interfaces
         Task<bool> DeletePlace(int id);
         Task<Place> GetPlaceByArticleId(int? articleId);
         Task<List<PlacesViewModel>> GetPlacesBySubCategoryId(int id);
+        Task<List<PlacesViewModel>> GetPlacesWithPlaceType();
+        Task<List<PlacesViewModel>> GetPlacesByPlaceType(PlaceType placeType);
     }
 }

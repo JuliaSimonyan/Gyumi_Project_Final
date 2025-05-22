@@ -168,5 +168,60 @@ namespace Gyumri.Application.Services
         .Include(p => p.Article)
         .FirstOrDefaultAsync(p => p.ArticleId == articleId);
         }
+
+        public async Task<List<PlacesViewModel>> GetPlacesWithPlaceType()
+        {
+            return await _context.Places
+                .Where(p => p.PlaceType != null)
+                .Select(p => new PlacesViewModel
+                {
+                    Id = p.PlaceId,
+                    PlaceName = p.PlaceName,
+                    PlaceNameArm = p.PlaceNameArm,
+                    PlaceNameRu = p.PlaceNameRu,
+                    Description = p.Description,
+                    DescriptionArm = p.DescriptionArm,
+                    DescriptionRu = p.DescriptionRu,
+                    Photo = p.Photo,
+                    MinPrice = p.MinPrice,
+                    MaxPrice = p.MaxPrice,
+                    Raiting = p.Raiting,
+                    ArticleId = p.ArticleId,
+                    PlaceType = p.PlaceType,
+                    Address = p.Address,
+                    AddressArm = p.AddressArm,
+                    AddressRu = p.AddressRu,
+                    SubcategoryId = p.SubcategoryId
+                })
+                .ToListAsync();
+        }
+        public async Task<List<PlacesViewModel>> GetPlacesByPlaceType(PlaceType placeType)
+        {
+            return await _context.Places
+                .Where(p => p.PlaceType == placeType)
+                .Select(p => new PlacesViewModel
+                {
+                    Id = p.PlaceId,
+                    PlaceName = p.PlaceName,
+                    PlaceNameArm = p.PlaceNameArm,
+                    PlaceNameRu = p.PlaceNameRu,
+                    Description = p.Description,
+                    DescriptionArm = p.DescriptionArm,
+                    DescriptionRu = p.DescriptionRu,
+                    Photo = p.Photo,
+                    MinPrice = p.MinPrice,
+                    MaxPrice = p.MaxPrice,
+                    Raiting = p.Raiting,
+                    ArticleId = p.ArticleId,
+                    PlaceType = p.PlaceType,
+                    Address = p.Address,
+                    AddressArm = p.AddressArm,
+                    AddressRu = p.AddressRu,
+                    SubcategoryId = p.SubcategoryId
+                })
+                .ToListAsync();
+        }
+
+
     }
 }

@@ -314,6 +314,15 @@
   <data name="OtherLinks" xml:space="preserve">
     <value>Другие ссылки</value>
   </data>
+  <data name="AregakBakery" xml:space="preserve">
+    <value>Пекарня и кафе Арегак</value>
+  </data>
+  <data name="BakedwithLove" xml:space="preserve">
+    <value>Испечено с любовью, подано с целью.</value>
+  </data>
+  <data name="StaroftheMonth" xml:space="preserve">
+    <value>Звезда месяца.</value>
+  </data>
   <data name="GGTitle" xml:space="preserve">
     <value> GG Shuttle</value>
   </data>
@@ -340,15 +349,6 @@
   </data>
   <data name="Everyday" xml:space="preserve">
     <value>Каждый день</value>
-  </data>
-  <data name="AregakBakery" xml:space="preserve">
-    <value>Пекарня и кафе Арегак</value>
-  </data>
-  <data name="BakedwithLove" xml:space="preserve">
-    <value>Испечено с любовью, подано с целью.</value>
-  </data>
-  <data name="StaroftheMonth" xml:space="preserve">
-    <value>Звезда месяца.</value>
   </data>
   <data name="Aslamazyan" xml:space="preserve">
     <value>Галерея сестёр Асламазян</value>
@@ -385,5 +385,35 @@
   </data>
   <data name="WelcomeSubHeadline" xml:space="preserve">
     <value>Город, где каждый уголок хранит историю — и каждое посещение оставляет свою.</value>
+  </data>
+  <data name="TravelDuration" xml:space="preserve">
+    <value>Продолжительность поездки</value>
+  </data>
+  <data name="Hotel" xml:space="preserve">
+    <value>Հյուրանոց</value>
+  </data>
+  <data name="Guesthouse" xml:space="preserve">
+    <value>Հյուրատուն</value>
+  </data>
+  <data name="Hostel" xml:space="preserve">
+    <value>Хостел</value>
+  </data>
+  <data name="Museum" xml:space="preserve">
+    <value>Музей</value>
+  </data>
+  <data name="Crafts" xml:space="preserve">
+    <value>Ремесла</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>История</value>
+  </data>
+  <data name="Outdoor" xml:space="preserve">
+    <value>На открытом воздухе</value>
+  </data>
+  <data name="Cafe" xml:space="preserve">
+    <value>Cafe</value>
+  </data>
+  <data name="Restaurant" xml:space="preserve">
+    <value>Ресторан</value>
   </data>
 </root>

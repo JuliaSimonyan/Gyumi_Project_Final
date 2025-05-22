@@ -1,6 +1,5 @@
 ﻿@{
     var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
-    Layout = "~/Views/Shared/_Layout.cshtml";
     var places = ViewBag.Places as List<Gyumri.Common.ViewModel.Place.PlacesViewModel>;
 }
 

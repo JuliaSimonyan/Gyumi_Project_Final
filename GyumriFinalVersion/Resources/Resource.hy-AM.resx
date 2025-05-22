@@ -384,4 +384,34 @@
   <data name="WelcomeSubHeadline" xml:space="preserve">
     <value>Քաղաք, որտեղ յուրաքանչյուր փողոցի անկյուն մի պատմություն ունի, և ամեն այցելություն՝ նոր հետք է թողնում։</value>
   </data>
+  <data name="TravelDuration" xml:space="preserve">
+    <value>Ճամփորդության տևողությունը</value>
+  </data>
+  <data name="Hotel" xml:space="preserve">
+    <value>Отель</value>
+  </data>
+  <data name="Guesthouse" xml:space="preserve">
+    <value>Гостевой дом</value>
+  </data>
+  <data name="Hostel" xml:space="preserve">
+    <value>Հոստել</value>
+  </data>
+  <data name="Museum" xml:space="preserve">
+    <value>Թանգարան</value>
+  </data>
+  <data name="Crafts" xml:space="preserve">
+    <value>Ձեռնարվեստ</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>Պատմություն</value>
+  </data>
+  <data name="Outdoor" xml:space="preserve">
+    <value>Բացօթյա</value>
+  </data>
+  <data name="Cafe" xml:space="preserve">
+    <value>Սրճարան</value>
+  </data>
+  <data name="Restaurant" xml:space="preserve">
+    <value>Ռեստորան</value>
+  </data>
 </root>

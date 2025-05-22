@@ -178,6 +178,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cafe.
+        /// </summary>
+        public static string Cafe {
+            get {
+                return ResourceManager.GetString("Cafe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Central Park Ferris Wheel.
         /// </summary>
         public static string CentralPark {
@@ -219,6 +228,15 @@ namespace GyumriFinalVersion.Resources {
         public static string Contact {
             get {
                 return ResourceManager.GetString("Contact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Crafts.
+        /// </summary>
+        public static string Crafts {
+            get {
+                return ResourceManager.GetString("Crafts", resourceCulture);
             }
         }
         
@@ -430,6 +448,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Guesthouse.
+        /// </summary>
+        public static string Guesthouse {
+            get {
+                return ResourceManager.GetString("Guesthouse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Gyumri.
         /// </summary>
         public static string Gyumri {
@@ -475,11 +502,38 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to History.
+        /// </summary>
+        public static string History {
+            get {
+                return ResourceManager.GetString("History", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
         public static string Home {
             get {
                 return ResourceManager.GetString("Home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hostel.
+        /// </summary>
+        public static string Hostel {
+            get {
+                return ResourceManager.GetString("Hostel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hotel.
+        /// </summary>
+        public static string Hotel {
+            get {
+                return ResourceManager.GetString("Hotel", resourceCulture);
             }
         }
         
@@ -565,6 +619,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Museum.
+        /// </summary>
+        public static string Museum {
+            get {
+                return ResourceManager.GetString("Museum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Next.
         /// </summary>
         public static string Next {
@@ -592,6 +655,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Outdoor.
+        /// </summary>
+        public static string Outdoor {
+            get {
+                return ResourceManager.GetString("Outdoor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Plan a Trip.
         /// </summary>
         public static string PlanATrip {
@@ -615,6 +687,15 @@ namespace GyumriFinalVersion.Resources {
         public static string PrivateCar {
             get {
                 return ResourceManager.GetString("PrivateCar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restaurant.
+        /// </summary>
+        public static string Restaurant {
+            get {
+                return ResourceManager.GetString("Restaurant", resourceCulture);
             }
         }
         
@@ -732,6 +813,15 @@ namespace GyumriFinalVersion.Resources {
         public static string TrainAddress {
             get {
                 return ResourceManager.GetString("TrainAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Travel duration.
+        /// </summary>
+        public static string TravelDuration {
+            get {
+                return ResourceManager.GetString("TravelDuration", resourceCulture);
             }
         }
         
