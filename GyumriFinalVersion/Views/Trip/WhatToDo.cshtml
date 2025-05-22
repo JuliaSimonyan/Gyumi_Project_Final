@@ -5,7 +5,7 @@
 <form method="post" asp-action="WhatToDo" id="placesForm">
     <!-- Filters -->
     <div id="filter-buttons" class="mb-3">
-        @foreach (var item in Util.GetEnumForFirstPage())
+        @foreach (var item in Util.GetEnumForSecondPage())
         {
             var placeTypeStr = item.ToString();
             <button type="button" class="filter-btn btn btn-outline-primary me-2 mb-2" data-type="@placeTypeStr">

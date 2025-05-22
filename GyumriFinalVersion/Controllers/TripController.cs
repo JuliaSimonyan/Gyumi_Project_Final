@@ -132,74 +132,9 @@ namespace GyumriFinalVersion.Controllers
         //}
         [HttpGet]
         public async Task<IActionResult> WhatToDo()
-        {/*await _placeService.GetPlacesWithPlaceType()*/
-            var allPlaces = new List<PlacesViewModel>
-            {
-                new PlacesViewModel
-                {
-                    Id = 1,
-                    PlaceName = "Sunny Hotel",
-                    PlaceNameArm = "Արևոտ Հյուրանոց",
-                    PlaceNameRu = "Санни Отель",
-                    Description = "A cozy hotel in downtown.",
-                    DescriptionArm = "Հարմարավետ հյուրանոց քաղաքի կենտրոնում։",
-                    DescriptionRu = "Уютный отель в центре города.",
-                    Photo = "sunnyhotel.jpg",
-                    MinPrice = 20000,
-                    MaxPrice = 50000,
-                    Raiting = 5,
-                    ArticleId = null,
-                    SubcategoryId = 1,
-                    Address = "123 Main St",
-                    AddressArm = "Հիմնական 123",
-                    AddressRu = "Главная 123",
-                    PlaceType = PlaceType.HOTEL
-                },
-                new PlacesViewModel
-                {
-                    Id = 2,
-                    PlaceName = "Green Hostel",
-                    PlaceNameArm = "Կանաչ Հոսթել",
-                    PlaceNameRu = "Зелёный Хостел",
-                    Description = "Affordable place for backpackers.",
-                    DescriptionArm = "Մատչելի վայր ճանապարհորդների համար։",
-                    DescriptionRu = "Доступное место для путешественников.",
-                    Photo = "greenhostel.jpg",
-                    MinPrice = 8000,
-                    MaxPrice = 15000,
-                    Raiting = 3,
-                    ArticleId = 2,
-                    SubcategoryId = 2,
-                    Address = "456 Backpacker Ave",
-                    AddressArm = "Ուղևորի 456",
-                    AddressRu = "Бэкпекер 456",
-                    PlaceType = PlaceType.HOSTEL
-                },
-                new PlacesViewModel
-                {
-                    Id = 3,
-                    PlaceName = "Family Guesthouse",
-                    PlaceNameArm = "Ընտանեկան Հյուրատուն",
-                    PlaceNameRu = "Семейный Гостевой Дом",
-                    Description = "Perfect for families.",
-                    DescriptionArm = "Իդեալական ընտանեկան հանգստի համար։",
-                    DescriptionRu = "Идеально для семейного отдыха.",
-                    Photo = "familyguesthouse.jpg",
-                    MinPrice = 12000,
-                    MaxPrice = 30000,
-                    Raiting = 4,
-                    ArticleId = null,
-                    SubcategoryId = 3,
-                    Address = "789 Family Rd",
-                    AddressArm = "Ընտանիքի 789",
-                    AddressRu = "Семейная 789",
-                    PlaceType = PlaceType.GUESTHOUSE
-                }
-            };
-
-
+        {
+            var allPlaces = await _placeService.GetPlacesWithPlaceType();
             ViewBag.Places = allPlaces;
-
             return View();
         }
 
@@ -212,7 +147,6 @@ namespace GyumriFinalVersion.Controllers
                 return RedirectToAction("SecondStep");
             }
 
-            // Process the selected places here...
 
             return RedirectToAction("NextStep"); // or wherever you want to go
         }
