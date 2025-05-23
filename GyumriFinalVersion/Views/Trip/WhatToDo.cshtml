@@ -62,7 +62,7 @@
             var placeTypeStr = item.ToString();
             <button type="button" class="filter-btn btn btn-outline-primary me-2 mb-2" data-type="@placeTypeStr">
                 <i class="fa-solid fa-hotel"></i>
-                @Util.GetPlaceTypeNameByEnumType(item)
+                @Util.GetPlaceTypeNameByEnumType(item, currentCulture)
             </button>
         }
     </div>

@@ -41,6 +41,7 @@ namespace GyumriFinalVersion.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
+            tripInfo = new();
             SetCulture();
             ViewBag.Categories = await _categoryService.GetAllCategories();
             return View();
@@ -124,6 +125,7 @@ namespace GyumriFinalVersion.Controllers
         [HttpPost]
         public async Task<IActionResult> WhatToDo(List<int> selectedPlaceIds)
         {
+            selectedPlaceIds = selectedPlaceIds.Distinct().ToList();
 
             if (tripInfo.PlaceWhatToDo == null)
             {
@@ -167,17 +169,17 @@ namespace GyumriFinalVersion.Controllers
         }
 
 
-        [HttpGet]
-        public async Task<IActionResult> ForthStep()
-        {
-            SetCulture();
-            ViewBag.Categories = await _categoryService.GetAllCategories();
-            ViewBag.PlaceWhereToStay = tripInfo.PlaceWhereToStay;
-            ViewBag.PlacesWhatToDo = tripInfo.PlaceWhatToDo;
-            ViewBag.FullInfo = tripInfo;
+        //[HttpGet]
+        //public async Task<IActionResult> ForthStep()
+        //{
+        //    SetCulture();
+        //    ViewBag.Categories = await _categoryService.GetAllCategories();
+        //    ViewBag.PlaceWhereToStay = tripInfo.PlaceWhereToStay;
+        //    ViewBag.PlacesWhatToDo = tripInfo.PlaceWhatToDo;
+        //    ViewBag.FullInfo = tripInfo;
 
-            return View(tripInfo);
-        }
+        //    return View(tripInfo);
+        //}
 
         public async Task<IActionResult> Final()
         {
