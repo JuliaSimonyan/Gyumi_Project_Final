@@ -113,22 +113,43 @@ namespace GyumriFinalVersion.Controllers
         [HttpPost]
         public async Task<IActionResult> WhatToDo(List<int> selectedPlaceIds)
         {
-            if (selectedPlaceIds == null || selectedPlaceIds.Count == 0)
+
+            if (tripInfo.PlaceWhatToDo == null)
             {
-                ModelState.AddModelError("", "Խնդրում ենք ընտրել առնվազն մեկ տեղ։");
-                return View();
+                tripInfo.PlaceWhatToDo = new List<PlacesViewModel>();
             }
+
             foreach (int id in selectedPlaceIds)
             {
-                var p = await _placeService.GetPlaceById(id);
-                tripInfo.PlaceWhatToDo.Add(p);
+                var placeEntity = await _placeService.GetPlaceById(id);
+                if (placeEntity != null)
+                {
+                    // Պահանջվում է վերափոխում Place -> PlacesViewModel
+                    var placeVm = new PlacesViewModel
+                    {
+                        Id = placeEntity.Id,
+                        PlaceName = placeEntity.PlaceName,
+                        PlaceNameArm = placeEntity.PlaceNameArm,
+                        PlaceNameRu = placeEntity.PlaceNameRu,
+                        Description = placeEntity.Description,
+                        DescriptionArm = placeEntity.DescriptionArm,
+                        DescriptionRu = placeEntity.DescriptionRu,
+                        // ավելացրու այլ հատկությունները եթե կան
+                    };
+                    tripInfo.PlaceWhatToDo.Add(placeVm);
+                }
             }
             return RedirectToAction("ForthStep"); // or wherever you want to go
+
         }
+
 
         [HttpGet]
         public async Task<IActionResult> ForthStep()
         {
+
+            ViewBag.PlaceWhereToStay = tripInfo.PlaceWhereToStay;
+            ViewBag.PlacesWhatToDo = tripInfo.PlaceWhatToDo;
             ViewBag.FullInfo = tripInfo;
             //var currentCulture = Request.Cookies["UserCulture"] ?? "en";
             //var cultureInfo = new System.Globalization.CultureInfo(currentCulture);
@@ -150,7 +171,7 @@ namespace GyumriFinalVersion.Controllers
             //ViewBag.Place1 = place1;
             //ViewBag.Place2 = place2;
 
-            return View();
+            return View(tripInfo);
         }
 
         public async Task<IActionResult> Final()

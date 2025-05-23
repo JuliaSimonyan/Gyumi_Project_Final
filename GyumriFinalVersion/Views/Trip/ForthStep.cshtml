@@ -1,4 +1,6 @@
-﻿@{
+﻿@model GyumriFinalVersion.Models.TripInputInfo
+
+@{
     ViewData["Title"] = "Where to Stay";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -109,22 +111,22 @@
                         <div class="item-details">
                             @if (ViewBag.CurrentCulture == "ru-RU")
                             {
-                                <h3>@ViewBag.FullInfo.PlaceWhereToStay?.NameRu</h3>
+                                <h3>@ViewBag.FullInfo.PlaceWhereToStay?.PlaceNameRu</h3>
                             }
                             else if (ViewBag.CurrentCulture == "hy-AM")
                             {
-                                <h3>@ViewBag.FullInfo.PlaceWhereToStay?.NameArm</h3>
+                                <h3>@ViewBag.FullInfo.PlaceWhereToStay?.PlaceNameArm</h3>
                             }
                             else
                             {
-                                <h3>@ViewBag.FullInfo.PlaceWhereToStay?.Name</h3>
+                                <h3>@ViewBag.FullInfo.PlaceWhereToStay?.PlaceName</h3>
                             }
                             <div class="item-address" style="color:#000;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                     <circle cx="12" cy="10" r="3"></circle>
                                 </svg>
-                                @ViewBag.FullInfo.PlaceWhereToStay?.Name @* TODO:: get address from backend *@
+                                @ViewBag.FullInfo.PlaceWhereToStay?.PlaceName @* TODO:: get address from backend *@
                             </div>
                         </div>
                     </div>
@@ -143,6 +145,23 @@
                 </div>
             </div>
 
+            <h2>Your Trip Summary</h2>
+
+            <h3>Where to Stay</h3>
+            @if (ViewBag.FullInfo?.PlaceWhatToDo != null && ((List<Gyumri.Common.ViewModel.Place.PlacesViewModel>)ViewBag.FullInfo.PlaceWhatToDo).Any())
+            {
+                <ul>
+                    @foreach (var place in (List<Gyumri.Common.ViewModel.Place.PlacesViewModel>)ViewBag.FullInfo.PlaceWhatToDo)
+                    {
+                        <li>@place.PlaceName</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>No places selected to do.</p>
+            }
+
             <div class="guide-section">
                 <h2>@AppRes.WhatToDo</h2>
                 <div class="guide-item">
@@ -153,16 +172,16 @@
                         <div class="item-details">
                             @if (ViewBag.CurrentCulture == "ru-RU")
                             {
-                                        <h3>@ViewBag.FullInfo.PlaceWhatToDo?.NameRu</h3>
+                                        <h3>@ViewBag.FullInfo.PlaceWhatToDo?.PlaceNameRu</h3>
                                
                             }
                             else if (ViewBag.CurrentCulture == "hy-AM")
                             {
-                                    <h3>@ViewBag.FullInfo.PlaceWhatToDo?.NameArm</h3>
+                                    <h3>@ViewBag.FullInfo.PlaceWhatToDo?.PlaceNameArm</h3>
                             }
                             else
                             {
-                                        <h3>@ViewBag.FullInfo.PlaceWhatToDo?.Name</h3>
+                                        <h3>@ViewBag.FullInfo.PlaceWhatToDo?.PlaceName</h3>
                             }
                             <div class="item-address" style="color:#000;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
