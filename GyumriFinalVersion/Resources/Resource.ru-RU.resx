@@ -234,7 +234,7 @@
 </value>
   </data>
   <data name="Adults" xml:space="preserve">
-    <value>Մեծահասակներ</value>
+    <value>Взрослые</value>
   </data>
   <data name="GettingHere" xml:space="preserve">
     <value>Далее: Как добраться</value>
@@ -411,7 +411,7 @@
     <value>На открытом воздухе</value>
   </data>
   <data name="Cafe" xml:space="preserve">
-    <value>Cafe</value>
+    <value>Кафе</value>
   </data>
   <data name="Restaurant" xml:space="preserve">
     <value>Ресторан</value>
@@ -424,5 +424,8 @@
   </data>
   <data name="Plan" xml:space="preserve">
     <value>План</value>
+  </data>
+  <data name="SendEmail" xml:space="preserve">
+    <value>Отправить электронное письмо</value>
   </data>
 </root>

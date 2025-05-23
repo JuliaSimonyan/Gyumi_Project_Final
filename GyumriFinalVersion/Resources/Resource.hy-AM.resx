@@ -423,4 +423,7 @@
   <data name="Plan" xml:space="preserve">
     <value>Ծրագիր</value>
   </data>
+  <data name="SendEmail" xml:space="preserve">
+    <value>Ուղարկել էլ. նամակ</value>
+  </data>
 </root>
