@@ -62,13 +62,21 @@
                             </svg>
                         </div>
                         <div class="item-details">
-                            <h3 style="color:#000;">@ViewBag.Transport</h3>
+                            <h3 style="color:#000;">@ViewBag.FullInfo.TransportName</h3>
                             <div class="item-time">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="12" cy="12" r="10"></circle>
                                     <polyline points="12 6 12 12 16 14"></polyline>
                                 </svg>
-                                90 @AppRes.min
+                                @if (ViewBag.FullInfo.TimePeriod == null)
+                                {
+                                    <span>90 @AppRes.min</span>
+                                }
+                                else
+                                {
+                                    @($"{ViewBag.FullInfo.TimePeriod} {AppRes.min}")
+                                }
+                                
                             </div>
                         </div>
                     </div>
@@ -78,7 +86,14 @@
                             <path d="M12 8v8"></path>
                             <path d="M8 12h8"></path>
                         </svg>
-                        12,000 (֏) AMD
+                        @if (ViewBag.FullInfo.TransportAmount == null)
+                        {
+                            <span>12,000 AMD</span>
+                        }
+                        else
+                        {
+                            @ViewBag.FullInfo.TransportAmount
+                        }
                         @* <button class="change-btn">Change</button> *@
                     </div>
                 </div>
@@ -94,22 +109,22 @@
                         <div class="item-details">
                             @if (ViewBag.CurrentCulture == "ru-RU")
                             {
-                                <h3>@ViewBag.Place1?.NameRu</h3>
+                                <h3>@ViewBag.FullInfo.PlaceWhereToStay?.NameRu</h3>
                             }
                             else if (ViewBag.CurrentCulture == "hy-AM")
                             {
-                                <h3>@ViewBag.Place1?.NameArm</h3>
+                                <h3>@ViewBag.FullInfo.PlaceWhereToStay?.NameArm</h3>
                             }
                             else
                             {
-                                <h3>@ViewBag.Place1?.Name</h3>
+                                <h3>@ViewBag.FullInfo.PlaceWhereToStay?.Name</h3>
                             }
                             <div class="item-address" style="color:#000;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                     <circle cx="12" cy="10" r="3"></circle>
                                 </svg>
-                                @ViewBag.Place1?.Name @* TODO:: get address from backend *@
+                                @ViewBag.FullInfo.PlaceWhereToStay?.Name @* TODO:: get address from backend *@
                             </div>
                         </div>
                     </div>
@@ -119,7 +134,7 @@
                             <path d="M12 8v8"></path>
                             <path d="M8 12h8"></path>
                         </svg>
-                        @(ViewBag.Place1?.MinPrice) - @(ViewBag.Place1?.MAxPrice) (֏) AMD / @AppRes.night
+                        @(ViewBag.FullInfo.PlaceWhereToStay?.MinPrice) - @(ViewBag.FullInfo.PlaceWhereToStay?.MaxPrice) AMD / @AppRes.night
                         @* <div class="action-buttons">
                             <button class="change-btn">Change</button>
                             <button class="remove-btn">×</button>
@@ -136,17 +151,18 @@
                             <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-kUJhL8uD96j8xGMUGnXmdJFprk4qId.png" alt="Dzitoghtsyan Museum">
                         </div>
                         <div class="item-details">
-                            <@if (ViewBag.CurrentCulture == "ru-RU")
+                            @if (ViewBag.CurrentCulture == "ru-RU")
                             {
-                                <h3>@ViewBag.Place2?.NameRu</h3>
+                                        <h3>@ViewBag.FullInfo.PlaceWhatToDo?.NameRu</h3>
+                               
                             }
                             else if (ViewBag.CurrentCulture == "hy-AM")
                             {
-                                <h3>@ViewBag.Place2?.NameArm</h3>
+                                    <h3>@ViewBag.FullInfo.PlaceWhatToDo?.NameArm</h3>
                             }
                             else
                             {
-                                <h3>@ViewBag.Place2?.Name</h3>
+                                        <h3>@ViewBag.FullInfo.PlaceWhatToDo?.Name</h3>
                             }
                             <div class="item-address" style="color:#000;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -154,6 +170,21 @@
                                     <circle cx="12" cy="10" r="3"></circle>
                                 </svg>
                                 47 Haghtanaki Avenue, Gyumri@* TODO:: get address from backend *@
+                                ViewBag.FullInfo.PlaceWhatToDo.Address
+
+                                @if (ViewBag.CurrentCulture == "ru-RU")
+                                {
+                                    @ViewBag.FullInfo.PlaceWhatToDo?.AddressRu
+
+                                }
+                                else if (ViewBag.CurrentCulture == "hy-AM")
+                                {
+                                    @ViewBag.FullInfo.PlaceWhatToDo?.AddressArm
+                                }
+                                else
+                                {
+                                    @ViewBag.FullInfo.PlaceWhatToDo?.Address
+                                }
                             </div>
                         </div>
                     </div>
@@ -163,7 +194,7 @@
                             <path d="M12 8v8"></path>
                             <path d="M8 12h8"></path>
                         </svg>
-                        @(ViewBag.Place2?.MinPrice) - @(ViewBag.Place2?.MAxPrice) (֏) AMD
+                        @(ViewBag.FullInfo.PlaceWhatToDo?.MinPrice) - @(ViewBag.FullInfo.PlaceWhatToDo?.MAxPrice) AMD
                         <div class="action-buttons">
                             @* <button class="change-btn">Change</button>
                             <button class="remove-btn">×</button> *@
