@@ -116,6 +116,12 @@ namespace Gyumri.Application.Services
         {
             var defaultCategories = new List<Category>
             {
+                 new Category()
+    {
+        Name = "Home",         
+        NameArm = "Գլխավոր",
+        NameRu = "Главная",
+    },
                 new Category()
                 {
                     Name = "See & Do",
