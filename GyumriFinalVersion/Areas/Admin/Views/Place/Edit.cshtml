@@ -1,4 +1,6 @@
 ﻿@model Gyumri.Common.ViewModel.Place.AddEditPlaceViewModel
+@using Gyumri.Data.Models
+
 @{
     ViewData["Title"] = "Edit Place";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
@@ -75,6 +77,18 @@
         <input asp-for="Raiting" type="number" value="@Model.Raiting" class="form-control" />
         <span asp-validation-for="Raiting" class="text-danger"></span>
     </div>
+    <div class="form-group">
+        <label asp-for="PlaceType" class="control-label">Place Type</label>
+        <select asp-for="PlaceType" class="form-control" required>
+            <option value="">Select Place Type (not optional)</option>
+            @foreach (PlaceType placeType in Enum.GetValues(typeof(PlaceType)))
+            {
+                <option value="@placeType" @(placeType == Model.PlaceType ? "selected" : "")>@placeType</option>
+            }
+        </select>
+        <span asp-validation-for="PlaceType" class="text-danger"></span>
+    </div>
+
     <div class="form-group">
         <label asp-for="ArticleId">Article</label>
         <select class="form-control" class="form-control" name="ArticleId">

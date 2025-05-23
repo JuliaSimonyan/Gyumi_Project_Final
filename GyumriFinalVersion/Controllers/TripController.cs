@@ -85,6 +85,8 @@ namespace GyumriFinalVersion.Controllers
 
             var Places = await _placeService.GetPlacesByPlaceType(selectedPlaceType);
 
+            Console.WriteLine($"Selected Place Type: {selectedPlaceType}");
+
             ViewBag.PagesCount = (int)Math.Ceiling((double)Places.Count() / 5);
             ViewBag.CurrentPlaceType = selectedPlaceType;
             ViewBag.Places = Places.Skip((currentPage - 1) * 5).Take(5).ToList();

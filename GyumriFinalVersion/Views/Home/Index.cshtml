@@ -181,22 +181,29 @@
                     <p class="section-title"><b class="fw-bold">@AppRes.LookingForMore </b>@AppRes.DiveDeeperIntoGyumrisHiddenGems</p>
                     <p class="section-subtitle">@AppRes.LookingForPartTextt</p>
                 <div class="scroll-container" id="scrollContainer1">
+                        @if (places != null)
+                        {
+                            @foreach (var item in ViewBag.Places)
+                            {
+                                <a asp-controller="Home" asp-action="Articles" asp-route-articleId="@item.ArticleId">
+                                    <div class="card">
+                                        <img src="~/Images/places/@item.Photo" class="card-img-top" alt="Gyumri Drama Theatre">
 
-                    @foreach (var item in ViewBag.Places)
-                    {
-                        <a asp-controller="Home" asp-action="Articles" asp-route-articleId="@item.ArticleId">
-                            <div class="card">
-                                <img src="~/Images/places/@item.Photo" class="card-img-top" alt="Gyumri Drama Theatre">
-
-                                <div class="card-overlay">
-                                    <div>
-                                        <h2 class="card-title">@item.PlaceName</h2>
-                                        <p class="card-text">@item.Description</p>
+                                        <div class="card-overlay">
+                                            <div>
+                                                <h2 class="card-title">@item.PlaceName</h2>
+                                                <p class="card-text">@item.Description</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </a>
-                    }
+                                </a>
+                            }
+
+                        }
+                        else
+                        {
+                            <p>No places found.</p>
+                        }
 
                 </div>
                 </div>
