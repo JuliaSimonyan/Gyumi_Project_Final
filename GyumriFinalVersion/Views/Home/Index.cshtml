@@ -181,7 +181,11 @@
                     <p class="section-title"><b class="fw-bold">@AppRes.LookingForMore </b>@AppRes.DiveDeeperIntoGyumrisHiddenGems</p>
                     <p class="section-subtitle">@AppRes.LookingForPartTextt</p>
                 <div class="scroll-container" id="scrollContainer1">
+<<<<<<< Updated upstream
                         @if (places != null)
+=======
+                        @if (ViewBag.Places != null)
+>>>>>>> Stashed changes
                         {
                             @foreach (var item in ViewBag.Places)
                             {
@@ -202,7 +206,11 @@
                         }
                         else
                         {
+<<<<<<< Updated upstream
                             <p>No places found.</p>
+=======
+                            <p>No places available.</p>
+>>>>>>> Stashed changes
                         }
 
                 </div>
