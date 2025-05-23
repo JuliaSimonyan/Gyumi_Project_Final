@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,125 +25,182 @@
 
                     </div>
                     <div class="address">
-                        <p>Vardanants str. 1</p>
-                        <p>Gyumri, Shirak Marz, RA</p>
+                        <p>@AppRes.AddressGyumri</p>
+                        <p>@AppRes.AddressGyumri2</p>
                     </div>
                 </div>
 
                 <div class="plan-title">
-                    <h1>Trip to Gyumri</h1>
-                    <p>Plan</p>
+                    <h1>@AppRes.TripToGyumri</h1>
+                    <p>@AppRes.Plan</p>
                 </div>
 
                 <div class="plan-details">
                     <div class="detail-item">
                         <i class="far fa-calendar"></i>
-                        <span>Mar 19 - Mar 21</span>
+                        <span>@ViewBag.FullInfo.Date</span>
                     </div>
                     <div class="detail-item">
                         <i class="fas fa-user"></i>
-                        <span>2 Adults</span>
+                        <span>@ViewBag.FullInfo.AdultCount</span>
                     </div>
                     <div class="detail-item">
                         <i class="fas fa-child"></i>
-                        <span>2 Children</span>
+                        <span>@ViewBag.FullInfo.ChildrenCount</span>
                     </div>
                 </div>
 
                 <div class="plan-section">
-                    <h2>Getting to Gyumri</h2>
+                    <h2>@AppRes.GettingtoGyumri</h2>
                     <div class="section-item">
                         <div class="item-icon">
                             <i class="fas fa-taxi"></i>
                         </div>
-                        <div class="item-name">GG Taxi</div>
+                        <div class="item-name">@ViewBag.FullInfo.TransportName</div>
                         <div class="item-info">
-                            <span>90 min</span>
+                            <span>@($"{ViewBag.FullInfo.TimePeriod} {AppRes.min}")</span>
                             <i class="far fa-clock"></i>
                         </div>
                     </div>
                 </div>
 
                 <div class="plan-section">
-                    <h2>Where to Stay</h2>
+                    <h2>@AppRes.WheretoStay</h2>
                     <div class="section-item">
                         <div class="item-icon">
                             <i class="fas fa-hotel"></i>
                         </div>
-                        <div class="item-name">Berlin Art Hotel</div>
+                        <div class="item-name">
+                            @if (ViewBag.CurrentCulture == "ru-RU")
+                            {
+                                @ViewBag.FullInfo.PlaceWhereToStay?.PlaceNameRu
+                            }
+                            else if (ViewBag.CurrentCulture == "hy-AM")
+                            {
+                                @ViewBag.FullInfo.PlaceWhereToStay?.PlaceNameArm
+                            }
+                            else
+                            {
+                                @ViewBag.FullInfo.PlaceWhereToStay?.PlaceName
+                            }
+                        </div>
                         <div class="item-info">
-                            <span>25 Haghtanaki Avenue, Gyumri</span>
+                            @if (ViewBag.CurrentCulture == "ru-RU")
+                            {
+                                <span>@ViewBag.FullInfo.PlaceWhereToStay?.AddressRu</span>
+                            }
+                            else if (ViewBag.CurrentCulture == "hy-AM")
+                            {
+                                <span>@ViewBag.FullInfo.PlaceWhereToStay?.AddressArm</span>
+                            }
+                            else
+                            {
+                                <span>@ViewBag.FullInfo.PlaceWhereToStay?.Address</span>
+                            }
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                     </div>
                 </div>
 
                 <div class="plan-section">
-                    <h2>What to Do</h2>
-                    <div class="section-item">
-                        <div class="item-icon">
-                            <i class="fas fa-coffee"></i>
-                        </div>
-                        <div class="item-name">Aregak Bakery & Café</div>
-                        <div class="item-info">
-                            <span>Abovyan st. 242, Gyumri</span>
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                    </div>
+                    <h2>@AppRes.WhatToDo</h2>
 
-                    <div class="section-item">
-                        <div class="item-icon">
-                            <i class="fas fa-landmark"></i>
-                        </div>
-                        <div class="item-name">Dzitoghtsyan Museum</div>
-                        <div class="item-info">
-                            <span>47 Haghtanaki Avenue, Gyumri</span>
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                    </div>
 
-                    <div class="section-item">
-                        <div class="item-icon">
-                            <i class="fas fa-utensils"></i>
+                    @foreach (var item in ViewBag.FullInfo.PlaceWhatToDo)
+                    {
+                        <div class="section-item">
+                            <div class="item-icon">
+                                <i class="fas fa-coffee"></i>
+                            </div>
+                            <div class="item-name">
+                                @if (ViewBag.CurrentCulture == "ru-RU")
+                                {
+                                    <h3 style="color:#000;">@item.PlaceNameRu</h3>
+
+                                }
+                                else if (ViewBag.CurrentCulture == "hy-AM")
+                                {
+                                    <h3 style="color:#000;">@item.PlaceNameArm</h3>
+                                }
+                                else
+                                {
+                                    <h3 style="color:#000;">@item.PlaceName</h3>
+                                }
+                            </div>
+                            <div class="item-info">
+                                <span>
+                                    @if (ViewBag.CurrentCulture == "ru-RU")
+                                    {
+                                        @item.AddressRu
+
+                                    }
+                                    else if (ViewBag.CurrentCulture == "hy-AM")
+                                    {
+                                        @item.AddressArm
+                                    }
+                                    else
+                                    {
+                                        @item.Address
+                                    }
+                                </span>
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
                         </div>
-                        <div class="item-name">Gwoog Gastrohouse</div>
-                        <div class="item-info">
-                            <span>11/3 Tigran Mets Avenue, Gyumri</span>
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                    </div>
+                    }
+
                 </div>
             </div>
 
             <div>
-                <form asp-controller="Trip" asp-action="SendWelcomeEmail" class="action-buttons" method="post">
+                <div class="action-buttons" method="post">
+                    <input type="email" name="email" class="form-control w-100" required />
+
                     <button class="btn btn-back" id="backBtn">
                         <i class="fas fa-arrow-left"></i>
                         Back
                     </button>
-                    <input type="email" name="email" class="form-control w-100" required style="width: 20% !important" /><br></br>
-
-                    
                     <button class="btn btn-download" id="downloadBtn">
                         <i class="fas fa-file-pdf"></i>
                         Download PDF
+            <div>
+                <form asp-controller="Trip" asp-action="SendWelcomeEmail" class="action-buttons" method="post">
+                    <input type="email" name="email" class="form-control" />
+                    <button class="btn btn-email" id="emailBtn" type="submit">
+                        <i class="fas fa-envelope"></i>
+                        @AppRes.SendEmail
                     </button>
-                    @* <button class="btn btn-email" id="emailBtn">
-                    <i class="fas fa-envelope"></i>
-                    Send via Email
-                    </button> *@
-                    <button class="btn btn-email" id="emailBtn" type="submit">Ուղարկել նամակ</button>
+                    <form asp-action="SendWelcomeEmail" asp-controller="Trip">
+@*                         <button class="btn btn-email" id="emailBtn">
+                            <i class="fas fa-envelope"></i>
+                            Send via Email
+                        </button> *@
+                        <button class="btn btn-email" id="emailBtn" type="submit">
+                            <i class="fas fa-envelope"></i>
+                            Ուղարկել նամակ
+                        </button>
+                    </form>
 
+
+                    @* 
                     <button class="btn btn-share" id="shareBtn">
                         <i class="fas fa-share-alt"></i>
                         Share
-                    </button>
-
+                    </button> *@
                 </form>
+                <button class="btn btn-back" id="backBtn">
+                    <i class="fas fa-arrow-left"></i>
+                    @AppRes.Back
+                </button>
+                <button class="btn btn-download" id="downloadBtn">
+                    <i class="fas fa-file-pdf"></i>
+                    Download PDF
+                </button>
+
+                </div>
             </div>
 
             <!-- Share Modal -->
-            <div class="modal" id="shareModal">
+            @* <div class="modal mb-4" id="shareModal">
                 <div class="modal-content">
                     <span class="close-modal">&times;</span>
                     <h3>Share Your Trip Plan</h3>
@@ -159,7 +216,7 @@
                     </div>
 
                 </div>
-            </div>
+            </div> *@
         </div>
 
 </body>
