@@ -1,0 +1,254 @@
+﻿@model GyumriFinalVersion.Models.TripInputInfo
+@{
+    ViewData["Title"] = @AppRes.LetsPlanYourTrip;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
+}
+<link rel="stylesheet" href="~/Content/style.css">
+<link rel="stylesheet" href="~/Content/css/step4.css">
+
+
+<div class="main-content" style="background-color:white" ;>
+    <!-- Progress Steps -->
+    <div class="progress-steps">
+        <div class="step actiive">
+            <div class="step-icon">
+                <i class="fa-solid fa-car"></i>
+            </div>
+            <div class="step-text"> @AppRes.GettingToAround </div>
+        </div>
+        <div class="step-divider"></div>
+        <div class="step actiive">
+            <div class="step-icon">
+                <i class="fa-solid fa-bed"></i>
+            </div>
+            <div class="step-text"> @AppRes.WheretoStay </div>
+        </div>
+        <div class="step-divider"></div>
+        <div class="step actiive">
+            <div class="step-icon">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="step-text">@AppRes.WhatToDo</div>
+        </div>
+        <div class="step-divider"></div>
+        <div class="step actiive">
+            <div class="step-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="step-text">@AppRes.Finalizing</div>
+        </div>
+    </div>
+
+    <!-- Travel Guide Section -->
+    <section class="travel-guide">
+        <div class="guide-section">
+            <h2>@AppRes.GettingtoGyumri</h2>
+            <div class="guide-item">
+                <div class="item-content">
+                    <div class="item-icon">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
+                    <div class="item-details">
+                        <h3 style="color:#000;">@ViewBag.FullInfo.TransportName</h3>
+                        <div class="item-time">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            @if (ViewBag.FullInfo.TimePeriod == null)
+                            {
+                                <span>90 @AppRes.min</span>
+                            }
+                            else
+                            {
+                                @($"{ViewBag.FullInfo.TimePeriod} {AppRes.min}")
+                            }
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item-price">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                        <path d="M12 8v8"></path>
+                        <path d="M8 12h8"></path>
+                    </svg>
+                    @if (ViewBag.FullInfo.TransportAmount == null)
+                    {
+                        <span>12,000 AMD</span>
+                    }
+                    else
+                    {
+                        @ViewBag.FullInfo.TransportAmount
+                    }
+                    @* <button class="change-btn">Change</button> *@
+                </div>
+            </div>
+        </div>
+
+        <div class="guide-section">
+            <h2>@AppRes.WheretoStay</h2>
+            <div class="guide-item">
+                <div class="item-content">
+                    <div class="item-thumbnail">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-kUJhL8uD96j8xGMUGnXmdJFprk4qId.png" alt="Berlin Art Hotel">
+                    </div>
+                    <div class="item-details">
+                        @if (ViewBag.CurrentCulture == "ru-RU")
+                        {
+                            <h3>@ViewBag.FullInfo.PlaceWhereToStay?.PlaceNameRu</h3>
+                        }
+                        else if (ViewBag.CurrentCulture == "hy-AM")
+                        {
+                            <h3>@ViewBag.FullInfo.PlaceWhereToStay?.PlaceNameArm</h3>
+                        }
+                        else
+                        {
+                            <h3>@ViewBag.FullInfo.PlaceWhereToStay?.PlaceName</h3>
+                        }
+                        <div class="item-address" style="color:#000;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            @ViewBag.FullInfo.PlaceWhereToStay?.PlaceName @* TODO:: get address from backend *@
+                        </div>
+                    </div>
+                </div>
+                <div class="item-price" style="color:#000;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                        <path d="M12 8v8"></path>
+                        <path d="M8 12h8"></path>
+                    </svg>
+                    @(ViewBag.FullInfo.PlaceWhereToStay?.MinPrice) - @(ViewBag.FullInfo.PlaceWhereToStay?.MaxPrice) AMD / @AppRes.night
+                    @* <div class="action-buttons">
+                            <button class="change-btn">Change</button>
+                            <button class="remove-btn">×</button>
+                        </div> *@
+                </div>
+            </div>
+        </div>
+       
+        <div class="guide-section">
+
+            @if (ViewBag.FullInfo.PlaceWhatToDo != null)
+            {
+                <h2>@AppRes.WhatToDo</h2>
+                @foreach (var item in ViewBag.FullInfo.PlaceWhatToDo)
+                {
+                    <div class="guide-item">
+                        <div class="item-content">
+                            <div class="item-thumbnail">
+                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-kUJhL8uD96j8xGMUGnXmdJFprk4qId.png" alt="Dzitoghtsyan Museum">
+                            </div>
+                            <div class="item-details">
+                                @if (ViewBag.CurrentCulture == "ru-RU")
+                                {
+                                    <h3>@item.PlaceNameRu</h3>
+
+                                }
+                                else if (ViewBag.CurrentCulture == "hy-AM")
+                                {
+                                    <h3>@item.PlaceNameArm</h3>
+                                }
+                                else
+                                {
+                                    <h3>@item.PlaceName</h3>
+                                }
+                                <div class="item-address" style="color:#000;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    @*47 Haghtanaki Avenue, Gyumri TODO:: get address from backend *@
+                                    @item.Address
+
+                                    @if (ViewBag.CurrentCulture == "ru-RU")
+                                    {
+                                        @item.AddressRu
+
+                                    }
+                                    else if (ViewBag.CurrentCulture == "hy-AM")
+                                    {
+                                        @item.AddressArm
+                                    }
+                                    else
+                                    {
+                                        @item.Address
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-price">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                <path d="M12 8v8"></path>
+                                <path d="M8 12h8"></path>
+                            </svg>
+                            @(item.MinPrice) - @(item?.MaxPrice) AMD
+                            <div class="action-buttons">
+                                @* <button class="change-btn">Change</button>
+                            <button class="remove-btn">×</button> *@
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </section>
+
+    <!-- Pagination -->
+    <div class="pagination-container">
+        <div class="navigation-buttons">
+            <a href=@Url.Action("ThirdStep", "Trip") class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+                @AppRes.Back
+            </a>
+            <a href=@Url.Action("Final", "Trip") class="next-btn">
+                @AppRes.Complete
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/e8c2e1c09c.js" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        const accommodationRadios = document.querySelectorAll('input[name="accommodation"]');
+        accommodationRadios.forEach(radio => {
+            radio.addEventListener('change', function () {
+                document.querySelectorAll('.accommodation-item').forEach(item => {
+                    item.classList.remove('selected');
+                });
+
+                if (this.checked) {
+                    this.closest('.accommodation-item').classList.add('selected');
+                }
+            });
+        });
+
+        document.querySelector('.accommodation-item').classList.add('selected');
+
+        const paginationItems = document.querySelectorAll('.page-item');
+        paginationItems.forEach(item => {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                paginationItems.forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    });
+</script>

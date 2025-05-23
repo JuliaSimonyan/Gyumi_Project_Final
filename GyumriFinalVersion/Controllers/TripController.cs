@@ -75,6 +75,9 @@ namespace GyumriFinalVersion.Controllers
         public IActionResult FirstStep(string transport)
         {
             TempData["Transport"] = transport;
+            tripInfo.TransportName = transport;
+            tripInfo.TimePeriod = "90";
+            tripInfo.TransportAmount = "12.000";
             return RedirectToAction("WheretoStay");
         }
 
@@ -139,8 +142,18 @@ namespace GyumriFinalVersion.Controllers
                     tripInfo.PlaceWhatToDo.Add(placeVm);
                 }
             }
-            return RedirectToAction("ForthStep"); // or wherever you want to go
+            return RedirectToAction("LastStep"); // or wherever you want to go
 
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> LastStep()
+        {
+            ViewBag.PlaceWhereToStay = tripInfo.PlaceWhereToStay;
+            ViewBag.PlacesWhatToDo = tripInfo.PlaceWhatToDo;
+            ViewBag.FullInfo = tripInfo;
+
+            return View(tripInfo);
         }
 
 
@@ -151,25 +164,6 @@ namespace GyumriFinalVersion.Controllers
             ViewBag.PlaceWhereToStay = tripInfo.PlaceWhereToStay;
             ViewBag.PlacesWhatToDo = tripInfo.PlaceWhatToDo;
             ViewBag.FullInfo = tripInfo;
-            //var currentCulture = Request.Cookies["UserCulture"] ?? "en";
-            //var cultureInfo = new System.Globalization.CultureInfo(currentCulture);
-            //Thread.CurrentThread.CurrentCulture = cultureInfo;
-            //Thread.CurrentThread.CurrentUICulture = cultureInfo;
-            //ViewBag.Categories = await _categoryService.GetAllCategories();
-
-            //if (!TempData.TryGetValue("Place1Id", out var place1IdObj) || !TempData.TryGetValue("Place2Id", out var place2IdObj))
-            //{
-            //    return RedirectToAction("Index");
-            //}
-
-            //int place1Id = Convert.ToInt32(place1IdObj);
-            //int place2Id = Convert.ToInt32(place2IdObj);
-
-            //var place1 = await _placeService.GetPlaceById(place1Id);
-            //var place2 = await _placeService.GetPlaceById(place2Id);
-            //ViewBag.CurrentCulture = string.IsNullOrEmpty(currentCulture) ? "en" : currentCulture;
-            //ViewBag.Place1 = place1;
-            //ViewBag.Place2 = place2;
 
             return View(tripInfo);
         }

@@ -1,9 +1,5 @@
 ﻿@model GyumriFinalVersion.Models.TripInputInfo
 
-@{
-    ViewData["Title"] = "Where to Stay";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,21 +19,21 @@
     <div class="main-content" style="background-color:white" ;>
         <!-- Progress Steps -->
         <div class="progress-steps">
-            <div class="step">
+            <div class="step actiive">
                 <div class="step-icon">
                     <i class="fa-solid fa-car"></i>
                 </div>
                 <div class="step-text"> @AppRes.GettingToAround </div>
             </div>
             <div class="step-divider"></div>
-            <div class="step">
+            <div class="step actiive">
                 <div class="step-icon">
                     <i class="fa-solid fa-bed"></i>
                 </div>
                 <div class="step-text"> @AppRes.WheretoStay </div>
             </div>
             <div class="step-divider"></div>
-            <div class="step">
+            <div class="step actiive">
                 <div class="step-icon">
                     <i class="fa-solid fa-location-dot"></i>
                 </div>
@@ -51,6 +47,7 @@
                 <div class="step-text">@AppRes.Finalizing</div>
             </div>
         </div>
+
         <!-- Travel Guide Section -->
         <section class="travel-guide">
             <div class="guide-section">
@@ -58,10 +55,7 @@
                 <div class="guide-item">
                     <div class="item-content">
                         <div class="item-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
-                                <path d="M1 10h22"></path>
-                            </svg>
+                            <i class="fa-solid fa-car"></i>
                         </div>
                         <div class="item-details">
                             <h3 style="color:#000;">@ViewBag.FullInfo.TransportName</h3>
@@ -78,7 +72,7 @@
                                 {
                                     @($"{ViewBag.FullInfo.TimePeriod} {AppRes.min}")
                                 }
-                                
+
                             </div>
                         </div>
                     </div>
@@ -164,63 +158,70 @@
 
             <div class="guide-section">
                 <h2>@AppRes.WhatToDo</h2>
-                <div class="guide-item">
-                    <div class="item-content">
-                        <div class="item-thumbnail">
-                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-kUJhL8uD96j8xGMUGnXmdJFprk4qId.png" alt="Dzitoghtsyan Museum">
-                        </div>
-                        <div class="item-details">
-                            @if (ViewBag.CurrentCulture == "ru-RU")
-                            {
-                                        <h3>@ViewBag.FullInfo.PlaceWhatToDo?.PlaceNameRu</h3>
-                               
-                            }
-                            else if (ViewBag.CurrentCulture == "hy-AM")
-                            {
-                                    <h3>@ViewBag.FullInfo.PlaceWhatToDo?.PlaceNameArm</h3>
-                            }
-                            else
-                            {
-                                        <h3>@ViewBag.FullInfo.PlaceWhatToDo?.PlaceName</h3>
-                            }
-                            <div class="item-address" style="color:#000;">
+                @if (ViewBag.FullInfo.PlaceWhatToDo != null)
+                {
+                    @foreach (var item in ViewBag.FullInfo.PlaceWhatToDo)
+                    {
+                        <div class="guide-item">
+                            <div class="item-content">
+                                <div class="item-thumbnail">
+                                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-kUJhL8uD96j8xGMUGnXmdJFprk4qId.png" alt="Dzitoghtsyan Museum">
+                                </div>
+                                <div class="item-details">
+                                    @if (ViewBag.CurrentCulture == "ru-RU")
+                                    {
+                                        <h3>@item.PlaceNameRu</h3>
+
+                                    }
+                                    else if (ViewBag.CurrentCulture == "hy-AM")
+                                    {
+                                        <h3>@item.PlaceNameArm</h3>
+                                    }
+                                    else
+                                    {
+                                        <h3>@item.PlaceName</h3>
+                                    }
+                                    <div class="item-address" style="color:#000;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                            <circle cx="12" cy="10" r="3"></circle>
+                                        </svg>
+                                        @*47 Haghtanaki Avenue, Gyumri TODO:: get address from backend *@
+                                        @item.Address
+
+                                        @if (ViewBag.CurrentCulture == "ru-RU")
+                                        {
+                                            @item.AddressRu
+
+                                        }
+                                        else if (ViewBag.CurrentCulture == "hy-AM")
+                                        {
+                                            @item.AddressArm
+                                        }
+                                        else
+                                        {
+                                            @item.Address
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-price">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                    <circle cx="12" cy="10" r="3"></circle>
+                                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                    <path d="M12 8v8"></path>
+                                    <path d="M8 12h8"></path>
                                 </svg>
-                                47 Haghtanaki Avenue, Gyumri@* TODO:: get address from backend *@
-                                ViewBag.FullInfo.PlaceWhatToDo.Address
-
-                                @if (ViewBag.CurrentCulture == "ru-RU")
-                                {
-                                    @ViewBag.FullInfo.PlaceWhatToDo?.AddressRu
-
-                                }
-                                else if (ViewBag.CurrentCulture == "hy-AM")
-                                {
-                                    @ViewBag.FullInfo.PlaceWhatToDo?.AddressArm
-                                }
-                                else
-                                {
-                                    @ViewBag.FullInfo.PlaceWhatToDo?.Address
-                                }
+                                @(item.MinPrice) - @(item?.MaxPrice) AMD
+                                <div class="action-buttons">
+                                    @* <button class="change-btn">Change</button>
+                            <button class="remove-btn">×</button> *@
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="item-price">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                            <path d="M12 8v8"></path>
-                            <path d="M8 12h8"></path>
-                        </svg>
-                        @(ViewBag.FullInfo.PlaceWhatToDo?.MinPrice) - @(ViewBag.FullInfo.PlaceWhatToDo?.MAxPrice) AMD
-                        <div class="action-buttons">
-                            @* <button class="change-btn">Change</button>
-                            <button class="remove-btn">×</button> *@
-                        </div>
-                    </div>
-                </div>
 
+                    }
+
+                }
                 @* <div class="guide-item">
                     <div class="item-content">
                         <div class="item-thumbnail">
