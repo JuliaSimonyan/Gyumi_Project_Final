@@ -120,7 +120,7 @@ namespace GyumriFinalVersion.Controllers
         public async Task<IActionResult> WheretoStay(int selectedPlaceId)
         {
             TempData["Place1Id"] = selectedPlaceId;
-            tripInfo.PlaceWhereToStay = places.First(p=> p.Id == selectedPlaceId);
+            tripInfo.PlaceWhereToStay = places.FirstOrDefault(p => p.Id == selectedPlaceId);
             //tripInfo.PlaceWhereToStay = await _placeService.GetPlaceById(selectedPlaceId);
             return RedirectToAction("WhatToDo");
         }
