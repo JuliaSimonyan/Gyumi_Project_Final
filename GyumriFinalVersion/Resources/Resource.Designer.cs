@@ -358,6 +358,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cafés with character, restaurants with soul, and flavors you won’t forget..
+        /// </summary>
+        public static string EatAndDrinkDesc {
+            get {
+                return ResourceManager.GetString("EatAndDrinkDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Every day.
         /// </summary>
         public static string Everyday {
@@ -671,6 +680,15 @@ namespace GyumriFinalVersion.Resources {
         public static string LetsPlanYourTrip {
             get {
                 return ResourceManager.GetString("LetsPlanYourTrip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Move here, work remotely, open a business—or just experience everyday life like a local..
+        /// </summary>
+        public static string LiveAndWorkDesc {
+            get {
+                return ResourceManager.GetString("LiveAndWorkDesc", resourceCulture);
             }
         }
         
@@ -1005,6 +1023,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to From historic guesthouses to peaceful hideouts—rest the way Gyumri would want you to..
+        /// </summary>
+        public static string RelaxAndSleepDesc {
+            get {
+                return ResourceManager.GetString("RelaxAndSleepDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Restaurant.
         /// </summary>
         public static string Restaurant {
@@ -1019,6 +1046,15 @@ namespace GyumriFinalVersion.Resources {
         public static string RoutInfo {
             get {
                 return ResourceManager.GetString("RoutInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Whether you’re here for a day or a week, you’ll find stories, places, and people worth your time..
+        /// </summary>
+        public static string SeeAndDoDesc {
+            get {
+                return ResourceManager.GetString("SeeAndDoDesc", resourceCulture);
             }
         }
         

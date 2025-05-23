@@ -4,13 +4,80 @@
 }
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
-<partial name="_LoginPartial" />
 <!-- Main Content -->
-        <main class="main-content">
-            <section class="dashboard-content">
-                <h1>Welcome to Admin Panel</h1>
-            </section>
-        </main>
+<div class="main-content">
+    <div class="content-header">
+        <div class="header-left">
+            <h2>Welcome to Admin Panel</h2>
+        </div>
+        <div class="header-right">
+            <div class="admin-user">
+                <div class="admin-avatar">
+                    <img src="https://cdn.vectorstock.com/i/500p/04/09/user-icon-vector-5770409.jpg" alt="Admin">
+                </div>
+                <div class="admin-details">
+                    <h4>Admin User</h4>
+                    <p>Administrator</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <script src="~/js/admin.js"></script>
+    <div class="dashboard-content">
+        <!-- Welcome Banner -->
+        <div class="card mb-3">
+            <div class="location-image">
+                <img src="~/Content/Images/header-background.jpeg" alt="Gyumri Panorama">
+                <div class="absolute inset-0 bg-black bg-opacity-40" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center;">
+                    <div class="text-center text-white p-6">
+                        <h1 style="font-size: 2rem; font-weight: bold; margin-bottom: 0.5rem;">Welcome to Gyumri Admin</h1>
+                        <p style="font-size: 1.25rem;">Manage your content and explore the beauty of Gyumri</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Quick Access Cards -->
+        <div class="section-header">
+            <h3>Quick Access</h3>
+        </div>
+        
+        <div class="dashboard-stats">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>Manage Article Categories</h3>
+                    <p style="margin-bottom: 1rem;">Add, edit, or remove articles categories</p>
+                    <a href="@Url.Action("Index", "Subcategory")" class="btn btn-primary" style="width: 100%;">Go to Articles</a>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>Manage Articles</h3>
+                    <p style="margin-bottom: 1rem;">Add, edit, or remove articles about Gyumri and its attractions.</p>
+                    <a href="@Url.Action("Index", "Place")" class="btn btn-primary" style="width: 100%;">Manage Users</a>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-cog"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>Manage Article Content</h3>
+                    <p style="margin-bottom: 1rem;">Configure content settings, appearance, and functionality.</p>
+                    <a href="@Url.Action("Index", "Article")" class="btn btn-primary" style="width: 100%;">Go to Settings</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="~/js/admin.js"></script>
