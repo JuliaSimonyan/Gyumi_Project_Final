@@ -71,13 +71,12 @@
 
 
 <div class="accommodation-list">
-    <form id="placeForm" asp-action="WheretoStay" asp-controller="Trip" method="post">
+    <form asp-action="WheretoStay" asp-controller="Trip" method="post" id="placeForm">
         @foreach (var place in ViewBag.Places)
         {
             <div class="accommodation-item">
                 <div class="item-selection">
-                    <input type="radio" name="placeId" value="@place.Id" id="villa-kars" checked>
-                    <label for="villa-kars"></label>
+                    <input type="radio" name="selectedPlaceId" value="@place.Id">
                 </div>
                 <div class="item-image">
                     <img src="~/Images/places/@place.Photo" />
@@ -119,7 +118,7 @@
                 <div class="item-price">
                     <div class="price-tag">
                         <i class="fa-solid fa-tag"></i>
-                        <span>@place.MinPrice - @place.MaxPrice ֏ AMD / night</span>
+                        <span>@place.MinPrice - @place.MaxPrice ֏ AMD / @AppRes.night</span>
                     </div>
                     <a href="#" class="more-details">@AppRes.SeeMore <i class="fa-solid fa-chevron-right"></i></a>
                 </div>
