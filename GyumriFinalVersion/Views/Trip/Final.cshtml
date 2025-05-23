@@ -117,12 +117,13 @@
 
             <div>
                 <form asp-controller="Trip" asp-action="SendWelcomeEmail" class="action-buttons" method="post">
-                    <input type="email" name="email" class="form-control w-100" required />
-
                     <button class="btn btn-back" id="backBtn">
                         <i class="fas fa-arrow-left"></i>
                         Back
                     </button>
+                    <input type="email" name="email" class="form-control w-100" required style="width: 20% !important" /><br></br>
+
+                    
                     <button class="btn btn-download" id="downloadBtn">
                         <i class="fas fa-file-pdf"></i>
                         Download PDF
