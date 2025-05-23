@@ -416,4 +416,13 @@
   <data name="Restaurant" xml:space="preserve">
     <value>Ресторан</value>
   </data>
+  <data name="AddressGyumri2" xml:space="preserve">
+    <value>Гюмри, Ширакская область, РА </value>
+  </data>
+  <data name="TripToGyumri" xml:space="preserve">
+    <value>Поездка в Гюмри</value>
+  </data>
+  <data name="Plan" xml:space="preserve">
+    <value>План</value>
+  </data>
 </root>

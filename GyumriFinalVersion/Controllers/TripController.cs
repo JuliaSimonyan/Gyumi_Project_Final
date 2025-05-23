@@ -11,7 +11,7 @@ namespace GyumriFinalVersion.Controllers
 {
     public class TripController : Controller
     {
-        private static TripInputInfo tripInfo= new();
+        private static TripInputInfo tripInfo = new();
         private readonly ApplicationContext _context;
         private readonly ICategory _categoryService;
         private readonly ISubcategory _subCategoryService;
@@ -181,7 +181,11 @@ namespace GyumriFinalVersion.Controllers
         {
             SetCulture();
             ViewBag.Categories = await _categoryService.GetAllCategories();
-            return View();
+            ViewBag.PlaceWhereToStay = tripInfo.PlaceWhereToStay;
+            ViewBag.PlacesWhatToDo = tripInfo.PlaceWhatToDo;
+            ViewBag.FullInfo = tripInfo;
+
+            return View(tripInfo);
         }
 
         // ______________________ Send Email ____________________
