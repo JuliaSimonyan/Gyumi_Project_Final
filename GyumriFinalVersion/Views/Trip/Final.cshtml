@@ -104,83 +104,125 @@
                 <div class="plan-section">
                     <h2>@AppRes.WhatToDo</h2>
 
-
-                    @foreach (var item in ViewBag.FullInfo.PlaceWhatToDo)
+                    @if (ViewBag.FullInfo.PlaceWhatToDo != null)
                     {
-                        <div class="section-item">
-                            <div class="item-icon">
-                                <i class="fas fa-coffee"></i>
-                            </div>
-                            <div class="item-name">
-                                @if (ViewBag.CurrentCulture == "ru-RU")
-                                {
-                                    <h3 style="color:#000;">@item.PlaceNameRu</h3>
-
-                                }
-                                else if (ViewBag.CurrentCulture == "hy-AM")
-                                {
-                                    <h3 style="color:#000;">@item.PlaceNameArm</h3>
-                                }
-                                else
-                                {
-                                    <h3 style="color:#000;">@item.PlaceName</h3>
-                                }
-                            </div>
-                            <div class="item-info">
-                                <span>
+                        @foreach (var item in ViewBag.FullInfo.PlaceWhatToDo)
+                        {
+                            <div class="section-item">
+                                <div class="item-icon">
+                                    <i class="fas fa-coffee"></i>
+                                </div>
+                                <div class="item-name">
                                     @if (ViewBag.CurrentCulture == "ru-RU")
                                     {
-                                        @item.AddressRu
+                                        <h3 style="color:#000;">@item.PlaceNameRu</h3>
 
                                     }
                                     else if (ViewBag.CurrentCulture == "hy-AM")
                                     {
-                                        @item.AddressArm
+                                        <h3 style="color:#000;">@item.PlaceNameArm</h3>
                                     }
                                     else
                                     {
-                                        @item.Address
+                                        <h3 style="color:#000;">@item.PlaceName</h3>
                                     }
-                                </span>
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                        </div>
-                    }
+                                </div>
+                                <div class="item-info">
+                                    <span>
+                                        @if (ViewBag.CurrentCulture == "ru-RU")
+                                        {
+                                            @item.AddressRu
 
+                                        }
+                                        else if (ViewBag.CurrentCulture == "hy-AM")
+                                        {
+                                            @item.AddressArm
+                                        }
+                                        else
+                                        {
+                                            @item.Address
+                                        }
+                                    </span>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <p>oActivitiesPlanned</p>
+                    }
                 </div>
             </div>
 
-            <div class="d-flex align-items-end justify-content-center gap-2 m-4">
-                <form asp-action="LastStep" asp-controller="Trip">
-                    <button class="btn btn-back" id="backBtn" style="height:50px;" type="submit">
-                        <i class="fas fa-arrow-left"></i>
-                        @AppRes.Back
-                    </button>
-                </form>
+            <div class="container my-4">
+                <div class="row g-2 justify-content-center" style="padding-bottom: 10px;">
+                    <div class="col-12 col-md-auto text-center">
+                        <form asp-action="LastStep" asp-controller="Trip">
+                            <button class="btn btn-back w-100" id="backBtn" type="submit">
+                                <i class="fas fa-arrow-left"></i>
+                                @AppRes.Back
+                            </button>
+                        </form>
+                    </div>
 
-                <form asp-controller="Trip" asp-action="SendWelcomeEmail" method="post">
-                    <input type="email" name="email" class="form-control" />
-                    <button class="btn btn-email" id="emailBtn" type="submit" style="height:50px;">
-                        <i class="fas fa-envelope"></i>
-                        @AppRes.SendEmail
-                    </button>
-                </form>
+                    <div class="col-12 col-md d-flex flex-column flex-md-row align-items-center gap-2">
+                        <form asp-controller="Trip" asp-action="SendWelcomeEmail" method="post" class="w-100">
+                            <div class="d-flex flex-column flex-md-row gap-2">
+                                <input type="email" name="email" class="form-control" placeholder="Enter email to send the plan" style="width:85%;" />
+                                <button class="btn btn-email" id="emailBtn" type="submit">
+                                    <i class="fas fa-envelope"></i>
+                                    @AppRes.SendEmail
+                                </button>
+                            </div>
+                        </form>
+                    </div>
 
-                <form asp-action="DownloadPdf" asp-controller="Trip">
-                    <button type="submit" class="btn btn-download" style="height:50px;" id="downloadBtn">
-                        <i class="fas fa-file-pdf"></i>
-                        Download PDF
-                    </button>
-                </form>
+                    <div class="col-12 col-md-auto text-center">
+                        <form asp-action="DownloadPdf" asp-controller="Trip">
+                            <button type="submit" class="btn btn-download w-100" id="downloadBtn">
+                                <i class="fas fa-file-pdf"></i>
+                                Download PDF
+                            </button>
+                        </form>
+                    </div>
 
-                <button class="action-btn share-btn" style="height:50px;" id="shareButton">
-                    <i class="fas fa-share-alt"></i> Share
-                </button>
+                    <div class="col-12 col-md-auto text-center">
+                        <button class="action-btn share-btn w-100" id="shareButton" style="padding-bottom:10px;">
+                            <i class="fas fa-share-alt"></i> Share
+                        </button>
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
 
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const shareBtn = document.getElementById("shareButton");
+        const sharePopup = document.getElementById("sharePopup");
+        const closePopup = document.querySelector(".close-popup");
+
+        // Toggle popup on Share button click
+        shareBtn.addEventListener("click", function () {
+            sharePopup.style.display = (sharePopup.style.display === "block") ? "none" : "block";
+        });
+
+        // Close popup on close icon click
+        closePopup.addEventListener("click", function () {
+            sharePopup.style.display = "none";
+        });
+
+        // Optional: click outside to close popup
+        document.addEventListener("click", function (event) {
+            if (!sharePopup.contains(event.target) && !shareBtn.contains(event.target)) {
+                sharePopup.style.display = "none";
+            }
+        });
+    });
+</script>
 
 <script src="~/Content/plan.js"></script>
 </html>
