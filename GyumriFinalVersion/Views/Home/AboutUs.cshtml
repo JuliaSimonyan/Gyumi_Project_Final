@@ -20,8 +20,8 @@
         <section class="hero-about">
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h1>About Visit Gyumri</h1>
-                <p>Your guide to experiencing Armenia's cultural capital</p>
+                <h1>@AppRes.AboutWebsite</h1>
+                <p>@AppRes.AboutUsShort</p>
             </div>
         </section>
 
@@ -29,55 +29,46 @@
         <section class="container content-section">
             <div class="content-wrapper">
                 <p class="lead-text">
-                    This website is your guide to <strong>experiencing Gyumri fully and authentically</strong>—whether you're
-                    here for a weekend, a month, or making the city your new home. It brings together everything you need to
-                    explore Armenia's cultural capital, from iconic landmarks and historic neighborhoods to offbeat
-                    adventures, cozy cafés, and local favorites.
+                   @AppRes.AboutUsLong
                 </p>
 
-                <h2>You'll find:</h2>
+                <h2>@AppRes.Find</h2>
                 <ul class="feature-list">
                     <li>
-                        Real recommendations on where to eat, sleep, and relax—based on what's truly popular, not paid
-                        placements.
+                       @AppRes.Find1
                     </li>
                     <li>
-                        Practical info to help you <strong>navigate life in Gyumri</strong>—transport, services, housing, remote
-                        work, and more.
-                    </li>
-                    <li>Curated listings of events, seasonal experiences, and neighborhood highlights.</li>
-                    <li>
-                        Tools to help you <strong>plan your trip, submit an event</strong>, or even
-                        <strong>ask locals your questions (upcoming)</strong>.
+                        @AppRes.Find2
+
                     </li>
                     <li>
-                        And soon: a <strong>local coupon system</strong> offering discounts and perks at featured cafés, shops,
-                        and guesthouses around the city.
+                        @AppRes.Find3
+                    </li>
+                    <li>
+                        @AppRes.Find4
+
+                    </li>
+                    <li>
+                        @AppRes.Find5
+
                     </li>
                 </ul>
 
                 <div class="info-box">
                     <p class="italic">
-                        This platform was created as part of the
-                        <strong>"Open Data Project for Accurate Visitor Information in Gyumri,"</strong> a sub-project within
-                        the <strong>"Mayors for Economic Growth"</strong> grant program. The program is
-                        <strong>funded by the European Union</strong> and <strong>implemented by UNDP</strong>, with this
-                        project brought to life by the <strong>Gyumri Technology Center (GTC)</strong> and
-                        <strong>Vanadzor Technology Center (VTC)</strong> by the
-                        <strong>Enterprise Incubator Foundation (EIF).</strong>
+                       @Html.Raw(AppRes.Platform)
                     </p>
                 </div>
 
                 <p class="conclusion-text">
-                    This isn't just a website—it's a tool to make Gyumri more visible, accessible, and welcoming, for visitors
-                    and locals alike.
+                @AppRes.Tool
                 </p>
 
             </div>
         </section>
 
         <!-- CTA Section -->
-        <section class="cta-section">
+      @*   <section class="cta-section">
             <div class="container">
                 <h2>Ready to explore Gyumri?</h2>
                 <p>
@@ -85,7 +76,7 @@
                 </p>
                 <a href="@Url.Action("Index", "Trip")" class="cta-button">Plan Your Trip</a>
             </div>
-        </section>
+        </section> *@
     </main>
 </body>
 </html>

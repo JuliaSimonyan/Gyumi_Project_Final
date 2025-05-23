@@ -426,4 +426,121 @@
   <data name="SendEmail" xml:space="preserve">
     <value>Send Email</value>
   </data>
+  <data name="AboutUsLong" xml:space="preserve">
+    <value>This website is your guide to experiencing Gyumri fully and authentically—whether you’re here for a weekend, a month, or making the city your new home. It brings together everything you need to explore Armenia’s cultural capital, from iconic landmarks and historic neighborhoods to offbeat adventures, cozy cafés, and local favorites.</value>
+  </data>
+  <data name="AboutUsShort" xml:space="preserve">
+    <value>Your guide to experiencing Armenia's cultural capital</value>
+  </data>
+  <data name="AboutWebsite" xml:space="preserve">
+    <value>About The Website</value>
+  </data>
+  <data name="Find" xml:space="preserve">
+    <value>You'll find:</value>
+  </data>
+  <data name="Find1" xml:space="preserve">
+    <value>Real recommendations on where to eat, sleep, and relax—based on what's truly popular, not paid
+ placements.</value>
+  </data>
+  <data name="Find2" xml:space="preserve">
+    <value>Practical info to help you navigate life in Gyumri—transport, services, housing, remote work, and more.</value>
+  </data>
+  <data name="Find3" xml:space="preserve">
+    <value>Curated listings of events, seasonal experiences, and neighborhood highlights.</value>
+  </data>
+  <data name="Find4" xml:space="preserve">
+    <value>Tools to help you plan your trip, submit an event, or even
+ask locals your questions (upcoming).</value>
+  </data>
+  <data name="Find5" xml:space="preserve">
+    <value>And soon: a local coupon system offering discounts and perks at featured cafés, shops, and guesthouses around the city.</value>
+  </data>
+  <data name="MainArticleDesc" xml:space="preserve">
+    <value>Tucked in the northwestern corner of Armenia, Gyumri is a city that surprises you—not with skyscrapers or glitter, but with soul. It doesn't shout for attention. It whispers stories through its streets, scents, and sunsets. Here's why your next trip should bring you to this one-of-a-kind city.</value>
+  </data>
+  <data name="Platform" xml:space="preserve">
+    <value>This platform was created as part of the
+ &lt;strong&gt;"Open Data Project for Accurate Visitor Information in Gyumri,"&lt;/strong&gt; a sub-project within
+ the &lt;strong&gt;"Mayors for Economic Growth"&lt;/strong&gt; grant program. The program is
+ &lt;strong&gt;funded by the European Union&lt;/strong&gt; and &lt;strong&gt;implemented by UNDP&lt;/strong&gt;, with this
+ project brought to life by the &lt;strong&gt;Gyumri Technology Center (GTC)&lt;/strong&gt; and
+ &lt;strong&gt;Vanadzor Technology Center (VTC)&lt;/strong&gt; by the
+ &lt;strong&gt;Enterprise Incubator Foundation (EIF).&lt;/strong&gt;</value>
+  </data>
+  <data name="Point1" xml:space="preserve">
+    <value>Architectural Time Travel</value>
+  </data>
+  <data name="Point2" xml:space="preserve">
+    <value>Creative Renaissance</value>
+  </data>
+  <data name="Point2Desc1" xml:space="preserve">
+    <value>Gyumri has always been Armenia's cultural capital—but lately, something new is stirring. The city's rich heritage in theater, music, and visual arts is fusing with a younger generation's bold experimentation. Painters, potters, coders, animators, filmmakers, and fashion designers are redefining what it means to be "creative" in Gyumri.</value>
+  </data>
+  <data name="Point2Desc2" xml:space="preserve">
+    <value>The streets hum with creative energy: mural art on old facades, digital artists working out of tech hubs, handmade jewelry on display in boutique shops. Institutions like the Gyumri Technology Center and TUMO support a growing wave of innovation, blending tradition with tomorrow.</value>
+  </data>
+  <data name="Point2Desc3" xml:space="preserve">
+    <value>And it's not just about the art—it's about the atmosphere. You feel it in conversations at gallery openings. You hear it in the fusion of old folk melodies and electronic beats drifting from rehearsal rooms. You see it in workshops where Soviet tools are repurposed to make something entirely new.</value>
+  </data>
+  <data name="Point3" xml:space="preserve">
+    <value>The Walking Supremacy</value>
+  </data>
+  <data name="Point3Desc1" xml:space="preserve">
+    <value>In Gyumri, your feet are your best travel guide. The city was made for walking—not just because the layout is compact and scenic, but because the real magic happens when you take your time.</value>
+  </data>
+  <data name="Point3Desc2" xml:space="preserve">
+    <value>Stroll along Rustaveli Street and pop into an antique shop. Cut through a courtyard and find yourself in front of an impromptu nardi game. Sit on a public bench, and a local might start telling you about the earthquake, the artists, or the best ponchik in town.</value>
+  </data>
+  <data name="Point3Desc3" xml:space="preserve">
+    <value>There's no need for taxis, timetables, or noise-canceling headphones. The silence is soft, the air is fresh, and the streets reward the curious. You won't just get from point A to point B—you'll get a hundred little stories in between.</value>
+  </data>
+  <data name="Point4" xml:space="preserve">
+    <value>Affordable Adventure</value>
+  </data>
+  <data name="Point4Desc1" xml:space="preserve">
+    <value>Let's be honest—travel can get expensive. But in Gyumri, your money stretches without cutting corners on experience. You can enjoy a full homemade lunch, coffee, and dessert for the price of a metro ticket in most major cities. Boutique guesthouses offer character and comfort at a fraction of what you'd pay elsewhere.</value>
+  </data>
+  <data name="Point4Desc2" xml:space="preserve">
+    <value>Whether you're touring local museums, enjoying live music, or hopping into a marshrutka for a scenic countryside ride, you don't need to budget your joy. Even high-value experiences—like attending a puppet show, taking a pottery class, or spending an afternoon in a traditional bathhouse—are refreshingly affordable.</value>
+  </data>
+  <data name="Point4Desc3" xml:space="preserve">
+    <value>Gyumri proves that adventure doesn't have to be expensive. It just has to be real.</value>
+  </data>
+  <data name="Point5" xml:space="preserve">
+    <value>A Culinary Love Letter</value>
+  </data>
+  <data name="Point5Desc1" xml:space="preserve">
+    <value>Every city has a flavor, and Gyumri's is unforgettable. The day might begin with a breakfast of fresh cheese, herbs, and warm lavash from a corner bakery. By midday, you're hunting down the famous "Ponchik Monchik"—a hot, cream-filled doughnut so good it has its own legend.</value>
+  </data>
+  <data name="Point5Desc2" xml:space="preserve">
+    <value>Lunch could bring you to a family-run fish restaurant, where trout from local rivers is served grilled and smoky, alongside roasted potatoes and pickled vegetables. You might sip homemade oghi (fruit vodka) with your host, or taste jams made from wild rose petals and walnuts.</value>
+  </data>
+  <data name="Point5Desc3" xml:space="preserve">
+    <value>And dinner? Maybe a cozy bistro in a renovated brick building, offering modern takes on traditional dishes—like lamb stew with herbs, or beetroot salads with garlic and walnuts. Every bite tells a story of land, season, and hospitality.</value>
+  </data>
+  <data name="Point5Desc4" xml:space="preserve">
+    <value>In Gyumri, food isn't just sustenance. It's poetry.</value>
+  </data>
+  <data name="PointDesc1" xml:space="preserve">
+    <value>In Gyumri, every step is a step through time. The moment you enter the historic Kumayri district, you're surrounded by 19th-century buildings carved from the city's signature black tuff stone. Their thick walls and ornate wooden balconies have stood through earthquakes and empires, and they still hold the rhythm of old conversations and distant music.</value>
+  </data>
+  <data name="PointDesc2" xml:space="preserve">
+    <value>Keep walking and you'll find splashes of color in unexpected places—Soviet-era mosaics tucked between courtyards, ironwork gates that creak with age, and fading shop signs in retro Cyrillic script. It's a rare kind of city where history hasn't just been preserved—it's lived in. Cafés operate out of century-old homes, and artisan workshops are nestled in what used to be merchant houses.</value>
+  </data>
+  <data name="PointDesc3" xml:space="preserve">
+    <value>In Gyumri, architecture isn't a background. It's a co-narrator.</value>
+  </data>
+  <data name="Tool" xml:space="preserve">
+    <value>This isn't just a website—it's a tool to make Gyumri more visible, accessible, and welcoming, for visitors
+    and locals alike.</value>
+  </data>
+  <data name="WhyReady" xml:space="preserve">
+    <value>Ready when you are.</value>
+  </data>
+  <data name="WhyReason" xml:space="preserve">
+    <value>Because it's not trying to be like anywhere else. It's not racing to keep up with trends. It's walking to its own rhythm—inviting you to slow down, look closer, and stay longer.</value>
+  </data>
+  <data name="WhySection" xml:space="preserve">
+    <value>So why come to Gyumri?</value>
+  </data>
 </root>

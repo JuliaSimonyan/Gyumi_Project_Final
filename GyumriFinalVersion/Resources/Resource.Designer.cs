@@ -70,6 +70,33 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This website is your guide to experiencing Gyumri fully and authentically—whether you’re here for a weekend, a month, or making the city your new home. It brings together everything you need to explore Armenia’s cultural capital, from iconic landmarks and historic neighborhoods to offbeat adventures, cozy cafés, and local favorites..
+        /// </summary>
+        public static string AboutUsLong {
+            get {
+                return ResourceManager.GetString("AboutUsLong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your guide to experiencing Armenia&apos;s cultural capital.
+        /// </summary>
+        public static string AboutUsShort {
+            get {
+                return ResourceManager.GetString("AboutUsShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About The Website.
+        /// </summary>
+        public static string AboutWebsite {
+            get {
+                return ResourceManager.GetString("AboutWebsite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Accessibility statement.
         /// </summary>
         public static string AccessibilityStatement {
@@ -394,6 +421,62 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You&apos;ll find:.
+        /// </summary>
+        public static string Find {
+            get {
+                return ResourceManager.GetString("Find", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Real recommendations on where to eat, sleep, and relax—based on what&apos;s truly popular, not paid
+        /// placements..
+        /// </summary>
+        public static string Find1 {
+            get {
+                return ResourceManager.GetString("Find1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Practical info to help you navigate life in Gyumri—transport, services, housing, remote work, and more..
+        /// </summary>
+        public static string Find2 {
+            get {
+                return ResourceManager.GetString("Find2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Curated listings of events, seasonal experiences, and neighborhood highlights..
+        /// </summary>
+        public static string Find3 {
+            get {
+                return ResourceManager.GetString("Find3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tools to help you plan your trip, submit an event, or even
+        ///ask locals your questions (upcoming)..
+        /// </summary>
+        public static string Find4 {
+            get {
+                return ResourceManager.GetString("Find4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to And soon: a local coupon system offering discounts and perks at featured cafés, shops, and guesthouses around the city..
+        /// </summary>
+        public static string Find5 {
+            get {
+                return ResourceManager.GetString("Find5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Creative Renaissance.
         /// </summary>
         public static string ForgeOfLegends {
@@ -610,6 +693,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tucked in the northwestern corner of Armenia, Gyumri is a city that surprises you—not with skyscrapers or glitter, but with soul. It doesn&apos;t shout for attention. It whispers stories through its streets, scents, and sunsets. Here&apos;s why your next trip should bring you to this one-of-a-kind city..
+        /// </summary>
+        public static string MainArticleDesc {
+            get {
+                return ResourceManager.GetString("MainArticleDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to min.
         /// </summary>
         public static string min {
@@ -687,6 +779,210 @@ namespace GyumriFinalVersion.Resources {
         public static string PlanATrip {
             get {
                 return ResourceManager.GetString("PlanATrip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This platform was created as part of the
+        /// &lt;strong&gt;&quot;Open Data Project for Accurate Visitor Information in Gyumri,&quot;&lt;/strong&gt; a sub-project within
+        /// the &lt;strong&gt;&quot;Mayors for Economic Growth&quot;&lt;/strong&gt; grant program. The program is
+        /// &lt;strong&gt;funded by the European Union&lt;/strong&gt; and &lt;strong&gt;implemented by UNDP&lt;/strong&gt;, with this
+        /// project brought to life by the &lt;strong&gt;Gyumri Technology Center (GTC)&lt;/strong&gt; and
+        /// &lt;strong&gt;Vanadzor Technology Center (VTC)&lt;/strong&gt; by the
+        /// &lt;strong&gt;Enterprise Incubator Foundation [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Platform {
+            get {
+                return ResourceManager.GetString("Platform", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Architectural Time Travel.
+        /// </summary>
+        public static string Point1 {
+            get {
+                return ResourceManager.GetString("Point1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Creative Renaissance.
+        /// </summary>
+        public static string Point2 {
+            get {
+                return ResourceManager.GetString("Point2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gyumri has always been Armenia&apos;s cultural capital—but lately, something new is stirring. The city&apos;s rich heritage in theater, music, and visual arts is fusing with a younger generation&apos;s bold experimentation. Painters, potters, coders, animators, filmmakers, and fashion designers are redefining what it means to be &quot;creative&quot; in Gyumri..
+        /// </summary>
+        public static string Point2Desc1 {
+            get {
+                return ResourceManager.GetString("Point2Desc1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The streets hum with creative energy: mural art on old facades, digital artists working out of tech hubs, handmade jewelry on display in boutique shops. Institutions like the Gyumri Technology Center and TUMO support a growing wave of innovation, blending tradition with tomorrow..
+        /// </summary>
+        public static string Point2Desc2 {
+            get {
+                return ResourceManager.GetString("Point2Desc2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to And it&apos;s not just about the art—it&apos;s about the atmosphere. You feel it in conversations at gallery openings. You hear it in the fusion of old folk melodies and electronic beats drifting from rehearsal rooms. You see it in workshops where Soviet tools are repurposed to make something entirely new..
+        /// </summary>
+        public static string Point2Desc3 {
+            get {
+                return ResourceManager.GetString("Point2Desc3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Walking Supremacy.
+        /// </summary>
+        public static string Point3 {
+            get {
+                return ResourceManager.GetString("Point3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In Gyumri, your feet are your best travel guide. The city was made for walking—not just because the layout is compact and scenic, but because the real magic happens when you take your time..
+        /// </summary>
+        public static string Point3Desc1 {
+            get {
+                return ResourceManager.GetString("Point3Desc1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stroll along Rustaveli Street and pop into an antique shop. Cut through a courtyard and find yourself in front of an impromptu nardi game. Sit on a public bench, and a local might start telling you about the earthquake, the artists, or the best ponchik in town..
+        /// </summary>
+        public static string Point3Desc2 {
+            get {
+                return ResourceManager.GetString("Point3Desc2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There&apos;s no need for taxis, timetables, or noise-canceling headphones. The silence is soft, the air is fresh, and the streets reward the curious. You won&apos;t just get from point A to point B—you&apos;ll get a hundred little stories in between..
+        /// </summary>
+        public static string Point3Desc3 {
+            get {
+                return ResourceManager.GetString("Point3Desc3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Affordable Adventure.
+        /// </summary>
+        public static string Point4 {
+            get {
+                return ResourceManager.GetString("Point4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Let&apos;s be honest—travel can get expensive. But in Gyumri, your money stretches without cutting corners on experience. You can enjoy a full homemade lunch, coffee, and dessert for the price of a metro ticket in most major cities. Boutique guesthouses offer character and comfort at a fraction of what you&apos;d pay elsewhere..
+        /// </summary>
+        public static string Point4Desc1 {
+            get {
+                return ResourceManager.GetString("Point4Desc1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Whether you&apos;re touring local museums, enjoying live music, or hopping into a marshrutka for a scenic countryside ride, you don&apos;t need to budget your joy. Even high-value experiences—like attending a puppet show, taking a pottery class, or spending an afternoon in a traditional bathhouse—are refreshingly affordable..
+        /// </summary>
+        public static string Point4Desc2 {
+            get {
+                return ResourceManager.GetString("Point4Desc2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gyumri proves that adventure doesn&apos;t have to be expensive. It just has to be real..
+        /// </summary>
+        public static string Point4Desc3 {
+            get {
+                return ResourceManager.GetString("Point4Desc3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Culinary Love Letter.
+        /// </summary>
+        public static string Point5 {
+            get {
+                return ResourceManager.GetString("Point5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Every city has a flavor, and Gyumri&apos;s is unforgettable. The day might begin with a breakfast of fresh cheese, herbs, and warm lavash from a corner bakery. By midday, you&apos;re hunting down the famous &quot;Ponchik Monchik&quot;—a hot, cream-filled doughnut so good it has its own legend..
+        /// </summary>
+        public static string Point5Desc1 {
+            get {
+                return ResourceManager.GetString("Point5Desc1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lunch could bring you to a family-run fish restaurant, where trout from local rivers is served grilled and smoky, alongside roasted potatoes and pickled vegetables. You might sip homemade oghi (fruit vodka) with your host, or taste jams made from wild rose petals and walnuts..
+        /// </summary>
+        public static string Point5Desc2 {
+            get {
+                return ResourceManager.GetString("Point5Desc2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to And dinner? Maybe a cozy bistro in a renovated brick building, offering modern takes on traditional dishes—like lamb stew with herbs, or beetroot salads with garlic and walnuts. Every bite tells a story of land, season, and hospitality..
+        /// </summary>
+        public static string Point5Desc3 {
+            get {
+                return ResourceManager.GetString("Point5Desc3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In Gyumri, food isn&apos;t just sustenance. It&apos;s poetry..
+        /// </summary>
+        public static string Point5Desc4 {
+            get {
+                return ResourceManager.GetString("Point5Desc4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In Gyumri, every step is a step through time. The moment you enter the historic Kumayri district, you&apos;re surrounded by 19th-century buildings carved from the city&apos;s signature black tuff stone. Their thick walls and ornate wooden balconies have stood through earthquakes and empires, and they still hold the rhythm of old conversations and distant music..
+        /// </summary>
+        public static string PointDesc1 {
+            get {
+                return ResourceManager.GetString("PointDesc1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Keep walking and you&apos;ll find splashes of color in unexpected places—Soviet-era mosaics tucked between courtyards, ironwork gates that creak with age, and fading shop signs in retro Cyrillic script. It&apos;s a rare kind of city where history hasn&apos;t just been preserved—it&apos;s lived in. Cafés operate out of century-old homes, and artisan workshops are nestled in what used to be merchant houses..
+        /// </summary>
+        public static string PointDesc2 {
+            get {
+                return ResourceManager.GetString("PointDesc2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In Gyumri, architecture isn&apos;t a background. It&apos;s a co-narrator..
+        /// </summary>
+        public static string PointDesc3 {
+            get {
+                return ResourceManager.GetString("PointDesc3", resourceCulture);
             }
         }
         
@@ -813,6 +1109,16 @@ namespace GyumriFinalVersion.Resources {
         public static string Taxi {
             get {
                 return ResourceManager.GetString("Taxi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This isn&apos;t just a website—it&apos;s a tool to make Gyumri more visible, accessible, and welcoming, for visitors
+        ///    and locals alike..
+        /// </summary>
+        public static string Tool {
+            get {
+                return ResourceManager.GetString("Tool", resourceCulture);
             }
         }
         
@@ -975,6 +1281,33 @@ namespace GyumriFinalVersion.Resources {
         public static string WheretoStay {
             get {
                 return ResourceManager.GetString("WheretoStay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ready when you are..
+        /// </summary>
+        public static string WhyReady {
+            get {
+                return ResourceManager.GetString("WhyReady", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Because it&apos;s not trying to be like anywhere else. It&apos;s not racing to keep up with trends. It&apos;s walking to its own rhythm—inviting you to slow down, look closer, and stay longer..
+        /// </summary>
+        public static string WhyReason {
+            get {
+                return ResourceManager.GetString("WhyReason", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to So why come to Gyumri?.
+        /// </summary>
+        public static string WhySection {
+            get {
+                return ResourceManager.GetString("WhySection", resourceCulture);
             }
         }
         
