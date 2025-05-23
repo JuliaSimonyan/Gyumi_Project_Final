@@ -206,6 +206,11 @@ namespace GyumriFinalVersion.Controllers
             smtp.Send(message);
         }
 
+        public IActionResult Animation()
+        {
+            return View();
+        }
+
         [HttpPost]
         public async Task<IActionResult> SendWelcomeEmail(string email)
         {
