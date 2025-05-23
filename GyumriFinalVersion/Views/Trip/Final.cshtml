@@ -151,58 +151,25 @@
                 </div>
             </div>
 
+
             <div>
-                <div class="action-buttons" method="post">
-                    <input type="email" name="email" class="form-control w-100" required />
-
-                    <button class="btn btn-back" id="backBtn">
-                        <i class="fas fa-arrow-left"></i>
-                        Back
+                <form asp-controller="Trip" asp-action="SendWelcomeEmail" class="action-buttons" method="post">
+                    <input type="email" name="email" class="form-control" />
+                    <button class="btn btn-email" id="emailBtn" type="submit">
+                        <i class="fas fa-envelope"></i>
+                        @AppRes.SendEmail
                     </button>
-                    <button class="btn btn-download" id="downloadBtn">
-                        <i class="fas fa-file-pdf"></i>
-                        Download PDF
-                    </button>
-                    <form asp-action="SendWelcomeEmail" asp-controller="Trip">
-@*                         <button class="btn btn-email" id="emailBtn">
-                            <i class="fas fa-envelope"></i>
-                            Send via Email
-                        </button> *@
-                        <button class="btn btn-email" id="emailBtn" type="submit">
-                            <i class="fas fa-envelope"></i>
-                            Ուղարկել նամակ
-                        </button>
-                    </form>
+                </form>
+                <button class="btn btn-back" id="backBtn">
+                    <i class="fas fa-arrow-left"></i>
+                    @AppRes.Back
+                </button>
+                <button class="btn btn-download" id="downloadBtn">
+                    <i class="fas fa-file-pdf"></i>
+                    Download PDF
+                </button>
 
-
-                    @* 
-                    <button class="btn btn-share" id="shareBtn">
-                        <i class="fas fa-share-alt"></i>
-                        Share
-                    </button> *@
-
-                </div>
             </div>
-
-            <!-- Share Modal -->
-            @* <div class="modal mb-4" id="shareModal">
-                <div class="modal-content">
-                    <span class="close-modal">&times;</span>
-                    <h3>Share Your Trip Plan</h3>
-                    <div class="social-icons">
-                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" class="social-icon telegram"><i class="fab fa-telegram-plane"></i></a>
-                    </div>
-                    <div class="share-link">
-                        <input type="text" id="shareLink" value="https://gyumritourism.com/trip/12345" readonly>
-                        <button id="copyLink">Copy</button>
-                    </div>
-
-                </div>
-            </div> *@
-        </div>
 
 </body>
 <script src="~/Content/plan.js"></script>

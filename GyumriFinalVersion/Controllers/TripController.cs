@@ -6,6 +6,8 @@ using System.Net;
 using Gyumri.Common.ViewModel.Place;
 using GyumriFinalVersion.Models;
 using System.Threading.Tasks;
+using System.Linq;
+using System.Text;
 
 namespace GyumriFinalVersion.Controllers
 {
@@ -223,55 +225,31 @@ namespace GyumriFinalVersion.Controllers
         {
             SetCulture();
 
-            if (!TempData.TryGetValue("Place1Id", out var place1IdObj) || !TempData.TryGetValue("Place2Id", out var place2IdObj))
-            {
-                return RedirectToAction("Index");
-            }
-
-            int place1Id = Convert.ToInt32(place1IdObj);
-            int place2Id = Convert.ToInt32(place2IdObj);
-
-            var place1 = await _placeService.GetPlaceById(place1Id);
-            var place2 = await _placeService.GetPlaceById(place2Id);
-
             var subject = AppRes.WelcomeGyumri;
-            string body;
+            var body = new StringBuilder();
 
-            string currentCulture = Request.Cookies["UserCulture"] ?? "en";
+            body.AppendLine("<h1>Trip to Gyumri</h1>");
+            body.AppendLine("<p>Plan</p>");
+            body.AppendLine("<br/>");
+            body.AppendLine($"<p>Date - {tripInfo.Date}</p>");
+            body.AppendLine($"<p>Adult count - {tripInfo.AdultCount}</p>");
+            body.AppendLine($"<p>Children count - {tripInfo.ChildrenCount}</p>");
+            body.AppendLine("<br/>");
 
-            if (currentCulture == "ru-RU")
+            body.AppendLine("<h2>Where to stay</h2>");
+            body.AppendLine($"<p>Place Name {tripInfo.PlaceWhereToStay?.PlaceName}</p>");
+            body.AppendLine($"<p>Address {tripInfo.PlaceWhereToStay?.Address}</p>");
+            body.AppendLine("<br/>");
+
+            body.AppendLine("<h2>What to do</h2>");
+            foreach (var trip in tripInfo.PlaceWhatToDo)
             {
-                body = $@"
-        <h1>{AppRes.TripPlan}</h1>
-        <h3>{AppRes.WheretoStay}</h3>
-        <p>{(place1?.PlaceNameRu ?? "N/A")}</p>
-        <br/>
-        <h3>{AppRes.WhatToDo}</h3>
-        <p>{(place2?.PlaceNameRu ?? "N/A")}</p>";
-            }
-            else if (currentCulture == "hy-AM")
-            {
-                body = $@"
-        <h1>{AppRes.TripPlan}</h1>
-        <h3>{AppRes.WheretoStay}</h3>
-        <p>{(place1?.PlaceNameArm ?? "N/A")}</p>
-        <br/>
-        <h3>{AppRes.WhatToDo}</h3>
-        <p>{(place2?.PlaceNameArm ?? "N/A")}</p>";
-            }
-            else
-            {
-                body = $@"
-        <h1>{AppRes.TripPlan}</h1>
-        <h3>{AppRes.WheretoStay}</h3>
-        <p>{(place1?.PlaceName ?? "N/A")}</p>
-        <br/>
-        <h3>{AppRes.WhatToDo}</h3>
-        <p>{(place2?.PlaceName ?? "N/A")}</p>";
+                body.AppendLine($"<p>Place name - {trip.PlaceName}</p>");
+                body.AppendLine($"<p>Address - {trip.Address}</p>");
+                body.AppendLine("<br/>");
             }
 
-
-            SendEmail(email, subject, body);
+            SendEmail(email, subject, body.ToString());
 
             return RedirectToAction("Final");
         }

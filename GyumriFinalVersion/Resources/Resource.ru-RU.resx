@@ -425,4 +425,7 @@
   <data name="Plan" xml:space="preserve">
     <value>План</value>
   </data>
+  <data name="SendEmail" xml:space="preserve">
+    <value>Отправить электронное письмо</value>
+  </data>
 </root>
