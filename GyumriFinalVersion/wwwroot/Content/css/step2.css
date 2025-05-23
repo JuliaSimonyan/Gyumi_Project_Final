@@ -6,7 +6,7 @@ body {
 }
 
 .main-content {
-    margin-top: 76px;
+    /*margin-top: 76px;*/
     /* To account for fixed navbar */
     padding: 0;
     background-color: white;
@@ -134,8 +134,9 @@ body {
     background: #EBE9E9;
     display: flex;
     border-bottom: 1px solid #eee;
-    padding: 20px 0;
+    padding: 20px;
     position: relative;
+    border-radius:20px;
 }
 
 
