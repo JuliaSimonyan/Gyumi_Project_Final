@@ -129,15 +129,23 @@
 
             paginated.forEach(p => {
                 const div = document.createElement('div');
-                div.className = 'col-md-4';
+                div.className = 'accommodation-list';
                 div.innerHTML = `
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <input name="selectedPlaceIds" type="checkbox" class="place-checkbox" value="${p.id}" id="place-${p.id}" data-id="${p.id}" ${selectedPlaces.has(p.id.toString()) ? 'checked' : ''} />
+                    <div class="accommodation-item">
+                        <div class="item-selection">
+                                    <input name="selectedPlaceIds" type="checkbox" class="place-checkbox" value="${p.id}" id="place-${p.id}" data-id="${p.id}" ${selectedPlaces.has(p.id.toString()) ? 'checked' : ''} />
+                                    </div>
+                                            <div class="item-image">
+                            <img src="~/Images/places/${p.Photo}" />
+                        </div>
+                                                <div class="item-details">
+
                             <label for="place-${p.id}"><strong>${p.placeName}</strong></label>
                             <p class="card-text">Type: ${p.placeType}</p>
                             <p class="card-text">${p.description || ''}</p>
+                            </div>
                         </div>
+                    </div>
                     </div>`;
                 container.appendChild(div);
             });
