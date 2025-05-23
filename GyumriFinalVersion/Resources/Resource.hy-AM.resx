@@ -388,10 +388,10 @@
     <value>Ճամփորդության տևողությունը</value>
   </data>
   <data name="Hotel" xml:space="preserve">
-    <value>Отель</value>
+    <value>Հյուրանոց</value>
   </data>
   <data name="Guesthouse" xml:space="preserve">
-    <value>Гостевой дом</value>
+    <value>Հյուրատուն</value>
   </data>
   <data name="Hostel" xml:space="preserve">
     <value>Հոստել</value>

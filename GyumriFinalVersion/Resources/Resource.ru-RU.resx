@@ -390,10 +390,10 @@
     <value>Продолжительность поездки</value>
   </data>
   <data name="Hotel" xml:space="preserve">
-    <value>Հյուրանոց</value>
+    <value>Отель</value>
   </data>
   <data name="Guesthouse" xml:space="preserve">
-    <value>Հյուրատուն</value>
+    <value>Гостевой дом</value>
   </data>
   <data name="Hostel" xml:space="preserve">
     <value>Хостел</value>
