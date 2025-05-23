@@ -119,7 +119,7 @@
                                 </div>
                             </div>
                             <div class="item-link">
-                                <a href="https://www.team.gg/gg-shuttle?lang=hy" target="_blank" class="service-link nav-link">
+                                <a href="https://www.team.gg/gg-shuttle?lang=hy" target="_blank" style="color:#000;" class="service-link nav-link">
                                     @AppRes.VisitWebsite <i class="fa-solid fa-external-link"></i>
                                 </a>
                             </div>
@@ -149,7 +149,7 @@
                                 </div>
                             </div>
                             <div class="item-link">
-                                <a href="https://apps.apple.com/am/app/yev-yev/id1564473555" target="_blank" class="service-link nav-link">
+                                <a href="https://apps.apple.com/am/app/yev-yev/id1564473555" target="_blank" style="color:#000;" class="service-link nav-link">
                                     @AppRes.DownloadApp <i class="fa-solid fa-external-link"></i>
                                 </a>
                             </div>
@@ -220,7 +220,7 @@
                         <div class="bus-info">
                             <p><strong>@(AppRes.StartFrom)</strong> @(AppRes.TrainAddress)</p>
                             <div class="item-link">
-                                <a href="tel:+37410621670" class="service-link nav-link">
+                                <a href="tel:+37410621670" class="service-link nav-link" style="color:#000 !important;">
                                     <i class="fa-solid fa-phone"></i> +374 10 621 670
                                 </a>
                             </div>
@@ -298,7 +298,7 @@
 
                         <div class="train-info">
                             <div class="item-link nav-link">
-                                <a href="https://www.railway.am/" target="_blank" class="service-link">
+                                <a href="https://www.railway.am/" target="_blank" class="service-link" style="color:#000 !important;"
                                     Visit Railway Website <i class="fa-solid fa-external-link"></i>
                                 </a>
                             </div>
@@ -315,20 +315,24 @@
                         <div class="transport-icon">
                             <i class="fa-solid fa-car"></i>
                         </div>
-                        <div class="transport-name">@AppRes.PrivateCar</div>
+                        <div class="transport-name">@AppRes.PrivateCar</div>]
                         <div class="dropdown-arrow">
                             <i class="fa-solid fa-chevron-down"></i>
                         </div>
                     </div>
                     <div class="transport-content" style="display: none;">
                         <div class="navigation-options">
+                            <div class="item-radio">
+                                <input type="radio" name="transport" value="@(AppRes.PrivateCar)" id="yevyev-shuttle">
+                                <label for="yevyev-shuttle">@AppRes.PrivateCar</label>
+                            </div>
                             <div class="navigation-option">
-                                <a href="https://maps.app.goo.gl/ZvsXEEhohAGTJ6pW9" target="_blank" class="nav-link">
+                                <a href="https://maps.app.goo.gl/ZvsXEEhohAGTJ6pW9" target="_blank" style="color:#000 !important;" class="nav-link">
                                     <i class="fa-brands fa-google"></i> Google Maps Navigation
                                 </a>
                             </div>
                             <div class="navigation-option">
-                                <a href="https://yandex.com/maps/-/CHrkNO5S" target="_blank" class="nav-link">
+                                <a href="https://yandex.com/maps/-/CHrkNO5S" target="_blank" style="color:#000 !important;" class="nav-link">
                                     <i class="fa-solid fa-location-dot"></i> Yandex Maps Navigation
                                 </a>
                             </div>
@@ -341,7 +345,7 @@
 
     <!-- Navigation Buttons -->
     <div class="navigation-buttons">
-        <a href=@Url.Action("Index", "Trip") class="back-btn">
+        <a href=@Url.Action("Index", "Trip")  class="back-btn">
             <i class="fa-solid fa-arrow-left"></i>
             @AppRes.Back
         </a>

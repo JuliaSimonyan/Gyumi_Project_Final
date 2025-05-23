@@ -59,8 +59,8 @@
 <div id="filter-buttons" class="mb-3 d-flex justify-content-center">
     @foreach (var item in Util.GetEnumForFirstPage())
     {
-        <a href="@Url.Action("WheretoStay", "Trip", new { selectedPlaceType = item, currentPage = 1 })" style="text-decoration:none !important;">
-            <button type="button" class="filter-btn btn btn-dark me-2 mb-2" data-type="@item">
+        <a href="@Url.Action("WheretoStay", "Trip", new { selectedPlaceType = item, currentPage = 1 })" class="custom-button-black-hover" style="text-decoration:none !important;">
+            <button type="button" class="filter-btn btn btn-dark me-2 mb-2 custom-button-black-hover" data-type="@item">
                 <i class="fa-solid fa-hotel"></i>
                 @Util.GetPlaceTypeNameByEnumType(item,currentCulture)
             </button>
@@ -68,7 +68,11 @@
     }
 </div>
 
-
+<style>
+    .custom-button-black-hover:hover{
+        background-color:#000;
+    }
+</style>
 
 <div class="accommodation-list">
     <form asp-action="WheretoStay" asp-controller="Trip" method="post" id="placeForm">

@@ -16,7 +16,6 @@
 <body>
 
     <div class="main-content" style="background-color:white" ;>
-
         <div class="mcontainer" style="background-color:white" ;>
             <div class="plan-container" id="plan-content">
                 <div class="plan-header">
@@ -151,54 +150,37 @@
                 </div>
             </div>
 
-            <div>
-                <div class="action-buttons" method="post">
+            <div class="d-flex align-items-end justify-content-center gap-2 m-4">
+                <form asp-action="LastStep" asp-controller="Trip">
+                    <button class="btn btn-back" id="backBtn" style="height:50px;" type="submit">
+                        <i class="fas fa-arrow-left"></i>
+                        @AppRes.Back
+                    </button>
+                </form>
 
+                <form asp-controller="Trip" asp-action="SendWelcomeEmail" method="post">
+                    <input type="email" name="email" class="form-control" />
+                    <button class="btn btn-email" id="emailBtn" type="submit" style="height:50px;">
+                        <i class="fas fa-envelope"></i>
+                        @AppRes.SendEmail
+                    </button>
+                </form>
 
+                <form asp-action="DownloadPdf" asp-controller="Trip">
+                    <button type="submit" class="btn btn-download" style="height:50px;" id="downloadBtn">
+                        <i class="fas fa-file-pdf"></i>
+                        Download PDF
+                    </button>
+                </form>
 
-                    <form asp-controller="Trip" asp-action="SendWelcomeEmail" class="action-buttons" method="post">
-                        <button class="btn btn-back" id="backBtn">
-                            <i class="fas fa-arrow-left"></i>
-                            @AppRes.Back
-                        </button>
-                        <input type="email" name="email" class="form-control" />
-                        <button class="btn btn-email" id="emailBtn" type="submit">
-                            <i class="fas fa-envelope"></i>
-                            @AppRes.SendEmail
-                        </button>
-                    </form>
-                    <form asp-action="DownloadPdf" asp-controller="Trip">
-                        <button type="submit" class="btn btn-download" id="downloadBtn">
-                            <i class="fas fa-file-pdf"></i>
-                            Download PDF
-                        </button>
-                    </form>
-
-
-
-                </div>
+                <button class="action-btn share-btn" style="height:50px;" id="shareButton">
+                    <i class="fas fa-share-alt"></i> Share
+                </button>
             </div>
-
-            <!-- Share Modal -->
-            @* <div class="modal mb-4" id="shareModal">
-                <div class="modal-content">
-                    <span class="close-modal">&times;</span>
-                    <h3>Share Your Trip Plan</h3>
-                    <div class="social-icons">
-                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" class="social-icon telegram"><i class="fab fa-telegram-plane"></i></a>
-                    </div>
-                    <div class="share-link">
-                        <input type="text" id="shareLink" value="https://gyumritourism.com/trip/12345" readonly>
-                        <button id="copyLink">Copy</button>
-                    </div>
-
-                </div>
-            </div> *@
         </div>
+    </div>
 
 </body>
+
 <script src="~/Content/plan.js"></script>
 </html>

@@ -22,8 +22,8 @@ namespace GyumriFinalVersion.Controllers
         private readonly IPlace _placeService;
         private readonly PdfGenerator _pdfGenerator;
         private readonly IWebHostEnvironment _env;
-        private readonly string fromEmail = "";
-        private readonly string password = "lhwd zttk xque sajp";
+        private readonly string fromEmail = "visitgyumri.info@gmail.com";
+        private readonly string password = "avmy aviv ukql syui";
 
         public TripController(IWebHostEnvironment env, PdfGenerator PdfGenerator, ICategory categoryService, ApplicationContext context, IPlace placeService, ISubcategory subcategoryService)
         {
