@@ -67,6 +67,8 @@ namespace GyumriFinalVersion.Controllers
         [HttpGet]
         public async Task<IActionResult> FirstStep()
         {
+            SetCulture();
+
             ViewBag.Categories = await _categoryService.GetAllCategories();
             return View();
         }
@@ -85,7 +87,7 @@ namespace GyumriFinalVersion.Controllers
         public async Task<IActionResult> WheretoStay(PlaceType selectedPlaceType = PlaceType.HOTEL, int currentPage = 1)
         {
             SetCulture();
-
+            ViewBag.Categories = await _categoryService.GetAllCategories();
             var Places = await _placeService.GetPlacesByPlaceType(selectedPlaceType);
 
             Console.WriteLine($"Selected Place Type: {selectedPlaceType}");
@@ -100,6 +102,8 @@ namespace GyumriFinalVersion.Controllers
         [HttpPost]
         public async Task<IActionResult> WheretoStay(int selectedPlaceId)
         {
+            SetCulture();
+            ViewBag.Categories = await _categoryService.GetAllCategories();
             TempData["Place1Id"] = selectedPlaceId;
             tripInfo.PlaceWhereToStay = await _placeService.GetPlaceById(selectedPlaceId);
             return RedirectToAction("WhatToDo");
@@ -108,6 +112,8 @@ namespace GyumriFinalVersion.Controllers
         [HttpGet]
         public async Task<IActionResult> WhatToDo()
         {
+            SetCulture();
+            ViewBag.Categories = await _categoryService.GetAllCategories();
             var allPlaces = await _placeService.GetPlacesWithPlaceType();
             ViewBag.Places = allPlaces;
             return View();
@@ -149,6 +155,8 @@ namespace GyumriFinalVersion.Controllers
         [HttpGet]
         public async Task<IActionResult> LastStep()
         {
+            SetCulture();
+            ViewBag.Categories = await _categoryService.GetAllCategories();
             ViewBag.PlaceWhereToStay = tripInfo.PlaceWhereToStay;
             ViewBag.PlacesWhatToDo = tripInfo.PlaceWhatToDo;
             ViewBag.FullInfo = tripInfo;
@@ -160,7 +168,8 @@ namespace GyumriFinalVersion.Controllers
         [HttpGet]
         public async Task<IActionResult> ForthStep()
         {
-
+            SetCulture();
+            ViewBag.Categories = await _categoryService.GetAllCategories();
             ViewBag.PlaceWhereToStay = tripInfo.PlaceWhereToStay;
             ViewBag.PlacesWhatToDo = tripInfo.PlaceWhatToDo;
             ViewBag.FullInfo = tripInfo;
