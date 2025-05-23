@@ -167,17 +167,17 @@ namespace GyumriFinalVersion.Controllers
         }
 
 
-        [HttpGet]
-        public async Task<IActionResult> ForthStep()
-        {
-            SetCulture();
-            ViewBag.Categories = await _categoryService.GetAllCategories();
-            ViewBag.PlaceWhereToStay = tripInfo.PlaceWhereToStay;
-            ViewBag.PlacesWhatToDo = tripInfo.PlaceWhatToDo;
-            ViewBag.FullInfo = tripInfo;
+        //[HttpGet]
+        //public async Task<IActionResult> ForthStep()
+        //{
+        //    SetCulture();
+        //    ViewBag.Categories = await _categoryService.GetAllCategories();
+        //    ViewBag.PlaceWhereToStay = tripInfo.PlaceWhereToStay;
+        //    ViewBag.PlacesWhatToDo = tripInfo.PlaceWhatToDo;
+        //    ViewBag.FullInfo = tripInfo;
 
-            return View(tripInfo);
-        }
+        //    return View(tripInfo);
+        //}
 
         public async Task<IActionResult> Final()
         {

@@ -62,7 +62,7 @@
         <a href="@Url.Action("WheretoStay", "Trip", new { selectedPlaceType = item, currentPage = 1 })" style="text-decoration:none !important;">
             <button type="button" class="filter-btn btn btn-dark me-2 mb-2" data-type="@item">
                 <i class="fa-solid fa-hotel"></i>
-                @Util.GetPlaceTypeNameByEnumType(item)
+                @Util.GetPlaceTypeNameByEnumType(item,currentCulture)
             </button>
         </a>
     }
