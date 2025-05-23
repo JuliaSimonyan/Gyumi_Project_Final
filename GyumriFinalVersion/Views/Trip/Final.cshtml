@@ -153,48 +153,28 @@
 
             <div>
                 <div class="action-buttons" method="post">
-                    <input type="email" name="email" class="form-control w-100" required />
 
-                    <button class="btn btn-back" id="backBtn">
-                        <i class="fas fa-arrow-left"></i>
-                        Back
-                    </button>
-                    <button class="btn btn-download" id="downloadBtn">
-                        <i class="fas fa-file-pdf"></i>
-                        Download PDF
-            <div>
-                <form asp-controller="Trip" asp-action="SendWelcomeEmail" class="action-buttons" method="post">
-                    <input type="email" name="email" class="form-control" />
-                    <button class="btn btn-email" id="emailBtn" type="submit">
-                        <i class="fas fa-envelope"></i>
-                        @AppRes.SendEmail
-                    </button>
-                    <form asp-action="SendWelcomeEmail" asp-controller="Trip">
-@*                         <button class="btn btn-email" id="emailBtn">
-                            <i class="fas fa-envelope"></i>
-                            Send via Email
-                        </button> *@
+
+
+                    <form asp-controller="Trip" asp-action="SendWelcomeEmail" class="action-buttons" method="post">
+                        <button class="btn btn-back" id="backBtn">
+                            <i class="fas fa-arrow-left"></i>
+                            @AppRes.Back
+                        </button>
+                        <input type="email" name="email" class="form-control" />
                         <button class="btn btn-email" id="emailBtn" type="submit">
                             <i class="fas fa-envelope"></i>
-                            Ուղարկել նամակ
+                            @AppRes.SendEmail
+                        </button>
+                    </form>
+                    <form asp-action="DownloadPdf" asp-controller="Trip">
+                        <button type="submit" class="btn btn-download" id="downloadBtn">
+                            <i class="fas fa-file-pdf"></i>
+                            Download PDF
                         </button>
                     </form>
 
 
-                    @* 
-                    <button class="btn btn-share" id="shareBtn">
-                        <i class="fas fa-share-alt"></i>
-                        Share
-                    </button> *@
-                </form>
-                <button class="btn btn-back" id="backBtn">
-                    <i class="fas fa-arrow-left"></i>
-                    @AppRes.Back
-                </button>
-                <button class="btn btn-download" id="downloadBtn">
-                    <i class="fas fa-file-pdf"></i>
-                    Download PDF
-                </button>
 
                 </div>
             </div>

@@ -7,6 +7,9 @@ using Gyumri.Application.Services;
 using Gyumri.Middleware;
 using Gyumri.App.Interfaces;
 using Gyumri.App.Services;
+using DinkToPdf.Contracts;
+using DinkToPdf;
+using TheArtOfDev.HtmlRenderer.PdfSharp;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
@@ -24,9 +27,10 @@ builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/Admin/Account/Login";
     options.AccessDeniedPath = "/Admin/Account/AccessDenied";
-}); 
+});
 
-
+builder.Services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
+IServiceCollection serviceCollection = builder.Services.AddTransient<GyumriFinalVersion.Services.PdfGenerator>();
 // Add MVC (controllers & views)
 
 builder.Services.AddControllersWithViews()

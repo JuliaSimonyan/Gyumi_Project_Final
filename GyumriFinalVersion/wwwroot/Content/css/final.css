@@ -14,8 +14,6 @@ body {
     flex-direction: column; /* This ensures proper stacking of elements */
 }
 
-
-
 .plan-container {
     margin:0 auto;
     background-color: white;
