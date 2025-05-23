@@ -94,7 +94,7 @@
                     <div class="item-thumbnail">
                         <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-kUJhL8uD96j8xGMUGnXmdJFprk4qId.png" alt="Berlin Art Hotel">
                     </div>
-                    <div class="item-details">
+                    <div class="item-details" style="color:#000;">
                         @if (ViewBag.CurrentCulture == "ru-RU")
                         {
                             <h3>@ViewBag.FullInfo.PlaceWhereToStay?.PlaceNameRu</h3>
@@ -146,16 +146,16 @@
                             <div class="item-details">
                                 @if (ViewBag.CurrentCulture == "ru-RU")
                                 {
-                                    <h3>@item.PlaceNameRu</h3>
+                                    <h3 style="color:#000;">@item.PlaceNameRu</h3>
 
                                 }
                                 else if (ViewBag.CurrentCulture == "hy-AM")
                                 {
-                                    <h3>@item.PlaceNameArm</h3>
+                                    <h3 style="color:#000;">@item.PlaceNameArm</h3>
                                 }
                                 else
                                 {
-                                    <h3>@item.PlaceName</h3>
+                                    <h3 style="color:#000;">@item.PlaceName</h3>
                                 }
                                 <div class="item-address" style="color:#000;">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
