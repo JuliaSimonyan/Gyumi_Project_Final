@@ -414,4 +414,13 @@
   <data name="Restaurant" xml:space="preserve">
     <value>Ռեստորան</value>
   </data>
+  <data name="AddressGyumri2" xml:space="preserve">
+    <value>Գյումրի, Շիրակի մարզ, ՀՀ</value>
+  </data>
+  <data name="TripToGyumri" xml:space="preserve">
+    <value>Ճանապարհորդություն դեպի Գյումրի</value>
+  </data>
+  <data name="Plan" xml:space="preserve">
+    <value>Ծրագիր</value>
+  </data>
 </root>

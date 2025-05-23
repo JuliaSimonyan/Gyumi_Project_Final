@@ -414,4 +414,13 @@
   <data name="Restaurant" xml:space="preserve">
     <value>Restaurant</value>
   </data>
+  <data name="AddressGyumri2" xml:space="preserve">
+    <value>Gyumri, Shirak Province, RA</value>
+  </data>
+  <data name="TripToGyumri" xml:space="preserve">
+    <value>Trip to Gyumri</value>
+  </data>
+  <data name="Plan" xml:space="preserve">
+    <value>Plan</value>
+  </data>
 </root>

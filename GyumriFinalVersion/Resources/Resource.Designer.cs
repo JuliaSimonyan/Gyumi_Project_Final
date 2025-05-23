@@ -88,6 +88,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Gyumri, Shirak Province, RA.
+        /// </summary>
+        public static string AddressGyumri2 {
+            get {
+                return ResourceManager.GetString("AddressGyumri2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Adults.
         /// </summary>
         public static string Adults {
@@ -664,6 +673,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Plan.
+        /// </summary>
+        public static string Plan {
+            get {
+                return ResourceManager.GetString("Plan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Plan a Trip.
         /// </summary>
         public static string PlanATrip {
@@ -840,6 +858,15 @@ namespace GyumriFinalVersion.Resources {
         public static string TripPlan {
             get {
                 return ResourceManager.GetString("TripPlan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trip to Gyumri.
+        /// </summary>
+        public static string TripToGyumri {
+            get {
+                return ResourceManager.GetString("TripToGyumri", resourceCulture);
             }
         }
         
