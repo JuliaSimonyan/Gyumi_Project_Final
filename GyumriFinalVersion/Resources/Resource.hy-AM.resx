@@ -546,4 +546,7 @@
   <data name="WhySection" xml:space="preserve">
     <value>Ապա ինչո՞ւ գալ Գյումրի</value>
   </data>
+  <data name="SendEmailPlaceholder" xml:space="preserve">
+    <value>Մուտքագրեք էլ. հասցեն՝ պլանը ուղարկելու համար</value>
+  </data>
 </root>

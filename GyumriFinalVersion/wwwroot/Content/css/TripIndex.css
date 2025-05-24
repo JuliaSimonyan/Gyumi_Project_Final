@@ -86,13 +86,26 @@
         left: 0px;
     }
 }
+
 @media only screen and (min-width: 1200px) {
-    .text-div{
-        padding:85px 0;
+    .text-div {
+        padding: 85px 0;
     }
+
+    .trip-input-info-div {
+        width: 70%;
+        left: 15%;
+    }
+}
+
+@media only screen and (min-width: 1700px) {
+    .text-div {
+        padding: 85px 0;
+    }
+
     .trip-input-info-div {
         width: 50%;
-        left:25%;
+        left: 25%;
     }
 }
 

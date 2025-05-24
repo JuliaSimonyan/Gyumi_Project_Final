@@ -315,7 +315,7 @@ input[type="radio"] {
 .back-btn,
 .next-btn {
     padding: 8px 16px;
-    border-radius: 38px;
+    border-radius: 28px;
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;

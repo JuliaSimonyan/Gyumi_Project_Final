@@ -1077,6 +1077,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enter email to send the plan.
+        /// </summary>
+        public static string SendEmailPlaceholder {
+            get {
+                return ResourceManager.GetString("SendEmailPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sev Berd Fortress.
         /// </summary>
         public static string SevBerd {

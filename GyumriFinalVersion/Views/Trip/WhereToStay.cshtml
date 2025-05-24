@@ -13,8 +13,8 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
-<link rel="stylesheet" href="~/Content/css/step1.css">
-<link rel="stylesheet" href="~/Content/css/step2.css">
+<link rel="stylesheet" href="~/Content/css/step1.css" data-version="1.2">
+<link rel="stylesheet" href="~/Content/css/step2.css" data-version="1.2">
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
@@ -62,15 +62,15 @@
         <a href="@Url.Action("WheretoStay", "Trip", new { selectedPlaceType = item, currentPage = 1 })" class="custom-button-black-hover" style="text-decoration:none !important;">
             <button type="button" class="filter-btn btn btn-dark me-2 mb-2 custom-button-black-hover" data-type="@item">
                 <i class="fa-solid fa-hotel"></i>
-                @Util.GetPlaceTypeNameByEnumType(item,currentCulture)
+                @Util.GetPlaceTypeNameByEnumType(item, currentCulture)
             </button>
         </a>
     }
 </div>
 
 <style>
-    .custom-button-black-hover:hover{
-        color:#000;
+    .custom-button-black-hover:hover {
+        color: #000;
     }
 </style>
 
@@ -131,55 +131,46 @@
     </form>
 </div>
 
-    <div class="navigation-buttons">
-        <a href=@Url.Action("FirstStep", "Trip") class="back-btn">
-            <i class="fa-solid fa-arrow-left"></i>
-            @AppRes.Back
-        </a>
-        <div class="pagination">
-            @if (ViewBag.CurrentPage > 1)
-            {
-                <a href="@Url.Action("WheretoStay", "Trip", new { selectedPlaceType = ViewBag.CurrentPlaceType, currentPage = ViewBag.CurrentPage - 1 })" class="page-item"><i class="fa-solid fa-arrow-left"></i></a>
-            }
-            @if (ViewBag.CurrentPage > 3)
-            {
-                <a href="@Url.Action("WheretoStay", "Trip", new { selectedPlaceType = ViewBag.CurrentPlaceType, currentPage = 1 })" class="page-item">1</a>
-                <span class="page-item">...</span>
-            }
+<div class="navigation-buttons">
+    <a href=@Url.Action("FirstStep", "Trip") class="back-btn">
+        <i class="fa-solid fa-arrow-left"></i>
+        @AppRes.Back
+    </a>
+    <div class="pagination">
+        @if (ViewBag.CurrentPage > 1)
+        {
+            <a href="@Url.Action("WheretoStay", "Trip", new { selectedPlaceType = ViewBag.CurrentPlaceType, currentPage = ViewBag.CurrentPage - 1 })" class="page-item"><i class="fa-solid fa-arrow-left"></i></a>
+        }
+        @if (ViewBag.CurrentPage > 3)
+        {
+            <a href="@Url.Action("WheretoStay", "Trip", new { selectedPlaceType = ViewBag.CurrentPlaceType, currentPage = 1 })" class="page-item">1</a>
+            <span class="page-item">...</span>
+        }
 
-            @for (int i = Math.Max(1, ViewBag.CurrentPage - 2); i <= Math.Min(ViewBag.PagesCount, ViewBag.CurrentPage + 2); i++)
-            {
-                var activeClass = (i == ViewBag.CurrentPage) ? "active" : "";
-                <a href="@Url.Action("WheretoStay", "Trip", new {selectedPlaceType = ViewBag.CurrentPlaceType, currentPage = i })"
-                   class="page-item @activeClass">@i</a>
-            }
+        @for (int i = Math.Max(1, ViewBag.CurrentPage - 2); i <= Math.Min(ViewBag.PagesCount, ViewBag.CurrentPage + 2); i++)
+        {
+            var activeClass = (i == ViewBag.CurrentPage) ? "active" : "";
+            <a href="@Url.Action("WheretoStay", "Trip", new {selectedPlaceType = ViewBag.CurrentPlaceType, currentPage = i })"
+               class="page-item @activeClass">@i</a>
+        }
 
-            @if (ViewBag.CurrentPage < ViewBag.PagesCount - 2)
-            {
-                <span class="page-item">...</span>
-                <a href="@Url.Action("WheretoStay", "Trip", new { selectedPlaceType = ViewBag.CurrentPlaceType, currentPage = ViewBag.PagesCount })" class="page-item">@ViewBag.PagesCount</a>
-            }
+        @if (ViewBag.CurrentPage < ViewBag.PagesCount - 2)
+        {
+            <span class="page-item">...</span>
+            <a href="@Url.Action("WheretoStay", "Trip", new { selectedPlaceType = ViewBag.CurrentPlaceType, currentPage = ViewBag.PagesCount })" class="page-item">@ViewBag.PagesCount</a>
+        }
 
-            @if (ViewBag.CurrentPage < ViewBag.PagesCount)
-            {
-                <a href="@Url.Action("WheretoStay", "Trip", new { selectedPlaceType = ViewBag.CurrentPlaceType, currentPage = ViewBag.CurrentPage + 1 })" class="page-item"><i class="fa-solid fa-arrow-right"></i></a>
-            }
-        </div>
+        @if (ViewBag.CurrentPage < ViewBag.PagesCount)
+        {
+            <a href="@Url.Action("WheretoStay", "Trip", new { selectedPlaceType = ViewBag.CurrentPlaceType, currentPage = ViewBag.CurrentPage + 1 })" class="page-item"><i class="fa-solid fa-arrow-right"></i></a>
+        }
+    </div>
 
     <button type="submit" form="placeForm" class="next-btn">
-            @AppRes.Next
-            <i class="fa-solid fa-arrow-right"></i>
-        </button>
-        @* <a href=@Url.Action("ThirdStep", "Trip") class="next-btn">
-                    @AppRes.Next
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a> *@
-    </div>
-
+        @AppRes.Next
+        <i class="fa-solid fa-arrow-right"></i>
+    </button>
 </div>
-
-
-    </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://kit.fontawesome.com/e8c2e1c09c.js" crossorigin="anonymous"></script>
@@ -211,27 +202,3 @@
 
     });
 </script>
-
-@* 
-<!-- Navigation Buttons -->
-<div class="navigation-buttons">
-    <a href=@Url.Action("Index", "Trip") class="back-btn">
-        <i class="fa-solid fa-arrow-left"></i>
-        @AppRes.Back
-    </a>
-    <button type="submit" form="myForm" class="next-btn">
-        @AppRes.Next
-        <i class="fa-solid fa-arrow-right"></i>
-    </button>
-</div>
-
-
-<style>
-    .placeList{
-        width: 1160px;
-        max-width: 1200px;
-        margin:0 auto;
-    }
-
-</style>
- *@

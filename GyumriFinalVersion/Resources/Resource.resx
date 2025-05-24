@@ -555,4 +555,7 @@ ask locals your questions (upcoming).</value>
   <data name="WhySection" xml:space="preserve">
     <value>So why come to Gyumri?</value>
   </data>
+  <data name="SendEmailPlaceholder" xml:space="preserve">
+    <value>Enter email to send the plan</value>
+  </data>
 </root>

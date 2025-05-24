@@ -386,6 +386,18 @@
   <data name="WelcomeSubHeadline" xml:space="preserve">
     <value>Город, где каждый уголок хранит историю — и каждое посещение оставляет свою.</value>
   </data>
+  <data name="EatAndDrinkDesc" xml:space="preserve">
+    <value>Кафе с характером, рестораны с душой и вкусы, которые вы не забудете.</value>
+  </data>
+  <data name="LiveAndWorkDesc" xml:space="preserve">
+    <value>Переезжайте, работайте удалённо, откройте бизнес — или просто проживите повседневную жизнь как местный.</value>
+  </data>
+  <data name="RelaxAndSleepDesc" xml:space="preserve">
+    <value>От исторических гостевых домов до уединённых уголков — отдыхайте так, как это делает сам Гюмри.</value>
+  </data>
+  <data name="SeeAndDoDesc" xml:space="preserve">
+    <value>Будь вы здесь на день или на неделю — вас ждут истории, места и люди, достойные вашего времени.</value>
+  </data>
   <data name="TravelDuration" xml:space="preserve">
     <value>Продолжительность поездки</value>
   </data>
@@ -536,19 +548,10 @@
   <data name="WhySection" xml:space="preserve">
     <value>Так зачем приезжать в Гюмри?</value>
   </data>
-  <data name="EatAndDrinkDesc" xml:space="preserve">
-    <value>Кафе с характером, рестораны с душой и вкусы, которые вы не забудете.</value>
-  </data>
-  <data name="LiveAndWorkDesc" xml:space="preserve">
-    <value>Переезжайте, работайте удалённо, откройте бизнес — или просто проживите повседневную жизнь как местный.</value>
-  </data>
-  <data name="RelaxAndSleepDesc" xml:space="preserve">
-    <value>От исторических гостевых домов до уединённых уголков — отдыхайте так, как это делает сам Гюмри.</value>
-  </data>
-  <data name="SeeAndDoDesc" xml:space="preserve">
-    <value>Будь вы здесь на день или на неделю — вас ждут истории, места и люди, достойные вашего времени.</value>
-  </data>
   <data name="String1" xml:space="preserve">
     <value />
+  </data>
+  <data name="SendEmailPlaceholder" xml:space="preserve">
+    <value>Введите эл. почту для отправки плана</value>
   </data>
 </root>
