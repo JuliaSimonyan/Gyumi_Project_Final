@@ -41,32 +41,36 @@ namespace Gyumri.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Article article, List<IFormFile> imageFiles)
         {
-            var filesIndex = 0;
+            int imageIndex = 0;
 
             foreach (var block in article.Blocks)
             {
                 if (block.BlockType == "Image")
                 {
-                    if (filesIndex < imageFiles.Count)
+                    if (imageIndex < imageFiles.Count && imageFiles[imageIndex]?.Length > 0)
                     {
-                        var file = imageFiles[filesIndex++];
+                        var file = imageFiles[imageIndex++];
+                        var uploadsPath = Path.Combine(_env.WebRootPath, "uploads");
+                        Directory.CreateDirectory(uploadsPath);
 
-                        if (file != null && file.Length > 0)
-                        {
-                            var uploadsPath = Path.Combine(_env.WebRootPath, "uploads");
-                            Directory.CreateDirectory(uploadsPath);
+                        var fileName = Path.GetFileName(file.FileName);
+                        var filePath = Path.Combine(uploadsPath, fileName);
 
-                            var fileName = Path.GetFileName(file.FileName);
-                            var filePath = Path.Combine(uploadsPath, fileName);
+                        using var stream = new FileStream(filePath, FileMode.Create);
+                        await file.CopyToAsync(stream);
 
-                            using var stream = new FileStream(filePath, FileMode.Create);
-                            await file.CopyToAsync(stream);
-
-                            block.Content = "/uploads/" + fileName;
-                        }
+                        block.Content = "/uploads/" + fileName;
+                    }
+                    else
+                    {
+                        continue;
                     }
                 }
             }
+
+            article.Blocks = article.Blocks
+                .Where(b => b.BlockType != "Image" || !string.IsNullOrWhiteSpace(b.Content))
+                .ToList();
 
             _context.Articles.Add(article);
             await _context.SaveChangesAsync();
@@ -120,7 +124,7 @@ namespace Gyumri.Areas.Admin.Controllers
 
             int imageIndex = 0;
 
-            foreach (var newBlock in model.Blocks)
+            foreach (var newBlock in model.Blocks.OrderBy(b => b.Order))
             {
                 var existingBlock = existing.Blocks.FirstOrDefault(b => b.Id == newBlock.Id);
 
@@ -133,11 +137,12 @@ namespace Gyumri.Areas.Admin.Controllers
                     }
                     else if (existingBlock.BlockType == "Image")
                     {
-                        if (imageFiles.Count > imageIndex && imageFiles[imageIndex]?.Length > 0)
+                        if (imageIndex < imageFiles.Count && imageFiles[imageIndex]?.Length > 0)
                         {
                             var file = imageFiles[imageIndex++];
                             var uploadsPath = Path.Combine(_env.WebRootPath, "uploads");
                             Directory.CreateDirectory(uploadsPath);
+
                             var fileName = Path.GetFileName(file.FileName);
                             var filePath = Path.Combine(uploadsPath, fileName);
 
@@ -150,10 +155,9 @@ namespace Gyumri.Areas.Admin.Controllers
                 }
                 else
                 {
-                    // ✅ Add new block
                     if (newBlock.BlockType == "Image")
                     {
-                        if (imageFiles.Count > imageIndex && imageFiles[imageIndex]?.Length > 0)
+                        if (imageIndex < imageFiles.Count && imageFiles[imageIndex]?.Length > 0)
                         {
                             var file = imageFiles[imageIndex++];
                             var uploadsPath = Path.Combine(_env.WebRootPath, "uploads");
@@ -165,6 +169,10 @@ namespace Gyumri.Areas.Admin.Controllers
                             await file.CopyToAsync(stream);
 
                             newBlock.Content = "/uploads/" + fileName;
+                        }
+                        else
+                        {
+                            continue;
                         }
                     }
 
@@ -180,7 +188,6 @@ namespace Gyumri.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction("Details", new { id = model.Id });
         }
-
 
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
