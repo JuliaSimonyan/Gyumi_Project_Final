@@ -191,8 +191,27 @@
 
                                         <div class="card-overlay">
                                             <div>
-                                                <h2 class="card-title">@item.PlaceName</h2>
-                                                <p class="card-text">@item.Description</p>
+                                                @if (currentCulture == "en")
+                                                {
+
+                                                    <h2 class="card-title">@item.PlaceName</h2>
+                                                    <p class="card-text">@item.Description</p>
+
+                                                }
+                                                else if (currentCulture == "hy-AM")
+                                                {
+
+                                                    <h2 class="card-title">@item.PlaceNameArm</h2>
+                                                    <p class="card-text">@item.DescriptionArm</p>
+
+                                                }
+                                                else if (currentCulture == "ru-RU")
+                                                {
+                                                    <p class="card-text">@item.PlaceNameRu</p>
+                                                    <p class="card-text">@item.DescriptionRu</p>
+
+                                                }
+
                                             </div>
                                         </div>
                                     </div>
