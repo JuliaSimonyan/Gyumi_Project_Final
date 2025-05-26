@@ -47,19 +47,23 @@ namespace Gyumri.Areas.Admin.Controllers
             {
                 if (block.BlockType == "Image")
                 {
-                    var file = imageFiles[filesIndex++];
-                    if (file != null && file.Length > 0)
+                    if (filesIndex < imageFiles.Count)
                     {
-                        var uploadsPath = Path.Combine(_env.WebRootPath, "uploads");
-                        Directory.CreateDirectory(uploadsPath);
+                        var file = imageFiles[filesIndex++];
 
-                        var fileName = Path.GetFileName(file.FileName);
-                        var filePath = Path.Combine(uploadsPath, fileName);
+                        if (file != null && file.Length > 0)
+                        {
+                            var uploadsPath = Path.Combine(_env.WebRootPath, "uploads");
+                            Directory.CreateDirectory(uploadsPath);
 
-                        using var stream = new FileStream(filePath, FileMode.Create);
-                        await file.CopyToAsync(stream);
+                            var fileName = Path.GetFileName(file.FileName);
+                            var filePath = Path.Combine(uploadsPath, fileName);
 
-                        block.Content = "/uploads/" + fileName;
+                            using var stream = new FileStream(filePath, FileMode.Create);
+                            await file.CopyToAsync(stream);
+
+                            block.Content = "/uploads/" + fileName;
+                        }
                     }
                 }
             }
@@ -116,13 +120,13 @@ namespace Gyumri.Areas.Admin.Controllers
 
             int imageIndex = 0;
 
-            for (int i = 0; i < model.Blocks.Count; i++)
+            foreach (var newBlock in model.Blocks)
             {
-                var newBlock = model.Blocks[i];
                 var existingBlock = existing.Blocks.FirstOrDefault(b => b.Id == newBlock.Id);
 
                 if (existingBlock != null)
                 {
+                    // ✅ Update existing block
                     if (existingBlock.BlockType == "Paragraph")
                     {
                         existingBlock.Content = newBlock.Content;
@@ -144,11 +148,39 @@ namespace Gyumri.Areas.Admin.Controllers
                         }
                     }
                 }
+                else
+                {
+                    // ✅ Add new block
+                    if (newBlock.BlockType == "Image")
+                    {
+                        if (imageFiles.Count > imageIndex && imageFiles[imageIndex]?.Length > 0)
+                        {
+                            var file = imageFiles[imageIndex++];
+                            var uploadsPath = Path.Combine(_env.WebRootPath, "uploads");
+                            Directory.CreateDirectory(uploadsPath);
+                            var fileName = Path.GetFileName(file.FileName);
+                            var filePath = Path.Combine(uploadsPath, fileName);
+
+                            using var stream = new FileStream(filePath, FileMode.Create);
+                            await file.CopyToAsync(stream);
+
+                            newBlock.Content = "/uploads/" + fileName;
+                        }
+                    }
+
+                    existing.Blocks.Add(new ArticleBlock
+                    {
+                        BlockType = newBlock.BlockType,
+                        Content = newBlock.Content,
+                        Order = newBlock.Order
+                    });
+                }
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction("Details", new { id = model.Id });
         }
+
 
         [HttpPost]
         public async Task<IActionResult> Delete(int id)

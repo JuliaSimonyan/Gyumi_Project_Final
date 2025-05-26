@@ -1,4 +1,5 @@
 ﻿@{
+    ViewData["Title"] = @ViewBag.CategoryName;
     var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }

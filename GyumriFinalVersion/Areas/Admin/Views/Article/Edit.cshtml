@@ -16,6 +16,8 @@
         <input asp-for="Title" class="form-control" />
     </div>
 
+    <hr />
+
     <div id="blocks-container">
         @for (int i = 0; i < Model.Blocks.Count; i++)
         {
@@ -42,31 +44,66 @@
         }
     </div>
 
-    <button type="submit" class="btn btn-primary">Save Changes</button>
+    <!-- Add buttons to insert new blocks -->
+    <div class="mb-4">
+        <button type="button" class="btn btn-outline-primary me-2" onclick="addBlock('Paragraph')">Add Paragraph</button>
+        <button type="button" class="btn btn-outline-secondary" onclick="addBlock('Image')">Add Image</button>
+    </div>
+
+    <button type="submit" class="btn btn-success">Save Changes</button>
 </form>
 
 <!-- CKEditor CDN -->
 <script src="https://cdn.ckeditor.com/ckeditor5/41.0.0/classic/ckeditor.js"></script>
 
 <script>
+    let blockIndex = @Model.Blocks.Count;
     const editors = [];
 
     document.addEventListener("DOMContentLoaded", () => {
         const textareas = document.querySelectorAll("textarea[id^='editor-']");
         textareas.forEach((textarea) => {
             ClassicEditor.create(textarea)
-                .then(editor => {
-                    editors.push(editor);
-                })
-                .catch(error => {
-                    console.error(error);
-                });
+                .then(editor => editors.push(editor))
+                .catch(console.error);
         });
 
         document.querySelector('form').addEventListener('submit', () => {
-            editors.forEach(editor => {
-                editor.updateSourceElement();
-            });
+            editors.forEach(editor => editor.updateSourceElement());
         });
     });
+
+    function addBlock(type) {
+        const container = document.getElementById("blocks-container");
+        let html = `<div class="mb-3">
+                <input type="hidden" name="Blocks[${blockIndex}].Id" value="0" />
+                <input type="hidden" name="Blocks[${blockIndex}].Order" value="${blockIndex}" />
+                <input type="hidden" name="Blocks[${blockIndex}].BlockType" value="${type}" />`;
+
+        if (type === "Paragraph") {
+            html += `
+                    <label>New Paragraph:</label>
+                    <textarea id="editor-${blockIndex}" name="Blocks[${blockIndex}].Content" class="form-control"></textarea>
+                `;
+        } else {
+            html += `
+                    <label>New Image:</label>
+                    <input type="file" name="imageFiles" class="form-control" />
+                    <input type="hidden" name="Blocks[${blockIndex}].Content" value="" />
+                `;
+        }
+
+        html += `</div>`;
+        container.insertAdjacentHTML("beforeend", html);
+
+        if (type === "Paragraph") {
+            setTimeout(() => {
+                ClassicEditor.create(document.querySelector(`#editor-${blockIndex}`))
+                    .then(editor => editors.push(editor))
+                    .catch(console.error);
+            }, 100);
+        }
+
+        blockIndex++;
+    }
 </script>

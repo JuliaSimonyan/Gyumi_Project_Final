@@ -558,4 +558,7 @@ ask locals your questions (upcoming).</value>
   <data name="SendEmailPlaceholder" xml:space="preserve">
     <value>Enter email to send the plan</value>
   </data>
+  <data name="MyList" xml:space="preserve">
+    <value>My List</value>
+  </data>
 </root>

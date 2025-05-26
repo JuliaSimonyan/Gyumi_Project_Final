@@ -1,13 +1,14 @@
 ﻿@{
     var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
+    
 }
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - GyumriFinalVersion</title>
-    <link rel="stylesheet" href="~/Content/style.css">
+    <title>@ViewData["Title"] VisitGyumri</title>
+    <link rel="stylesheet" href="~/Content/style.css" data-version="1.3">
     <link rel="stylesheet" href="~/Content/css/responsive.css">
     <link rel="icon" type="image/x-icon" href="~/Content/Images/favicon_black.ico" media="(prefers-color-scheme: light)" />
     <link rel="icon" type="image/x-icon" href="~/Content/Images/favicon-32x32.png media="(prefers-color-scheme: dark)" />
@@ -147,6 +148,13 @@
                     <div class="footer-section">@AppRes.OtherLinks.ToUpper()</div><br>
                     <p><a asp-controller="Trip" asp-action="Index" class="footer-link">@AppRes.PlanATrip</a></p>
                     @* <p><a href="#" class="footer-link">For Media</a></p>  TODO:: What is this part?*@
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-logos">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/UNDP%20LOGOS-01-gYZvyw7Yx2yGwiAmAZfVeiVXuksf6c.png" alt="Partner Organizations Logos - EU, UNDP, Mayors for Economic Growth, Enterprise Incubator Foundation, GTC, VTC">
+                    </div>
                 </div>
             </div>
         </div>

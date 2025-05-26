@@ -747,6 +747,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to My List.
+        /// </summary>
+        public static string MyList {
+            get {
+                return ResourceManager.GetString("MyList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Next.
         /// </summary>
         public static string Next {

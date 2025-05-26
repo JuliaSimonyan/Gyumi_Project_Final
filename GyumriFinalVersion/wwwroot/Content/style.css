@@ -1335,3 +1335,141 @@ margin-bottom: 15px;
 .footer-contact p, .footer-about p, .footer-links p {
     margin: 5px 0;
 }
+@media (max-width: 575.98px) {
+    .footer {
+        padding: 20px 0 15px 0;
+    }
+
+    .footer-section {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .footer-contact p,
+    .footer-about p,
+    .footer-links p {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .footer-logos {
+        margin-top: 15px;
+        padding: 15px 10px;
+    }
+
+        .footer-logos img {
+            max-width: 95%;
+            width: 95%;
+        }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .footer {
+        padding: 25px 0 18px 0;
+    }
+
+    .footer-section {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    .footer-contact p,
+    .footer-about p,
+    .footer-links p {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+
+    .footer-logos {
+        margin-top: 20px;
+        padding: 18px 12px;
+    }
+
+        .footer-logos img {
+            max-width: 90%;
+            width: 90%;
+        }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .footer {
+        padding: 30px 0 20px 0;
+    }
+
+    .footer-logos {
+        margin-top: 25px;
+        padding: 20px 15px;
+    }
+
+        .footer-logos img {
+            max-width: 100%;
+            width: 100%;
+        }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .footer {
+        padding: 35px 0 22px 0;
+    }
+
+    .footer-logos {
+        margin-top: 28px;
+        padding: 22px 20px;
+    }
+
+        .footer-logos img {
+            max-width: 100%;
+            width: 100%;
+        }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .footer {
+        padding: 40px 0 25px 0;
+    }
+
+    .footer-logos {
+        margin-top: 30px;
+        padding: 25px 25px;
+    }
+
+        .footer-logos img {
+            max-width: 100%;
+            width: 100%;
+        }
+}
+
+@media (min-width: 1400px) {
+    .footer {
+        padding: 45px 0 30px 0;
+    }
+
+    .footer-logos {
+        margin-top: 35px;
+        padding: 30px 30px;
+    }
+
+        .footer-logos img {
+            max-width: 100%;
+            width: 100%;
+        }
+}
+
+@media (min-width: 1920px) {
+    .footer-logos img {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+.footer-logos img:hover {
+    transform: scale(1.02);
+}
+
+.footer-logos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}

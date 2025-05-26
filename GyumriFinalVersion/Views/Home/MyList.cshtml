@@ -1,4 +1,5 @@
 ﻿@{
+    ViewData["Title"] = @AppRes.MyList;
     var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -16,7 +17,7 @@
 
 <div class="mylist-header">
     <div class="container">
-        <h1>My List</h1>
+        <h1>@AppRes.MyList</h1>
     </div>
 </div>
 

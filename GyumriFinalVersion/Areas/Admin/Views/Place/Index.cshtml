@@ -1,6 +1,8 @@
 ﻿@{
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
     ViewData["Title"] = "Places";
+    var subcategories = ViewBag.Subcategories as IEnumerable<dynamic>;
+
 }
 <h2>Add Articles</h2>
 
@@ -21,11 +23,16 @@
     <tbody>
         @foreach (var place in Model)
         {
+            var subcategoryName = subcategories?.FirstOrDefault(s => s.SubcategoryId == place.SubcategoryId)?.Name ?? "Unknown";
+
             <tr>
                 <td>@place.PlaceName</td>
                 <td>@place.Description</td>
                 <td><img src="/Images/places/@place.Photo" alt="Place Image" style="width: 50px; height: 50px;" /></td>
-                <td>@place.SubcategoryId</td>
+                <td>
+                    @subcategoryName
+
+                </td>
                 <td>
                     <form action="@Url.Action("Delete", "Place", new { id = place.Id, area = "Admin" })" method="post" style="display:inline-block;">
                         <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this place?')">Delete</button>

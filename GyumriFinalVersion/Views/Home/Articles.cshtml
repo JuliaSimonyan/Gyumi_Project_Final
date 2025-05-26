@@ -1,6 +1,7 @@
 ﻿@model Gyumri.Data.Models.Article
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
+    ViewData["Title"] = @Model.Title;
     var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -13,7 +14,6 @@
 <link rel="stylesheet" href="~/content/css/lifeandwork.css">
 <link rel="stylesheet" href="~/content/css/relax.css">
 <link rel="stylesheet" href="~/content/css/see.css">
-<title>@Model.Title - Gyumri Tourism</title>
 
 <div class="header-image" style="background-image: url('@Url.Content($"~/Images/places/{ViewBag.PlaceImage}")') !important;">
 </div>

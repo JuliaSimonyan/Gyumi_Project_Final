@@ -27,7 +27,7 @@
 
     <div class="form-group">
         <label for="Description">Description</label>
-        <textarea id="Description" name="Description" class="form-control" rows="3">@Model.Description</textarea>
+        <textarea id="Description" name="Description" class="form-control" rows="3" required>@Model.Description</textarea>
     </div>
 
     <div class="form-group">
@@ -79,7 +79,7 @@
     </div>
     <div class="form-group">
         <label asp-for="PlaceType" class="control-label">Place Type</label>
-        <select asp-for="PlaceType" class="form-control" required>
+        <select asp-for="PlaceType" class="form-control">
             <option value="">Select Place Type (not optional)</option>
             @foreach (PlaceType placeType in Enum.GetValues(typeof(PlaceType)))
             {

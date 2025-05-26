@@ -554,4 +554,7 @@
   <data name="SendEmailPlaceholder" xml:space="preserve">
     <value>Введите эл. почту для отправки плана</value>
   </data>
+  <data name="MyList" xml:space="preserve">
+    <value>Мой список</value>
+  </data>
 </root>

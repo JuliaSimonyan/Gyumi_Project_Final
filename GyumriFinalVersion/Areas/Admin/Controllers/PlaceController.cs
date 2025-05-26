@@ -29,6 +29,8 @@ namespace Gyumri.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
+            var subcategories = await _subcategoryService.GetAllSubcategories();
+            ViewBag.Subcategories = subcategories;
             var places = await _placeService.GetAllPlaces();
             return View(places);
         }

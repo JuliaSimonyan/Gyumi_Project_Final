@@ -549,4 +549,7 @@
   <data name="SendEmailPlaceholder" xml:space="preserve">
     <value>Մուտքագրեք էլ. հասցեն՝ պլանը ուղարկելու համար</value>
   </data>
+  <data name="MyList" xml:space="preserve">
+    <value>Իմ ցանկը</value>
+  </data>
 </root>
