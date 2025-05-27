@@ -118,7 +118,7 @@ body {
 }
 
 .filter-btn:hover:not(.active) {
-    background-color: #f5f5f5;
+    background-color: white;
 }
 
 /* Accommodation List */
@@ -270,7 +270,7 @@ body {
 }
 
 .page-item:hover:not(.active) {
-    background-color: #f5f5f5;
+    background-color: white;
 }
 
 /* Navigation Buttons */

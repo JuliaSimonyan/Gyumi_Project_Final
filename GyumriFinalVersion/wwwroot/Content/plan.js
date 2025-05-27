@@ -44,6 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Rest of the existing code...
     console.log("DOM loaded, initializing map...")
 
+    // Declare the L variable before using it
+    const L = window.L
+
     // Check if Leaflet is loaded
     if (typeof L === "undefined") {
         console.error("Leaflet library not loaded! Please check your script includes.")
@@ -434,15 +437,71 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Replace the updateTransportOptions function with this improved version
         function updateTransportOptions(locationName) {
-            // Get the bus and train option groups
+            // Get the bus and train option groups (these have specific classes)
             const busGroup = document.querySelector(".transport-option-group.bus-group")
             const trainGroup = document.querySelector(".transport-option-group.train-group")
+
+            // Handle Taxi options - only available in Yerevan
+            // The taxi group is the one that contains the taxi icon but doesn't have bus-group or train-group class
+            const allTransportGroups = document.querySelectorAll(".transport-option-group")
+            let taxiGroup = null
+
+            // Find the taxi group by looking for the fa-taxi icon
+            allTransportGroups.forEach((group) => {
+                const icon = group.querySelector(".transport-icon i.fa-taxi")
+                if (icon && !group.classList.contains("bus-group") && !group.classList.contains("train-group")) {
+                    taxiGroup = group
+                }
+            })
+
+            if (taxiGroup) {
+                console.log("Found taxi group:", taxiGroup)
+
+                if (locationName.toLowerCase().includes("yerevan")) {
+                    taxiGroup.classList.remove("disabled")
+                    const transportName = taxiGroup.querySelector(".transport-name")
+                   
+                    // Re-enable radio buttons
+                    const radioButtons = taxiGroup.querySelectorAll('input[type="radio"]')
+                    radioButtons.forEach((radio) => {
+                        radio.disabled = false
+                    })
+                } else {
+                    taxiGroup.classList.add("disabled")
+                    const transportName = taxiGroup.querySelector(".transport-name")
+                    if (transportName) {
+                        transportName.textContent += "(not available)"
+                    }
+
+                    // Close the dropdown if it's open
+                    const content = taxiGroup.querySelector(".transport-content")
+                    const header = taxiGroup.querySelector(".transport-header")
+                    if (content && content.style.display === "block") {
+                        content.style.display = "none"
+                        if (header) {
+                            header.classList.remove("expanded")
+                            const arrow = header.querySelector(".dropdown-arrow i")
+                            if (arrow) {
+                                arrow.className = "fa-solid fa-chevron-down"
+                            }
+                        }
+                    }
+
+                    // Disable radio buttons
+                    const radioButtons = taxiGroup.querySelectorAll('input[type="radio"]')
+                    radioButtons.forEach((radio) => {
+                        radio.disabled = true
+                        radio.checked = false
+                    })
+                }
+            } else {
+                console.log("Taxi group not found")
+            }
 
             if (busGroup) {
                 // Bus is only active in Yerevan
                 if (locationName.toLowerCase().includes("yerevan")) {
                     busGroup.classList.remove("disabled")
-                    busGroup.querySelector(".transport-name").textContent = "Bus"
                     busGroup.style.display = "block"
 
                     // Make sure any unavailable message is removed
@@ -452,7 +511,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 } else {
                     busGroup.classList.add("disabled")
-                    busGroup.querySelector(".transport-name").textContent = "Bus (not available)"
+                    busGroup.querySelector(".transport-name").textContent += "(not available)"
 
                     // Close the dropdown if it's open
                     const content = busGroup.querySelector(".transport-content")
@@ -498,7 +557,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 if (isTrainAvailable) {
                     trainGroup.classList.remove("disabled")
-                    trainGroup.querySelector(".transport-name").textContent = "Train"
                     trainGroup.style.display = "block"
 
                     // Make sure any unavailable message is removed
@@ -508,7 +566,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 } else {
                     trainGroup.classList.add("disabled")
-                    trainGroup.querySelector(".transport-name").textContent = "Train (not available)"
+                    trainGroup.querySelector(".transport-name").textContent += "(not available)"
 
                     // Close the dropdown if it's open
                     const content = trainGroup.querySelector(".transport-content")
@@ -535,4 +593,3 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("There was an error loading the map. Please refresh the page and try again.")
     }
 })
-

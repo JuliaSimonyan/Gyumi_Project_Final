@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using DinkToPdf.Contracts;
 using GyumriFinalVersion.Services;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
 
 namespace GyumriFinalVersion.Controllers
 {
@@ -214,56 +216,9 @@ namespace GyumriFinalVersion.Controllers
         {
             return View();
         }
-
-        [HttpPost]
-        public async Task<IActionResult> SendWelcomeEmail(string email)
+        // Move logic to a shared method
+        private byte[] GenerateTripPdf()
         {
-            SetCulture();
-
-            var subject = AppRes.WelcomeGyumri;
-            var body = new StringBuilder();
-
-            body.AppendLine("<h1>Trip to Gyumri</h1>");
-            body.AppendLine("<p>Plan</p>");
-            body.AppendLine("<br/>");
-            body.AppendLine($"<p>Date - {tripInfo.Date}</p>");
-            body.AppendLine($"<p>Adult count - {tripInfo.AdultCount}</p>");
-            body.AppendLine($"<p>Children count - {tripInfo.ChildrenCount}</p>");
-            body.AppendLine("<br/>");
-
-            body.AppendLine("<h2>Where to stay</h2>");
-            body.AppendLine($"<p>Place Name {tripInfo.PlaceWhereToStay?.PlaceName}</p>");
-            body.AppendLine($"<p>Address {tripInfo.PlaceWhereToStay?.Address}</p>");
-            body.AppendLine("<br/>");
-
-            body.AppendLine("<h2>What to do</h2>");
-            foreach (var trip in tripInfo.PlaceWhatToDo)
-            {
-                body.AppendLine($"<p>Place name - {trip.PlaceName}</p>");
-                body.AppendLine($"<p>Address - {trip.Address}</p>");
-                body.AppendLine("<br/>");
-            }
-
-            SendEmail(email, subject, body.ToString());
-
-            return RedirectToAction("Final");
-        }
-
-
-        //public IActionResult DownloadPdf()
-        //{
-        //    string htmlContent = @"";
-        //    var pdfBytes = _pdfGenerator.GeneratePdf(htmlContent);
-        //    return File(pdfBytes, "application/pdf", "downloaded.pdf");
-        //}
-
-        public IActionResult DownloadPdf()
-        {
-            var currentCulture = Request.Cookies["UserCulture"] ?? "en";
-            var cultureInfo = new System.Globalization.CultureInfo(currentCulture);
-            Thread.CurrentThread.CurrentCulture = cultureInfo;
-            Thread.CurrentThread.CurrentUICulture = cultureInfo;
-
             string placeName = tripInfo?.PlaceWhereToStay?.PlaceName;
             //currentCulture == "ru-RU" ? fullInfo.PlaceWhereToStay?.PlaceNameRu :
             //               currentCulture == "hy-AM" ? fullInfo.PlaceWhereToStay?.PlaceNameArm :
@@ -636,6 +591,88 @@ body {
                             </div>
                             <style>{css}</style>";
             var pdfBytes = _pdfGenerator.GeneratePdf(htmlContent);
+            return pdfBytes;
+        }
+
+        public void SendEmailWithAttachment(string toEmail, string subject, string htmlBody, byte[] attachmentBytes, string fileName)
+        {
+            var message = new MailMessage();
+            message.To.Add(toEmail);
+            message.Subject = subject;
+            message.Body = htmlBody;
+            message.IsBodyHtml = true;
+
+            if (attachmentBytes != null)
+            {
+                message.Attachments.Add(new Attachment(new MemoryStream(attachmentBytes), fileName, "application/pdf"));
+            }
+
+            using (var smtp = new SmtpClient())
+            {
+                smtp.Send(message);
+            }
+        }
+        [HttpPost]
+        public async Task<IActionResult> SendWelcomeEmail(string email)
+        {
+            // Configure SMTP settings directly (for quick use; not recommended for production)
+            var smtpHost = "smtp.gmail.com";
+            var smtpPort = 587;
+            var smtpUser = "visitgyumri.info@gmail.com";
+            var smtpPass = "avmy aviv ukql syui";
+            var enableSsl = true;
+
+            // Build email body
+            var subject = "Trip to Gyumri";
+            string body = "<p>Please find your trip plan attached as a PDF.</p>";
+         
+         
+            // Generate PDF in memory
+            byte[] pdfBytes = GenerateTripPdf();
+
+            // Prepare the email
+            var message = new MailMessage
+            {
+                From = new MailAddress(smtpUser),
+                Subject = subject,
+                Body = body,
+                IsBodyHtml = true
+            };
+            message.To.Add(email);
+
+            // Attach the generated PDF
+            var attachment = new Attachment(new MemoryStream(pdfBytes), "TripPlan.pdf", "application/pdf");
+            message.Attachments.Add(attachment);
+
+            // Send the email
+            using (var smtp = new SmtpClient(smtpHost, smtpPort))
+            {
+                smtp.Credentials = new NetworkCredential(smtpUser, smtpPass);
+                smtp.EnableSsl = enableSsl;
+
+                await smtp.SendMailAsync(message);
+            }
+
+            return RedirectToAction("Final");
+        }
+
+
+        //public IActionResult DownloadPdf()
+        //{
+        //    string htmlContent = @"";
+        //    var pdfBytes = _pdfGenerator.GeneratePdf(htmlContent);
+        //    return File(pdfBytes, "application/pdf", "downloaded.pdf");
+        //}
+
+        public IActionResult DownloadPdf()
+        {
+            var currentCulture = Request.Cookies["UserCulture"] ?? "en";
+            var cultureInfo = new System.Globalization.CultureInfo(currentCulture);
+            Thread.CurrentThread.CurrentCulture = cultureInfo;
+            Thread.CurrentThread.CurrentUICulture = cultureInfo;
+            var pdfBytes = GenerateTripPdf();
+
+
             return File(pdfBytes, "application/pdf", "downloaded.pdf");
         }
 

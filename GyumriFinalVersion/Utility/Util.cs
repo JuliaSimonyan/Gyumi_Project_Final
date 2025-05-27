@@ -30,7 +30,7 @@ namespace Gyumri.Common.Utility
                         PlaceType.CRAFTS => "Արվեստներ",
                         PlaceType.HISTORY => "Պատմություն",
                         PlaceType.OUTDOOR => "Բացօթյա",
-                        PlaceType.CAFE => "Կաֆե",
+                        PlaceType.CAFE => "Սրճարան",
                         PlaceType.RESTAURANT => "Ռեստորան",
                         _ => string.Empty
                     },

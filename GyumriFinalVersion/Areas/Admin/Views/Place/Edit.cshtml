@@ -1,5 +1,7 @@
 ﻿@model Gyumri.Common.ViewModel.Place.AddEditPlaceViewModel
 @using Gyumri.Data.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
 
 @{
     ViewData["Title"] = "Edit Place";
@@ -11,33 +13,33 @@
 
 <form asp-action="Edit" method="post" enctype="multipart/form-data">
     <div class="form-group">
-        <label for="PlaceName">Place Name</label>
-        <input type="text" class="form-control" id="PlaceName" name="PlaceName" value="@Model.PlaceName" required />
+        <label asp-for="PlaceName">Place Name</label>
+        <input asp-for="PlaceName"  type="text" class="form-control" id="PlaceName"  value="@Model.PlaceName" required />
     </div>
 
     <div class="form-group">
-        <label for="PlaceNameArm">Place Name (Armenian)</label>
-        <input type="text" class="form-control" id="PlaceNameArm" name="PlaceNameArm" value="@Model.PlaceNameArm" />
+        <label asp-for="PlaceNameArm">Place Name (Armenian)</label>
+        <input asp-for="PlaceNameArm" type="text" class="form-control" id="PlaceNameArm" name="PlaceNameArm" value="@Model.PlaceNameArm" />
     </div>
 
     <div class="form-group">
-        <label for="PlaceNameRu">Place Name (Russian)</label>
-        <input type="text" class="form-control" id="PlaceNameRu" name="PlaceNameRu" value="@Model.PlaceNameRu" />
+        <label asp-for="PlaceNameRu">Place Name (Russian)</label>
+        <input asp-for="PlaceNameRu" type="text" class="form-control" id="PlaceNameRu" name="PlaceNameRu" value="@Model.PlaceNameRu" />
     </div>
 
     <div class="form-group">
-        <label for="Description">Description</label>
-        <textarea id="Description" name="Description" class="form-control" rows="3" required>@Model.Description</textarea>
+        <label asp-for="Description">Description</label>
+        <textarea asp-for="Description" id="Description" name="Description" class="form-control" rows="3" required>@Model.Description</textarea>
     </div>
 
     <div class="form-group">
-        <label for="DescriptionArm">Description (Armenian)</label>
-        <textarea id="DescriptionArm" name="DescriptionArm" class="form-control" rows="3">@Model.DescriptionArm</textarea>
+        <label asp-for="DescriptionArm">Description (Armenian)</label>
+        <textarea asp-for="DescriptionArm" id="DescriptionArm" name="DescriptionArm" class="form-control" rows="3">@Model.DescriptionArm</textarea>
     </div>
 
     <div class="form-group">
-        <label for="DescriptionRu">Description (Russian)</label>
-        <textarea id="DescriptionRu" name="DescriptionRu" class="form-control" rows="3">@Model.DescriptionRu</textarea>
+        <label asp-for="DescriptionRu">Description (Russian)</label>
+        <textarea asp-for="DescriptionRu" id="DescriptionRu" name="DescriptionRu" class="form-control" rows="3">@Model.DescriptionRu</textarea>
     </div>
 
     <div class="form-group">
@@ -46,11 +48,26 @@
             <option value="">Select Subcategory</option>
             @foreach (var subcategory in ViewBag.Subcategories as List<Gyumri.Common.ViewModel.Subcategory.SubcategoryViewModel>)
             {
-                <option value="@subcategory.SubcategoryId" @(subcategory.SubcategoryId == Model.SubcategoryId ? "selected" : "")>
+                <option value="@subcategory.SubcategoryId">
                     @subcategory.Name
                 </option>
             }
         </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address" class="control-label"></label>
+        <textarea asp-for="Address" class="form-control" required>@Model.Address</textarea>
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="AddressRu" class="control-label"></label>
+        <textarea asp-for="AddressRu" class="form-control">@Model.AddressRu</textarea>
+        <span asp-validation-for="AddressRu" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="AddressArm" class="control-label"></label>
+        <textarea asp-for="AddressArm" class="form-control">@Model.AddressArm</textarea>
+        <span asp-validation-for="AddressArm" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label for="Photo">Upload Photo (Optional)</label>
@@ -64,17 +81,17 @@
     </div>
     <div class="form-group">
         <label asp-for="MinPrice" class="control-label">Edit MinPrice</label>
-        <input asp-for="MinPrice" type="number" value="@Model.MinPrice" />
+        <input asp-for="MinPrice" type="number"/>
         <span asp-validation-for="MinPrice" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="MaxPrice" class="control-label">Edit MaxPrice</label>
-        <input asp-for="MaxPrice" type="number" value="@Model.MaxPrice"/>
+        <input asp-for="MaxPrice" type="number"/>
         <span asp-validation-for="MaxPrice" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Raiting" class="control-label">Edit Raiting</label>
-        <input asp-for="Raiting" type="number" value="@Model.Raiting" class="form-control" />
+        <input asp-for="Raiting" type="number"/>
         <span asp-validation-for="Raiting" class="text-danger"></span>
     </div>
     <div class="form-group">
@@ -83,7 +100,7 @@
             <option value="">Select Place Type (not optional)</option>
             @foreach (PlaceType placeType in Enum.GetValues(typeof(PlaceType)))
             {
-                <option value="@placeType" @(placeType == Model.PlaceType ? "selected" : "")>@placeType</option>
+                <option value="@placeType" >@placeType</option>
             }
         </select>
         <span asp-validation-for="PlaceType" class="text-danger"></span>
@@ -91,11 +108,11 @@
 
     <div class="form-group">
         <label asp-for="ArticleId">Article</label>
-        <select class="form-control" class="form-control" name="ArticleId">
+        <select asp-for="ArticleId" class="form-control">
             <option value="">Select Article</option>
             @foreach (var article in ViewBag.Articles as List<Gyumri.Data.Models.Article>)
             {
-                <option value="@article.Id" @(article.Id == Model.ArticleId ? "selected" : "")>
+                <option value="@article.Id" >
                     @article.Title
                 </option>
             }

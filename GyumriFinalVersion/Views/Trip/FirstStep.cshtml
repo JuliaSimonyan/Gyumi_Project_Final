@@ -82,6 +82,36 @@
                         <p id="route-distance">353 @AppRes.km</p>
                     </div>
                 </div>
+                 <!-- Private Car Dropdown -->
+                <div class="transport-option-group">
+                    <div class="transport-header">
+                        <div class="transport-icon">
+                            <i class="fa-solid fa-car"></i>
+                        </div>
+                        <div class="transport-name">@AppRes.PrivateCar</div>
+                        <div class="dropdown-arrow">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="transport-content" style="display: block;">
+                        <div class="navigation-options">
+                            <div class="item-radio">
+                                <input type="radio" name="transport" value="@(AppRes.PrivateCar)" id="yevyev-shuttle">
+                                <label for="yevyev-shuttle">@AppRes.PrivateCar</label>
+                            </div>
+                            <div class="navigation-option">
+                                <a href="https://maps.app.goo.gl/ZvsXEEhohAGTJ6pW9" target="_blank" style="color:#000 !important;" class="nav-link">
+                                    <i class="fa-brands fa-google"></i> Google Maps Navigation
+                                </a>
+                            </div>
+                            <div class="navigation-option">
+                                <a href="https://yandex.com/maps/-/CHrkNO5S" target="_blank" style="color:#000 !important;" class="nav-link">
+                                    <i class="fa-solid fa-location-dot"></i> Yandex Maps Navigation
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- Taxi Dropdown -->
                 <div class="transport-option-group">
                     <div class="transport-header expanded">
@@ -90,11 +120,11 @@
                         </div>
                         <div class="transport-name">@AppRes.Taxi</div>
                         <div class="dropdown-arrow">
-                            <i class="fa-solid fa-chevron-up"></i>
+                            <i class="fa-solid fa-chevron-down"></i>
                         </div>
                     </div>
 
-                    <div class="transport-content">
+                    <div class="transport-content" style="display: none;">
                         <!-- GG Shuttle -->
                         <div class="transport-item selected">
                             <div class="item-rating">
@@ -309,43 +339,14 @@
                     </div>
                 </div>
 
-                <!-- Private Car Dropdown -->
-                <div class="transport-option-group">
-                    <div class="transport-header">
-                        <div class="transport-icon">
-                            <i class="fa-solid fa-car"></i>
-                        </div>
-                        <div class="transport-name">@AppRes.PrivateCar</div>
-                        <div class="dropdown-arrow">
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                    </div>
-                    <div class="transport-content" style="display: none;">
-                        <div class="navigation-options">
-                            <div class="item-radio">
-                                <input type="radio" name="transport" value="@(AppRes.PrivateCar)" id="yevyev-shuttle">
-                                <label for="yevyev-shuttle">@AppRes.PrivateCar</label>
-                            </div>
-                            <div class="navigation-option">
-                                <a href="https://maps.app.goo.gl/ZvsXEEhohAGTJ6pW9" target="_blank" style="color:#000 !important;" class="nav-link">
-                                    <i class="fa-brands fa-google"></i> Google Maps Navigation
-                                </a>
-                            </div>
-                            <div class="navigation-option">
-                                <a href="https://yandex.com/maps/-/CHrkNO5S" target="_blank" style="color:#000 !important;" class="nav-link">
-                                    <i class="fa-solid fa-location-dot"></i> Yandex Maps Navigation
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               
             </form>
         </div>
     </div>
 
     <!-- Navigation Buttons -->
     <div class="navigation-buttons">
-        <a href=@Url.Action("Index", "Trip")  class="back-btn">
+        <a href=@Url.Action("Index", "Trip")  class="back-btn" style="text-decoration:none;">
             <i class="fa-solid fa-arrow-left"></i>
             @AppRes.Back
         </a>
