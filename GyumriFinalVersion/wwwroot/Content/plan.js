@@ -47,12 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Declare the L variable before using it
     const L = window.L
 
-    // Check if Leaflet is loaded
-    if (typeof L === "undefined") {
-        console.error("Leaflet library not loaded! Please check your script includes.")
-        alert("Map library not loaded. Please refresh the page or check your internet connection.")
-        return
-    }
 
     // Get the map container
     const mapContainer = document.getElementById("map")

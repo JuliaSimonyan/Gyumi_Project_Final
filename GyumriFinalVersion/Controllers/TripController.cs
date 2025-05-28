@@ -154,7 +154,13 @@ namespace GyumriFinalVersion.Controllers
                         Description = placeEntity.Description,
                         DescriptionArm = placeEntity.DescriptionArm,
                         DescriptionRu = placeEntity.DescriptionRu,
-                        // ավելացրու այլ հատկությունները եթե կան
+                        Photo = placeEntity.Photo,
+                        MinPrice = placeEntity.MinPrice,
+                        MaxPrice = placeEntity.MaxPrice,
+                        Raiting = placeEntity.Raiting,
+                        Address = placeEntity.Address,
+                        AddressArm = placeEntity.AddressArm,
+                        AddressRu = placeEntity.AddressRu,
                     };
                     tripInfo.PlaceWhatToDo.Add(placeVm);
                 }
@@ -618,8 +624,8 @@ body {
             // Configure SMTP settings directly (for quick use; not recommended for production)
             var smtpHost = "smtp.gmail.com";
             var smtpPort = 587;
-            var smtpUser = "visitgyumri.info@gmail.com";
-            var smtpPass = "avmy aviv ukql syui";
+            var smtpUser = fromEmail;
+            var smtpPass = password;
             var enableSsl = true;
 
             // Build email body

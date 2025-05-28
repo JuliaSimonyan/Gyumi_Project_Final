@@ -83,7 +83,7 @@
                     </div>
                 </div>
                  <!-- Private Car Dropdown -->
-                <div class="transport-option-group">
+                <div class="transport-option-group selected">
                     <div class="transport-header">
                         <div class="transport-icon">
                             <i class="fa-solid fa-car"></i>
@@ -96,7 +96,7 @@
                     <div class="transport-content" style="display: block;">
                         <div class="navigation-options">
                             <div class="item-radio">
-                                <input type="radio" name="transport" value="@(AppRes.PrivateCar)" id="yevyev-shuttle">
+                                <input type="radio" name="transport" value="@(AppRes.PrivateCar)" id="yevyev-shuttle" checked>
                                 <label for="yevyev-shuttle">@AppRes.PrivateCar</label>
                             </div>
                             <div class="navigation-option">
@@ -126,7 +126,7 @@
 
                     <div class="transport-content" style="display: none;">
                         <!-- GG Shuttle -->
-                        <div class="transport-item selected">
+                        <div class="transport-item ">
                             <div class="item-rating">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -135,7 +135,7 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                             <div class="item-radio">
-                                <input type="radio" name="transport" value="@AppRes.GGTitle" id="gg-shuttle" checked>
+                                <input type="radio" name="transport" value="@AppRes.GGTitle" id="gg-shuttle" >
                                 <label for="gg-shuttle"> @AppRes.GGTitle </label>
                             </div>
                             <div class="item-details">

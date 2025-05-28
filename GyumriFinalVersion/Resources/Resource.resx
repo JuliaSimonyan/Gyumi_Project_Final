@@ -205,7 +205,7 @@
     <value>Skip the obvious.</value>
   </data>
   <data name="LookingForPartTextt" xml:space="preserve">
-    <value>Whether you’re a local or a visitor, there’s always something new to uncover.Here’s where things get a little weird, wild, and wonderful. See More</value>
+    <value>Whether you’re a local or a visitor, there’s always something new to uncover.Here’s where things get a little weird, wild, and wonderful. </value>
   </data>
   <data name="ExploretheUndergroundArtsScene" xml:space="preserve">
     <value>Explore the Underground Arts Scene</value>
@@ -560,5 +560,131 @@ ask locals your questions (upcoming).</value>
   </data>
   <data name="MyList" xml:space="preserve">
     <value>My List</value>
+  </data>
+  <data name="AlmostReady" xml:space="preserve">
+    <value>Almost ready...</value>
+  </data>
+  <data name="Event-related" xml:space="preserve">
+    <value>Event-related information when you use the</value>
+  </data>
+  <data name="HoldTight" xml:space="preserve">
+    <value>Hold tight! We're getting your personalized Gyumri trip documents ready</value>
+  </data>
+  <data name="InMoment" xml:space="preserve">
+    <value>In just a moment, you'll have access to your itinerary, hotel bookings, must-visit museums, top cafés, local restaurants, and insider tips — all in one place.</value>
+  </data>
+  <data name="PQuestion" xml:space="preserve">
+    <value>If you have questions about this privacy policy, email us at</value>
+  </data>
+  <data name="PreparingYourGuide" xml:space="preserve">
+    <value>Preparing Your Travel Guide to Gyumri</value>
+  </data>
+  <data name="PRequest" xml:space="preserve">
+    <value>Request that we delete any personal information you've submitted via email:</value>
+  </data>
+  <data name="PrivacyAnonymous" xml:space="preserve">
+    <value>Anonymous browsing data (like location and device type) to help us improve user experience and offer a
+  best experience for features like "Plan A Trip".</value>
+  </data>
+  <data name="PrivacyCan" xml:space="preserve">
+    <value>You can:</value>
+  </data>
+  <data name="PrivacyChoose" xml:space="preserve">
+    <value>Your Choices</value>
+  </data>
+  <data name="PrivacyCollect" xml:space="preserve">
+    <value>What We Collect</value>
+  </data>
+  <data name="PrivacyCollectDesc" xml:space="preserve">
+    <value>We only collect the information you choose to share with us, such as:</value>
+  </data>
+  <data name="PrivacyData" xml:space="preserve">
+    <value>Choose not to provide personal data by avoiding forms and interactive tools</value>
+  </data>
+  <data name="PrivacyDesc1" xml:space="preserve">
+    <value>Your privacy matters to us. This website is committed to protecting your personal information and being
+transparent about how we collect, use, and store data. Below is a summary of what you need to know.</value>
+  </data>
+  <data name="PrivacyForm" xml:space="preserve">
+    <value>form</value>
+  </data>
+  <data name="PrivacyHow" xml:space="preserve">
+    <value>How We Store &amp; Protect It</value>
+  </data>
+  <data name="PrivacyHowDesc" xml:space="preserve">
+    <value>Your data is stored securely on servers managed by our technology partner. We use industry-standard
+security measures to protect it from unauthorized access, modification, or disclosure.</value>
+  </data>
+  <data name="PrivacyMatters" xml:space="preserve">
+    <value>Your privacy matters to us. We're committed to protecting your personal information.</value>
+  </data>
+  <data name="PrivacySell" xml:space="preserve">
+    <value>We never sell your data to third parties. Ever.</value>
+  </data>
+  <data name="PrivacySubmitEvent" xml:space="preserve">
+    <value>Submit an Event</value>
+  </data>
+  <data name="PrivacyTools" xml:space="preserve">
+    <value>Third-Party Tools</value>
+  </data>
+  <data name="PrivacyToolsDesc" xml:space="preserve">
+    <value>We may use services like Google Analytics, social media integrations (e.g. Instagram embeds), or email
+ marketing tools to better understand usage and reach. These platforms have their own privacy policies,
+ which we recommend reviewing.</value>
+  </data>
+  <data name="PrivacyWhy" xml:space="preserve">
+    <value>Why We Collect It</value>
+  </data>
+  <data name="PrivacyWhyTo" xml:space="preserve">
+    <value>We collect this data to:</value>
+  </data>
+  <data name="PUpdates" xml:space="preserve">
+    <value>Updates to This Policy</value>
+  </data>
+  <data name="PUpdatesDesc" xml:space="preserve">
+    <value>We may update this privacy policy if new features or services are added. Any changes will be reflected on
+  this page with an updated date.</value>
+  </data>
+  <data name="PWhy1" xml:space="preserve">
+    <value>Provide accurate responses to your questions</value>
+  </data>
+  <data name="PWhy2" xml:space="preserve">
+    <value>Feature events submitted by users</value>
+  </data>
+  <data name="PWhy3" xml:space="preserve">
+    <value>Improve website performance and content based on visitor behavior</value>
+  </data>
+  <data name="PWhy4" xml:space="preserve">
+    <value>Ensure a smooth, secure experience for all visitors</value>
+  </data>
+  <data name="Skip" xml:space="preserve">
+    <value>Skip</value>
+  </data>
+  <data name="Cafes" xml:space="preserve">
+    <value>Cafes</value>
+  </data>
+  <data name="Churches" xml:space="preserve">
+    <value>Churches</value>
+  </data>
+  <data name="Entertainment" xml:space="preserve">
+    <value>Entertainment</value>
+  </data>
+  <data name="ExploreGyumri" xml:space="preserve">
+    <value>Explore Gyumri</value>
+  </data>
+  <data name="Museums" xml:space="preserve">
+    <value>Museums</value>
+  </data>
+  <data name="Parks" xml:space="preserve">
+    <value>Parks</value>
+  </data>
+  <data name="SaveList" xml:space="preserve">
+    <value>Save places you're interested in to view them here later</value>
+  </data>
+  <data name="Sights" xml:space="preserve">
+    <value>Sights</value>
+  </data>
+  <data name="YourListEmpty" xml:space="preserve">
+    <value>Your list is empty</value>
   </data>
 </root>

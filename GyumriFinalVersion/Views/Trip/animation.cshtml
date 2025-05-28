@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="~/Content/css/effect.css" data-version="1.2" />
 <body>
     <div class="container" id="loadingContainer">
-        <h1>Preparing Your Travel Guide to Gyumri</h1>
-        <p class="subtitle">Hold tight! We're getting your personalized Gyumri trip documents ready<span class="loading-dots"></span></p>
-        <p class="description">In just a moment, you'll have access to your itinerary, hotel bookings, must-visit museums, top cafés, local restaurants, and insider tips — all in one place.</p>
+        <h1>@AppRes.PreparingYourGuide</h1>
+        <p class="subtitle">@AppRes.HoldTight<span class="loading-dots"></span></p>
+        <p class="description">@AppRes.InMoment</p>
 
         <div class="animation-container">
             <div class="document">
@@ -35,14 +35,14 @@
         <div class="progress-container">
             <div class="progress-bar"></div>
         </div>
-        <p class="completion-text">Almost ready...</p>
+        <p class="completion-text">@AppRes.AlmostReady</p>
     </div>
 
     <!-- Store the redirect URL in a hidden field -->
     <input type="hidden" id="redirectUrl" value="@Url.Action("Final", "Trip") " />
 
     <!-- Optional Skip Button -->
-    <a href="@Url.Action("Final", "Trip")" class="skip-button">Skip</a>
+    <a href="@Url.Action("Final", "Trip")" class="skip-button">@AppRes.Skip</a>
 
     <script>
         // Configuration

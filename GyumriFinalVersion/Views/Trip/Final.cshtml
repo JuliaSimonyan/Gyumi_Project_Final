@@ -160,7 +160,7 @@
                 </div>
             </div>
 
-            <div class="container my-4">
+            <div class="container my-4" style="margin: 0 auto !important; text-align:center;">
                 <div class="row g-2 justify-content-center" style="padding-bottom: 10px;">
                     <div class="col-12 col-md-auto text-center">
                         <form asp-action="LastStep" asp-controller="Trip" method="get">
@@ -174,7 +174,7 @@
                     <div class="col-12 col-md d-flex flex-column flex-md-row align-items-center gap-2">
                         <form asp-controller="Trip" asp-action="SendWelcomeEmail" method="post" class="w-100">
                             <div class="d-flex flex-column flex-md-row gap-2">
-                                <input type="email" name="email" class="form-control" placeholder="@AppRes.SendEmailPlaceholder" style="width:85%;" />
+                                <input type="email" name="email" class="form-control" placeholder="@AppRes.SendEmailPlaceholder" style="width:100%;" />
                                 <button class="btn btn-email" id="emailBtn" type="submit">
                                     <i class="fas fa-envelope"></i>
                                     @AppRes.SendEmail
@@ -202,32 +202,118 @@
 
         </div>
     </div>
+    <!-- Add this popup HTML to your page -->
+    <div id="sharePopup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000;">
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 25px; border-radius: 8px; width: 90%; max-width: 400px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            <span class="close-popup" style="position: absolute; top: 15px; right: 20px; font-size: 24px; cursor: pointer;">&times;</span>
+            <h3 style="margin-bottom: 20px; text-align: center;">Share this trip</h3>
 
+            <!-- Social Media Buttons -->
+            <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 25px;">
+                <a href="#" onclick="shareOnFacebook(); return false;" style="background: #3b5998; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none;">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" onclick="shareOnTwitter(); return false;" style="background: #1da1f2; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none;">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" onclick="shareOnWhatsApp(); return false;" style="background: #25d366; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none;">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" onclick="shareOnTelegram(); return false;" style="background: #0088cc; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none;">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+            </div>
+
+            <!-- Copy Link Section -->
+            <div style="display: flex; margin-top: 15px;">
+                <input type="text" id="shareUrl" value="" readonly style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 4px 0 0 4px; font-size: 14px;">
+                <button onclick="copyToClipboard()" style="padding: 10px 15px; background: #007bff; color: white; border: none; border-radius: 0 4px 4px 0; cursor: pointer;">Copy</button>
+            </div>
+        </div>
+    </div>
 </body>
 <script>
+    // Wait for DOM to be fully loaded
     document.addEventListener("DOMContentLoaded", function () {
+        console.log("DOM loaded");
+
+        // Set share URL
+        document.getElementById("shareUrl").value = window.location.href;
+
+        // Get elements
         const shareBtn = document.getElementById("shareButton");
         const sharePopup = document.getElementById("sharePopup");
         const closePopup = document.querySelector(".close-popup");
 
-        // Toggle popup on Share button click
-        shareBtn.addEventListener("click", function () {
-            sharePopup.style.display = (sharePopup.style.display === "block") ? "none" : "block";
-        });
+        console.log("Share button:", shareBtn);
+        console.log("Share popup:", sharePopup);
+        console.log("Close button:", closePopup);
 
-        // Close popup on close icon click
-        closePopup.addEventListener("click", function () {
-            sharePopup.style.display = "none";
-        });
+        // Share button click event
+        if (shareBtn) {
+            shareBtn.addEventListener("click", function (e) {
+                e.preventDefault();
+                console.log("Share button clicked");
+                if (sharePopup) {
+                    sharePopup.style.display = "block";
+                }
+            });
+        }
 
-        // Optional: click outside to close popup
-        document.addEventListener("click", function (event) {
-            if (!sharePopup.contains(event.target) && !shareBtn.contains(event.target)) {
+        // Close button click event
+        if (closePopup) {
+            closePopup.addEventListener("click", function () {
+                console.log("Close button clicked");
+                if (sharePopup) {
+                    sharePopup.style.display = "none";
+                }
+            });
+        }
+
+        // Close when clicking outside
+        window.addEventListener("click", function (event) {
+            if (sharePopup && event.target === sharePopup) {
                 sharePopup.style.display = "none";
             }
         });
     });
-</script>
 
+    // Share functions
+    function shareOnFacebook() {
+        const url = encodeURIComponent(window.location.href);
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+    }
+
+    function shareOnTwitter() {
+        const url = encodeURIComponent(window.location.href);
+        const text = encodeURIComponent('Check out this trip plan!');
+        window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+    }
+
+    function shareOnWhatsApp() {
+        const url = encodeURIComponent(window.location.href);
+        const text = encodeURIComponent('Check out this trip plan: ');
+        window.open(`https://wa.me/?text=${text}${url}`, '_blank');
+    }
+
+    function shareOnTelegram() {
+        const url = encodeURIComponent(window.location.href);
+        const text = encodeURIComponent('Check out this trip plan!');
+        window.open(`https://t.me/share/url?url=${url}&text=${text}`, '_blank');
+    }
+
+    function copyToClipboard() {
+        const shareUrl = document.getElementById('shareUrl');
+        shareUrl.select();
+        shareUrl.setSelectionRange(0, 99999);
+
+        try {
+            navigator.clipboard.writeText(shareUrl.value).then(() => {
+            });
+        } catch (err) {
+            document.execCommand('copy');
+        }
+    }
+</script>
 <script src="~/Content/plan.js"></script>
 </html>

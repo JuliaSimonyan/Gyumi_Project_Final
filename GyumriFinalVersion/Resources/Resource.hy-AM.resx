@@ -552,4 +552,124 @@
   <data name="MyList" xml:space="preserve">
     <value>Իմ ցանկը</value>
   </data>
+  <data name="AlmostReady" xml:space="preserve">
+    <value>Գրեթե պատրաստ է...</value>
+  </data>
+  <data name="Cafes" xml:space="preserve">
+    <value>Սրճարաններ</value>
+  </data>
+  <data name="Churches" xml:space="preserve">
+    <value>Եկեղեցիներ</value>
+  </data>
+  <data name="Entertainment" xml:space="preserve">
+    <value>Զվարճանք</value>
+  </data>
+  <data name="Event-related" xml:space="preserve">
+    <value>Կոնտակտային տվյալներ (անուն, էլ. հասցե)՝ </value>
+  </data>
+  <data name="ExploreGyumri" xml:space="preserve">
+    <value>Բացահայտիր Գյումրին</value>
+  </data>
+  <data name="HoldTight" xml:space="preserve">
+    <value>Սպասե՛ք։ Մենք պատրաստում ենք ձեր անհատականացված Գյումրու ճանապարհորդական փաստաթղթերը</value>
+  </data>
+  <data name="InMoment" xml:space="preserve">
+    <value>Մի քանի վայրկյանում դուք կունենաք ձեր երթուղին, հյուրանոցների ամրագրումները, պարտադիր այցելության թանգարանները, լավագույն սրճարանները, տեղական ռեստորանները և ներքին խորհուրդները՝ բոլորը մեկ տեղում։</value>
+  </data>
+  <data name="Museums" xml:space="preserve">
+    <value>Թանգարաններ</value>
+  </data>
+  <data name="Parks" xml:space="preserve">
+    <value>Այգիներ</value>
+  </data>
+  <data name="PQuestion" xml:space="preserve">
+    <value>Հարցե՞ր ունեք գաղտնիության քաղաքականության վերաբերյալ։ Գրեք մեզ</value>
+  </data>
+  <data name="PreparingYourGuide" xml:space="preserve">
+    <value>Գյումրու ձեր ճանապարհորդական ուղեցույցի պատրաստումը</value>
+  </data>
+  <data name="PRequest" xml:space="preserve">
+    <value>Խնդրեք մեզ ջնջել ձեր կողմից տրամադրված ցանկացած անձնական տեղեկատվություն, դիմելով հետևյալ մեյլին.</value>
+  </data>
+  <data name="PrivacyAnonymous" xml:space="preserve">
+    <value>Անանուն դիտման տվյալներ (օրինակ՝ գտնվելու վայր, սարքի տեսակ)՝ կայքի փորձը բարելավելու համար</value>
+  </data>
+  <data name="PrivacyCan" xml:space="preserve">
+    <value>Դուք կարող եք՝</value>
+  </data>
+  <data name="PrivacyChoose" xml:space="preserve">
+    <value>Ձեր ընտրանքները</value>
+  </data>
+  <data name="PrivacyCollect" xml:space="preserve">
+    <value>Ինչ ենք մենք հավաքագրում</value>
+  </data>
+  <data name="PrivacyCollectDesc" xml:space="preserve">
+    <value>Մենք հավաքում ենք միայն այն տվյալները, որոնք դուք ինքներդ եք տրամադրում՝</value>
+  </data>
+  <data name="PrivacyData" xml:space="preserve">
+    <value>Չտրամադրել անձնական տվյալներ՝ խուսափելով ձևերից ու ինտերակտիվ գործիքներից</value>
+  </data>
+  <data name="PrivacyDesc1" xml:space="preserve">
+    <value>Ձեր անձնական տվյալների պաշտպանությունը մեզ համար առաջնահերթություն է։ Մենք պարտավորվում ենք լինել բաց ու թափանցիկ տվյալների հավաքագրման, օգտագործման և պահպանման հարցում։ Ստորև ներկայացված է համառոտ նկարագրություն՝ ինչ է պետք իմանալ։</value>
+  </data>
+  <data name="PrivacyForm" xml:space="preserve">
+    <value>ձևում</value>
+  </data>
+  <data name="PrivacyHow" xml:space="preserve">
+    <value>Ինչպես ենք պահպանում և պաշտպանում տվյալները</value>
+  </data>
+  <data name="PrivacyHowDesc" xml:space="preserve">
+    <value>Ձեր տվյալները պահվում են մեր տեխնոլոգիական գործընկերոջ կողմից կառավարվող անվտանգ սերվերներում։ Մենք կիրառում ենք ոլորտին համապատասխան անվտանգության միջոցառումներ՝ չարտոնված հասանելիությունից, փոփոխություններից կամ բացահայտումից պաշտպանվելու համար։</value>
+  </data>
+  <data name="PrivacyMatters" xml:space="preserve">
+    <value>Ձեր գաղտնիությունը կարևոր է մեզ համար: Մենք հանձնառու ենք պաշտպանել ձեր անձնական տվյալները։</value>
+  </data>
+  <data name="PrivacySell" xml:space="preserve">
+    <value>Ձեր տվյալները ենթակա չեն երրորդ կողմին տրամադրման կամ վաճառքի։</value>
+  </data>
+  <data name="PrivacySubmitEvent" xml:space="preserve">
+    <value>«Հարց ուղղել»</value>
+  </data>
+  <data name="PrivacyTools" xml:space="preserve">
+    <value>Երրորդ կողմի գործիքներ</value>
+  </data>
+  <data name="PrivacyToolsDesc" xml:space="preserve">
+    <value>Մենք կարող ենք օգտագործել Google Analytics, սոցիալական մեդիայի ինտեգրացիաներ (օրինակ՝ Instagram), կամ էլ. փոստի գործիքներ՝ օգտագործման ու հասանելիության վերլուծության նպատակով։ Այս հարթակներն ունեն իրենց գաղտնիության քաղաքականությունները, որոնց ծանոթանալը խորհուրդ ենք տալիս։</value>
+  </data>
+  <data name="PrivacyWhy" xml:space="preserve">
+    <value>Ինչու ենք մենք հավաքում դրանք</value>
+  </data>
+  <data name="PrivacyWhyTo" xml:space="preserve">
+    <value>Մենք օգտագործում ենք տվյալները՝</value>
+  </data>
+  <data name="PUpdates" xml:space="preserve">
+    <value>Քաղաքականության թարմացումներ</value>
+  </data>
+  <data name="PUpdatesDesc" xml:space="preserve">
+    <value>Գաղտնիության քաղաքականությունը կարող է թարմացվել՝ նոր գործառույթների ավելացման դեպքում։ Բոլոր փոփոխությունները կարտացոլվեն այս էջում՝ թարմացված ամսաթվով։</value>
+  </data>
+  <data name="PWhy1" xml:space="preserve">
+    <value>Ձեր հարցերին ճշգրիտ պատասխաններ տալու համար</value>
+  </data>
+  <data name="PWhy2" xml:space="preserve">
+    <value>Օգտատերերի կողմից ներկայացված միջոցառումները ցուցադրելու համար</value>
+  </data>
+  <data name="PWhy3" xml:space="preserve">
+    <value>Կայքի աշխատանքի ու բովանդակության բարելավման նպատակով</value>
+  </data>
+  <data name="PWhy4" xml:space="preserve">
+    <value>Գտնվելու վայրին համապատասխան առաջարկներ ուղարկելու համար։Բոլոր այցելուների համար սահուն և անվտանգ փորձ ապահովելու համար</value>
+  </data>
+  <data name="SaveList" xml:space="preserve">
+    <value>Պահպանեք ձեզ հետաքրքրող վայրերը՝ դրանք այստեղ հետագայում դիտելու համար</value>
+  </data>
+  <data name="Sights" xml:space="preserve">
+    <value>Տեսարժան վայրեր</value>
+  </data>
+  <data name="Skip" xml:space="preserve">
+    <value>Բաց թողնել</value>
+  </data>
+  <data name="YourListEmpty" xml:space="preserve">
+    <value>Ձեր ցանկը դատարկ է</value>
+  </data>
 </root>

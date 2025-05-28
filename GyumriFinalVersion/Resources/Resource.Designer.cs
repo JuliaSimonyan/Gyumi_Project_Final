@@ -133,6 +133,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Almost ready....
+        /// </summary>
+        public static string AlmostReady {
+            get {
+                return ResourceManager.GetString("AlmostReady", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to and explore.
         /// </summary>
         public static string AndExplore {
@@ -223,6 +232,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cafes.
+        /// </summary>
+        public static string Cafes {
+            get {
+                return ResourceManager.GetString("Cafes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Central Park Ferris Wheel.
         /// </summary>
         public static string CentralPark {
@@ -246,6 +264,15 @@ namespace GyumriFinalVersion.Resources {
         public static string Children {
             get {
                 return ResourceManager.GetString("Children", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Churches.
+        /// </summary>
+        public static string Churches {
+            get {
+                return ResourceManager.GetString("Churches", resourceCulture);
             }
         }
         
@@ -367,6 +394,24 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Entertainment.
+        /// </summary>
+        public static string Entertainment {
+            get {
+                return ResourceManager.GetString("Entertainment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Event-related information when you use the.
+        /// </summary>
+        public static string Event_related {
+            get {
+                return ResourceManager.GetString("Event-related", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Every day.
         /// </summary>
         public static string Everyday {
@@ -390,6 +435,15 @@ namespace GyumriFinalVersion.Resources {
         public static string ExperienceGyumriAfterDarkText {
             get {
                 return ResourceManager.GetString("ExperienceGyumriAfterDarkText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Explore Gyumri.
+        /// </summary>
+        public static string ExploreGyumri {
+            get {
+                return ResourceManager.GetString("ExploreGyumri", resourceCulture);
             }
         }
         
@@ -612,6 +666,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hold tight! We&apos;re getting your personalized Gyumri trip documents ready.
+        /// </summary>
+        public static string HoldTight {
+            get {
+                return ResourceManager.GetString("HoldTight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
         public static string Home {
@@ -644,6 +707,15 @@ namespace GyumriFinalVersion.Resources {
         public static string hourShort {
             get {
                 return ResourceManager.GetString("hourShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In just a moment, you&apos;ll have access to your itinerary, hotel bookings, must-visit museums, top cafés, local restaurants, and insider tips — all in one place..
+        /// </summary>
+        public static string InMoment {
+            get {
+                return ResourceManager.GetString("InMoment", resourceCulture);
             }
         }
         
@@ -702,7 +774,7 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Whether you’re a local or a visitor, there’s always something new to uncover.Here’s where things get a little weird, wild, and wonderful. See More.
+        ///   Looks up a localized string similar to Whether you’re a local or a visitor, there’s always something new to uncover.Here’s where things get a little weird, wild, and wonderful. .
         /// </summary>
         public static string LookingForPartTextt {
             get {
@@ -743,6 +815,15 @@ namespace GyumriFinalVersion.Resources {
         public static string Museum {
             get {
                 return ResourceManager.GetString("Museum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Museums.
+        /// </summary>
+        public static string Museums {
+            get {
+                return ResourceManager.GetString("Museums", resourceCulture);
             }
         }
         
@@ -788,6 +869,15 @@ namespace GyumriFinalVersion.Resources {
         public static string Outdoor {
             get {
                 return ResourceManager.GetString("Outdoor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parks.
+        /// </summary>
+        public static string Parks {
+            get {
+                return ResourceManager.GetString("Parks", resourceCulture);
             }
         }
         
@@ -1014,6 +1104,135 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to If you have questions about this privacy policy, email us at.
+        /// </summary>
+        public static string PQuestion {
+            get {
+                return ResourceManager.GetString("PQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Preparing Your Travel Guide to Gyumri.
+        /// </summary>
+        public static string PreparingYourGuide {
+            get {
+                return ResourceManager.GetString("PreparingYourGuide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Request that we delete any personal information you&apos;ve submitted via email:.
+        /// </summary>
+        public static string PRequest {
+            get {
+                return ResourceManager.GetString("PRequest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Anonymous browsing data (like location and device type) to help us improve user experience and offer a
+        ///  best experience for features like &quot;Plan A Trip&quot;..
+        /// </summary>
+        public static string PrivacyAnonymous {
+            get {
+                return ResourceManager.GetString("PrivacyAnonymous", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can:.
+        /// </summary>
+        public static string PrivacyCan {
+            get {
+                return ResourceManager.GetString("PrivacyCan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Choices.
+        /// </summary>
+        public static string PrivacyChoose {
+            get {
+                return ResourceManager.GetString("PrivacyChoose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to What We Collect.
+        /// </summary>
+        public static string PrivacyCollect {
+            get {
+                return ResourceManager.GetString("PrivacyCollect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We only collect the information you choose to share with us, such as:.
+        /// </summary>
+        public static string PrivacyCollectDesc {
+            get {
+                return ResourceManager.GetString("PrivacyCollectDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose not to provide personal data by avoiding forms and interactive tools.
+        /// </summary>
+        public static string PrivacyData {
+            get {
+                return ResourceManager.GetString("PrivacyData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your privacy matters to us. This website is committed to protecting your personal information and being
+        ///transparent about how we collect, use, and store data. Below is a summary of what you need to know..
+        /// </summary>
+        public static string PrivacyDesc1 {
+            get {
+                return ResourceManager.GetString("PrivacyDesc1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to form.
+        /// </summary>
+        public static string PrivacyForm {
+            get {
+                return ResourceManager.GetString("PrivacyForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to How We Store &amp; Protect It.
+        /// </summary>
+        public static string PrivacyHow {
+            get {
+                return ResourceManager.GetString("PrivacyHow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your data is stored securely on servers managed by our technology partner. We use industry-standard
+        ///security measures to protect it from unauthorized access, modification, or disclosure..
+        /// </summary>
+        public static string PrivacyHowDesc {
+            get {
+                return ResourceManager.GetString("PrivacyHowDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your privacy matters to us. We&apos;re committed to protecting your personal information..
+        /// </summary>
+        public static string PrivacyMatters {
+            get {
+                return ResourceManager.GetString("PrivacyMatters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Privacy Policy.
         /// </summary>
         public static string PrivacyPolicy {
@@ -1023,11 +1242,122 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to We never sell your data to third parties. Ever..
+        /// </summary>
+        public static string PrivacySell {
+            get {
+                return ResourceManager.GetString("PrivacySell", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Submit an Event.
+        /// </summary>
+        public static string PrivacySubmitEvent {
+            get {
+                return ResourceManager.GetString("PrivacySubmitEvent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Third-Party Tools.
+        /// </summary>
+        public static string PrivacyTools {
+            get {
+                return ResourceManager.GetString("PrivacyTools", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We may use services like Google Analytics, social media integrations (e.g. Instagram embeds), or email
+        /// marketing tools to better understand usage and reach. These platforms have their own privacy policies,
+        /// which we recommend reviewing..
+        /// </summary>
+        public static string PrivacyToolsDesc {
+            get {
+                return ResourceManager.GetString("PrivacyToolsDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Why We Collect It.
+        /// </summary>
+        public static string PrivacyWhy {
+            get {
+                return ResourceManager.GetString("PrivacyWhy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We collect this data to:.
+        /// </summary>
+        public static string PrivacyWhyTo {
+            get {
+                return ResourceManager.GetString("PrivacyWhyTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Private Car.
         /// </summary>
         public static string PrivateCar {
             get {
                 return ResourceManager.GetString("PrivateCar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Updates to This Policy.
+        /// </summary>
+        public static string PUpdates {
+            get {
+                return ResourceManager.GetString("PUpdates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We may update this privacy policy if new features or services are added. Any changes will be reflected on
+        ///  this page with an updated date..
+        /// </summary>
+        public static string PUpdatesDesc {
+            get {
+                return ResourceManager.GetString("PUpdatesDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Provide accurate responses to your questions.
+        /// </summary>
+        public static string PWhy1 {
+            get {
+                return ResourceManager.GetString("PWhy1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Feature events submitted by users.
+        /// </summary>
+        public static string PWhy2 {
+            get {
+                return ResourceManager.GetString("PWhy2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Improve website performance and content based on visitor behavior.
+        /// </summary>
+        public static string PWhy3 {
+            get {
+                return ResourceManager.GetString("PWhy3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ensure a smooth, secure experience for all visitors.
+        /// </summary>
+        public static string PWhy4 {
+            get {
+                return ResourceManager.GetString("PWhy4", resourceCulture);
             }
         }
         
@@ -1055,6 +1385,15 @@ namespace GyumriFinalVersion.Resources {
         public static string RoutInfo {
             get {
                 return ResourceManager.GetString("RoutInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save places you&apos;re interested in to view them here later.
+        /// </summary>
+        public static string SaveList {
+            get {
+                return ResourceManager.GetString("SaveList", resourceCulture);
             }
         }
         
@@ -1109,6 +1448,24 @@ namespace GyumriFinalVersion.Resources {
         public static string SevBerdDesc {
             get {
                 return ResourceManager.GetString("SevBerdDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sights.
+        /// </summary>
+        public static string Sights {
+            get {
+                return ResourceManager.GetString("Sights", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Skip.
+        /// </summary>
+        public static string Skip {
+            get {
+                return ResourceManager.GetString("Skip", resourceCulture);
             }
         }
         
@@ -1371,6 +1728,15 @@ namespace GyumriFinalVersion.Resources {
         public static string Yerevan {
             get {
                 return ResourceManager.GetString("Yerevan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your list is empty.
+        /// </summary>
+        public static string YourListEmpty {
+            get {
+                return ResourceManager.GetString("YourListEmpty", resourceCulture);
             }
         }
     }

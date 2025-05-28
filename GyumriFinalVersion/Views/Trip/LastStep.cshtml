@@ -92,7 +92,11 @@
             <div class="guide-item">
                 <div class="item-content">
                     <div class="item-thumbnail">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-kUJhL8uD96j8xGMUGnXmdJFprk4qId.png" alt="Berlin Art Hotel">
+                        @{
+                            var stay = ViewBag.FullInfo.PlaceWhereToStay?.Photo;
+
+                        }
+                        <img src="/Images/places/@stay" alt="Berlin Art Hotel">
                     </div>
                     <div class="item-details" style="color:#000;">
                         @if (ViewBag.CurrentCulture == "ru-RU")
@@ -112,7 +116,12 @@
                                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                 <circle cx="12" cy="10" r="3"></circle>
                             </svg>
-                            @ViewBag.FullInfo.PlaceWhereToStay?.PlaceName @* TODO:: get address from backend *@
+                            @{
+                                string stayAddress = currentCulture == "ru-RU" ? ViewBag.FullInfo.PlaceWhereToStay?.AddressRu :
+                                currentCulture == "hy-AM" ? ViewBag.FullInfo.PlaceWhereToStay?.AddressArm :
+                                ViewBag.FullInfo.PlaceWhereToStay?.Address;
+                            }
+                            @stayAddress
                         </div>
                     </div>
                 </div>
@@ -136,12 +145,20 @@
             @if (ViewBag.FullInfo.PlaceWhatToDo != null)
             {
                 <h2>@AppRes.WhatToDo</h2>
-                @foreach (var item in ViewBag.FullInfo.PlaceWhatToDo)
+                @foreach (var item in ViewBag.FullInfo.PlaceWhatToDo as List<Gyumri.Common.ViewModel.Place.PlacesViewModel>)
                 {
+                                                
+                                var minPrice = item.MinPrice;
+                                var maxPrice = item.MaxPrice;
+                    var photo = item.Photo;
+                    string placeAddress = currentCulture == "ru-RU" ? item.AddressRu :
+                                currentCulture == "hy-AM" ? item.AddressArm :
+                                item.Address;
+                            
                     <div class="guide-item">
                         <div class="item-content">
                             <div class="item-thumbnail">
-                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-kUJhL8uD96j8xGMUGnXmdJFprk4qId.png" alt="Dzitoghtsyan Museum">
+                                <img src="/Images/places/@photo" alt="Dzitoghtsyan Museum">
                             </div>
                             <div class="item-details">
                                 @if (ViewBag.CurrentCulture == "ru-RU")
@@ -163,21 +180,9 @@
                                         <circle cx="12" cy="10" r="3"></circle>
                                     </svg>
                                     @*47 Haghtanaki Avenue, Gyumri TODO:: get address from backend *@
-                                    @item.Address
+                                    @placeAddress
 
-                                    @if (ViewBag.CurrentCulture == "ru-RU")
-                                    {
-                                        @item.AddressRu
-
-                                    }
-                                    else if (ViewBag.CurrentCulture == "hy-AM")
-                                    {
-                                        @item.AddressArm
-                                    }
-                                    else
-                                    {
-                                        @item.Address
-                                    }
+                                   
                                 </div>
                             </div>
                         </div>
@@ -187,7 +192,7 @@
                                 <path d="M12 8v8"></path>
                                 <path d="M8 12h8"></path>
                             </svg>
-                            @(item.MinPrice) - @(item?.MaxPrice) AMD
+                            @(minPrice) - @(maxPrice) AMD
                             <div class="action-buttons">
                                 @* <button class="change-btn">Change</button>
                             <button class="remove-btn">×</button> *@

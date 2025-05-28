@@ -14,9 +14,16 @@
 <link rel="stylesheet" href="~/content/css/lifeandwork.css">
 <link rel="stylesheet" href="~/content/css/relax.css">
 <link rel="stylesheet" href="~/content/css/see.css">
+<link rel="stylesheet" href="~/Content/css/article.css"></link>
 
-<div class="header-image" style="background-image: url('@Url.Content($"~/Images/places/{ViewBag.PlaceImage}")') !important;">
-</div>
+    <!-- Article Header -->
+<header class="article-header" style="background-image: url('@Url.Content($"~/Images/places/{ViewBag.PlaceImage}")') !important;">
+        <div class="container">
+    <h2>@Model.Title</h2>
+    </div>
+
+    </header>
+
 <div class="container py-5 mainsection" style="margin-top:0 !important;">
    
     <p class="subcategory-heading">@ViewBag.SubcategoryName</p>

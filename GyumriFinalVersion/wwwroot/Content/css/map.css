@@ -746,5 +746,6 @@ ul {
 }
 .leaflet-interactive {
     stroke:none;
+    fill:none;
 }
 
