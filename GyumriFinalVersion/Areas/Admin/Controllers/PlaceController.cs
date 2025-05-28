@@ -17,13 +17,16 @@ namespace Gyumri.Areas.Admin.Controllers
         private readonly ISubcategory _subcategoryService;
         private readonly IArticle _articleService;
         private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly ImageOptimizerService _imageOptimizerService;
 
-        public PlaceController(IPlace placeService, ISubcategory subcategoryService, IArticle article, IWebHostEnvironment webHostEnvironment)
+
+        public PlaceController(IPlace placeService, ISubcategory subcategoryService, IArticle article, IWebHostEnvironment webHostEnvironment, ImageOptimizerService imageOptimizerService)
         {
             _placeService = placeService;
             _subcategoryService = subcategoryService;
             _articleService = article;
             _webHostEnvironment = webHostEnvironment;
+            _imageOptimizerService = imageOptimizerService;
         }
 
         [HttpGet]
@@ -49,12 +52,8 @@ namespace Gyumri.Areas.Admin.Controllers
         {
             if (photo != null)
             {
-                string fileName = Guid.NewGuid() + Path.GetExtension(photo.FileName);
-                string path = Path.Combine(_webHostEnvironment.WebRootPath, "Images/places", fileName);
-                model.Photo = fileName;
-
-                using var fileStream = new FileStream(path, FileMode.Create);
-                await photo.CopyToAsync(fileStream);
+                string relativePath = _imageOptimizerService.OptimizeAndSaveUploadedImage(photo, "Images/places");
+                model.Photo = Path.GetFileName(relativePath);
             }
 
             bool success = await _placeService.AddPlace(model);
@@ -121,12 +120,8 @@ namespace Gyumri.Areas.Admin.Controllers
                     }
                 }
 
-                string fileName = Guid.NewGuid() + Path.GetExtension(photo.FileName);
-                string path = Path.Combine(_webHostEnvironment.WebRootPath, "Images/places", fileName);
-                model.Photo = fileName;
-
-                using var fileStream = new FileStream(path, FileMode.Create);
-                await photo.CopyToAsync(fileStream);
+                string relativePath = _imageOptimizerService.OptimizeAndSaveUploadedImage(photo, "Images/places");
+                model.Photo = Path.GetFileName(relativePath);
             }
             else
             {

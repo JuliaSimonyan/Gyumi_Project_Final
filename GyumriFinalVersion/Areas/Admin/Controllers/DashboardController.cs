@@ -12,5 +12,18 @@ namespace Gyumri.Areas.Admin.Controllers
         {
             return View();
         }
+        [HttpGet]
+        public IActionResult OptimizeStaticImages()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult OptimizeStaticImages([FromServices] ImageOptimizerService optimizer)
+        {
+            optimizer.OptimizeAllImagesInWwwroot();
+            TempData["Message"] = "Static images optimized and originals deleted.";
+            return RedirectToAction("Index");
+        }
+
     }
 }

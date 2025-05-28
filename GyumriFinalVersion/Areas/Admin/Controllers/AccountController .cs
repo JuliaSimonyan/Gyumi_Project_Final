@@ -2,6 +2,9 @@
 using GyumriFinalVersion.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Processing;
+using SixLabors.ImageSharp.Formats.Jpeg;
 
 namespace GyumriFinalVersion.Areas.Admin.Controllers
 {
@@ -60,6 +63,50 @@ namespace GyumriFinalVersion.Areas.Admin.Controllers
         }
 
         public IActionResult AccessDenied() => View();
+        [HttpGet]
+        public IActionResult UploadImage()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> UploadImage(IFormFile imageFile)
+        {
+            if (imageFile != null && imageFile.Length > 0)
+            {
+                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads");
+                Directory.CreateDirectory(uploadsFolder);
+
+                var originalFileName = Path.GetFileNameWithoutExtension(imageFile.FileName);
+                var fileExt = Path.GetExtension(imageFile.FileName);
+                var optimizedName = $"{originalFileName}_{DateTime.UtcNow.Ticks}.webp";
+
+                var savePath = Path.Combine(uploadsFolder, optimizedName);
+
+                using var stream = imageFile.OpenReadStream();
+                using var image = await Image.LoadAsync(stream);
+
+                image.Mutate(x => x.Resize(new ResizeOptions
+                {
+                    Size = new Size(1024, 768),
+                    Mode = ResizeMode.Max
+                }));
+
+                var encoder = new SixLabors.ImageSharp.Formats.Webp.WebpEncoder
+                {
+                    Quality = 75
+                };
+
+                await image.SaveAsync(savePath, encoder);
+
+                ViewBag.UploadedImage = $"/uploads/{optimizedName}";
+                ViewBag.Message = $"Image '{optimizedName}' uploaded and optimized.";
+            }
+
+            return View();
+        }
+
 
     }
 }

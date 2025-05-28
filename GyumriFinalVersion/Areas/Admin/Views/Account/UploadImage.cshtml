@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Upload Image";
+}
+
+<h2>Upload and Optimize Image</h2>
+
+<form asp-action="UploadImage" asp-controller="Account" asp-area="Admin" enctype="multipart/form-data" method="post">
+    <input type="file" name="imageFile" accept="image/*" required />
+    <button type="submit">Upload</button>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <p style="color: green">@ViewBag.Message</p>
+}
+
+@if (ViewBag.UploadedImage != null)
+{
+    <h3>Uploaded Image:</h3>
+    <img src="@ViewBag.UploadedImage" loading="lazy" width="400" height="auto" alt="Uploaded Image" />
+}

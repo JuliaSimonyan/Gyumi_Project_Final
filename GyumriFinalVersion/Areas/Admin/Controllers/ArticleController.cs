@@ -19,12 +19,15 @@ namespace Gyumri.Areas.Admin.Controllers
         private readonly ApplicationContext _context;
         private readonly IWebHostEnvironment _env;
         private readonly IArticle _articleService;
+        private readonly ImageOptimizerService _imageOptimizer;
 
-        public ArticleController(ApplicationContext context, IWebHostEnvironment env, IArticle articleService)
+
+        public ArticleController(ApplicationContext context, IWebHostEnvironment env, IArticle articleService, ImageOptimizerService imageOptimizer)
         {
             _context = context;
             _env = env;
             _articleService = articleService;
+            _imageOptimizer = imageOptimizer;
         }
 
         public async Task<IActionResult> Index()
@@ -41,8 +44,12 @@ namespace Gyumri.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Article article, List<IFormFile> imageFiles)
         {
-            int imageIndex = 0;
+            if (article.Blocks == null)
+            {
+                article.Blocks = new List<ArticleBlock>();
+            }
 
+            int imageIndex = 0;
             foreach (var block in article.Blocks)
             {
                 if (block.BlockType == "Image")
@@ -50,16 +57,10 @@ namespace Gyumri.Areas.Admin.Controllers
                     if (imageIndex < imageFiles.Count && imageFiles[imageIndex]?.Length > 0)
                     {
                         var file = imageFiles[imageIndex++];
-                        var uploadsPath = Path.Combine(_env.WebRootPath, "uploads");
-                        Directory.CreateDirectory(uploadsPath);
 
-                        var fileName = Path.GetFileName(file.FileName);
-                        var filePath = Path.Combine(uploadsPath, fileName);
+                        var optimizedImagePath = _imageOptimizer.OptimizeAndSaveUploadedImage(file, "uploads");
+                        block.Content = optimizedImagePath; 
 
-                        using var stream = new FileStream(filePath, FileMode.Create);
-                        await file.CopyToAsync(stream);
-
-                        block.Content = "/uploads/" + fileName;
                     }
                     else
                     {
@@ -140,16 +141,9 @@ namespace Gyumri.Areas.Admin.Controllers
                         if (imageIndex < imageFiles.Count && imageFiles[imageIndex]?.Length > 0)
                         {
                             var file = imageFiles[imageIndex++];
-                            var uploadsPath = Path.Combine(_env.WebRootPath, "uploads");
-                            Directory.CreateDirectory(uploadsPath);
+                            var optimizedImagePath = _imageOptimizer.OptimizeAndSaveUploadedImage(file, "uploads");
+                            existingBlock.Content = optimizedImagePath;
 
-                            var fileName = Path.GetFileName(file.FileName);
-                            var filePath = Path.Combine(uploadsPath, fileName);
-
-                            using var stream = new FileStream(filePath, FileMode.Create);
-                            await file.CopyToAsync(stream);
-
-                            existingBlock.Content = "/uploads/" + fileName;
                         }
                     }
                 }

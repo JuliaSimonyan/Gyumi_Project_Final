@@ -1,0 +1,8 @@
+﻿@if (TempData["Message"] != null)
+{
+    <div style="color: green">@TempData["Message"]</div>
+}
+
+<form asp-action="OptimizeStaticImages" method="post">
+    <button type="submit">Optimize Static Files (Delete Originals)</button>
+</form>

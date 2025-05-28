@@ -15,9 +15,44 @@
 <link rel="stylesheet" href="~/content/css/relax.css">
 <link rel="stylesheet" href="~/content/css/see.css">
 <link rel="stylesheet" href="~/Content/css/article.css"></link>
+<style>
+    .article-header {
+        position: relative;
+        height: 300px;
+        color: white;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
 
+        .article-header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('@Url.Content($"~/Images/places/{ViewBag.PlaceImage}")');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            filter: brightness(0.5);
+            z-index: 0;
+        }
+
+        .article-header .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .article-header h2 {
+            color: white;
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+        }
+</style>
     <!-- Article Header -->
-<header class="article-header" style="background-image: url('@Url.Content($"~/Images/places/{ViewBag.PlaceImage}")') !important;">
+<header class="article-header">
         <div class="container">
     <h2>@Model.Title</h2>
     </div>

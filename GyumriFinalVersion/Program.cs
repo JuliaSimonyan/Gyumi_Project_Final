@@ -44,6 +44,8 @@ builder.Services.AddScoped<ISubcategory, SubcategoryService>();
 builder.Services.AddScoped<IPlace, PlaceService>();
 builder.Services.AddScoped<IArticle, ArticleService>();
 builder.Services.AddLocalization();
+builder.Services.AddSingleton<ImageOptimizerService>();
+
 
 builder.Services.AddDistributedMemoryCache(); // Required for session state
 builder.Services.AddSession(options =>
@@ -109,10 +111,15 @@ using (var scope = app.Services.CreateScope())
     await categoryService.SeedDefaultCategoriesAsync();
 
 }
-
 // Middleware setup
 app.UseHttpsRedirection();
-app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions
+{
+    OnPrepareResponse = ctx =>
+    {
+        ctx.Context.Response.Headers.Append("Cache-Control", "public,max-age=31536000");
+    }
+});
 app.UseRouting();
 app.UseSession();
 
