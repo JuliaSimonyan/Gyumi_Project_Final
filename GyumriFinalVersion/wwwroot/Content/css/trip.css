@@ -168,7 +168,7 @@ ul {
 
 /* Hero section styles */
 .hero-section {
-  background-image: url("../Images/Trip/tripheader.png");
+  background-image: url("../Images/Trip/tripheader.webp");
   background-size: cover;
   background-position: center;
   min-height: auto; /* Auto height to fit content */

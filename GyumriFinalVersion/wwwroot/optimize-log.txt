@@ -1,0 +1,655 @@
+Optimizer ran at 29.05.2025 16:53:23
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\00aef515-16de-4663-8416-6b051e4c5030.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\00aef515-16de-4663-8416-6b051e4c5030.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\0eac1540-4bf5-4206-8c6c-fa5d881b1715.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\0eac1540-4bf5-4206-8c6c-fa5d881b1715.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\59abb36a-9661-4a04-8eba-2a505029d729.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\59abb36a-9661-4a04-8eba-2a505029d729.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\c77ae927-a26a-4142-a3c0-4a82bb716d6c.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\c77ae927-a26a-4142-a3c0-4a82bb716d6c.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\photo.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\photo.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\activities\97fa1687-3ba7-451a-8706-bd8d464f7210.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\activities\97fa1687-3ba7-451a-8706-bd8d464f7210.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\activities\baa75f68-7a6f-4602-97ea-b865b0028275.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\activities\baa75f68-7a6f-4602-97ea-b865b0028275.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\activities\bde31cb5-3f3f-43b6-b3bd-7a643d60f9a3.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\activities\bde31cb5-3f3f-43b6-b3bd-7a643d60f9a3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\166488037_2263773530423316_4100471654477335040_n 3.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\166488037_2263773530423316_4100471654477335040_n 3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\about the website.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\about the website.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\amenaprkich (1).webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\amenaprkich (1).webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\amenaprkich.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\amenaprkich.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\apple-touch-icon.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\apple-touch-icon.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Architectural Time Travel.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Architectural Time Travel.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Aregak.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Aregak.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\aslamazyan.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\aslamazyan.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\bar1.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\bar1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\bar2.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\bar2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\bar3.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\bar3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\cafe.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\cafe.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\cafe1.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\cafe1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\cafe2.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\cafe2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\cafe3.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\cafe3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\car.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\car.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\central park.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\central park.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Cherkez.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Cherkez.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\creamics.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\creamics.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Creative Renaissance.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Creative Renaissance.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Culinary Love Letter.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Culinary Love Letter.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\drama theatre.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\drama theatre.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Dzitoghtsonc.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Dzitoghtsonc.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat drink hero banner.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat drink hero banner.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat1.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat2.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat3.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat4.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat4.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eatheader.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eatheader.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\favicon-32x32.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\favicon-32x32.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\ferris wheel.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\ferris wheel.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Frame (4).webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Frame (4).webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Frame (5).webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Frame (5).webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Frame (6).webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Frame (6).webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Frame.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Frame.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Friendship Park.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Friendship Park.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Group 15.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Group 15.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Group.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Group.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\gtc.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\gtc.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Gyumri Express.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Gyumri Express.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\header-background.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\header-background.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Herbs Honey.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Herbs Honey.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\hotel.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\hotel.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\image 4.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\image 4.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Independence Square.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Independence Square.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Isahakkyan.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Isahakkyan.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\kumayri.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\kumayri.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\leo art studio.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\leo art studio.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Live and Work Hero Banner.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Live and Work Hero Banner.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\mapheader.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\mapheader.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Mher mkRTCHYAN.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Mher mkRTCHYAN.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\more1.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\more1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\more2.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\more2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\more3.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\more3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\more4.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\more4.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\mother armenia.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\mother armenia.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\nights.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\nights.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\pdfIcon.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\pdfIcon.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place1.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place2.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place3.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place4.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place4.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place5.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place5.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Ponchik.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Ponchik.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason1.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason2.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason3.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason4.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason4.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason5.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason5.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Relax & Sleep Hero Banner.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Relax & Sleep Hero Banner.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\relaxheader.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\relaxheader.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\rest1.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\rest1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\rest2.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\rest2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\rest3.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\rest3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\saint nshan.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\saint nshan.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\See&Do Hero Banner.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\See&Do Hero Banner.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\see1.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\see1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\see2.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\see2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\see3.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\see3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\seeheader.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\seeheader.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Sev Berd.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Sev Berd.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Sheeraz.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Sheeraz.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\shiraz.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\shiraz.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Shuka.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Shuka.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Soviet Echoes.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Soviet Echoes.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\stars-png-641 1.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\stars-png-641 1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\tiknikayin.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\tiknikayin.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\tumo.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\tumo.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\vardanants.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\vardanants.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Varem MArem.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Varem MArem.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vector (1).webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vector (1).webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vector (2).webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vector (2).webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vector.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vector.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\view1.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\view1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Walking Supremacy.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Walking Supremacy.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\whatToDo.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\whatToDo.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\yot verk.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\yot verk.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\սիռեմգը (1).webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\սիռեմգը (1).webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\սիռեմգը.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\սիռեմգը.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Trip\tripheader.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Trip\tripheader.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vectors\1.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vectors\1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vectors\2.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vectors\2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vectors\3.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vectors\3.webp
+Optimizer ran at 29.05.2025 16:57:12
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\00aef515-16de-4663-8416-6b051e4c5030.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\00aef515-16de-4663-8416-6b051e4c5030.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\0eac1540-4bf5-4206-8c6c-fa5d881b1715.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\0eac1540-4bf5-4206-8c6c-fa5d881b1715.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\59abb36a-9661-4a04-8eba-2a505029d729.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\59abb36a-9661-4a04-8eba-2a505029d729.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\c77ae927-a26a-4142-a3c0-4a82bb716d6c.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\c77ae927-a26a-4142-a3c0-4a82bb716d6c.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\photo.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\photo.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\activities\97fa1687-3ba7-451a-8706-bd8d464f7210.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\activities\97fa1687-3ba7-451a-8706-bd8d464f7210.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\activities\baa75f68-7a6f-4602-97ea-b865b0028275.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\activities\baa75f68-7a6f-4602-97ea-b865b0028275.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\activities\bde31cb5-3f3f-43b6-b3bd-7a643d60f9a3.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\activities\bde31cb5-3f3f-43b6-b3bd-7a643d60f9a3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\about the website.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\about the website.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\amenaprkich.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\amenaprkich.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\apple-touch-icon.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\apple-touch-icon.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Architectural Time Travel.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Architectural Time Travel.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Aregak.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Aregak.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\aslamazyan.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\aslamazyan.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\bar1.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\bar1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\bar2.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\bar2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\bar3.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\bar3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\cafe.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\cafe.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\cafe1.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\cafe1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\cafe2.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\cafe2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\cafe3.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\cafe3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\car.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\car.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\central park.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\central park.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Cherkez.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Cherkez.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Creative Renaissance.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Creative Renaissance.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Culinary Love Letter.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Culinary Love Letter.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\drama theatre.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\drama theatre.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Dzitoghtsonc.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Dzitoghtsonc.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat drink hero banner.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat drink hero banner.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat1.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat2.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat3.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat4.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat4.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eatheader.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eatheader.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\favicon-32x32.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\favicon-32x32.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\ferris wheel.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\ferris wheel.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Frame (4).webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Frame (4).webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Frame (5).webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Frame (5).webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Frame (6).webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Frame (6).webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Frame.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Frame.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Friendship Park.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Friendship Park.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Group 15.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Group 15.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Group.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Group.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\gtc.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\gtc.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Gyumri Express.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Gyumri Express.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\header-background.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\header-background.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Herbs Honey.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Herbs Honey.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\hotel.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\hotel.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\image 4.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\image 4.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Independence Square.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Independence Square.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Isahakkyan.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Isahakkyan.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\kumayri.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\kumayri.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\leo art studio.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\leo art studio.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Live and Work Hero Banner.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Live and Work Hero Banner.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\mapheader.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\mapheader.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Mher mkRTCHYAN.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Mher mkRTCHYAN.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\more1.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\more1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\more2.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\more2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\more3.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\more3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\more4.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\more4.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\mother armenia.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\mother armenia.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\nights.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\nights.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\pdfIcon.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\pdfIcon.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place1.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place2.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place3.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place4.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place4.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place5.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place5.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Ponchik.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Ponchik.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason1.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason2.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason3.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason4.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason4.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason5.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason5.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Relax & Sleep Hero Banner.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Relax & Sleep Hero Banner.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\relaxheader.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\relaxheader.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\rest1.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\rest1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\rest2.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\rest2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\rest3.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\rest3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\saint nshan.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\saint nshan.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\See&Do Hero Banner.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\See&Do Hero Banner.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\see1.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\see1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\see2.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\see2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\see3.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\see3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\seeheader.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\seeheader.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Sev Berd.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Sev Berd.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Sheeraz.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Sheeraz.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\shiraz.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\shiraz.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Shuka.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Shuka.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Soviet Echoes.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Soviet Echoes.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\stars-png-641 1.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\stars-png-641 1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\tiknikayin.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\tiknikayin.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\tumo.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\tumo.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\vardanants.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\vardanants.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Varem MArem.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Varem MArem.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vector (1).webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vector (1).webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vector (2).webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vector (2).webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vector.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vector.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\view1.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\view1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Walking Supremacy.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Walking Supremacy.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\whatToDo.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\whatToDo.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\yot verk.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\yot verk.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\սիռեմգը (1).webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\սիռեմգը (1).webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\սիռեմգը.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\սիռեմգը.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Trip\tripheader.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Trip\tripheader.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vectors\1.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vectors\1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vectors\2.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vectors\2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vectors\3.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vectors\3.webp
+Optimizer ran at 29.05.2025 17:07:45
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\00aef515-16de-4663-8416-6b051e4c5030.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\00aef515-16de-4663-8416-6b051e4c5030.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\0eac1540-4bf5-4206-8c6c-fa5d881b1715.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\0eac1540-4bf5-4206-8c6c-fa5d881b1715.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\59abb36a-9661-4a04-8eba-2a505029d729.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\59abb36a-9661-4a04-8eba-2a505029d729.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\c77ae927-a26a-4142-a3c0-4a82bb716d6c.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\c77ae927-a26a-4142-a3c0-4a82bb716d6c.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\photo.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\accomodations\photo.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\activities\97fa1687-3ba7-451a-8706-bd8d464f7210.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\activities\97fa1687-3ba7-451a-8706-bd8d464f7210.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\activities\baa75f68-7a6f-4602-97ea-b865b0028275.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\activities\baa75f68-7a6f-4602-97ea-b865b0028275.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\activities\bde31cb5-3f3f-43b6-b3bd-7a643d60f9a3.webp
+Already exists: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Images\activities\bde31cb5-3f3f-43b6-b3bd-7a643d60f9a3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\166488037_2263773530423316_4100471654477335040_n 3.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\166488037_2263773530423316_4100471654477335040_n 3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\about the website.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\about the website.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\amenaprkich (1).webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\amenaprkich (1).webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\amenaprkich.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\amenaprkich.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\apple-touch-icon.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\apple-touch-icon.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Architectural Time Travel.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Architectural Time Travel.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Aregak.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Aregak.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\aslamazyan.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\aslamazyan.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\bar1.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\bar1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\bar2.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\bar2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\bar3.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\bar3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\cafe.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\cafe.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\cafe1.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\cafe1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\cafe2.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\cafe2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\cafe3.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\cafe3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\central park.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\central park.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Cherkez.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Cherkez.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\creamics.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\creamics.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Creative Renaissance.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Creative Renaissance.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Culinary Love Letter.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Culinary Love Letter.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\drama theatre.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\drama theatre.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Dzitoghtsonc.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Dzitoghtsonc.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat drink hero banner.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat drink hero banner.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat1.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat2.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat3.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat4.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eat4.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eatheader.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\eatheader.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\favicon-32x32.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\favicon-32x32.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\ferris wheel.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\ferris wheel.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Frame (4).webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Frame (4).webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Frame (5).webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Frame (5).webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Frame (6).webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Frame (6).webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Frame.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Frame.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Friendship Park.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Friendship Park.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Group 15.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Group 15.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Group.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Group.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\gtc.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\gtc.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Gyumri Express.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Gyumri Express.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\header-background.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\header-background.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Herbs Honey.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Herbs Honey.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\image 4.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\image 4.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Independence Square.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Independence Square.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Isahakkyan.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Isahakkyan.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\kumayri.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\kumayri.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\leo art studio.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\leo art studio.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Live and Work Hero Banner.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Live and Work Hero Banner.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\mapheader.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\mapheader.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Mher mkRTCHYAN.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Mher mkRTCHYAN.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\more1.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\more1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\more2.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\more2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\more3.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\more3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\more4.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\more4.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\mother armenia.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\mother armenia.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\nights.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\nights.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place1.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place2.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place3.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place4.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place4.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place5.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\place5.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Ponchik.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Ponchik.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason1.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason2.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason3.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason4.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason4.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason5.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\reason5.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Relax & Sleep Hero Banner.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Relax & Sleep Hero Banner.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\relaxheader.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\relaxheader.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\rest1.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\rest1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\rest2.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\rest2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\rest3.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\rest3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\saint nshan.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\saint nshan.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\See&Do Hero Banner.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\See&Do Hero Banner.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\see1.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\see1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\see2.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\see2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\see3.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\see3.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\seeheader.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\seeheader.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Sev Berd.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Sev Berd.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Sheeraz.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Sheeraz.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\shiraz.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\shiraz.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Shuka.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Shuka.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Soviet Echoes.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Soviet Echoes.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\stars-png-641 1.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\stars-png-641 1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\tiknikayin.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\tiknikayin.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\tumo.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\tumo.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\vardanants.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\vardanants.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Varem MArem.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Varem MArem.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vector (1).webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vector (1).webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vector (2).webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vector (2).webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vector.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vector.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\view1.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\view1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Walking Supremacy.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Walking Supremacy.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\yot verk.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\yot verk.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\սիռեմգը (1).webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\սիռեմգը (1).webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\սիռեմգը.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\սիռեմգը.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Trip\tripheader.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Trip\tripheader.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vectors\1.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vectors\1.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vectors\2.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vectors\2.webp
+Processing: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vectors\3.webp
+Optimized and deleted: C:\Users\Computer\Desktop\Final\Gyumi_Project_Final\GyumriFinalVersion\wwwroot\Content\Images\Vectors\3.webp

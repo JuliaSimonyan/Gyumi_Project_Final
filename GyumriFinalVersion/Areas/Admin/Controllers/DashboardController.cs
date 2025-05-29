@@ -20,8 +20,16 @@ namespace Gyumri.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult OptimizeStaticImages([FromServices] ImageOptimizerService optimizer)
         {
-            optimizer.OptimizeAllImagesInWwwroot();
-            TempData["Message"] = "Static images optimized and originals deleted.";
+            try
+            {
+                optimizer.OptimizeSpecificImageFolders();
+                TempData["Message"] = "Static images optimized and originals deleted.";
+            }
+            catch (Exception ex)
+            {
+                TempData["Message"] = $"Error: {ex.Message}";
+            }
+
             return RedirectToAction("Index");
         }
 

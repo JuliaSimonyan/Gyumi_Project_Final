@@ -252,7 +252,7 @@ ul {
 
 /* Hero section */
 .hero-section {
-    background-image: url('../Images/mapheader.png');
+    background-image: url('../Images/mapheader.webp');
     background-size: cover;
     background-position: center center;
     color: white;
@@ -403,7 +403,7 @@ ul {
 .marker-icon {
     width: 30px;
     height: 30px;
-    background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Group%2023-fmAN2Si5YnLPoqmwCOdWIdSbp6r0BF.png');
+    background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Group%2023-fmAN2Si5YnLPoqmwCOdWIdSbp6r0BF.webp');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -730,7 +730,7 @@ ul {
 .marker-icon {
     width: 30px;
     height: 30px;
-    background-image: url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Group%2023-fmAN2Si5YnLPoqmwCOdWIdSbp6r0BF.png");
+    background-image: url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Group%2023-fmAN2Si5YnLPoqmwCOdWIdSbp6r0BF.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

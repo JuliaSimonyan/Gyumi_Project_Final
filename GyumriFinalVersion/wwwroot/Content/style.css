@@ -58,7 +58,7 @@ body {
 }
 
 .hero-section {
-    background-image: url('Images/header-background.jpeg');
+    background-image: url('Images/header-background.webp');
     background-size: 110%;
     background-clip: padding-box;
     background-position: center center;
@@ -421,7 +421,7 @@ body {
 
 .discover-section {
     position: relative;
-    background-image: url('Images/view1.png'); /* Replace with actual background image URL */
+    background-image: url('Images/view1.webp'); /* Replace with actual background image URL */
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -433,7 +433,7 @@ body {
 .discover-section-new {
     margin: 50px 5%;
     position: relative;
-    background-image: url('Images/cafe.png'); /* Replace with actual background image URL */
+    background-image: url('Images/cafe.webp'); /* Replace with actual background image URL */
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -513,7 +513,7 @@ body {
     top: 10%;
     width: 450px;
     height: 700px;
-    background-image: url('Images/Frame.png'); /* Replace with actual decorative image URL */
+    background-image: url('Images/Frame.webp'); /* Replace with actual decorative image URL */
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -624,7 +624,7 @@ body {
     left: 0 !important;
     width: 100% !important;
     height: 100% !important;
-    background-image: url('Images/image\ 4.png') !important; /* Use the same image */
+    background-image: url('Images/image\ 4.webp') !important; /* Use the same image */
     background-size: cover !important;
     background-position: center !important;
     filter: blur(8px) !important; /* Adjust blur amount as needed */
@@ -731,7 +731,7 @@ body {
 }
 
 .hero-section {
-    background-image: url('Images/header-background.jpeg');
+    background-image: url('Images/header-background.webp');
     background-size: 110%;
     background-clip: padding-box;
     background-position: center center;
@@ -1102,7 +1102,7 @@ body {
 
 .discover-section {
     position: relative;
-    background-image: url('Images/view1.png'); /* Replace with actual background image URL */
+    background-image: url('Images/view1.webp'); /* Replace with actual background image URL */
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -1114,7 +1114,7 @@ body {
 .discover-section-new {
     margin: 50px 5%;
     position: relative;
-    background-image: url('Images/cafe.png'); /* Replace with actual background image URL */
+    background-image: url('Images/cafe.webp'); /* Replace with actual background image URL */
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -1187,7 +1187,7 @@ body {
     top: 5%;
     width: 650px;
     height: 700px;
-    background-image: url('Images/Frame.png'); /* Replace with actual decorative image URL */
+    background-image: url('Images/Frame.webp'); /* Replace with actual decorative image URL */
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -1250,7 +1250,7 @@ body {
         left: 0 !important;
         width: 100% !important;
         height: 100% !important;
-        background-image: url('Images/image\ 4.png') !important; /* Use the same image */
+        background-image: url('Images/image\ 4.webp') !important; /* Use the same image */
         background-size: cover !important;
         background-position: center !important;
         filter: blur(8px) !important; /* Adjust blur amount as needed */

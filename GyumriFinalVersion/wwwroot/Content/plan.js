@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Map initialized")
 
         // Add the base map layer (CartoDB Light)
-        L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+        L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.webp", {
             attribution: "&copy; OpenStreetMap contributors & CartoDB",
             subdomains: "abcd",
             maxZoom: 19,

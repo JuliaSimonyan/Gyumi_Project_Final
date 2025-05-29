@@ -9,7 +9,7 @@
     }).setView([40.7929, 43.8465], 15) // Gyumri coordinates with higher zoom
 
     // Add a grayscale tile layer
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.webp", {
         maxZoom: 19,
         className: "map-tiles-grayscale",
     }).addTo(map)

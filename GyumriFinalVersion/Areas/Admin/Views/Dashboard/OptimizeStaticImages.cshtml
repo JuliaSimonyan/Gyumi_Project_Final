@@ -4,5 +4,11 @@
 }
 
 <form asp-action="OptimizeStaticImages" method="post">
-    <button type="submit">Optimize Static Files (Delete Originals)</button>
+    <button type="submit">Run Image Optimizer</button>
 </form>
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-info">
+        @TempData["Message"]
+    </div>
+}

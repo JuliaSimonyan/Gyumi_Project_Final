@@ -11,30 +11,55 @@ public class ImageOptimizerService
         _wwwroot = env.WebRootPath;
     }
 
-    public void OptimizeAllImagesInWwwroot()
+    public void OptimizeSpecificImageFolders()
     {
-        var imageExtensions = new[] { ".jpg", ".jpeg", ".png" };
-        var allImages = Directory.GetFiles(_wwwroot, "*.*", SearchOption.AllDirectories)
-                                 .Where(f => imageExtensions.Contains(Path.GetExtension(f).ToLower()))
-                                 .ToList();
+        var logPath = Path.Combine(_wwwroot, "optimize-log.txt");
+        File.AppendAllText(logPath, $"Optimizer ran at {DateTime.UtcNow}\n");
 
-        foreach (var imgPath in allImages)
+        var targetFolders = new[]
         {
-            var webpPath = Path.ChangeExtension(imgPath, ".webp");
+        Path.Combine(_wwwroot, "uploads"),
+        Path.Combine(_wwwroot, "Images"),
+        Path.Combine(_wwwroot, "Content", "Images")
+    };
 
-            if (File.Exists(webpPath))
-                continue;
+        var imageExtensions = new[] { ".webp", ".webp", ".webp" };
 
-            using var image = Image.Load(imgPath);
-            image.Mutate(x => x.Resize(new ResizeOptions
+        foreach (var folder in targetFolders)
+        {
+            if (!Directory.Exists(folder))
             {
-                Size = new Size(1024, 768),
-                Mode = ResizeMode.Max
-            }));
+                File.AppendAllText(logPath, $"Skipped missing folder: {folder}\n");
+                continue;
+            }
 
-            image.Save(webpPath, new WebpEncoder { Quality = 75 });
+            var images = Directory.GetFiles(folder, "*.*", SearchOption.AllDirectories)
+                                  .Where(f => imageExtensions.Contains(Path.GetExtension(f).ToLower()))
+                                  .ToList();
 
-            File.Delete(imgPath);
+            foreach (var imgPath in images)
+            {
+                File.AppendAllText(logPath, $"Processing: {imgPath}\n");
+
+                var webpPath = Path.ChangeExtension(imgPath, ".webp");
+                if (File.Exists(webpPath))
+                {
+                    File.AppendAllText(logPath, $"Already exists: {webpPath}\n");
+                    continue;
+                }
+
+                using var image = Image.Load(imgPath);
+                image.Mutate(x => x.Resize(new ResizeOptions
+                {
+                    Size = new Size(1024, 768),
+                    Mode = ResizeMode.Max
+                }));
+
+                image.Save(webpPath, new WebpEncoder { Quality = 75 });
+
+                File.Delete(imgPath);
+                File.AppendAllText(logPath, $"Optimized and deleted: {imgPath}\n");
+            }
         }
     }
     public string OptimizeAndSaveUploadedImage(IFormFile file, string subFolder = "uploads")
