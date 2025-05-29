@@ -681,4 +681,7 @@
   <data name="YourListEmpty" xml:space="preserve">
     <value>Ваш список пуст</value>
   </data>
+  <data name="CopyRight" xml:space="preserve">
+    <value>Этот веб-сайт был создан и поддерживается при финансовой поддержке Европейского Союза. Его содержимое является исключительной ответственностью муниципалитета Гюмри.</value>
+  </data>
 </root>

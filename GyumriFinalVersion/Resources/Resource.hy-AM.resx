@@ -672,4 +672,7 @@
   <data name="YourListEmpty" xml:space="preserve">
     <value>Ձեր ցանկը դատարկ է</value>
   </data>
+  <data name="CopyRight" xml:space="preserve">
+    <value>Այս կայքը ստեղծվել և պահպանվում է Եվրոպական Միության ֆինանսական աջակցությամբ: Դրա բովանդակության համար պատասխանատվությունը կրում է միայն Գյումրու քաղաքապետարանը:</value>
+  </data>
 </root>

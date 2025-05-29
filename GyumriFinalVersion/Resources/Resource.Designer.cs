@@ -295,6 +295,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This website was created and maintained with the financial support of the European Union. Its contents are the sole responsibility of Gyumri Municipality..
+        /// </summary>
+        public static string CopyRight {
+            get {
+                return ResourceManager.GetString("CopyRight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Crafts.
         /// </summary>
         public static string Crafts {

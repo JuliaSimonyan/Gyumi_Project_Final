@@ -687,4 +687,7 @@ security measures to protect it from unauthorized access, modification, or discl
   <data name="YourListEmpty" xml:space="preserve">
     <value>Your list is empty</value>
   </data>
+  <data name="CopyRight" xml:space="preserve">
+    <value>This website was created and maintained with the financial support of the European Union. Its contents are the sole responsibility of Gyumri Municipality.</value>
+  </data>
 </root>
