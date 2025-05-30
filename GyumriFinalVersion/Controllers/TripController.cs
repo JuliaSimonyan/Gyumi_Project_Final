@@ -288,7 +288,6 @@ namespace GyumriFinalVersion.Controllers
             return RedirectToAction("Final");
         }
 
-
         //public IActionResult DownloadPdf()
         //{
         //    string htmlContent = @"";
@@ -303,7 +302,6 @@ namespace GyumriFinalVersion.Controllers
             Thread.CurrentThread.CurrentCulture = cultureInfo;
             Thread.CurrentThread.CurrentUICulture = cultureInfo;
             var pdfBytes = GenerateTripPdf();
-
 
             return File(pdfBytes, "application/pdf", "downloaded.pdf");
         }

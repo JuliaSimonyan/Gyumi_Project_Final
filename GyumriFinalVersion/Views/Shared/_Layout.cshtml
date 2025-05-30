@@ -1,6 +1,6 @@
 ﻿@{
     var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
-    
+
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -50,6 +50,26 @@
                             {
                                 <li class="nav-item">
                                     <a class="nav-link" asp-action="Category" asp-controller="Home" asp-route-categoryId="@menuItem.CategoryId">
+                                        @if (menuItem.Name == "See & Do")
+                                        {
+                                            @AppRes.SeeAndDo
+                                        }
+                                        @if (menuItem.Name == "Eat & Drink")
+                                        {
+                                            @AppRes.EatAndDrink
+                                        }
+                                        @if (menuItem.Name == "Relax & Sleep")
+                                        {
+                                            @AppRes.RelaxAndSleep
+                                        }
+                                        @if (menuItem.Name == "Live & Work")
+                                        {
+                                            @AppRes.LiveAndWork
+                                        }
+                                    </a>
+                                </li>
+                                @* <li class="nav-item">
+                                    <a class="nav-link" asp-action="Category" asp-controller="Home" asp-route-categoryId="@menuItem.CategoryId">
                                         @if (currentCulture == "ru-RU")
                                         {
                                             @menuItem.NameRu
@@ -63,7 +83,7 @@
                                             @menuItem.Name
                                         }
                                     </a>
-                                </li>
+                                </li> *@
                             }
                         }
                     }

@@ -690,4 +690,16 @@ security measures to protect it from unauthorized access, modification, or discl
   <data name="CopyRight" xml:space="preserve">
     <value>This website was created and maintained with the financial support of the European Union. Its contents are the sole responsibility of Gyumri Municipality.</value>
   </data>
+  <data name="SeeAndDo" xml:space="preserve">
+    <value>See &amp; Do</value>
+  </data>
+  <data name="EatAndDrink" xml:space="preserve">
+    <value>Eat &amp; Drink</value>
+  </data>
+  <data name="RelaxAndSleep" xml:space="preserve">
+    <value>Relax &amp; Sleep</value>
+  </data>
+  <data name="LiveAndWork" xml:space="preserve">
+    <value>Live &amp; Work</value>
+  </data>
 </root>

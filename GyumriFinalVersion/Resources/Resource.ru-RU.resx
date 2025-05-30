@@ -548,9 +548,6 @@
   <data name="WhySection" xml:space="preserve">
     <value>Так зачем приезжать в Гюмри?</value>
   </data>
-  <data name="String1" xml:space="preserve">
-    <value />
-  </data>
   <data name="SendEmailPlaceholder" xml:space="preserve">
     <value>Введите эл. почту для отправки плана</value>
   </data>
@@ -560,33 +557,15 @@
   <data name="AlmostReady" xml:space="preserve">
     <value>Почти готово...</value>
   </data>
-  <data name="Cafes" xml:space="preserve">
-    <value>Кафе</value>
-  </data>
-  <data name="Churches" xml:space="preserve">
-    <value>Церкви</value>
-  </data>
-  <data name="Entertainment" xml:space="preserve">
-    <value>Развлечения</value>
-  </data>
   <data name="Event-related" xml:space="preserve">
     <value>Информация, связанная с событиями, когда вы используете
 </value>
-  </data>
-  <data name="ExploreGyumri" xml:space="preserve">
-    <value>Откройте для себя Гюмри</value>
   </data>
   <data name="HoldTight" xml:space="preserve">
     <value>Держитесь крепче! Мы готовим ваши персонализированные документы для поездки в Гюмри</value>
   </data>
   <data name="InMoment" xml:space="preserve">
     <value>Всего через мгновение вы получите доступ к своему маршруту, бронированию отелей, обязательным для посещения музеям, лучшим кафе, местным ресторанам и советам знатоков — все в одном месте.</value>
-  </data>
-  <data name="Museums" xml:space="preserve">
-    <value>Музеи</value>
-  </data>
-  <data name="Parks" xml:space="preserve">
-    <value>Парки</value>
   </data>
   <data name="PQuestion" xml:space="preserve">
     <value>Если у вас есть вопросы об этой политике конфиденциальности, напишите нам по адресу</value>
@@ -669,19 +648,52 @@
   <data name="PWhy4" xml:space="preserve">
     <value>Обеспечение бесперебойной и безопасной работы для всех посетителей</value>
   </data>
+  <data name="Skip" xml:space="preserve">
+    <value>Пропустить</value>
+  </data>
+  <data name="Cafes" xml:space="preserve">
+    <value>Кафе</value>
+  </data>
+  <data name="Churches" xml:space="preserve">
+    <value>Церкви</value>
+  </data>
+  <data name="Entertainment" xml:space="preserve">
+    <value>Развлечения</value>
+  </data>
+  <data name="ExploreGyumri" xml:space="preserve">
+    <value>Откройте для себя Гюмри</value>
+  </data>
+  <data name="Museums" xml:space="preserve">
+    <value>Музеи</value>
+  </data>
+  <data name="Parks" xml:space="preserve">
+    <value>Парки</value>
+  </data>
   <data name="SaveList" xml:space="preserve">
     <value>Сохраните места, которые вас интересуют, чтобы просмотреть их здесь позже</value>
   </data>
   <data name="Sights" xml:space="preserve">
     <value>Достопримечательности</value>
   </data>
-  <data name="Skip" xml:space="preserve">
-    <value>Пропустить</value>
-  </data>
   <data name="YourListEmpty" xml:space="preserve">
     <value>Ваш список пуст</value>
   </data>
   <data name="CopyRight" xml:space="preserve">
     <value>Этот веб-сайт был создан и поддерживается при финансовой поддержке Европейского Союза. Его содержимое является исключительной ответственностью муниципалитета Гюмри.</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SeeAndDo" xml:space="preserve">
+    <value>Что посмотреть и чем заняться</value>
+  </data>
+  <data name="EatAndDrink" xml:space="preserve">
+    <value>Есть и Пить</value>
+  </data>
+  <data name="RelaxAndSleep" xml:space="preserve">
+    <value>Отдых и ночёвка</value>
+  </data>
+  <data name="LiveAndWork" xml:space="preserve">
+    <value>Жизнь и работа</value>
   </data>
 </root>

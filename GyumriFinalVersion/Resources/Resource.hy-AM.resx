@@ -555,32 +555,14 @@
   <data name="AlmostReady" xml:space="preserve">
     <value>Գրեթե պատրաստ է...</value>
   </data>
-  <data name="Cafes" xml:space="preserve">
-    <value>Սրճարաններ</value>
-  </data>
-  <data name="Churches" xml:space="preserve">
-    <value>Եկեղեցիներ</value>
-  </data>
-  <data name="Entertainment" xml:space="preserve">
-    <value>Զվարճանք</value>
-  </data>
   <data name="Event-related" xml:space="preserve">
     <value>Կոնտակտային տվյալներ (անուն, էլ. հասցե)՝ </value>
-  </data>
-  <data name="ExploreGyumri" xml:space="preserve">
-    <value>Բացահայտիր Գյումրին</value>
   </data>
   <data name="HoldTight" xml:space="preserve">
     <value>Սպասե՛ք։ Մենք պատրաստում ենք ձեր անհատականացված Գյումրու ճանապարհորդական փաստաթղթերը</value>
   </data>
   <data name="InMoment" xml:space="preserve">
     <value>Մի քանի վայրկյանում դուք կունենաք ձեր երթուղին, հյուրանոցների ամրագրումները, պարտադիր այցելության թանգարանները, լավագույն սրճարանները, տեղական ռեստորանները և ներքին խորհուրդները՝ բոլորը մեկ տեղում։</value>
-  </data>
-  <data name="Museums" xml:space="preserve">
-    <value>Թանգարաններ</value>
-  </data>
-  <data name="Parks" xml:space="preserve">
-    <value>Այգիներ</value>
   </data>
   <data name="PQuestion" xml:space="preserve">
     <value>Հարցե՞ր ունեք գաղտնիության քաղաքականության վերաբերյալ։ Գրեք մեզ</value>
@@ -660,19 +642,49 @@
   <data name="PWhy4" xml:space="preserve">
     <value>Գտնվելու վայրին համապատասխան առաջարկներ ուղարկելու համար։Բոլոր այցելուների համար սահուն և անվտանգ փորձ ապահովելու համար</value>
   </data>
+  <data name="Skip" xml:space="preserve">
+    <value>Բաց թողնել</value>
+  </data>
+  <data name="Cafes" xml:space="preserve">
+    <value>Սրճարաններ</value>
+  </data>
+  <data name="Churches" xml:space="preserve">
+    <value>Եկեղեցիներ</value>
+  </data>
+  <data name="Entertainment" xml:space="preserve">
+    <value>Զվարճանք</value>
+  </data>
+  <data name="ExploreGyumri" xml:space="preserve">
+    <value>Բացահայտիր Գյումրին</value>
+  </data>
+  <data name="Museums" xml:space="preserve">
+    <value>Թանգարաններ</value>
+  </data>
+  <data name="Parks" xml:space="preserve">
+    <value>Այգիներ</value>
+  </data>
   <data name="SaveList" xml:space="preserve">
     <value>Պահպանեք ձեզ հետաքրքրող վայրերը՝ դրանք այստեղ հետագայում դիտելու համար</value>
   </data>
   <data name="Sights" xml:space="preserve">
     <value>Տեսարժան վայրեր</value>
   </data>
-  <data name="Skip" xml:space="preserve">
-    <value>Բաց թողնել</value>
-  </data>
   <data name="YourListEmpty" xml:space="preserve">
     <value>Ձեր ցանկը դատարկ է</value>
   </data>
   <data name="CopyRight" xml:space="preserve">
     <value>Այս կայքը ստեղծվել և պահպանվում է Եվրոպական Միության ֆինանսական աջակցությամբ: Դրա բովանդակության համար պատասխանատվությունը կրում է միայն Գյումրու քաղաքապետարանը:</value>
+  </data>
+  <data name="SeeAndDo" xml:space="preserve">
+    <value>Տեսնել և անել</value>
+  </data>
+  <data name="EatAndDrink" xml:space="preserve">
+    <value>Ուտել-խմել</value>
+  </data>
+  <data name="RelaxAndSleep" xml:space="preserve">
+    <value>Հանգիստ և գիշերակաց</value>
+  </data>
+  <data name="LiveAndWork" xml:space="preserve">
+    <value>Կյանք և աշխատանք</value>
   </data>
 </root>

@@ -394,6 +394,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Eat &amp; Drink.
+        /// </summary>
+        public static string EatAndDrink {
+            get {
+                return ResourceManager.GetString("EatAndDrink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cafés with character, restaurants with soul, and flavors you won’t forget..
         /// </summary>
         public static string EatAndDrinkDesc {
@@ -761,6 +770,15 @@ namespace GyumriFinalVersion.Resources {
         public static string LetsPlanYourTrip {
             get {
                 return ResourceManager.GetString("LetsPlanYourTrip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Live &amp; Work.
+        /// </summary>
+        public static string LiveAndWork {
+            get {
+                return ResourceManager.GetString("LiveAndWork", resourceCulture);
             }
         }
         
@@ -1371,6 +1389,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Relax &amp; Sleep.
+        /// </summary>
+        public static string RelaxAndSleep {
+            get {
+                return ResourceManager.GetString("RelaxAndSleep", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to From historic guesthouses to peaceful hideouts—rest the way Gyumri would want you to..
         /// </summary>
         public static string RelaxAndSleepDesc {
@@ -1403,6 +1430,15 @@ namespace GyumriFinalVersion.Resources {
         public static string SaveList {
             get {
                 return ResourceManager.GetString("SaveList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to See &amp; Do.
+        /// </summary>
+        public static string SeeAndDo {
+            get {
+                return ResourceManager.GetString("SeeAndDo", resourceCulture);
             }
         }
         
