@@ -137,6 +137,8 @@ namespace Gyumri.Areas.Admin.Controllers
                     if (existingBlock.BlockType == "Paragraph")
                     {
                         existingBlock.Content = newBlock.Content;
+                        existingBlock.ContentArm = newBlock.ContentArm;
+                        existingBlock.ContentRus = newBlock.ContentRus;
                     }
                     else if (existingBlock.BlockType == "Image")
                     {
