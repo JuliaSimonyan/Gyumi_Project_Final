@@ -54,16 +54,33 @@
     <!-- Article Header -->
 <header class="article-header">
         <div class="container">
-    <h2>@Model.Title</h2>
+            @if (currentCulture == "en")
+            {
+                <h2>@Model.Title</h2>
+            } else if(currentCulture == "hy-AM") {
+                <h2>@Model.TitleArm</h2>
+            } else if(currentCulture == "ru-RU") {
+                <h2>@Model.TitleRus</h2>
+            }
     </div>
 
     </header>
 
 <div class="container py-5 mainsection" style="margin-top:0 !important;">
-   
-    <p class="subcategory-heading">@ViewBag.SubcategoryName</p>
+    @if (currentCulture == "en")
+    {
 
+    <p class="subcategory-heading">@ViewBag.SubcategoryName</p>
     <h2>@Model.Title</h2>
+    } else if(currentCulture == "hy-AM") {
+        <p class="subcategory-heading">@ViewBag.SubcategoryNameArm</p>
+
+<h2>@Model.TitleArm</h2>
+    } else if(currentCulture == "ru-RU") {
+        <p class="subcategory-heading">@ViewBag.SubcategoryNameRu</p>
+
+<h2>@Model.TitleRus</h2>
+    }
     
     <!-- Article Action Buttons -->
     <div class="article-actions">
@@ -114,9 +131,19 @@
     <div class="article-content">
         @foreach (var block in Model.Blocks.OrderBy(b => b.Order))
         {
-            if (block.BlockType == "Paragraph")
+            if (block.BlockType == "Paragraph" && currentCulture=="en")
             {
                 <p style="max-width:80%">@Html.Raw(@block.Content)</p>
+            }
+            else if (block.BlockType == "Paragraph" && currentCulture == "hy-AM")
+            {
+                <p style="max-width:80%">@Html.Raw(@block.ContentArm)</p>
+
+            }
+            else if (block.BlockType == "Paragraph" && currentCulture == "ru-RU")
+            {
+                <p style="max-width:80%">@Html.Raw(@block.ContentRus)</p>
+
             }
             else if (block.BlockType == "Image")
             {

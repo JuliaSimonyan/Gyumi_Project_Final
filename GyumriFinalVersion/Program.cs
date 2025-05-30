@@ -46,6 +46,7 @@ builder.Services.AddScoped<IArticle, ArticleService>();
 builder.Services.AddLocalization();
 builder.Services.AddSingleton<ImageOptimizerService>();
 
+builder.Services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
 
 builder.Services.AddDistributedMemoryCache(); // Required for session state
 builder.Services.AddSession(options =>

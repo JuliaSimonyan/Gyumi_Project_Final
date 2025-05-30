@@ -12,6 +12,12 @@
     <label>Title:</label>
     <input asp-for="Title" class="form-control" />
     <hr />
+    <label>Title(Arm):</label>
+    <input asp-for="TitleArm" class="form-control" />
+    <hr />
+    <label>Title(Ru):</label>
+    <input asp-for="TitleRus" class="form-control" />
+    <hr />
 
     <div id="blockContainer"></div>
 
@@ -35,9 +41,18 @@
                 <input type="hidden" name="Blocks[${blockIndex}].Order" value="${blockIndex}" />`;
 
         if (type === "Paragraph") {
-            html += `<label>Paragraph:</label>
-                    <textarea id="editor-${blockIndex}" name="Blocks[${blockIndex}].Content" class="form-control"></textarea>`;
-        } else {
+            html += `
+            <label>Paragraph (EN):</label>
+            <textarea id="editor-en-${blockIndex}" name="Blocks[${blockIndex}].Content" class="form-control"></textarea>
+
+            <label>Paragraph (ARM):</label>
+            <textarea id="editor-arm-${blockIndex}" name="Blocks[${blockIndex}].ContentArm" class="form-control"></textarea>
+
+            <label>Paragraph (RUS):</label>
+            <textarea id="editor-rus-${blockIndex}" name="Blocks[${blockIndex}].ContentRus" class="form-control"></textarea>
+        `;
+        }
+        else {
             html += `<label>Image:</label>
                  <input type="file" name="imageFiles" class="form-control" />`;
         }
@@ -47,14 +62,11 @@
 
         // Ensure CKEditor initializes properly
         if (type === "Paragraph") {
-            ClassicEditor.create(document.querySelector(`#editor-${blockIndex}`))
-                .then(editor => {
-                    console.log('Editor initialized');
-                })
-                .catch(error => {
-                    console.error('Error initializing CKEditor:', error);
-                });
+            ClassicEditor.create(document.querySelector(`#editor-en-${blockIndex}`)).catch(console.error);
+            ClassicEditor.create(document.querySelector(`#editor-arm-${blockIndex}`)).catch(console.error);
+            ClassicEditor.create(document.querySelector(`#editor-rus-${blockIndex}`)).catch(console.error);
         }
+
 
         blockIndex++;
     }

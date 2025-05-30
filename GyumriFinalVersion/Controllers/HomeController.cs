@@ -140,7 +140,9 @@ namespace GyumriFinalVersion.Controllers
             ViewBag.PlaceSubcategoryId = place.SubcategoryId;
 
             var subcategory = await _subcategoryService.GetSubcategoryById(place.SubcategoryId);
-            ViewBag.SubcategoryName = subcategory?.Name; 
+            ViewBag.SubcategoryName = subcategory?.Name;
+            ViewBag.SubcategoryNameArm = subcategory?.NameArm;
+            ViewBag.SubcategoryNameRu = subcategory?.NameRu;
 
             Thread.CurrentThread.CurrentCulture = cultureInfo;
             Thread.CurrentThread.CurrentUICulture = cultureInfo;

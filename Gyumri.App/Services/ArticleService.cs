@@ -22,11 +22,15 @@ namespace Gyumri.App.Services
            {
                Id = a.Id,
                Title = a.Title,
+               TitleArm = a.TitleArm,
+               TitleRus = a.TitleRus,
                Blocks = a.Blocks.Select(b => new ArticleBlock
                {
                    Id = b.Id,
                    BlockType = b.BlockType,
                    Content = b.Content,
+                   ContentArm = b.ContentArm,
+                   ContentRus = b.ContentRus,
                    Order = b.Order
                }).ToList()
            })
@@ -46,11 +50,15 @@ namespace Gyumri.App.Services
             {
                 Id = article.Id,
                 Title = article.Title,
+                TitleArm = article.TitleArm,
+                TitleRus = article.TitleRus,
                 Blocks = article.Blocks.Select(b => new ArticleBlock
                 {
                     Id = b.Id,
                     BlockType = b.BlockType,
                     Content = b.Content,
+                    ContentArm = b.ContentArm,
+                    ContentRus = b.ContentRus,
                     Order = b.Order
                 }).ToList()
             };

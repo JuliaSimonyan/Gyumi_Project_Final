@@ -122,6 +122,8 @@ namespace Gyumri.Areas.Admin.Controllers
                 return NotFound();
 
             existing.Title = model.Title;
+            existing.TitleArm = model.TitleArm;
+            existing.TitleRus = model.TitleRus;
 
             int imageIndex = 0;
 
@@ -154,15 +156,8 @@ namespace Gyumri.Areas.Admin.Controllers
                         if (imageIndex < imageFiles.Count && imageFiles[imageIndex]?.Length > 0)
                         {
                             var file = imageFiles[imageIndex++];
-                            var uploadsPath = Path.Combine(_env.WebRootPath, "uploads");
-                            Directory.CreateDirectory(uploadsPath);
-                            var fileName = Path.GetFileName(file.FileName);
-                            var filePath = Path.Combine(uploadsPath, fileName);
-
-                            using var stream = new FileStream(filePath, FileMode.Create);
-                            await file.CopyToAsync(stream);
-
-                            newBlock.Content = "/uploads/" + fileName;
+                            var optimizedImagePath = _imageOptimizer.OptimizeAndSaveUploadedImage(file, "uploads");
+                            existingBlock.Content = optimizedImagePath;
                         }
                         else
                         {
@@ -174,6 +169,8 @@ namespace Gyumri.Areas.Admin.Controllers
                     {
                         BlockType = newBlock.BlockType,
                         Content = newBlock.Content,
+                        ContentArm = newBlock.ContentArm,
+                        ContentRus = newBlock.ContentRus,
                         Order = newBlock.Order
                     });
                 }

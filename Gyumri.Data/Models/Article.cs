@@ -11,6 +11,8 @@ namespace Gyumri.Data.Models
     {
         public int Id { get; set; }
         public string Title { get; set; }
+        public string? TitleArm { get; set; }
+        public string? TitleRus { get; set; }
         public List<ArticleBlock>? Blocks { get; set; }
     }
 }

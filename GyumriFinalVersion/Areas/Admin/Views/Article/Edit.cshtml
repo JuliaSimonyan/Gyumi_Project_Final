@@ -12,8 +12,14 @@
     <input type="hidden" asp-for="Id" />
 
     <div class="form-group">
-        <label for="Title">Title</label>
+        <label>Title (EN)</label>
         <input asp-for="Title" class="form-control" />
+
+        <label>Title (ARM)</label>
+        <input asp-for="TitleArm" class="form-control" />
+
+        <label>Title (RUS)</label>
+        <input asp-for="TitleRus" class="form-control" />
     </div>
 
     <hr />
@@ -28,8 +34,14 @@
             if (Model.Blocks[i].BlockType == "Paragraph")
             {
                 <div class="mb-3">
-                    <label>Paragraph Block #@(i + 1)</label>
-                    <textarea id="editor-@i" name="Blocks[@i].Content" class="form-control">@Html.Raw(Model.Blocks[i].Content)</textarea>
+                    <label>Paragraph (EN)</label>
+                    <textarea id="editor-en-@i" name="Blocks[@i].Content" class="form-control">@Html.Raw(Model.Blocks[i].Content)</textarea>
+
+                    <label>Paragraph (ARM)</label>
+                    <textarea id="editor-arm-@i" name="Blocks[@i].ContentArm" class="form-control">@Html.Raw(Model.Blocks[i].ContentArm)</textarea>
+
+                    <label>Paragraph (RUS)</label>
+                    <textarea id="editor-rus-@i" name="Blocks[@i].ContentRus" class="form-control">@Html.Raw(Model.Blocks[i].ContentRus)</textarea>
                 </div>
             }
             else if (Model.Blocks[i].BlockType == "Image")
@@ -44,7 +56,6 @@
         }
     </div>
 
-    <!-- Add buttons to insert new blocks -->
     <div class="mb-4">
         <button type="button" class="btn btn-outline-primary me-2" onclick="addBlock('Paragraph')">Add Paragraph</button>
         <button type="button" class="btn btn-outline-secondary" onclick="addBlock('Image')">Add Image</button>
@@ -53,7 +64,6 @@
     <button type="submit" class="btn btn-success">Save Changes</button>
 </form>
 
-<!-- CKEditor CDN -->
 <script src="https://cdn.ckeditor.com/ckeditor5/41.0.0/classic/ckeditor.js"></script>
 
 <script>
@@ -61,11 +71,16 @@
     const editors = [];
 
     document.addEventListener("DOMContentLoaded", () => {
-        const textareas = document.querySelectorAll("textarea[id^='editor-']");
-        textareas.forEach((textarea) => {
-            ClassicEditor.create(textarea)
-                .then(editor => editors.push(editor))
-                .catch(console.error);
+        const langIds = ["en", "arm", "rus"];
+        langIds.forEach(lang => {
+            for (let i = 0; i < blockIndex; i++) {
+                const textarea = document.querySelector(`#editor-${lang}-${i}`);
+                if (textarea) {
+                    ClassicEditor.create(textarea)
+                        .then(editor => editors.push(editor))
+                        .catch(console.error);
+                }
+            }
         });
 
         document.querySelector('form').addEventListener('submit', () => {
@@ -82,8 +97,14 @@
 
         if (type === "Paragraph") {
             html += `
-                    <label>New Paragraph:</label>
-                    <textarea id="editor-${blockIndex}" name="Blocks[${blockIndex}].Content" class="form-control"></textarea>
+                    <label>Paragraph (EN)</label>
+                    <textarea id="editor-en-${blockIndex}" name="Blocks[${blockIndex}].Content" class="form-control"></textarea>
+
+                    <label>Paragraph (ARM)</label>
+                    <textarea id="editor-arm-${blockIndex}" name="Blocks[${blockIndex}].ContentArm" class="form-control"></textarea>
+
+                    <label>Paragraph (RUS)</label>
+                    <textarea id="editor-rus-${blockIndex}" name="Blocks[${blockIndex}].ContentRus" class="form-control"></textarea>
                 `;
         } else {
             html += `
@@ -98,9 +119,11 @@
 
         if (type === "Paragraph") {
             setTimeout(() => {
-                ClassicEditor.create(document.querySelector(`#editor-${blockIndex}`))
-                    .then(editor => editors.push(editor))
-                    .catch(console.error);
+                ["en", "arm", "rus"].forEach(lang => {
+                    ClassicEditor.create(document.querySelector(`#editor-${lang}-${blockIndex}`))
+                        .then(editor => editors.push(editor))
+                        .catch(console.error);
+                });
             }, 100);
         }
 
