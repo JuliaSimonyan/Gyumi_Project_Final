@@ -95,10 +95,11 @@ namespace Gyumri.Common.Utility
                 }
                 .plan-header {
                     display: flex;
-                    justify-content: space-between;
                     align-items: flex-start;
+                    gap: 10px;
                     margin-bottom: 30px;
-                }
+}
+
                 .logo {
                     width: 40px;
                     height: 40px;
@@ -143,16 +144,39 @@ namespace Gyumri.Common.Utility
                     margin-bottom: 15px;
                     color: #000;
                 }
-                .section-item {
+              .section-item {
                     display: flex;
                     align-items: center;
+                    gap: 12px;
                     margin-bottom: 15px;
                     padding-bottom: 15px;
                     border-bottom: 1px solid #f5f5f5;
-                }
-                .section-item div{
-                    flex:1;
-                }
+}
+
+.item-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.item-name, .item-info {
+    font-size: 14px;
+    color: #333;
+}
+
+.item-name {
+    font-weight: 500;
+    min-width: 100px; 
+}
+
+.item-info {
+    color: #666;
+    white-space: nowrap;
+}
+
                 .section-item:last-child {
                     margin-bottom: 0;
                     padding-bottom: 0;
@@ -171,7 +195,7 @@ namespace Gyumri.Common.Utility
                     font-weight: 500;
                 }
                 .item-info {
-                    width:40%;
+                    width:60%;
                     align-items: center;
                     font-size: 14px;
                     color: #666;
@@ -179,6 +203,9 @@ namespace Gyumri.Common.Utility
                 .item-info i {
                     margin-left: 8px;
                 }
+.leftside{
+text-align:right;
+}
                 ";
         }
 
@@ -241,7 +268,7 @@ namespace Gyumri.Common.Utility
                                 <img class=""pdfLogo"" src=""{carDataUri}"" alt=""Logo"" height=""20"">
                             </div>
                             <div class=""item-name"">{tripInfo.TransportName}</div>
-                            <div class=""item-info""><span>{tripInfo.TimePeriod} {AppRes.min}</span></div>
+                            <div class=""item-info leftside""><span>{tripInfo.TimePeriod} {AppRes.min}</span></div>
                         </div>
                     </div>
                     <div class=""plan-section"">
@@ -251,7 +278,7 @@ namespace Gyumri.Common.Utility
                                 <img class=""pdfLogo"" src=""{hotelUri}"" alt=""Logo"" height=""20"">
                             </div>
                             <div class=""item-name"">{placeName}</div>
-                            <div class=""item-info"">{placeAddress}</div>
+                            <div class=""item-info leftside"">{placeAddress}</div>
                         </div>
                     </div>
                 ";
@@ -268,7 +295,7 @@ namespace Gyumri.Common.Utility
                                  <img class=""pdfLogo"" src=""{whatToDoUri}"" alt=""Logo"" height=""30"">
                             </div>
                             <div class=""item-name"">{item?.PlaceName}</div>
-                            <div class=""item-info"">{item?.Address}</div>
+                            <div class=""item-info leftside"">{item?.Address}</div>
                         </div>";
                 }
             }
