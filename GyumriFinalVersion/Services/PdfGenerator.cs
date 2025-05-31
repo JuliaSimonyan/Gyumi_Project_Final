@@ -1,33 +1,38 @@
-using DinkToPdf;
-using DinkToPdf.Contracts;
+using PuppeteerSharp;
+using PuppeteerSharp.Media;
 
 namespace GyumriFinalVersion.Services
 {
     public class PdfGenerator
     {
-        private readonly IConverter _converter;
-
-        public PdfGenerator(IConverter converter)
+        public async Task<Stream> GeneratePdfAsync(string htmlContent)
         {
-            _converter = converter;
-        }
+            // 1. Download the Chromium browser if needed
+            await new BrowserFetcher().DownloadAsync();
 
-        public byte[] GeneratePdf(string htmlContent)
-        {
-            var doc = new HtmlToPdfDocument()
+            // 2. Launch the browser
+            var launchOptions = new LaunchOptions
             {
-                GlobalSettings = {
-                    PaperSize = PaperKind.A4,
-                    Orientation = Orientation.Portrait
-                },
-                Objects = {
-                    new ObjectSettings() {
-                        HtmlContent = htmlContent,
-                        WebSettings = { DefaultEncoding = "utf-8" }
-                    }
-                }
+                Headless = true,
+                Args = new[] { "--no-sandbox" } // Important for some environments
             };
-            return _converter.Convert(doc);
+
+            await using var browser = await Puppeteer.LaunchAsync(launchOptions);
+            await using var page = await browser.NewPageAsync();
+
+            // Set content and generate PDF
+            await page.SetContentAsync(htmlContent);
+            return await page.PdfStreamAsync(new PdfOptions
+            {
+                Format = PaperFormat.A4,
+                MarginOptions = new MarginOptions
+                {
+                    Right = "2cm",
+                    Bottom = "2cm",
+                    Left = "1cm"
+                },
+                //PrintBackground = true
+            });
         }
     }
 }

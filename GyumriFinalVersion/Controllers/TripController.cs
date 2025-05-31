@@ -218,12 +218,12 @@ namespace GyumriFinalVersion.Controllers
             return View();
         }
         // Move logic to a shared method
-        private byte[] GenerateTripPdf()
+        private async Task<Stream> GenerateTripPdfAsync()
         {
             string htmlContent = Util.GetPdfHtml(tripInfo, _env);
 
-            var pdfBytes = _pdfGenerator.GeneratePdf(htmlContent);
-            return pdfBytes;
+            var pdfStream = await _pdfGenerator.GeneratePdfAsync(htmlContent);
+            return pdfStream;
         }
 
         public void SendEmailWithAttachment(string toEmail, string subject, string htmlBody, byte[] attachmentBytes, string fileName)
@@ -260,7 +260,7 @@ namespace GyumriFinalVersion.Controllers
          
          
             // Generate PDF in memory
-            byte[] pdfBytes = GenerateTripPdf();
+            var pdfStream = await GenerateTripPdfAsync();
 
             // Prepare the email
             var message = new MailMessage
@@ -273,7 +273,7 @@ namespace GyumriFinalVersion.Controllers
             message.To.Add(email);
 
             // Attach the generated PDF
-            var attachment = new Attachment(new MemoryStream(pdfBytes), "TripPlan.pdf", "application/pdf");
+            var attachment = new Attachment(pdfStream, "TripPlan.pdf", "application/pdf");
             message.Attachments.Add(attachment);
 
             // Send the email
@@ -295,15 +295,15 @@ namespace GyumriFinalVersion.Controllers
         //    return File(pdfBytes, "application/pdf", "downloaded.pdf");
         //}
 
-        public IActionResult DownloadPdf()
+        public async Task<IActionResult> DownloadPdf()
         {
             var currentCulture = Request.Cookies["UserCulture"] ?? "en";
             var cultureInfo = new System.Globalization.CultureInfo(currentCulture);
             Thread.CurrentThread.CurrentCulture = cultureInfo;
             Thread.CurrentThread.CurrentUICulture = cultureInfo;
-            var pdfBytes = GenerateTripPdf();
+            var pdfStream = await GenerateTripPdfAsync();
 
-            return File(pdfBytes, "application/pdf", "downloaded.pdf");
+            return File(pdfStream, "application/pdf", "downloaded.pdf");
         }
 
     }

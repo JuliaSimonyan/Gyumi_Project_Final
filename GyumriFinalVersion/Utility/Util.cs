@@ -195,22 +195,22 @@ namespace Gyumri.Common.Utility
             //                  currentCulture == "hy-AM" ? fullInfo.PlaceWhereToStay?.AddressArm :
             //                  fullInfo.PlaceWhereToStay?.Address;
             string logoPath = Path.Combine(_env.WebRootPath, "content", "Images", "pdfIcon.png");
-            byte[] imageBytes = System.IO.File.ReadAllBytes(logoPath);
+            byte[] imageBytes = File.ReadAllBytes(logoPath);
             string base64Image = Convert.ToBase64String(imageBytes);
             string logoDataUri = $"data:image/png;base64,{base64Image}";
 
             string logoPath2 = Path.Combine(_env.WebRootPath, "content", "Images", "car.png");
-            byte[] imageBytes2 = System.IO.File.ReadAllBytes(logoPath2);
+            byte[] imageBytes2 = File.ReadAllBytes(logoPath2);
             string base64Image2 = Convert.ToBase64String(imageBytes2);
             string carDataUri = $"data:image/png;base64,{base64Image2}";
 
             string logoPath3 = Path.Combine(_env.WebRootPath, "content", "Images", "hotel.png");
-            byte[] imageBytes3 = System.IO.File.ReadAllBytes(logoPath3);
+            byte[] imageBytes3 = File.ReadAllBytes(logoPath3);
             string base64Image3 = Convert.ToBase64String(imageBytes3);
             string hotelUri = $"data:image/png;base64,{base64Image3}";
 
             string logoPath4 = Path.Combine(_env.WebRootPath, "content", "Images", "whatToDo.png");
-            byte[] imageBytes4 = System.IO.File.ReadAllBytes(logoPath4);
+            byte[] imageBytes4 = File.ReadAllBytes(logoPath4);
             string base64Image4 = Convert.ToBase64String(imageBytes4);
             string whatToDoUri = $"data:image/png;base64,{base64Image4}";
 
