@@ -687,4 +687,7 @@
   <data name="LiveAndWork" xml:space="preserve">
     <value>Կյանք և աշխատանք</value>
   </data>
+  <data name="AwayFromGyumri" xml:space="preserve">
+    <value>Դու Գյումրիից 120 կմ հեռու ես։</value>
+  </data>
 </root>

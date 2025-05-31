@@ -7,7 +7,7 @@ body {
 }
 
 .main-content {
-   /* margin-top: 76px;  To account for fixed navbar */
+    /* margin-top: 76px;  To account for fixed navbar */
     padding: 0;
 }
 
@@ -392,8 +392,23 @@ input[type="radio"] {
         gap: 5px;
     }
 
+    .route-info,
+    .route-info-white {
+        display: block !important;
+    }
+
+    .route-info-container-black h5, .route-info-container-black p {
+        font-size: 15px;
+        line-height: 15px;
+    }
+
+    .location-icon {
+        font-size: 10px;
+    }
+
     .route-info-container-black {
         width: 100%;
+        height: auto;
     }
 }
 
@@ -404,5 +419,19 @@ input[type="radio"] {
 
     .navigation-buttons {
         padding: 15px;
+    }
+
+    .route-info,
+    .route-info-white {
+        display: block !important;
+    }
+
+    .route-info-container-black h5, .route-info-container-black p {
+        font-size: 15px;
+        line-height: 10px;
+    }
+
+    .location-icon {
+        font-size: 10px;
     }
 }

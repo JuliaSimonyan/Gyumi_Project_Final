@@ -196,6 +196,15 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You&apos;re 120 km away from Gyumri.
+        /// </summary>
+        public static string AwayFromGyumri {
+            get {
+                return ResourceManager.GetString("AwayFromGyumri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Back.
         /// </summary>
         public static string Back {

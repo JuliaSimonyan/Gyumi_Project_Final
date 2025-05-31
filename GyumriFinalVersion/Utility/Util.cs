@@ -256,7 +256,7 @@ namespace Gyumri.Common.Utility
                         </div>
                     </div>
                 ";
-            if (tripInfo.PlaceWhatToDo.IsNullOrEmpty())
+            if (!tripInfo.PlaceWhatToDo.IsNullOrEmpty())
             {
                 htmlContent += $@" <div class=""plan-section"">
                 <h2>{AppRes.WhatToDo}</h2>";

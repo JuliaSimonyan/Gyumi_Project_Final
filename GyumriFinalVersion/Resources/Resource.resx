@@ -702,4 +702,7 @@ security measures to protect it from unauthorized access, modification, or discl
   <data name="LiveAndWork" xml:space="preserve">
     <value>Live &amp; Work</value>
   </data>
+  <data name="AwayFromGyumri" xml:space="preserve">
+    <value>You're 120 km away from Gyumri</value>
+  </data>
 </root>

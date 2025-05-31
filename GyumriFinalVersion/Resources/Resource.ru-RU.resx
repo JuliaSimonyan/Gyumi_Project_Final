@@ -681,9 +681,6 @@
   <data name="CopyRight" xml:space="preserve">
     <value>Этот веб-сайт был создан и поддерживается при финансовой поддержке Европейского Союза. Его содержимое является исключительной ответственностью муниципалитета Гюмри.</value>
   </data>
-  <data name="String1" xml:space="preserve">
-    <value />
-  </data>
   <data name="SeeAndDo" xml:space="preserve">
     <value>Что посмотреть и чем заняться</value>
   </data>
@@ -695,5 +692,11 @@
   </data>
   <data name="LiveAndWork" xml:space="preserve">
     <value>Жизнь и работа</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AwayFromGyumri" xml:space="preserve">
+    <value>Ты находишься в 120 км от Гюмри.</value>
   </data>
 </root>
