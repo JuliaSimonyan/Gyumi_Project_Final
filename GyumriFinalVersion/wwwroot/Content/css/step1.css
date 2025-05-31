@@ -399,7 +399,7 @@ input[type="radio"] {
 
     .route-info-container-black h5, .route-info-container-black p {
         font-size: 15px;
-        line-height: 15px;
+        line-height: 10px;
     }
 
     .location-icon {

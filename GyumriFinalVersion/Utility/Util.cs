@@ -1,6 +1,7 @@
 ﻿using Gyumri.Data.Models;
 using GyumriFinalVersion.Models;
 using Microsoft.IdentityModel.Tokens;
+using System.Drawing;
 
 namespace Gyumri.Common.Utility
 {
@@ -158,21 +159,19 @@ namespace Gyumri.Common.Utility
                     border-bottom: none;
                 }
                 .item-icon {
-                    width: 40px;
-                    height: 40px;
+                    width: 20px;
+                    height: 20px;
                     background-color: #f5f5f5;
                     border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
                     align-items: center;
                     margin-right: 15px;
                 }
                 .item-name {
-                    flex: 1;
+                    width:40%;
                     font-weight: 500;
                 }
                 .item-info {
-                    display: flex;
+                    width:40%;
                     align-items: center;
                     font-size: 14px;
                     color: #666;
@@ -219,7 +218,7 @@ namespace Gyumri.Common.Utility
                 <div class=""plan-container"">
                     <div class=""plan-header"">
                         <div class=""logo"">
-                            <img class=""pdfLogo"" src=""{logoDataUri}"" alt=""Logo"" height=""30"">
+                            <img class=""pdfLogo"" src=""{logoDataUri}"" alt=""Logo"" height=""20"">
                         </div>
                         <div class=""address"">
                             <p>{AppRes.AddressGyumri}</p>
@@ -239,7 +238,7 @@ namespace Gyumri.Common.Utility
                         <h2>{AppRes.GettingtoGyumri}</h2>
                         <div class=""section-item"">
                             <div class=""item-icon"">
-                                <img class=""pdfLogo"" src=""{carDataUri}"" alt=""Logo"" height=""30"">
+                                <img class=""pdfLogo"" src=""{carDataUri}"" alt=""Logo"" height=""20"">
                             </div>
                             <div class=""item-name"">{tripInfo.TransportName}</div>
                             <div class=""item-info""><span>{tripInfo.TimePeriod} {AppRes.min}</span></div>
@@ -249,7 +248,7 @@ namespace Gyumri.Common.Utility
                         <h2>{AppRes.WheretoStay}</h2>
                         <div class=""section-item"">
                             <div class=""item-icon"">
-                                <img class=""pdfLogo"" src=""{hotelUri}"" alt=""Logo"" height=""30"">
+                                <img class=""pdfLogo"" src=""{hotelUri}"" alt=""Logo"" height=""20"">
                             </div>
                             <div class=""item-name"">{placeName}</div>
                             <div class=""item-info"">{placeAddress}</div>
