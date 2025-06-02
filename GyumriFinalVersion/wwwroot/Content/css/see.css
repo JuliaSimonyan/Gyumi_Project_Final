@@ -178,6 +178,7 @@
 
 /* Card Styles */
 .cardnoarticle {
+    max-width:375px !important;
     height: 250px !important;
     flex: 0 0 auto; /* Prevent shrinking or wrapping */
     position: relative;
