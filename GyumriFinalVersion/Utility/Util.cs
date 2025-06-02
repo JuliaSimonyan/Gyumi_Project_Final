@@ -93,22 +93,28 @@ namespace Gyumri.Common.Utility
                     padding: 30px;
                     margin-bottom: 30px;
                 }
-                .plan-header {
-                    display: flex;
-                    align-items: flex-start;
-                    gap: 10px;
-                    margin-bottom: 30px;
+
+
+               .logo {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+              .plan-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 30px;
 }
 
-                .logo {
-                    width: 40px;
-                    height: 40px;
-                }
-                .address {
-                    text-align: right;
-                    font-size: 12px;
-                    color: #666;
-                }
+.address {
+font-size: 13px;
+    width: 100%;
+    max-width: 250px;
+    margin-left: auto;
+    text-align: right;
+}
+
                 .plan-title {
                     text-align: center;
                     margin-bottom: 20px;
