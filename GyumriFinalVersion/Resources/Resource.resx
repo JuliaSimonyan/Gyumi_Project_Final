@@ -688,7 +688,7 @@ security measures to protect it from unauthorized access, modification, or discl
     <value>Your list is empty</value>
   </data>
   <data name="CopyRight" xml:space="preserve">
-    <value>This website was created and maintained with the financial support of the European Union. Its contents are the sole responsibility of Gyumri Municipality.</value>
+    <value>This was created and maintained with the financial support of the European Union. Its contents are the sole responsibility of Gyumri Municipality and do not necessarily reflect the views of the European Union.</value>
   </data>
   <data name="SeeAndDo" xml:space="preserve">
     <value>See &amp; Do</value>
@@ -704,5 +704,8 @@ security measures to protect it from unauthorized access, modification, or discl
   </data>
   <data name="AwayFromGyumri" xml:space="preserve">
     <value>You're 120 km away from Gyumri</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
   </data>
 </root>
