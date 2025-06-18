@@ -23,16 +23,8 @@
         <div class="header-image" style="background-image: url('@Url.Content("~/Content/Images/See&Do Hero Banner.webp")') !important;">
             <div class="overlay"></div>
 
-            <div class="newheader">
-                @if (currentCulture == "en") {
-            <h1 class=" header-title">@ViewBag.CategoryName</h1>
-                }
-                else if (currentCulture == "hy-AM")
-                {
-                    <h1 class=" header-title">@ViewBag.CategoryNameArm</h1>
-                } else if (currentCulture == "ru-RU") {
-                    <h1 class=" header-title">@ViewBag.CategoryNameRu</h1>
-                }
+            <div class="newheader">             
+            <h1 class=" header-title">@AppRes.SeeAndDo</h1>              
             <p>@AppRes.SeeAndDoDesc</p>
             </div>
 
@@ -43,19 +35,7 @@ else if (ViewBag.CategoryName == "Eat & Drink")
 {
         <div class="header-image" style="background-image: url('@Url.Content("~/Content/Images/eat drink hero banner.webp")') !important;">
             <div class="newheader">
-
-                @if (currentCulture == "en")
-                {
-                    <h1 class=" header-title">@ViewBag.CategoryName</h1>
-                }
-                else if (currentCulture == "hy-AM")
-                {
-                    <h1 class=" header-title">@ViewBag.CategoryNameArm</h1>
-                }
-                else if (currentCulture == "ru-RU")
-                {
-                    <h1 class=" header-title">@ViewBag.CategoryNameRu</h1>
-                }
+                <h1 class=" header-title">@AppRes.EatAndDrink</h1>
                 <p>@AppRes.EatAndDrinkDesc</p>
 </div>
             <div><img class="" src="~/Content/Images/Vector (1).webp" alt="Symbols"></div>
@@ -66,18 +46,8 @@ else if (ViewBag.CategoryName == "Relax & Sleep")
         <div class="header-image" style="background-image: url('@Url.Content("~/Content/Images/Relax & Sleep Hero Banner.webp")') !important;">
             <div class="newheader">
 
-                @if (currentCulture == "en")
-                {
-                    <h1 class=" header-title">@ViewBag.CategoryName</h1>
-                }
-                else if (currentCulture == "hy-AM")
-                {
-                    <h1 class=" header-title">@ViewBag.CategoryNameArm</h1>
-                }
-                else if (currentCulture == "ru-RU")
-                {
-                    <h1 class=" header-title">@ViewBag.CategoryNameRu</h1>
-                }                <p>@AppRes.RelaxAndSleepDesc</p>
+                <h1 class=" header-title">@AppRes.RelaxAndSleep</h1>
+                <p>@AppRes.RelaxAndSleepDesc</p>
                 </div>
 
         <div><img class="" src="~/Content/Images/Vector (2).webp" style="width:100%" alt="Symbols"></div>
@@ -88,18 +58,8 @@ else if (ViewBag.CategoryName == "Live & Work")
         <div class="header-image" style="background-image: url('@Url.Content("~/Content/Images/Live and Work Hero Banner.webp")') !important;">
                 <div class="newheader">
 
-                @if (currentCulture == "en")
-                {
-                    <h1 class=" header-title">@ViewBag.CategoryName</h1>
-                }
-                else if (currentCulture == "hy-AM")
-                {
-                    <h1 class=" header-title">@ViewBag.CategoryNameArm</h1>
-                }
-                else if (currentCulture == "ru-RU")
-                {
-                    <h1 class=" header-title">@ViewBag.CategoryNameRu</h1>
-                }                <p>@AppRes.LiveAndWorkDesc</p>
+                <h1 class=" header-title">@AppRes.LiveAndWork</h1>
+                <p>@AppRes.LiveAndWorkDesc</p>
                     </div>
             <div><img class="" src="~/Content/Images/Group.webp"  style="width:100%"  alt="Symbols"></div>
         </div>

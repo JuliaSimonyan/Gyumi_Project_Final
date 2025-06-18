@@ -71,10 +71,12 @@ using (var scope = app.Services.CreateScope())
     }
 
     // ✅ Seed admin user
-    var adminEmail = "admin@admin.com";
-    var adminPassword = "Admin123!";
-    var adminUser = await userManager.FindByEmailAsync(adminEmail);
+    // Read from configuration
+    var config = services.GetRequiredService<IConfiguration>();
+    var adminEmail = config["AdminUser:Email"];
+    var adminPassword = config["AdminUser:Password"];
 
+    var adminUser = await userManager.FindByEmailAsync(adminEmail);
     if (adminUser == null)
     {
         var user = new ApplicationUser
