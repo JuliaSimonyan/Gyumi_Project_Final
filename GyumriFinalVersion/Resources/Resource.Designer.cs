@@ -304,7 +304,7 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This website was created and maintained with the financial support of the European Union. Its contents are the sole responsibility of Gyumri Municipality..
+        ///   Looks up a localized string similar to This was created and maintained with the financial support of the European Union. Its contents are the sole responsibility of Gyumri Municipality and do not necessarily reflect the views of the European Union..
         /// </summary>
         public static string CopyRight {
             get {
@@ -1538,6 +1538,15 @@ namespace GyumriFinalVersion.Resources {
         public static string StartFrom {
             get {
                 return ResourceManager.GetString("StartFrom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
             }
         }
         

@@ -39,11 +39,32 @@
                     <div class="place-info">
                         <h3 class="place-title">
                             <a asp-controller="Home" asp-action="Articles" asp-route-articleId="@place.ArticleId">
-                                @place.Description
+                                @if (currentCulture == "en")
+                                {
+                                    @(place.PlaceName)
+                                }
+                                else if (currentCulture == "hy-AM")
+                                {
+                                    @(place.PlaceNameArm)
+                                }
+                                else if (currentCulture == "ru-RU")
+                                {
+                                    @(place.PlaceNameRu)
+                                }
                             </a>
                         </h3>
                         <p class="place-category">
-                            @(place.Description)
+                            @if(currentCulture == "en") {
+                                @(place.Description)
+							}
+                            else if (currentCulture == "hy-AM")
+							{
+								@(place.DescriptionArm)
+							}
+							else if (currentCulture == "ru-RU")
+							{
+								@(place.DescriptionRu)
+							}
                         </p>
                     </div>
                 </div>
