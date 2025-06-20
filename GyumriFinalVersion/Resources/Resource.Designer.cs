@@ -304,7 +304,7 @@ namespace GyumriFinalVersion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This was created and maintained with the financial support of the European Union. Its contents are the sole responsibility of Gyumri Municipality and do not necessarily reflect the views of the European Union..
+        ///   Looks up a localized string similar to This website was developed within the framework of the Mayors for Economic Growth (M4EG) Facility, implemented by the United Nations Development Programme and financed by the European Union. Gyumri Municipality bears responsibility for the content, which does not necessarily reflect the official opinion of the EU..
         /// </summary>
         public static string CopyRight {
             get {
